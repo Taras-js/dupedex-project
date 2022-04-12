@@ -1,0 +1,116 @@
+@import "~materialize-css";
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.card-panel {
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.form-registration {
+    width: 380px;
+    height: 320px;
+    margin: 2rem auto;
+    border-radius: 30px;
+}
+
+.fieldset {
+    display: grid;
+    border-radius: 30px;
+    width: 320px;
+    margin: 0 auto;
+    border: none;
+}
+
+.legend {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.text {
+    resize: none;
+    overflow-y: hidden;
+}
+
+.yellow-input {
+    color: white;
+}
+
+label {
+    color: white;
+    font-size: 15px;
+}
+
+.file {
+    height: 40px;
+    background-color: #6cefff;
+    border-radius: 3px;
+    font-size: 15px;
+    color: black;
+    margin: 5px;
+    width: 300px;
+}
+
+textarea {
+    background-color: white;
+    border-radius: 5px;
+}
+
+textarea::placeholder {
+    color: black;
+}
+
+.file:hover {
+    color: #F7654A;
+    cursor: pointer;
+    background-color: black;
+}
+
+.logo {
+    width: 350px;
+    border-radius: 5%;
+}
+
+.btn i {
+    width: 300px;
+}
+
+.wrapper {
+    margin: 1rem auto;
+}
+
+.form-file {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.image-page {
+    height: 100%;
+}
+
+.nav-wrapper {
+    margin: -10px auto 10px auto;
+}
+
+.nav-mobile {
+}
+
+@media screen and (min-width: 320px) and (max-width: 690px) {
+    .nav-wrapper {
+        height: 120px;
+        width: 500px;
+    }
+
+    .all-image {
+        width: 500px;
+    }
+
+}
