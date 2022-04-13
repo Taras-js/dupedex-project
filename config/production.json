@@ -1,6 +1,6 @@
 {
   "port": 5000,
-  "mongoUri": "mongodb+srv://taras:taras@cluster0.cte51.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongoUri": "mongodb+srv://taras:fantomas@cluster1.awfuc.mongodb.net/dupedex?retryWrites=true&w=majority",
   "jwtSecret": "taras",
   "baseUrl": "http://localhost:5000"
 }
