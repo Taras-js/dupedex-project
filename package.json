@@ -6,14 +6,14 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
-    "client": "npm run start --prefix client",
+    "client": "npm run dev --prefix client",
     "client:install": "npm install --prefix client",
     "client:build": "npm run build --prefix client",
     "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Taras-js/dupedex.git"
+    "url": "git+https://github.com/Taras-js/dupedex-project.git"
   },
   "keywords": [
     "express",
@@ -24,9 +24,9 @@
   "author": "Taras Schevchenko <shev-taras@ya.ru>",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Taras-js/dupedex-project/issues"
   },
-  "homepage": "https://github.com/Taras-js/dupedex.git#readme",
+  "homepage": "https://github.com/Taras-js/dupedex-project#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.2",
