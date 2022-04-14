@@ -4,11 +4,11 @@ import {Store} from "redux";
 import { ActionType } from '../shared/types';
 import * as Actions from '../actions';
 
-export const defaultState = {
+export const initialState = {
     todo: Map<unknown, Store>(),
 };
 
-export default (state: Record<typeof defaultState>, action: ActionType<typeof Actions>) => {
+export default (state: Record<typeof initialState>, action: ActionType<typeof Actions>) => {
     switch (action.type) {
         case GET_TODOS: {
             return state.set(stateValue, value);
