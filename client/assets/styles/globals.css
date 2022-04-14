@@ -2,13 +2,20 @@
 
 :root {
   --color-white: #ffffff;
-  --color-grey: #707070;
   --color-footer-grey: #383a4d;
   --color-black: #000000;
 
+  --color-grey: #707070;
+  --color-grey-dark: #303030;
+
   --color-beige: #fff9f7;
-  --color-peach: #f9e4e2;
-  --color-turquoise: #c7e8eb;
+
+  --color-peach: rgb(249, 228, 226);
+  --color-peach-dark: rgb(249, 218, 216);
+  
+  --color-turquoise: rgb(199, 232, 235);
+  --color-turquoise-dark: rgb(179, 232, 235);
+  --color-turquoise-darker: rgb(159, 232, 235);
 
   --color-share_pink: rgba(255, 195, 200, 0.74);
   --color-share_blue: rgba(219, 245, 255, 0.74);
@@ -16,6 +23,7 @@
   --color-main-bg: #fffbfb;
 
   --color-txt:  #585858;
+  --color-txt-dark:  #383838;
 
   --container-padding: 50px;
   --header-height: 135px;

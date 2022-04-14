@@ -1,35 +1,43 @@
 import styles from "./button.module.css"
 
-// enum Type {
-//     filled = 'filled',
-//     outlined = 'outlined',
-//     text = 'text',
-//     icon = 'icon',
-// }
-
-// enum Size {
-//     large = 'large',
-//     medium = 'medium',
-//     small = 'small',
-// }
-
 // interface ButtonProps {
 //     children: JSX.Element[] | string;
-//     type: Type;
-//     size?: Size;
+//     icon?: boolean;
+//     filled?: boolean;
+//     outlined?: boolean;
+//     large?: boolean;
+//     small?: boolean;
 //     className?: string;
 // }
 
-
-
 const Button = (props) => {
-    const {children, type, size, className} = props;
+    const {
+        children, 
+        icon,
+        filled,
+        outlined,
+        large,
+        small,
+        className
+    } = props;
 
-    const typeClass = `btn_${type}`
-    const sizeClass = type !== 'icon' ? (size ? `btn_${size}` : `btn_medium`) : '';
+    const typeClass = !icon
+        ? (filled ? 'btn_filled' 
+            : (outlined ? 'btn_outlined'
+                : 'btn_text'))
+        : 'btn_icon'
+
+    const sizeClass = !icon 
+        ? (large 
+            ? 'btn_large' 
+            : (small 
+                ? 'btn_small' 
+                : 'btn_medium')
+            )
+        : 'btn_icon';
 
     return (
-        <button className={`${styles.btn} ${styles[typeClass]}  ${styles[sizeClass]} ${className}`}
+        <button className={`${styles.btn} ${styles[typeClass]}  ${icon ? '' : styles[sizeClass]} ${className}`}
             >
             {children}
         </button>

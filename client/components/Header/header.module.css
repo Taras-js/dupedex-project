@@ -46,8 +46,10 @@
 .header__signin-link {
 }
 
+.btn_darkMode:focus {
+    transform: scale(1.02);
+}
 .btn_darkMode:hover,
-.btn_darkMode:focus,
 .btn_darkMode:active {
     transform: scale(1.05);
 }
