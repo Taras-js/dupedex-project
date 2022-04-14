@@ -1,11 +1,12 @@
-import { combineReducers } from "redux";
-import { todoReducer } from "./todoReducer";
+import { combineReducers } from "redux-immutable";
+import { Record } from "immutable";
 
-const rootReducer = combineReducers({todo: todoReducer});
-{
-    todo: {
-        // ... potatoes, and other state managed by the todoReducer ...
-    }
-}
+
+export const initialState = Record({
+    todo: Record({})(),
+
+})();
+const rootReducer = combineReducers({});
+
 export type RootState = ReturnType<typeof rootReducer>
 export default rootReducer;

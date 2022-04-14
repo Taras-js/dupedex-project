@@ -1,19 +1,32 @@
-import {GET_TODOS} from "../types";
-import { Map } from 'immutable';
+import {GET_TODOS} from "../shared/types";
+import { Map, Record } from 'immutable';
 import {Store} from "redux";
-export const defaultState = {
-    todos: Map<unknown, Store>(),
+import { ActionType } from '../shared/types';
+import * as Actions from '../actions';
 
+export const defaultState = {
+    todo: Map<unknown, Store>(),
 };
 
-class ActionType<T> {
-}
-
-export const todoReducer = (state: Record<typeof defaultState, any>, action: ActionType<typeof Actions>) => {
+export default (state: Record<typeof defaultState>, action: ActionType<typeof Actions>) => {
     switch (action.type) {
         case GET_TODOS: {
-            return state.set('fetchStatus', status.GET_STATUS_TODOS);
+            return state.set(stateValue, value);
         }
+        default: {
+            return state;
+        }
+    }
+}
+
+// class ActionType<T> {
+// }
+//
+// export const todoReducer = (state: Record<typeof defaultState>, action: ActionType<typeof Actions>) => {
+//     switch (action.type) {
+//         case GET_TODOS: {
+//             return state.set('fetchStatus', status.GET_STATUS_TODOS);
+//         }
 
         // case GET_STORES_SUCCEEDED: {
         //     const { payload: stores } = action;
@@ -41,8 +54,8 @@ export const todoReducer = (state: Record<typeof defaultState, any>, action: Act
         //     return state.set('specificTimes', OrderedMap(specificTimes));
         // }
 
-        default: {
-            return state;
-        }
-    }
-};
+//         default: {
+//             return state;
+//         }
+//     }
+// };
