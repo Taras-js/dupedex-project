@@ -14,8 +14,8 @@ const Header = () => {
                     </a>
 
                     <div className={styles.header__btn_wrapper}>
-                        <Button large outlined >SIGN IN</Button>
-                        <Button large filled >SIGN UP</Button>
+                        <Button large >SIGN IN</Button>
+                        <Button large outlined >SIGN UP</Button>
 
                         <Button icon className={styles.btn_darkMode}>
                             <DarkModeIcon />
