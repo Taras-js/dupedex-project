@@ -9,7 +9,7 @@ const Header = () => {
                 <h1 hidden>Dupe.dex - reviews agregator</h1>
 
                 <div className={styles.header__container}>
-                    <a href="#" className={styles.header_logo}>
+                    <a href="#" className={styles.header__logo}>
                         <LogoIcon />
                     </a>
 
