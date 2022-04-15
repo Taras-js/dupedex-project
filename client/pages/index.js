@@ -1,8 +1,22 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {useHttp} from "./hooks/http.hook";
+import {useState} from "react";
 
 export default function Home() {
+    const { request } = useHttp();
+    const [data, setData] = useState(null);
+    const getImages = async () => {
+        try {
+            const fetched = await request("/api/data", "GET"
+                );console.log(fetched)
+            return setData(fetched)
+
+        } catch (e) {
+            console.log('error:', e)
+        }
+    }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +29,29 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Junior Gate!
         </h1>
-      </main>
+          <button onClick={getImages}>Получить данные dupedex </button>
+          <div>{
+              data
+              ? data.map(item => {
+                  return (
+                      <div>
+                          <div> <strong>Brand: </strong>{item.brand_name} </div>
+                          <div> <strong>IMG_LINK: </strong> {item.img_link} </div>
+                          <div> <strong>Benefits: </strong> {item.Benefits} </div>
+                          <div> <strong>Details: </strong>{item.Details} </div>
+                          <div> <strong>Ingredients: </strong>{item.Ingredients} </div>
+                          <div> <strong>Usage: </strong>{item.Usage} </div>
+                          <div> <strong>Category: </strong>{item.category} </div>
+                          <div> <strong>Price: </strong>{item.price} </div>
+                          <div> <strong>Prod_link: </strong>{item.prod_link} </div>
+                          <div> <strong>_id: </strong>{item._id} </div>
+                          <div> <strong>id: </strong>{item.id} </div>
+                      </div>
+                  )
+                  })
+                  : ''
+          }</div>
+                </main>
     </div>
   )
 }
