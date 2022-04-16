@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./button.module.css"
 
 interface ButtonProps {
@@ -8,6 +9,7 @@ interface ButtonProps {
     large?: boolean;
     small?: boolean;
     className?: string;
+    onClick?: () => void;
 }
 
 const Button = (props: ButtonProps) => {
@@ -18,8 +20,13 @@ const Button = (props: ButtonProps) => {
         outlined,
         large,
         small,
-        className
+        className,
+        onClick,
     } = props;
+
+    const handleClick = () => {
+        if (onClick) onClick();
+    }
 
     const typeClass = !icon
         ? (filled ? 'btn_filled' 
@@ -37,11 +44,13 @@ const Button = (props: ButtonProps) => {
         : 'btn_icon';
 
     return (
-        <button className={`${styles.btn} ${styles[typeClass]}  ${icon ? '' : styles[sizeClass]} ${className}`}
-            >
+        <button
+            className={`${styles.btn} ${styles[typeClass]}  ${icon ? '' : styles[sizeClass]} ${className}`}
+            onClick={handleClick}
+        >
             {children}
         </button>
     )
 }
 
-export {Button};
+export default Button;

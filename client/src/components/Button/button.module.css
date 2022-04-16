@@ -20,6 +20,16 @@
     transition-timing-function: ease;
 }
 
+.btn:focus {
+    transform: scale(1.02);
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+.btn:active {
+    transform: scale(1.0);
+}
+
 /* Size styles */
 
 .btn_small {
@@ -43,12 +53,10 @@
     text-underline-offset: 5px;
 }
 .btn_text:focus {
-    transform: scale(1.02);
     text-decoration: underline;
 }
 .btn_text:hover,
 .btn_text:active {
-    transform: scale(1.05);
     text-decoration: underline;
     color: var(--color-txt-dark);
 }
@@ -59,12 +67,10 @@
     background-color: var(--color-white);
 }
 .btn_outlined:focus {
-    transform: scale(1.02);
     background-color: var(--color-peach);
 }
 .btn_outlined:hover,
 .btn_outlined:active {
-    transform: scale(1.05);
     color: var(--color-txt-dark);
     border-color: var(--color-grey-dark);
     background-color: var(--color-peach-dark);
@@ -76,12 +82,10 @@
     background-color: var(--color-button-grey);
 }
 .btn_filled:focus {
-    transform: scale(1.02);
     background-color: var(--color-button-grey-dark);
 }
 .btn_filled:hover,
 .btn_filled:active {
-    transform: scale(1.05);
     color: var(--color-white);
     border-color: var(--color-grey-dark);
     background-color: var(--color-button-grey-darker);
@@ -92,12 +96,10 @@
     background-color: var(--color-white);
 }
 .btn_filled-light:focus {
-    transform: scale(1.02);
     background-color: var(--color-beige);
 }
 .btn_filled-light:hover,
 .btn_filled-light:active {
-    transform: scale(1.05);
     color: var(--color-button-grey-darker);
     border-color: var(--color-grey-dark);
     background-color: var(--color-beige-dark);
