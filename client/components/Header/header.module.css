@@ -66,8 +66,8 @@
     fill: #fff9f7;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     .header__btn_wrapper :not(:last-child) {
-        margin-right: 32px;
+        margin-right: 20px;
     }
 }
