@@ -1,16 +1,16 @@
 import styles from "./button.module.css"
 
-// interface ButtonProps {
-//     children: JSX.Element[] | string;
-//     icon?: boolean;
-//     filled?: boolean;
-//     outlined?: boolean;
-//     large?: boolean;
-//     small?: boolean;
-//     className?: string;
-// }
+interface ButtonProps {
+    children: JSX.Element | string;
+    icon?: boolean;
+    filled?: boolean;
+    outlined?: boolean;
+    large?: boolean;
+    small?: boolean;
+    className?: string;
+}
 
-const Button = (props) => {
+const Button = (props: ButtonProps) => {
     const {
         children, 
         icon,

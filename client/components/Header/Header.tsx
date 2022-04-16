@@ -2,10 +2,10 @@ import LogoIcon from "../icons/LogoIcon.jsx";
 import DarkModeIcon from "../icons/DarkModeIcon.jsx";
 
 import styles from "./header.module.css"
-import {Button} from "../Button/Button.jsx";
+import {Button} from "../Button/Button";
 
 const Header = () => {
-    return <header  className={styles.header}>
+    return <header className={styles.header}>
                 <h1 hidden>Dupe.dex - reviews agregator</h1>
 
                 <div className={styles.header__container}>

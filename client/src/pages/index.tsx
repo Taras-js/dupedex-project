@@ -3,14 +3,16 @@ import Head from "next/head";
 
 import Counter from "../features/counter/Counter";
 import styles from "../../assets/styles/Home.module.css";
+import { Header } from "../../components/Header/Header";
 
 const IndexPage: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
+    <>
+      <Header />
+      <main className={styles.main}>
         <Counter />
-      </header>
-    </div>
+      </main>
+    </>
   );
 };
 
