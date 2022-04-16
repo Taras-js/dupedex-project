@@ -26,11 +26,13 @@ body {
 }
 
 a {
+  font-family: inherit;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
 
 button {
+  font-family: inherit;
   cursor: pointer;
 }
