@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 import { Header } from "../components/Header";
 
 
-import store from '../app/store'
+import store from "../app/store";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,5 +14,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
       <Component {...pageProps} />
     </Provider>
-  )
+  );
 }
