@@ -1,4 +1,4 @@
-import LogoIcon from "./LogoIcon";
-import DarkModeIcon from "./DarkModeIcon";
+import LogoIcon from './LogoIcon';
+import DarkModeIcon from './DarkModeIcon';
 
-export { LogoIcon, DarkModeIcon, }
+export { LogoIcon, DarkModeIcon };
