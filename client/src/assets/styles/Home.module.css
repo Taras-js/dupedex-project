@@ -1,13 +1,9 @@
-.container {
-  text-align: center;
-}
-
 .logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-.header {
+.main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
