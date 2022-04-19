@@ -1,23 +1,22 @@
 import * as icons from './constants'
+type IconTypes = keyof typeof icons;
 
-type logo = 'logo';
-type IconTypes = logo; 
 
-interface IIconProps {
-    type: IconTypes,
+interface IconProps {
+    type?: IconTypes,
+    width?: number,
+    height?: number,
+    widthOfViewbox?: number,
+    heightOfViewbox?: number,
     color?: string,
-    width?: string,
-    height?: string,
-    classname?: string 
+    classname?: string
 }
 
 
-const Icon: React.FC<IIconProps> = ({type}) => {
-    
+const Icon: React.FC<IconProps> = ({ type, width, height, classname, widthOfViewbox, heightOfViewbox, color }) => {
+   
     return (
-        <>
-        <svg><path d={icons[type]}/></svg>
-        </>
+        <svg viewBox={`0 0 ${widthOfViewbox} ${heightOfViewbox}`} width={width} height={height} fill={color ? color : '#78838c'}>{icons[type]}</svg>
     )
 }
 
