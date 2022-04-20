@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import styles from './Products.module.css';
+import styles from './productItem.module.css';
 
 interface ProductProps {
   _id: {
