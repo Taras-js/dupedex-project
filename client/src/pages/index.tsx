@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Layout, LayoutRow, LayoutItem } from '../components/Layout';
 
-import Products from '../features/products/Products';
+import Products from '../features/products/ProductItem';
+import { productsMock } from '../features/products/productmock';
 
 const IndexPage: NextPage = () => (
   <>
@@ -21,9 +23,11 @@ const IndexPage: NextPage = () => (
         </LayoutItem>
       </LayoutRow>
       <LayoutRow rowHeight={700}>
-        <LayoutItem itemWidth={0.9}>
-          <Products />
-        </LayoutItem>
+        {productsMock.map((item) => (
+          <LayoutItem itemWidth={1 / productsMock.length}>
+            <Products {...item} />
+          </LayoutItem>
+        ))}
         <LayoutItem itemWidth={370} noResize>
           Library
         </LayoutItem>
