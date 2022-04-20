@@ -14,26 +14,18 @@ const IndexPage: NextPage = () => (
     <Layout>
       <LayoutRow rowHeight={0.1}>
         <LayoutItem itemWidth={0.6}>
-          <div>
-            SearchBar
-          </div>
+          SearchBar
         </LayoutItem>
         <LayoutItem itemWidth={0.4}>
-          <div>
-            ToolBar
-          </div>
+          Toolbar
         </LayoutItem>
       </LayoutRow>
       <LayoutRow rowHeight={0.9}>
         <LayoutItem itemWidth={0.8}>
-          <div>
-            <Counter />
-          </div>
+          <Counter />
         </LayoutItem>
         <LayoutItem itemWidth={0.2}>
-          <div>
-            Library
-          </div>
+          Library
         </LayoutItem>
       </LayoutRow>
     </Layout>

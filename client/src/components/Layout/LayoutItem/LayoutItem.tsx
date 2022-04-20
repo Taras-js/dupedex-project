@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './layoutitem.module.css';
 
 interface LayoutItemProps {
-  children: JSX.Element;
+  children: React.ReactNode;
   itemWidth?: number;
 }
 

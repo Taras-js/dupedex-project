@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './layoutrow.module.css';
 
 interface LayoutRowProps {
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
   rowHeight?: number;
 }
 
