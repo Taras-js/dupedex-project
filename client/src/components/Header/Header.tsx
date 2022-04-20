@@ -1,45 +1,46 @@
-import { LogoIcon } from "../icons";
-import { DarkModeIcon } from "../icons";
+import React from 'react';
+import { LogoIcon, DarkModeIcon } from '../icons';
 
-import styles from "./header.module.css"
-import { Button } from "../Button";
+import styles from './header.module.css';
+import { Button } from '../Button';
 
-const Header = () => {
+function Header() {
+  const onClickMain = () => {
+    console.log('click Main');
+  };
 
-    const onClickMain = () => {
-        console.log('click Main')
-    }
+  const onClickSignIn = () => {
+    console.log('click SignIn');
+  };
 
-    const onClickSignIn = () => {
-        console.log('click SignIn')
-    }
+  const onClickSignUp = () => {
+    console.log('click SignUp');
+  };
 
-    const onClickSignUp = () => {
-        console.log('click SignUp')
-    }
+  const onClickDarkMode = () => {
+    console.log('click DarkMode');
+  };
 
-    const onClickDarkMode = () => {
-        console.log('click DarkMode')
-    }
+  return (
+    <header className={styles.header}>
+      <h1 hidden>Dupe.dex - reviews agregator</h1>
 
-    return <header className={styles.header}>
-                <h1 hidden>Dupe.dex - reviews agregator</h1>
+      <div className={styles.header__container}>
+        <Button icon className={styles.header__logo} onClick={onClickMain}>
+          <LogoIcon />
+        </Button>
 
-                <div className={styles.header__container}>
-                    <a onClick={onClickMain} className={styles.header__logo}>
-                        <LogoIcon />
-                    </a>
+        <div className={styles.header__btn_wrapper}>
+          <Button large onClick={onClickSignIn}>SIGN IN</Button>
+          <Button large outlined onClick={onClickSignUp}>SIGN UP</Button>
 
-                    <div className={styles.header__btn_wrapper}>
-                        <Button large onClick={onClickSignIn} >SIGN IN</Button>
-                        <Button large outlined onClick={onClickSignUp} >SIGN UP</Button>
-
-                        <Button icon className={styles.btn_darkMode} onClick={onClickDarkMode} >
-                            <DarkModeIcon />
-                        </Button>
-                    </div>
-                </div>
+          <Button icon className={styles.btn_darkMode} onClick={onClickDarkMode}>
+            <DarkModeIcon />
+          </Button>
+        </div>
+      </div>
     </header>
+  );
 }
 
 export default Header;
