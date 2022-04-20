@@ -12,7 +12,7 @@ const IndexPage: NextPage = () => (
     </Head>
 
     <Layout>
-      <LayoutRow rowHeight={0.1}>
+      <LayoutRow rowHeight={80} noResize>
         <LayoutItem itemWidth={0.6}>
           SearchBar
         </LayoutItem>
@@ -20,11 +20,11 @@ const IndexPage: NextPage = () => (
           Toolbar
         </LayoutItem>
       </LayoutRow>
-      <LayoutRow rowHeight={0.9}>
-        <LayoutItem itemWidth={0.8}>
+      <LayoutRow rowHeight={700}>
+        <LayoutItem itemWidth={0.9}>
           <Counter />
         </LayoutItem>
-        <LayoutItem itemWidth={0.2}>
+        <LayoutItem itemWidth={370} noResize>
           Library
         </LayoutItem>
       </LayoutRow>
