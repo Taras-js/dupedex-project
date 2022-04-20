@@ -27,6 +27,7 @@
     display: block;
     font-size: 0;
     height: calc(var(--header-height) - 2 * var(--header-padding));
+    transform: none !important;
 }
 
 .header__logo svg {
@@ -43,8 +44,8 @@
     margin-right: 40px;
 }
 
-.header__signin-link {
-}
+/* .header__signin-link {
+} */
 
 .btn_darkMode:focus {
     transform: scale(1.02);
