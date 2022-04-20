@@ -24,6 +24,7 @@ module.exports = {
   ],
   ignorePatterns: ['.eslintrc*', '*config.ts', '*d.ts'],
   rules: {
+    'linebreak-style': 0,
     'import/prefer-default-export': 'off',
     'max-len': 'off',
     'react/require-default-props': 0,

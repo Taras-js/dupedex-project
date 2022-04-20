@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoIcon, DarkModeIcon } from '../icons';
+import { LogoIcon, DarkModeIcon } from '../../assets/icons';
 
 import styles from './header.module.css';
 import { Button } from '../Button';

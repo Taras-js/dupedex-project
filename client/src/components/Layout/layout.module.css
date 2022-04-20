@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1840px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: calc(var(--header-height) + 25px) var(--container-padding) 25px;
+}
