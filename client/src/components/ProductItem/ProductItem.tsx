@@ -1,24 +1,9 @@
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import styles from './productItem.module.css';
+import { ProductProps } from '../../interfaces/ProductProps';
 
-interface ProductProps {
-  _id: {
-    $oid: string;
-  };
-  id: number,
-  brand_name: string,
-  prod_name: string,
-  prod_link: string,
-  price: string,
-  category: string,
-  img_link: string,
-  Benefits: string,
-  Details: string,
-  Usage: string,
-  Ingredients: string,
-}
+import styles from './productItem.module.css';
 
 function ProductItem(props: ProductProps) {
   return (
