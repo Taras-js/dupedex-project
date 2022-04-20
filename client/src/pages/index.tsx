@@ -4,8 +4,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Layout, LayoutRow, LayoutItem } from '../components/Layout';
 
-import Products from '../features/products/ProductItem';
-import { productsMock } from '../features/products/productmock';
+import { ProductItem } from '../components/ProductItem';
+import { productsMock } from '../components/ProductItem/productmock';
 
 const IndexPage: NextPage = () => (
   <>
@@ -24,8 +24,8 @@ const IndexPage: NextPage = () => (
       </LayoutRow>
       <LayoutRow rowHeight={700}>
         {productsMock.map((item) => (
-          <LayoutItem itemWidth={1 / productsMock.length}>
-            <Products {...item} />
+          <LayoutItem key={item.id} itemWidth={1 / productsMock.length}>
+            <ProductItem {...item} />
           </LayoutItem>
         ))}
         <LayoutItem itemWidth={370} noResize>

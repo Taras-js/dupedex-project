@@ -20,7 +20,7 @@ interface ProductProps {
   Ingredients: string,
 }
 
-function Products(props: ProductProps) {
+function ProductItem(props: ProductProps) {
   return (
     <div key={props.id} className={styles.products_item}>
       <a href={props.prod_link}><img className={styles.img_link} src={props.img_link} alt={props.prod_link} /></a>
@@ -34,4 +34,4 @@ function Products(props: ProductProps) {
   );
 }
 
-export default Products;
+export default ProductItem;
