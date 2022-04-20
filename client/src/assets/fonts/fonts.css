@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'HelveticaNeueCyr';
+    font-family: 'HelveticaNeue';
     src: local('HelveticaNeueCyr-Bold'),
         url('HelveticaNeueCyr-Bold.woff2') format('woff2'),
         url('HelveticaNeueCyr-Bold.woff') format('woff');
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'HelveticaNeueCyr';
+    font-family: 'HelveticaNeue';
     src: local('HelveticaNeueCyr-Medium'),
         url('HelveticaNeueCyr-Medium.woff2') format('woff2'),
         url('HelveticaNeueCyr-Medium.woff') format('woff');
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'HelveticaNeueCyr';
+    font-family: 'HelveticaNeue';
     src: local('HelveticaNeueCyr-Roman'),
         url('HelveticaNeueCyr-Roman.woff2') format('woff2'),
         url('HelveticaNeueCyr-Roman.woff') format('woff');
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: 'HelveticaNeueCyr';
+    font-family: 'HelveticaNeue';
     src: local('HelveticaNeueCyr-Light'),
         url('HelveticaNeueCyr-Light.woff2') format('woff2'),
         url('HelveticaNeueCyr-Light.woff') format('woff');
