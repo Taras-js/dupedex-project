@@ -13,10 +13,10 @@ interface IconProps {
 }
 
 
-const Icon: React.FC<IconProps> = ({ type, width, height, classname, widthOfViewbox, heightOfViewbox, color }) => {
+const Icon: React.FC<IconProps> = ({ type, width=50, height=50, classname='icon', widthOfViewbox=25, heightOfViewbox=25, color='#78838c' }) => {
    
     return (
-        <svg viewBox={`0 0 ${widthOfViewbox} ${heightOfViewbox}`} width={width} height={height} fill={color ? color : '#78838c'}>{icons[type]}</svg>
+        <svg className={classname}  viewBox={`0 0 ${widthOfViewbox} ${heightOfViewbox}`} width={width} height={height} fill={color}>{icons[type]}</svg>
     )
 }
 

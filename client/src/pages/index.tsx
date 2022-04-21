@@ -4,6 +4,7 @@ import Head from "next/head";
 import Counter from "../features/counter/Counter";
 import styles from "../styles/Home.module.css";
 
+import Icon from "/features/Icon/Icon";
 
 const IndexPage: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage: NextPage = () => {
       <header className={styles.header}>
         <Counter />
       </header>
+      <Icon classname={'test'} type='tutorial' />
     </div>
   );
 };
