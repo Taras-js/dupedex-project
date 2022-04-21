@@ -1,7 +1,7 @@
 import React from 'react';
 
+import { combinedClass } from '../../../utils/helper';
 import styles from './button.module.css';
-import { combinedClass } from '../../utils/helper';
 
 interface ButtonProps {
   children: JSX.Element | string;

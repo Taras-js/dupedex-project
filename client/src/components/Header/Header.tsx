@@ -2,7 +2,7 @@ import React from 'react';
 import { LogoIcon, DarkModeIcon } from '../../assets/icons';
 
 import styles from './header.module.css';
-import { Button } from '../Button';
+import { Button } from '../UIKit/Button';
 
 function Header() {
   const onClickMain = () => {

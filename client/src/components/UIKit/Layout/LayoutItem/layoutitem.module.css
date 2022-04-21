@@ -1,0 +1,7 @@
+.item {
+  min-width: 50px;
+}
+
+.item:not(:last-child) {
+  margin-right: 10px;
+}
