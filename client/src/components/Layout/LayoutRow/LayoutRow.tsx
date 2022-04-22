@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styles from './layoutrow.module.css';
 
 interface LayoutRowProps {

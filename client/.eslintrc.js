@@ -27,6 +27,7 @@ module.exports = {
     'linebreak-style': 0,
     'import/prefer-default-export': 'off',
     'max-len': 'off',
+    'react/react-in-jsx-scope': 0,
     'react/require-default-props': 0,
     'react/button-has-type': 0,
     'react/function-component-definition': 0,

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Icon } from '../../features/Icon';
 
 import styles from './header.module.css';
@@ -27,7 +26,7 @@ function Header() {
 
       <div className={styles.header__container}>
         <Button icon className={styles.header__logo} onClick={onClickMain}>
-          <Icon type="logotype" />
+          <Icon type="logo" />
         </Button>
 
         <div className={styles.header__btn_wrapper}>

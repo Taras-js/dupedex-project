@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const logotype = {
+export const logo = {
   viewBox: '0 0 361 103',
   path:
   <>
