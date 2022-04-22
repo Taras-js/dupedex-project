@@ -9,7 +9,7 @@ interface PanelProps {
   className?: string;
 }
 
-const Panel = (props: PanelProps) => {
+const Panel: React.FC<PanelProps> = (props) => {
   const { children, padding = 0, className } = props;
 
   const panelClass = combinedClass(styles, 'panel', className);
