@@ -1,4 +1,4 @@
-import type { InitialOptionsTsJest } from 'ts-jest/dist/types'
+import type { InitialOptionsTsJest } from 'ts-jest/dist/types';
 
 const config: InitialOptionsTsJest = {
   preset: 'ts-jest',
@@ -12,6 +12,6 @@ const config: InitialOptionsTsJest = {
       tsconfig: 'tsconfig.test.json',
     },
   },
-}
+};
 
-export default config
+export default config;

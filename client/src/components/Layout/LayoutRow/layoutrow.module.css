@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 50px;
+}
+.row:not(:last-child) {
+  margin-bottom: 2rem;
+}
