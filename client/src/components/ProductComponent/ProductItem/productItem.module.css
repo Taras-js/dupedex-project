@@ -1,7 +1,8 @@
-.products_item {
+.products__item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.img_link {
+.img__link {
+    max-width: 300px;
 }

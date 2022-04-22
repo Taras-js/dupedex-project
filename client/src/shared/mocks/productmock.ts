@@ -2,13 +2,13 @@ export const productsMock = [
   {
     _id: { $oid: '624ea268497fd119e6ebf8b0' },
     id: 1,
-    brand_name: 'Tatcha',
-    prod_name: 'The Rice Wash',
-    prod_link:
+    brandName: 'Tatcha',
+    prodName: 'The Rice Wash',
+    prodLink:
       'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
     price: '$56.00',
     category: 'HomeSkin CareCleanser & TonerCleanserThe Rice Wash',
-    img_link:
+    imgLink:
       'https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg',
     Benefits:
       'Cruelty-freeHydratingBrighteningExfoliatingFirmingPore minimisingOil freeSulphate-free',
@@ -22,13 +22,13 @@ export const productsMock = [
   {
     _id: { $oid: '624ea268497fd119e6ebf8b0' },
     id: 2,
-    brand_name: 'Tatcha',
-    prod_name: 'The Rice Wash',
-    prod_link:
+    brandName: 'Tatcha',
+    prodName: 'The Rice Wash',
+    prodLink:
       'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
     price: '$56.00',
     category: 'HomeSkin CareCleanser & TonerCleanserThe Rice Wash',
-    img_link:
+    imgLink:
       'https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg',
     Benefits:
       'Cruelty-freeHydratingBrighteningExfoliatingFirmingPore minimisingOil freeSulphate-free',
@@ -42,13 +42,13 @@ export const productsMock = [
   {
     _id: { $oid: '624ea268497fd119e6ebf8b0' },
     id: 3,
-    brand_name: 'Tatcha',
-    prod_name: 'The Rice Wash',
-    prod_link:
+    brandName: 'Tatcha',
+    prodName: 'The Rice Wash',
+    prodLink:
       'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
     price: '$56.00',
     category: 'HomeSkin CareCleanser & TonerCleanserThe Rice Wash',
-    img_link:
+    imgLink:
       'https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg',
     Benefits:
       'Cruelty-freeHydratingBrighteningExfoliatingFirmingPore minimisingOil freeSulphate-free',
@@ -62,13 +62,13 @@ export const productsMock = [
   {
     _id: { $oid: '624ea268497fd119e6ebf8b0' },
     id: 4,
-    brand_name: 'Tatcha',
-    prod_name: 'The Rice Wash',
-    prod_link:
+    brandName: 'Tatcha',
+    prodName: 'The Rice Wash',
+    prodLink:
       'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
     price: '$56.00',
     category: 'HomeSkin CareCleanser & TonerCleanserThe Rice Wash',
-    img_link:
+    imgLink:
       'https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg',
     Benefits:
       'Cruelty-freeHydratingBrighteningExfoliatingFirmingPore minimisingOil freeSulphate-free',
