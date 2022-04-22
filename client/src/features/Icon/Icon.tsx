@@ -13,7 +13,7 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = (props) => {
   const {
-    type, width, height, className, color = '#78838c',
+    type, width = '100%', height = '100%', className, color = '#78838c',
   } = props;
 
   return (

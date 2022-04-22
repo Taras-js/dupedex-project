@@ -27,7 +27,7 @@ function Header() {
 
       <div className={styles.header__container}>
         <Button icon className={styles.header__logo} onClick={onClickMain}>
-          <Icon type="logotype" width="100%" height="100%" />
+          <Icon type="logotype" />
         </Button>
 
         <div className={styles.header__btn_wrapper}>
