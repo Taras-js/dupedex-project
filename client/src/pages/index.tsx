@@ -29,7 +29,7 @@ const IndexPage: NextPage = () => (
       <LayoutRow rowHeight={700}>
         <LayoutItem itemWidth={1}>
           <div style={{ display: 'flex', height: '100%' }}>
-            <ProductComponent />
+            <ProductComponent isReviewShow />
           </div>
         </LayoutItem>
         <LayoutItem itemWidth={370} noResize>

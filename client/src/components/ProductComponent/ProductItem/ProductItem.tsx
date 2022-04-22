@@ -1,28 +1,25 @@
 import React from 'react';
+import { productsMock } from '../../../shared/mocks/productmock';
 
 import styles from './productItem.module.css';
 
 interface ProductProps {
   id: number;
-  brandName: string;
-  prodName: string;
-  prodLink: string;
-  imgLink: string;
 }
 
 function ProductItem(props: ProductProps) {
-  const {
-    id, brandName, prodName, prodLink, imgLink,
-  } = props;
+  const { id } = props;
+
+  const item = productsMock.find((itemToFind) => itemToFind.id === id);
 
   return (
     <div key={id} className={styles.products__item}>
-      <a href={prodLink}><img className={styles.img__link} src={imgLink} alt={prodLink} /></a>
+      <a href={item.prodLink}><img className={styles.img__link} src={item.imgLink} alt={item.prodLink} /></a>
       <h3>
-        {brandName}
+        {item.brandName}
       </h3>
       <h4>
-        {prodName}
+        {item.prodName}
       </h4>
     </div>
   );
