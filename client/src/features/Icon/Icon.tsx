@@ -1,12 +1,12 @@
 import React from 'react';
-import * as icons from './constants';
+import * as icons from '../../assets/icons';
 
 type IconTypes = keyof typeof icons;
 
 interface IconProps {
   type?: IconTypes,
   width?: number | string,
-  height?: number,
+  height?: number | string,
   color?: string,
   className?: string
 }

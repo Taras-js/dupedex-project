@@ -1,5 +1,26 @@
 import React from 'react';
 
+export const logotype = {
+  viewBox: '0 0 361 103',
+  path:
+  <>
+    <defs>
+      <linearGradient x1="1" x2="0.088" y2="0.192" gradientUnits="objectBoundingBox">
+        <stop offset="0" stopColor="#ffe4e6" />
+        <stop offset="1" stopColor="#ffbbc1" />
+      </linearGradient>
+    </defs>
+    <g transform="translate(-47 -19)">
+      <rect width="58" height="63" rx="10" transform="translate(47 39)" fill="url(#linear-gradient)" />
+      <text transform="translate(262 102)" fill="#292935" fontSize="86" fontFamily="Helvetica-Bold, HelveticaNeue" fontWeight="700" letterSpacing="-0.035em">
+        <tspan x="-145.383" y="0">Dupe</tspan>
+        <tspan y="0" fill="#ffd6d9" fontSize="80" fontFamily="HelveticaRounded-Bold, Helvetica Rounded">.</tspan>
+        <tspan y="0" fill="#ffd6d9" fontSize="40">dex</tspan>
+      </text>
+    </g>
+  </>,
+};
+
 export const productClaims = {
   viewBox: '0 0 25.9 25.64',
   path: <path d="M26.309,3H5.59A2.573,2.573,0,0,0,3.013,5.564L3,28.636l5.18-5.127H26.309a2.584,2.584,0,0,0,2.59-2.564V5.564A2.584,2.584,0,0,0,26.309,3ZM8.18,18.382V15.215L17.089,6.4a.646.646,0,0,1,.919,0L20.3,8.666c.259.256,0,.91,0,.91l-8.922,8.806Zm15.539,0H14.007l2.59-2.564h7.122Z" transform="translate(-3 -3)" />,
@@ -94,7 +115,7 @@ export const darkmode = {
   viewBox: '0 0 51 52',
   path:
   <g transform="translate(-1821 -41.371)">
-    <ellipse cx="25.5" cy="26" rx="25.5" ry="26" transform="translate(1821 41.371)" />
+    <ellipse cx="25.5" cy="26" rx="25.5" ry="26" transform="translate(1821 41.371)" fill="var(--color-darkmode-circle)" />
     <path d="M12.581,21.466C5.633,21.466,0,16.489,0,10.35A11.161,11.161,0,0,1,7.463.064a.953.953,0,0,1,.96.161.7.7,0,0,1,.182.849,8.926,8.926,0,0,0-.8,3.91c0,5.284,4.865,9.583,10.846,9.583a12.582,12.582,0,0,0,4.425-.7.953.953,0,0,1,.96.161.7.7,0,0,1,.182.849C22.249,18.878,17.678,21.466,12.581,21.466Z" transform="translate(1834.355 79.147) rotate(-90)" />
   </g>
   ,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoIcon, DarkModeIcon } from '../../assets/icons';
+import { Icon } from '../../features/Icon';
 
 import styles from './header.module.css';
 import { Button } from '../Button';
@@ -27,7 +27,7 @@ function Header() {
 
       <div className={styles.header__container}>
         <Button icon className={styles.header__logo} onClick={onClickMain}>
-          <LogoIcon />
+          <Icon type="logotype" width="100%" height="100%" />
         </Button>
 
         <div className={styles.header__btn_wrapper}>
@@ -35,7 +35,7 @@ function Header() {
           <Button large outlined onClick={onClickSignUp}>SIGN UP</Button>
 
           <Button icon className={styles.btn_darkMode} onClick={onClickDarkMode}>
-            <DarkModeIcon />
+            <Icon type="darkmode" width="50" height="50" color="#000" />
           </Button>
         </div>
       </div>
