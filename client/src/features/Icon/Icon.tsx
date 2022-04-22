@@ -1,23 +1,26 @@
-import * as icons from './constants'
+import React from 'react';
+import * as icons from './constants';
+
 type IconTypes = keyof typeof icons;
 
-
 interface IconProps {
-    type?: IconTypes,
-    width?: number,
-    height?: number,
-    widthOfViewbox?: number,
-    heightOfViewbox?: number,
-    color?: string,
-    classname?: string
+  type?: IconTypes,
+  width?: number | string,
+  height?: number,
+  color?: string,
+  className?: string
 }
 
+const Icon: React.FC<IconProps> = (props) => {
+  const {
+    type, width, height, className, color = '#78838c',
+  } = props;
 
-const Icon: React.FC<IconProps> = ({ type, width, height, classname, widthOfViewbox, heightOfViewbox, color }) => {
-   
-    return (
-        <svg viewBox={`0 0 ${widthOfViewbox} ${heightOfViewbox}`} width={width} height={height} fill={color ? color : '#78838c'}>{icons[type]}</svg>
-    )
-}
+  return (
+    <svg className={className} viewBox={icons[type].viewBox} width={width} height={height} fill={color}>
+      {icons[type].path}
+    </svg>
+  );
+};
 
 export default Icon;
