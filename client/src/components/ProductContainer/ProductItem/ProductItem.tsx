@@ -1,4 +1,3 @@
-import React from 'react';
 import { productsMock } from '../../../shared/mocks/productmock';
 import { FilterType } from '../../../shared/types';
 

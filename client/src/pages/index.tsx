@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import {
-  Layout, LayoutRow, LayoutItem, Panel, Button,
+  Layout, LayoutRow, LayoutItem, Panel, Icon, Button,
 } from '../components/UIKit';
 import { ProductContainer } from '../components/ProductContainer';
 import { itemsIdList, isReviewShown } from '../shared/mocks/consts';
@@ -15,8 +15,8 @@ const IndexPage: NextPage = () => {
   const [review, setReview] = useState(isReviewShown);
   const onButtonClick1 = () => { setItems([1]); };
   const onButtonClick4 = () => { setItems([1, 2, 3, 4]); };
-  const onButtonClickPos = () => { setFilter('positive'); };
-  const onButtonClickNeg = () => { setFilter('negative'); };
+  const onButtonClickPos = () => { setFilter(filter !== 'positive' ? 'positive' : null); };
+  const onButtonClickNeg = () => { setFilter(filter !== 'negative' ? 'negative' : null); };
   const onButtonClickRev = () => { setReview(!review); };
 
   return (
@@ -35,11 +35,23 @@ const IndexPage: NextPage = () => {
           <LayoutItem itemWidth={0.4}>
             <Panel>
               <div style={{ display: 'flex' }}>
-                <Button onClick={onButtonClick1}>1 Item</Button>
-                <Button onClick={onButtonClick4}>4 Items</Button>
-                <Button onClick={onButtonClickNeg}>Negative</Button>
-                <Button onClick={onButtonClickPos}>Positive</Button>
-                <Button onClick={onButtonClickRev}>Review</Button>
+                <Button outlined onClick={onButtonClick1}>
+                  <Icon type="comeBack" width={28} height={28} />
+                  1 Item
+                </Button>
+                <Button outlined onClick={onButtonClick4}>
+                  <Icon type="comeAhead" width={28} height={28} />
+                  4 Items
+                </Button>
+                <Button outlined onClick={onButtonClickNeg}>
+                  <Icon type="negativeReviews" width={28} height={28} />
+                </Button>
+                <Button outlined onClick={onButtonClickPos}>
+                  <Icon type="positiveReviews" width={28} height={28} />
+                </Button>
+                <Button outlined onClick={onButtonClickRev}>
+                  <Icon type="showOrHideReviews" width={28} height={28} />
+                </Button>
               </div>
             </Panel>
           </LayoutItem>

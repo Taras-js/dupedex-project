@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
 import '../assets/styles/globals.css';
 
 import { Provider } from 'react-redux';

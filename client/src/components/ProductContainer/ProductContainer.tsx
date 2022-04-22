@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Panel } from '../UIKit';
 import { ProductItem } from './ProductItem';
 
@@ -8,7 +6,7 @@ import { productsMock } from '../../shared/mocks/productmock';
 import styles from './productContainer.module.css';
 import { ProductContent } from '../../shared/types';
 
-const ProductContainer: React.FC<ProductContent> = (props) => {
+const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
     itemsIdList, currentItemId, filter, isReviewShown = false,
   } = props;
