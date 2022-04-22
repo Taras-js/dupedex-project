@@ -1,9 +1,10 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Layout, LayoutRow, LayoutItem } from '../components/UIKit/Layout';
-import { Panel } from '../components/UIKit/Panel';
 
+import {
+  Layout, LayoutRow, LayoutItem, Panel,
+} from '../components/UIKit';
 import { ProductComponent } from '../components/ProductComponent';
 
 const IndexPage: NextPage = () => (

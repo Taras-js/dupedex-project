@@ -1,6 +1,6 @@
 import React from 'react';
-import { combinedClass } from '../../../utils/helper';
 
+import { combinedClass } from '../../../utils/helper';
 import styles from './panel.module.css';
 
 interface PanelProps {

@@ -3,29 +3,16 @@ import React from 'react';
 import styles from './productItem.module.css';
 
 interface ProductProps {
-  // _id: {
-  //   $oid: string;
-  // };
   id: number;
   brandName: string;
   prodName: string;
   prodLink: string;
-  // price: string;
-  // category: string;
   imgLink: string;
-  // Benefits: string;
-  // Details: string;
-  // Usage: string;
-  // Ingredients: string;
 }
 
 function ProductItem(props: ProductProps) {
   const {
-    id,
-    brandName,
-    prodName,
-    prodLink,
-    imgLink,
+    id, brandName, prodName, prodLink, imgLink,
   } = props;
 
   return (

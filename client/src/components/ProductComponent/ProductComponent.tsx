@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { productsMock } from '../../shared/mocks/productmock';
+import { Panel } from '../UIKit';
 import { ProductItem } from './ProductItem';
-import { Panel } from '../UIKit/Panel';
+
+import { productsMock } from '../../shared/mocks/productmock';
 
 import styles from './productComponent.module.css';
 
