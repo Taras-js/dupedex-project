@@ -1,0 +1,66 @@
+.textInput {
+  width: 282.16px;
+  height: 38px;
+  border-radius: 7px;
+  background: #fff;
+  border: 1px solid #707070;
+  outline: none;
+  text-indent: 10px;
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 15px;
+}
+.textInputError {
+  border: 1px solid #ff0000;
+  color: #8496b8;
+}
+
+.inputGroupError label {
+  color: #ff0000;
+}
+
+.inputError {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ff0000;
+  margin: 5px;
+}
+.inputLabel {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #29315f;
+  margin: 5px;
+}
+.inputInner {
+  position: relative;
+}
+.inputGroup,
+.inputGroupError {
+  position: relative;
+  max-width: 370px;
+  margin-bottom: 10px;
+}
+.inputGroupError .inputLabel {
+  color: #ff0000;
+}
+
+.inputGroup .loadingIcon {
+  position: absolute;
+  top: 0;
+  background: transparent;
+  border: none;
+  right: 17px;
+}
+.inputGroup .loadingIcon img {
+  width: 30px;
+  height: 38px;
+}
+
+.textInput:focus::-webkit-input-placeholder { color:transparent; }
+.textInput:focus:-moz-placeholder { color:transparent; } 
+.textInput:focus::-moz-placeholder { color:transparent; } 
+.textInput:focus:-ms-input-placeholder { color:transparent; }
