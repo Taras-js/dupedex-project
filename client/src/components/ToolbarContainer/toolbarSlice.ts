@@ -2,6 +2,7 @@
 import { createSlice, current } from '@reduxjs/toolkit';
 
 import type { AppState } from '../../app/store';
+import { itemsIdListMock } from '../../shared/mocks/consts';
 import { Filter, ProductContent } from '../../shared/types';
 
 export interface ProductState extends ProductContent {
@@ -11,12 +12,12 @@ export interface ProductState extends ProductContent {
 
 const initialState: ProductState = {
   currentItemId: 1,
-  itemsIdList: [1, 2, 3, 4],
+  itemsIdList: itemsIdListMock,
   filter: null,
   isReviewShown: true,
   history: [{
     currentItemId: 1,
-    itemsIdList: [1, 2, 3, 4],
+    itemsIdList: itemsIdListMock,
     filter: null,
     isReviewShown: true,
   }],

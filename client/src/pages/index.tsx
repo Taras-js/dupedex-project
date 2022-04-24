@@ -11,7 +11,7 @@ import { productState } from '../components/ToolbarContainer/toolbarSlice';
 
 const IndexPage: NextPage = () => {
   const {
-    itemsIdList, filter, isReviewShown, historyStep,
+    currentItemId, itemsIdList, filter, isReviewShown, historyStep,
   } = useAppSelector(productState);
 
   return (
@@ -38,7 +38,7 @@ const IndexPage: NextPage = () => {
             <div style={{ display: 'flex', height: '100%' }}>
               <ProductContainer
                 itemsIdList={itemsIdList}
-                currentItemId={1}
+                currentItemId={currentItemId}
                 filter={filter}
                 isReviewShown={isReviewShown}
               />

@@ -4,5 +4,6 @@
     align-items: center;
 }
 .img__link {
-    max-width: 300px;
+    max-width: 200px;
+    max-height: 200px;
 }
