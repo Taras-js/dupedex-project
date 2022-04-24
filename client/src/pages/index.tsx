@@ -1,52 +1,76 @@
+import { useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Layout, LayoutRow, LayoutItem } from '../components/Layout';
 
-import Counter from '../features/counter/Counter';
-import { Icon } from '../features/Icon';
+import {
+  Layout, LayoutRow, LayoutItem, Panel, Icon, Button,
+} from '../components/UIKit';
+import { ProductContainer } from '../components/ProductContainer';
+import { itemsIdList, isReviewShown } from '../shared/mocks/consts';
+import { FilterType } from '../shared/types';
 
-const IndexPage: NextPage = () => (
-  <>
-    <Head>
-      <title>Dupe.dex</title>
-    </Head>
+const IndexPage: NextPage = () => {
+  const [items, setItems] = useState(itemsIdList);
+  const [filter, setFilter] = useState<FilterType>(null);
+  const [review, setReview] = useState(isReviewShown);
+  const onButtonClick1 = () => { setItems([1]); };
+  const onButtonClick4 = () => { setItems([1, 2, 3, 4]); };
+  const onButtonClickPos = () => { setFilter(filter !== 'positive' ? 'positive' : null); };
+  const onButtonClickNeg = () => { setFilter(filter !== 'negative' ? 'negative' : null); };
+  const onButtonClickRev = () => { setReview(!review); };
 
-    <Layout>
-      <LayoutRow rowHeight={80} noResize>
-        <LayoutItem itemWidth={0.6}>
-          SearchBar
-        </LayoutItem>
-        <LayoutItem itemWidth={0.4}>
-          <Icon type="comeAhead" width={28} height={28} />
-          <Icon type="comeBack" width={28} height={28} />
-          <Icon type="copyURL" width={28} height={28} />
-          <Icon type="ellipsis" width={28} height={28} />
-          <Icon type="exit" width={28} height={28} />
-          <Icon type="darkmode" width={28} height={28} />
-          <Icon type="messenger" width={28} height={28} />
-          <Icon type="plus" width={28} height={28} />
-          <Icon type="negativeReviews" width={28} height={28} />
-          <Icon type="positiveReviews" width={28} height={28} />
-          <Icon type="productClaims" width={28} height={28} />
-          <Icon type="question" width={28} height={28} />
-          <Icon type="save" width={28} height={28} />
-          <Icon type="search" width={28} height={28} />
-          <Icon type="tutorial" width={28} height={28} />
-          <Icon type="share" width={28} height={28} />
-          <Icon type="showOrHideReviews" width={28} height={28} />
-          <Icon type="writeNotes" width={28} height={28} />
-        </LayoutItem>
-      </LayoutRow>
-      <LayoutRow rowHeight={700}>
-        <LayoutItem itemWidth={0.9}>
-          <Counter />
-        </LayoutItem>
-        <LayoutItem itemWidth={370} noResize>
-          Library
-        </LayoutItem>
-      </LayoutRow>
-    </Layout>
-  </>
-);
+  return (
+    <>
+      <Head>
+        <title>dupedex | Skincare reviews App</title>
+      </Head>
+
+      <Layout>
+        <LayoutRow rowHeight={80} noResize>
+          <LayoutItem itemWidth={0.6}>
+            <Panel>
+              SearchBar
+            </Panel>
+          </LayoutItem>
+          <LayoutItem itemWidth={0.4}>
+            <Panel>
+              <div style={{ display: 'flex' }}>
+                <Button outlined onClick={onButtonClick1}>
+                  <Icon type="comeBack" width={28} height={28} />
+                  1 Item
+                </Button>
+                <Button outlined onClick={onButtonClick4}>
+                  <Icon type="comeAhead" width={28} height={28} />
+                  4 Items
+                </Button>
+                <Button outlined onClick={onButtonClickNeg}>
+                  <Icon type="negativeReviews" width={28} height={28} />
+                </Button>
+                <Button outlined onClick={onButtonClickPos}>
+                  <Icon type="positiveReviews" width={28} height={28} />
+                </Button>
+                <Button outlined onClick={onButtonClickRev}>
+                  <Icon type="showOrHideReviews" width={28} height={28} />
+                </Button>
+              </div>
+            </Panel>
+          </LayoutItem>
+        </LayoutRow>
+        <LayoutRow rowHeight={700}>
+          <LayoutItem itemWidth={1}>
+            <div style={{ display: 'flex', height: '100%' }}>
+              <ProductContainer itemsIdList={items} currentItemId={1} filter={filter} isReviewShown={review} />
+            </div>
+          </LayoutItem>
+          <LayoutItem itemWidth={370} noResize>
+            <Panel>
+              Library
+            </Panel>
+          </LayoutItem>
+        </LayoutRow>
+      </Layout>
+    </>
+  );
+};
 
 export default IndexPage;

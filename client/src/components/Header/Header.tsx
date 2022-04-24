@@ -1,7 +1,6 @@
-import { Icon } from '../../features/Icon';
+import { Icon, Button } from '../UIKit';
 
 import styles from './header.module.css';
-import { Button } from '../Button';
 
 function Header() {
   const onClickMain = () => {

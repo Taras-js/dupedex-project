@@ -39,6 +39,9 @@
 
   --heading-font-size: 77px;
   --text-font-size: 25px;
+
+  --vertical-gap: 24px;
+  --horizontal-gap: 12px;
 }
 
 html {

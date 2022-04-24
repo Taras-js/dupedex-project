@@ -1,4 +1,4 @@
-import * as icons from '../../assets/icons';
+import * as icons from '../../../assets/icons';
 
 type IconTypes = keyof typeof icons;
 
@@ -10,7 +10,7 @@ interface IconProps {
   className?: string
 }
 
-const Icon: React.FC<IconProps> = (props) => {
+const Icon: React.FC<IconProps> = (props: IconProps) => {
   const {
     type, width = '100%', height = '100%', className, color = '#78838c',
   } = props;
