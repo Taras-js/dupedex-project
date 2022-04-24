@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Layout, LayoutRow, LayoutItem } from '../components/Layout';
 
 import Counter from '../features/counter/Counter';
+import ProductSearch from '../features/Search/ProductSearch';
 
 const IndexPage: NextPage = () => (
   <>
@@ -14,7 +15,7 @@ const IndexPage: NextPage = () => (
     <Layout>
       <LayoutRow rowHeight={80} noResize>
         <LayoutItem itemWidth={0.6}>
-          SearchBar
+          <ProductSearch />
         </LayoutItem>
         <LayoutItem itemWidth={0.4}>
           Toolbar
