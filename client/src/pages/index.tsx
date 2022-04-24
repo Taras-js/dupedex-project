@@ -21,13 +21,13 @@ const IndexPage: NextPage = () => {
       </Head>
 
       <Layout>
-        <LayoutRow rowHeight={80} noResize>
-          <LayoutItem itemWidth={0.6}>
+        <LayoutRow rowHeight={54} noResize>
+          <LayoutItem itemWidth={1}>
             <Panel>
               SearchBar
             </Panel>
           </LayoutItem>
-          <LayoutItem itemWidth={0.4}>
+          <LayoutItem itemWidth={760} noResize>
             <Panel>
               <ToolbarContainer />
             </Panel>

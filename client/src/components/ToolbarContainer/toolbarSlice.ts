@@ -2,13 +2,9 @@
 import { createSlice, current } from '@reduxjs/toolkit';
 
 import type { AppState } from '../../app/store';
-import { FilterType, ProductContent } from '../../shared/types';
+import { Filter, ProductContent } from '../../shared/types';
 
-export interface ProductState {
-  currentItemId: number;
-  itemsIdList: number[];
-  filter: FilterType;
-  isReviewShown: boolean,
+export interface ProductState extends ProductContent {
   history: ProductContent[],
   historyStep: number,
 }
@@ -60,21 +56,17 @@ export const toolbarSlice = createSlice({
   name: 'toolbar',
   initialState,
   reducers: {
-    oneItem: (state) => {
-      state.itemsIdList = [1];
-      saveStep(state);
-    },
-    fourItems: (state) => {
-      state.itemsIdList = [1, 2, 3, 4];
+    showItem: (state, action: { type: '', payload: number[] }) => {
+      state.itemsIdList = action.payload;
       saveStep(state);
     },
     posReviews: (state) => {
-      if (state.filter !== 'positive') state.filter = 'positive';
+      if (state.filter !== Filter.positive) state.filter = Filter.positive;
       else state.filter = null;
       saveStep(state);
     },
     negReviews: (state) => {
-      if (state.filter !== 'negative') state.filter = 'negative';
+      if (state.filter !== Filter.negative) state.filter = Filter.negative;
       else state.filter = null;
       saveStep(state);
     },
@@ -92,7 +84,7 @@ export const toolbarSlice = createSlice({
 });
 
 export const {
-  oneItem, fourItems, posReviews, negReviews, showOrHideReviews, previousStep, followingStep,
+  showItem, posReviews, negReviews, showOrHideReviews, previousStep, followingStep,
 } = toolbarSlice.actions;
 
 export const productState = (state: AppState) => state.product;
