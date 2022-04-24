@@ -108,6 +108,11 @@
 /* .btn_icon {
 } */
 
+.btn:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
 @media screen and (max-width: 1024px) {
     .btn {
         --btn-font-size: 14px;

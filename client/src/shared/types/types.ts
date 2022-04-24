@@ -1,8 +1,12 @@
-export type FilterType = 'positive' | 'neutral' | 'negative' | null;
+export enum Filter {
+  positive = 'positive',
+  negative = 'negative',
+  neutral = 'neutral',
+}
 
 export interface ProductContent {
-  currentItemId?: number;
-  itemsIdList?: number[];
-  filter?: FilterType;
-  isReviewShown?: boolean,
+  currentItemId: number;
+  itemsIdList: number[];
+  filter: Filter | null;
+  isReviewShown: boolean,
 }

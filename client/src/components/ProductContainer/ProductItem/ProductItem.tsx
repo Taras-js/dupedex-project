@@ -1,11 +1,11 @@
 import { productsMock } from '../../../shared/mocks/productmock';
-import { FilterType } from '../../../shared/types';
+import { Filter } from '../../../shared/types';
 
 import styles from './productItem.module.css';
 
 interface ProductProps {
   id: number;
-  filter?: FilterType;
+  filter?: Filter;
 }
 
 function ProductItem(props: ProductProps) {
