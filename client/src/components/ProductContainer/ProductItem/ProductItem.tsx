@@ -19,24 +19,32 @@ function ProductItem(props: ProductProps) {
   return (
     <div key={id} className={styles.products__item}>
       <a href={item.prod_link}><img className={styles.img__link} src={item.img_link} alt={item.prod_link} /></a>
-      <h3>
+      <h3 className={styles.heading}>
         {item.brand_name}
       </h3>
-      <h4>
+      <h4 className={styles.heading}>
         {item.prod_name}
       </h4>
 
-      <h4>
+      <h4 className={styles.heading}>
         {filter}
         reviews:
       </h4>
-      {reviews.map((review) => (
-        <div>
-          <span>{review[0]}</span>
-          {' '}
-          <span>{Number(review[1]).toFixed(2)}</span>
-        </div>
-      ))}
+      {reviews
+        .filter((review) => (review[1] > 1))
+        .map((review) => (
+          <div>
+            <span>{review[0]}</span>
+            {': '}
+            <span>{Number(review[1]).toFixed(2)}</span>
+          </div>
+        ))}
+      other:
+      {reviews
+        .filter((review) => (review[1] < 1))
+        .map((review) => review[1])
+        .reduce((acc, value) => acc + value)
+        .toFixed(2)}
 
     </div>
   );
