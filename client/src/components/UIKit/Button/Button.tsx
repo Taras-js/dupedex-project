@@ -1,10 +1,8 @@
-import React from 'react';
-
+import { combinedClass } from '../../../utils/helper';
 import styles from './button.module.css';
-import { combinedClass } from '../../utils/helper';
 
 interface ButtonProps {
-  children: JSX.Element | string;
+  children: React.ReactNode;
   icon?: boolean;
   filled?: boolean;
   outlined?: boolean;
@@ -12,6 +10,7 @@ interface ButtonProps {
   small?: boolean;
   className?: string;
   onClick?: () => void;
+  isDisabled?: boolean;
 }
 
 function Button(props: ButtonProps) {
@@ -24,6 +23,7 @@ function Button(props: ButtonProps) {
     small,
     className,
     onClick,
+    isDisabled,
   } = props;
 
   const classPropMap = {
@@ -47,6 +47,7 @@ function Button(props: ButtonProps) {
       type="button"
       className={btnStyle}
       onClick={handleClick}
+      disabled={isDisabled}
     >
       {children}
     </button>

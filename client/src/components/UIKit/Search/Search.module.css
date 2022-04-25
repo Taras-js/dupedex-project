@@ -1,0 +1,10 @@
+.search_block{
+    display: flex;
+    align-items: center;
+}
+
+.search_block__input {
+    border: none;
+    outline: none;
+    background: none;
+}

@@ -1,20 +1,27 @@
 import { useEffect, useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { searchProduct } from './searchProductAction';
-import Search from './Search';
+import { setProduct } from './searchProductAction';
+import Search, { Results } from '../../components/UIKit/Search/Search';
+import { debounce } from '../../utils/helper';
+import { getProductBySearch } from './SearchSelector';
 
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>('');
+  const [result, setResult] = useState<Results[]>();
   const dispatch = useAppDispatch();
 
-  const result = useAppSelector((state) => state.product);
+  const goods = useAppSelector((state) => state.goods.products);
 
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
 
   useEffect(() => {
-    dispatch(searchProduct(search));
+    setResult(getProductBySearch(goods, search));
+  }, [search]);
+
+  useEffect(() => {
+    dispatch(setProduct());
   }, [search]);
 
   return (
@@ -22,7 +29,8 @@ const ProductSearch = () => {
     <Search
       onChange={handleChange}
       placeholder="Look for a skincare product name, brand name and etc."
-      results={result.products}
+      results={result}
+      withDebounce={debounce}
     />
   );
 };

@@ -1,8 +1,6 @@
-import React from 'react';
-import { LogoIcon, DarkModeIcon } from '../../assets/icons';
+import { Icon, Button } from '../UIKit';
 
 import styles from './header.module.css';
-import { Button } from '../Button';
 
 function Header() {
   const onClickMain = () => {
@@ -27,7 +25,7 @@ function Header() {
 
       <div className={styles.header__container}>
         <Button icon className={styles.header__logo} onClick={onClickMain}>
-          <LogoIcon />
+          <Icon type="logo" />
         </Button>
 
         <div className={styles.header__btn_wrapper}>
@@ -35,7 +33,7 @@ function Header() {
           <Button large outlined onClick={onClickSignUp}>SIGN UP</Button>
 
           <Button icon className={styles.btn_darkMode} onClick={onClickDarkMode}>
-            <DarkModeIcon />
+            <Icon type="darkmode" width="50" height="50" color="#000" />
           </Button>
         </div>
       </div>

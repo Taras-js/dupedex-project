@@ -1,8 +1,9 @@
 import { AppDispatch } from '../../app/store';
-import { products } from '../../mock/product';
+import { productsMock } from '../../shared/mocks/productmock';
 import { productSlice } from './productSlice';
 
-export const searchProduct = (search: string) => (dispatch: AppDispatch) => {
-  const result = products.filter((product) => product.title.toLowerCase().includes(search.toLowerCase()));
-  dispatch(productSlice.actions.setProducts(result));
+export const setProduct = () => async (dispatch: AppDispatch) => {
+  await setTimeout(() => {
+    dispatch(productSlice.actions.setProducts(productsMock));
+  }, 500);
 };

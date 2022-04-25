@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styles from './layoutitem.module.css';
 
 interface LayoutItemProps {
@@ -12,7 +10,7 @@ const LayoutItem = (props: LayoutItemProps) => {
   const { children, itemWidth, noResize = false } = props;
 
   return (
-    <div style={{ width: itemWidth < 1 ? `${itemWidth * 100}%` : itemWidth, flexShrink: !noResize ? 1 : 0 }} className={styles.item}>
+    <div style={{ width: itemWidth <= 1 ? `${itemWidth * 100}%` : itemWidth, flexShrink: !noResize ? 1 : 0 }} className={styles.item}>
       {children}
     </div>
   );
