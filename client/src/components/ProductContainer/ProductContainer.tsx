@@ -5,6 +5,7 @@ import { productsMock } from '../../shared/mocks/productmock';
 
 import styles from './productContainer.module.css';
 import { ProductContent } from '../../shared/types';
+import { ReviewItem } from './ReviewItem';
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
@@ -24,8 +25,7 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
         {isReviewShown && (
         <Panel padding={16} className={styles.products__panel}>
-          <h3>Review</h3>
-          {productsMock.find((item) => item.id === currentItemId).Details}
+          <ReviewItem id={currentItemId} />
         </Panel>
         )}
       </div>
@@ -35,7 +35,7 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
     <div className={styles.product__container}>
       {productList.map((item) => (
         <Panel key={item.id} className={styles.products__panel}>
-          <ProductItem id={item.id} filter={filter} />
+          <ProductItem isShowClose id={item.id} filter={filter} />
         </Panel>
       ))}
     </div>
