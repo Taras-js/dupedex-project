@@ -25,6 +25,15 @@
   --color-share_pink: rgba(255, 195, 200, 0.74);
   --color-share_blue: rgba(219, 245, 255, 0.74);
 
+  --color-negative_red: rgb(255, 159, 176);
+  --color-negative_red-dark: rgb(255, 119, 136);
+
+  --color-positive_green: rgb(143, 239, 186);
+  --color-positive_green-dark: rgb(103, 239, 146);
+
+  --color-neutral_yellow: rgb(248, 226, 166);
+  --color-neutral_yellow-dark: rgb(248, 186, 126);
+
   --color-darkmode-circle: #f4cac6;
 
   --color-main-bg: #fffbfb;

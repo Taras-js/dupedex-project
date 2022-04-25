@@ -15,7 +15,7 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
   if (productList.length === 1) {
     return (
-      <>
+      <div className={styles.product__container}>
         {productList.map((item) => (
           <Panel key={item.id} className={styles.products__panel}>
             <ProductItem id={item.id} filter={filter} />
@@ -23,22 +23,22 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
         ))}
 
         {isReviewShown && (
-        <Panel padding={16}>
+        <Panel padding={16} className={styles.products__panel}>
           <h3>Review</h3>
           {productsMock.find((item) => item.id === currentItemId).Details}
         </Panel>
         )}
-      </>
+      </div>
 
     );
   } return (
-    <>
+    <div className={styles.product__container}>
       {productList.map((item) => (
         <Panel key={item.id} className={styles.products__panel}>
           <ProductItem id={item.id} filter={filter} />
         </Panel>
       ))}
-    </>
+    </div>
   );
 };
 
