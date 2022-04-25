@@ -9,7 +9,7 @@ interface ProductProps {
   filter?: Filter;
 }
 
-function ProductItem(props: ProductProps) {
+const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const { id, filter } = props;
 
   const item = productsMock.find((itemToFind) => itemToFind.id === id);
@@ -48,6 +48,6 @@ function ProductItem(props: ProductProps) {
 
     </div>
   );
-}
+};
 
 export default ProductItem;
