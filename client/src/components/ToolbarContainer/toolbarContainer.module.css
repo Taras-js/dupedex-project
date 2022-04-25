@@ -3,11 +3,67 @@
   justify-content: space-between;
   width: 100%;
 }
-
 .container :not(:last-child) {
-  margin-left: 5px;
   margin-right: 5px;
 }
+.container :not(:first-child) {
+  margin-left: 5px;
+}
+
+.toolbar__btn:hover {
+  color: var(--color-grey-dark);
+}
+.toolbar__btn:hover > svg {
+  fill: var(--color-grey-dark);
+}
+
+.toolbar__btn_tutorial:hover > svg {
+  /* fill: var(--color-grey-dark); */
+}
+
+.toolbar__btn_prevstep:hover > svg {
+  /* fill: var(--color-grey-dark); */
+}
+
+.toolbar__btn_nextstep:hover > svg {
+  /* fill: var(--color-grey-dark); */
+}
+
+.toolbar__btn_showreviews:hover > svg {
+  fill: var(--color-neutral_yellow-dark);
+}
+.toolbar__btn_showreviews_active > svg {
+  fill: var(--color-neutral_yellow);
+}
+
+.toolbar__btn_positive:hover > svg {
+  fill: var(--color-positive_green-dark);
+}
+.toolbar__btn_positive_active > svg {
+  fill: var(--color-positive_green);
+}
+
+.toolbar__btn_negative:hover > svg {
+  fill: var(--color-negative_red-dark);
+}
+.toolbar__btn_negative_active > svg {
+  fill: var(--color-negative_red);
+}
+
+.toolbar__btn_productclaims:hover > svg {
+  fill: var(--color-neutral_yellow-dark);
+}
+.toolbar__btn_productclaims:hover > svg {
+  fill: var(--color-neutral_yellow-dark);
+}
+
+.toolbar__btn_writenotes:hover > svg {
+  fill: var(--color-neutral_yellow-dark);
+}
+.toolbar__btn_writenotes:hover > svg {
+  fill: var(--color-neutral_yellow-dark);
+}
+
 
 .divider {
   width: 0.5px;

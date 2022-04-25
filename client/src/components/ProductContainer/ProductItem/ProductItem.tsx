@@ -11,7 +11,7 @@ interface ProductProps {
   filter?: Filter;
 }
 
-function ProductItem(props: ProductProps) {
+const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const { id, filter } = props;
   const dispatch = useAppDispatch();
   const onSelectProduct = () => {
@@ -54,6 +54,6 @@ function ProductItem(props: ProductProps) {
 
     </button>
   );
-}
+};
 
 export default ProductItem;

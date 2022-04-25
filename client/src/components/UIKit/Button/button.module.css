@@ -8,7 +8,7 @@
     padding: 0;
     border-radius: 7px;
     text-align: center;
-
+    font-size: var(--btn-font-size);
     white-space: nowrap;
 
     transition-property: color, background-color, text-decoration, transform;
@@ -101,8 +101,12 @@
     background-color: var(--color-beige-dark);
 }
 
-/* .btn_icon {
-} */
+.btn_icon {
+    --btn-font-size: 25px;
+
+    display: flex;
+    align-items: center;
+}
 
 .btn:disabled {
     opacity: 0.7;
