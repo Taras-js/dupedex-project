@@ -1,6 +1,8 @@
+import { useAppDispatch } from '../../../app/hooks';
 import { productsMock } from '../../../shared/mocks/productmock';
 import { Filter } from '../../../shared/types';
 import { getReviews } from '../../../utils/helper';
+import { showItem } from '../../ToolbarContainer/toolbarSlice';
 
 import styles from './productItem.module.css';
 
@@ -11,14 +13,18 @@ interface ProductProps {
 
 function ProductItem(props: ProductProps) {
   const { id, filter } = props;
+  const dispatch = useAppDispatch();
+  const onSelectProduct = () => {
+    dispatch(showItem([id]));
+  };
 
   const item = productsMock.find((itemToFind) => itemToFind.id === id);
 
   const reviews = getReviews(item.reviews);
 
   return (
-    <div key={id} className={styles.products__item}>
-      <a href={item.prod_link}><img className={styles.img__link} src={item.img_link} alt={item.prod_link} /></a>
+    <button key={id} className={styles.products__item} onClick={onSelectProduct}>
+      <div><img className={styles.img__link} src={item.img_link} alt={item.prod_link} /></div>
       <h3 className={styles.heading}>
         {item.brand_name}
       </h3>
@@ -46,7 +52,7 @@ function ProductItem(props: ProductProps) {
         .reduce((acc, value) => acc + value)
         .toFixed(2)}
 
-    </div>
+    </button>
   );
 }
 

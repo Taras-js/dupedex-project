@@ -4,10 +4,6 @@
     --btn-font-size: 18px;
     --btn-gap-size: 10px;
 
-    background-color: transparent;
-    border: none;
-    outline: none;
-
     color: var(--color-txt);
     padding: 0;
     border-radius: 7px;
