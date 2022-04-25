@@ -107,6 +107,9 @@
     display: flex;
     align-items: center;
 }
+.btn_icon > svg + span {
+    padding-left: 16px;
+}
 
 .btn:disabled {
     opacity: 0.7;

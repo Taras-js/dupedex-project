@@ -61,6 +61,10 @@ export const toolbarSlice = createSlice({
       state.itemsIdList = action.payload;
       saveStep(state);
     },
+    removeItem: (state, action: { type: '', payload: number }) => {
+      state.itemsIdList = state.itemsIdList.filter((id) => id !== action.payload);
+      saveStep(state);
+    },
     posReviews: (state) => {
       if (state.filter !== Filter.positive) state.filter = Filter.positive;
       else state.filter = null;
@@ -85,7 +89,7 @@ export const toolbarSlice = createSlice({
 });
 
 export const {
-  showItem, posReviews, negReviews, showOrHideReviews, previousStep, followingStep,
+  showItem, removeItem, posReviews, negReviews, showOrHideReviews, previousStep, followingStep,
 } = toolbarSlice.actions;
 
 export const productState = (state: AppState) => state.product;

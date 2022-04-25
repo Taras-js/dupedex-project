@@ -2,7 +2,6 @@ import classnames from 'classnames';
 import { Button, Icon } from '../UIKit';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
-  showItem,
   posReviews,
   negReviews,
   showOrHideReviews,
@@ -54,11 +53,6 @@ const ToolbarContainer = () => {
 
   const onSaveClick = () => {};
   const onSaveClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_save);
-
-  const onButtonClick1Click = () => { dispatch(showItem([1])); };
-  const onButtonClick2Click = () => { dispatch(showItem([1, 2])); };
-  const onButtonClick3Click = () => { dispatch(showItem([1, 2, 3])); };
-  const onButtonClick4Click = () => { dispatch(showItem([1, 2, 3, 4])); };
 
   return (
     <div className={styles.container}>
@@ -134,30 +128,13 @@ const ToolbarContainer = () => {
 
       <Divider />
 
-      <div>
-        <Button onClick={onButtonClick1Click}>
-          1
-        </Button>
-        <Button onClick={onButtonClick2Click}>
-          2
-        </Button>
-        <Button onClick={onButtonClick3Click}>
-          3
-        </Button>
-        <Button onClick={onButtonClick4Click}>
-          4
-        </Button>
-      </div>
-
-      <Divider />
-
       <Button
         icon
         className={onShareClassName}
         onClick={onShareClick}
       >
         <Icon type="share" width={28} height={28} />
-        Share
+        <span>Share</span>
       </Button>
       <Button
         icon
@@ -165,7 +142,7 @@ const ToolbarContainer = () => {
         onClick={onSaveClick}
       >
         <Icon type="save" width={28} height={28} />
-        Save
+        <span>Save</span>
       </Button>
 
     </div>

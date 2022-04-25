@@ -39,7 +39,8 @@ function Button(props: ButtonProps) {
   };
   const btnStyle = classnames(classPropMap, className);
 
-  const handleClick = () => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
     if (onClick) onClick();
   };
 
