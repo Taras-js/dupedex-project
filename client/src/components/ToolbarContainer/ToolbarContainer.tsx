@@ -12,12 +12,15 @@ import {
 
 import styles from './toolbarContainer.module.css';
 import { Filter } from '../../shared/types';
+import { modalState, toggleModal } from '../UIKit/Modal/modalSlice';
+import { Modal } from '../UIKit/Modal';
 
 const Divider = () => (<div className={styles.divider} />);
 
 const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
   const product = useAppSelector(productState);
+  const modal = useAppSelector(modalState);
 
   const onTutorialClick = () => {};
   const onTutorialClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_tutorial);
@@ -48,7 +51,7 @@ const ToolbarContainer = () => {
   const onWriteNotesClick = () => {};
   const onWriteNotesClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_writenotes);
 
-  const onShareClick = () => {};
+  const onShareClick = () => { dispatch(toggleModal()); };
   const onShareClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_share);
 
   const onSaveClick = () => {};
@@ -145,6 +148,11 @@ const ToolbarContainer = () => {
         <span>Save</span>
       </Button>
 
+      {modal.isModalShown && (
+        <Modal onClose={() => { dispatch(toggleModal()); }}>
+          this is a modal
+        </Modal>
+      )}
     </div>
   );
 };

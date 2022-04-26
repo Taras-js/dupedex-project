@@ -2,12 +2,14 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
 import counterReducer from '../features/counter/counterSlice';
 import productReducer from '../components/ToolbarContainer/toolbarSlice';
+import modalReducer from '../components/UIKit/Modal/modalSlice';
 
 export function makeStore() {
   return configureStore({
     reducer: {
       counter: counterReducer,
       product: productReducer,
+      modal: modalReducer,
     },
   });
 }

@@ -12,6 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <Header />
       <Component {...pageProps} />
+      <div id="modal__root" />
     </Provider>
   );
 }

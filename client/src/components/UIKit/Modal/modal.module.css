@@ -1,0 +1,36 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.modal__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  min-width: 200px;
+  min-height: 160px;
+  max-width: 80%;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.content {
+  overflow-y: auto;
+}
+
+.close {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  margin: -24px;
+  color: #000
+}
