@@ -1,0 +1,119 @@
+/* Common styles */
+
+.ttp {
+    --ttp-font-size: 12px;
+    --ttp-gap-size: 10px;
+
+    display: flex;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+
+.ttp .ttp_text {
+    position: absolute;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 60px;
+    max-width: 110px;
+    background-color: #202020;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1.2rem;
+
+    padding: calc(1 * var(--ttp-gap-size)) calc(2 * var(--ttp-gap-size));;
+    transition: opacity .2s 0 ease;
+}
+
+.ttp:hover .ttp_text {
+    transition: opacity .4s 0.7s ease;
+    visibility: visible;
+    opacity: 1
+}
+
+.ttp_text_top {
+    left: 38%;
+    bottom: 130%;
+    transform: translateX(-50%);
+}
+
+.ttp_text_top:after {
+	content:"";
+    position: absolute;
+	width: 0;
+    height: 0;
+    border-width: 10px 16px 16px 16px;
+    border-style: solid;
+    border-color: #202020 transparent transparent transparent;
+    top: 98%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.ttp_text_bottom {
+    top: 170%;
+    left: 38%;
+    transform: translateX(-50%);
+}
+
+.ttp_text_bottom:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 16px 16px 10px 16px;
+    border-style: solid;
+    border-color: transparent transparent #202020 transparent;
+    bottom: 98%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.ttp_text_left {
+    right: 130%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    height: max-content;
+    align-self: center;
+}
+
+.ttp_text_left:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    border-width: 12px  12px 12px 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #202020;
+    top: 50%;
+    left: 98%;
+    transform: translateY(-50%); 
+}
+
+.ttp_text_right {
+    left: 130%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    height: max-content;
+    align-self: center;
+}
+
+.ttp_text_right:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    border-width: 12px 8px 12px 12px;
+    border-style: solid;
+    border-color: transparent #202020 transparent transparent;
+    top: 50%;
+    right: 98%;
+    transform: translateY(-50%); 
+}
+
+
+

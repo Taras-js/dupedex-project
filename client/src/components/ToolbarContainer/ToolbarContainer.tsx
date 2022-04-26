@@ -11,6 +11,7 @@ import {
 } from './toolbarSlice';
 
 import styles from './toolbarContainer.module.css';
+import { Tooltip } from '../UIKit/Tooltip';
 
 const Divider = () => (<div className={styles.divider} />);
 
@@ -35,36 +36,53 @@ const ToolbarContainer = () => {
 
   return (
     <div className={styles.container}>
-      <Button icon onClick={() => {}}>
-        <Icon type="tutorial" width={28} height={28} />
-      </Button>
+      <Tooltip placement="left" title='Tutorial'>
+        <Button icon onClick={() => {}}>
+          <Icon type="tutorial" width={28} height={28} />
+        </Button>
+      </Tooltip>
+      
 
       <Divider />
 
-      <Button icon onClick={onComeBack} isDisabled={isPrevDisabled}>
-        <Icon type="comeBack" width={28} height={28} />
-      </Button>
-      <Button icon onClick={onComeAhead} isDisabled={isNextDisabled}>
-        <Icon type="comeAhead" width={28} height={28} />
-      </Button>
+      <Tooltip title='undo'>
+        <Button icon onClick={onComeBack} isDisabled={isPrevDisabled}>
+          <Icon type="comeBack" width={28} height={28} />
+        </Button>
+      </Tooltip>
+      <Tooltip title='redo'>
+        <Button icon onClick={onComeAhead} isDisabled={isNextDisabled}>
+          <Icon type="comeAhead" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Button icon onClick={onShowReviews}>
-        <Icon type="showOrHideReviews" width={28} height={28} />
-      </Button>
-      <Button icon onClick={onShowPositive}>
-        <Icon type="positiveReviews" width={28} height={28} />
-      </Button>
-      <Button icon onClick={onShowNegative}>
-        <Icon type="negativeReviews" width={28} height={28} />
-      </Button>
-      <Button icon onClick={() => {}}>
-        <Icon type="productClaims" width={28} height={28} />
-      </Button>
-      <Button icon onClick={() => {}}>
-        <Icon type="writeNotes" width={28} height={28} />
-      </Button>
+      <Tooltip placement="bottom" title='Show/hide reviews'>
+        <Button icon onClick={onShowReviews}>
+          <Icon type="showOrHideReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
+      <Tooltip title='Positive reviews'>
+        <Button icon onClick={onShowPositive}>
+          <Icon type="positiveReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
+      <Tooltip title='Negative reviews'>
+        <Button icon onClick={onShowNegative}>
+          <Icon type="negativeReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
+      <Tooltip title='Product claims'>
+        <Button icon onClick={() => {}}>
+          <Icon type="productClaims" width={28} height={28} />
+        </Button>
+      </Tooltip>
+      <Tooltip placement="right" title='Write notes'>
+        <Button icon onClick={() => {}}>
+          <Icon type="writeNotes" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
@@ -84,15 +102,18 @@ const ToolbarContainer = () => {
       </div>
 
       <Divider />
-
-      <Button icon onClick={onButtonClick1}>
-        <Icon type="share" width={28} height={28} />
-        Share
-      </Button>
-      <Button icon onClick={onButtonClick2}>
-        <Icon type="save" width={28} height={28} />
-        Save
-      </Button>
+      <Tooltip title='Share library'>
+        <Button icon onClick={onButtonClick1}>
+          <Icon type="share" width={28} height={28} />
+          Share
+        </Button>
+      </Tooltip>
+      <Tooltip title='Share library'>
+        <Button icon onClick={onButtonClick2}>
+          <Icon type="save" width={28} height={28} />
+          Save
+        </Button>
+      </Tooltip>
 
     </div>
   );
