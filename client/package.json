@@ -8,6 +8,7 @@
     "test": "jest",
     "lint": "npx eslint . --fix"
   },
+  "proxy": "localhost:5000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.0.0",
     "@next/env": "^12.1.5",
