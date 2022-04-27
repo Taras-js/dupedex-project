@@ -1,6 +1,6 @@
-import classNames from 'classnames/bind';
+import classNames from "classnames/bind";
 
-export function combinedClass(styles, ...args) {
+export function cls(styles, ...args) {
   const sx = classNames.bind(styles);
   const className = sx(...args);
   return className;
