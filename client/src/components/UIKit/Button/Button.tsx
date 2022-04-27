@@ -1,5 +1,5 @@
-import { combinedClass } from '../../../utils/helper';
-import styles from './button.module.css';
+import { combinedClass } from "../../../utils/helper";
+import styles from "./button.module.css";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -30,13 +30,13 @@ function Button(props: ButtonProps) {
     btn_filled: filled,
     btn_outlined: outlined,
     btn_icon: icon,
-    btn_text: (!filled && !outlined && !icon),
+    btn_text: !filled && !outlined && !icon,
 
     btn_large: large,
     btn_small: small,
-    btn_medium: (!large && !small && !icon),
+    btn_medium: !large && !small && !icon,
   };
-  const btnStyle = combinedClass(styles, 'btn', className, classPropMap);
+  const btnStyle = combinedClass(styles, "btn", className, classPropMap);
 
   const handleClick = () => {
     if (onClick) onClick();

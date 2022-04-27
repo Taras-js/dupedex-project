@@ -1,5 +1,5 @@
-import { Button, Icon } from '../UIKit';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { Button, Icon } from "../UIKit";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
   showItem,
   posReviews,
@@ -8,27 +8,45 @@ import {
   previousStep,
   followingStep,
   productState,
-} from './toolbarSlice';
+} from "./toolbarSlice";
 
-import styles from './toolbarContainer.module.css';
+import styles from "./toolbarContainer.module.css";
 
-const Divider = () => (<div className={styles.divider} />);
+const Divider = () => <div className={styles.divider} />;
 
 const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
   const product = useAppSelector(productState);
 
-  const onComeBack = () => { dispatch(previousStep()); };
-  const onComeAhead = () => { dispatch(followingStep()); };
+  const onComeBack = () => {
+    dispatch(previousStep());
+  };
+  const onComeAhead = () => {
+    dispatch(followingStep());
+  };
 
-  const onButtonClick1 = () => { dispatch(showItem([1])); };
-  const onButtonClick2 = () => { dispatch(showItem([1, 2])); };
-  const onButtonClick3 = () => { dispatch(showItem([1, 2, 3])); };
-  const onButtonClick4 = () => { dispatch(showItem([1, 2, 3, 4])); };
+  const onButtonClick1 = () => {
+    dispatch(showItem([1]));
+  };
+  const onButtonClick2 = () => {
+    dispatch(showItem([1, 2]));
+  };
+  const onButtonClick3 = () => {
+    dispatch(showItem([1, 2, 3]));
+  };
+  const onButtonClick4 = () => {
+    dispatch(showItem([1, 2, 3, 4]));
+  };
 
-  const onShowPositive = () => { dispatch(posReviews()); };
-  const onShowNegative = () => { dispatch(negReviews()); };
-  const onShowReviews = () => { dispatch(showOrHideReviews()); };
+  const onShowPositive = () => {
+    dispatch(posReviews());
+  };
+  const onShowNegative = () => {
+    dispatch(negReviews());
+  };
+  const onShowReviews = () => {
+    dispatch(showOrHideReviews());
+  };
 
   const isPrevDisabled = product.historyStep === 1;
   const isNextDisabled = product.historyStep === product.history.length;
@@ -69,18 +87,10 @@ const ToolbarContainer = () => {
       <Divider />
 
       <div>
-        <Button onClick={onButtonClick1}>
-          1
-        </Button>
-        <Button onClick={onButtonClick2}>
-          2
-        </Button>
-        <Button onClick={onButtonClick3}>
-          3
-        </Button>
-        <Button onClick={onButtonClick4}>
-          4
-        </Button>
+        <Button onClick={onButtonClick1}>1</Button>
+        <Button onClick={onButtonClick2}>2</Button>
+        <Button onClick={onButtonClick3}>3</Button>
+        <Button onClick={onButtonClick4}>4</Button>
       </div>
 
       <Divider />
@@ -93,7 +103,6 @@ const ToolbarContainer = () => {
         <Icon type="save" width={28} height={28} />
         Save
       </Button>
-
     </div>
   );
 };
