@@ -36,53 +36,50 @@ const ToolbarContainer = () => {
 
   return (
     <div className={styles.container}>
-      <Tooltip placement="left" title='Tutorial'>
+      <Tooltip placement="top" title='Tutorial'>
         <Button icon onClick={() => {}}>
           <Icon type="tutorial" width={28} height={28} />
         </Button>
       </Tooltip>
+      
       
 
       <Divider />
 
       <Tooltip title='undo'>
         <Button icon onClick={onComeBack} isDisabled={isPrevDisabled}>
-          <Icon type="comeBack" width={28} height={28} />
+            <Icon type="comeBack" width={28} height={28} />
         </Button>
       </Tooltip>
-      <Tooltip title='redo'>
+    
+      <Tooltip placement="bottom" title='redo'>
         <Button icon onClick={onComeAhead} isDisabled={isNextDisabled}>
           <Icon type="comeAhead" width={28} height={28} />
         </Button>
       </Tooltip>
+      
 
       <Divider />
-
-      <Tooltip placement="bottom" title='Show/hide reviews'>
+      <Tooltip title='Show/hide reviews'>
         <Button icon onClick={onShowReviews}>
           <Icon type="showOrHideReviews" width={28} height={28} />
         </Button>
       </Tooltip>
-      <Tooltip title='Positive reviews'>
         <Button icon onClick={onShowPositive}>
           <Icon type="positiveReviews" width={28} height={28} />
         </Button>
-      </Tooltip>
-      <Tooltip title='Negative reviews'>
+
+      
         <Button icon onClick={onShowNegative}>
           <Icon type="negativeReviews" width={28} height={28} />
         </Button>
-      </Tooltip>
-      <Tooltip title='Product claims'>
+      
         <Button icon onClick={() => {}}>
           <Icon type="productClaims" width={28} height={28} />
         </Button>
-      </Tooltip>
-      <Tooltip placement="right" title='Write notes'>
         <Button icon onClick={() => {}}>
           <Icon type="writeNotes" width={28} height={28} />
         </Button>
-      </Tooltip>
 
       <Divider />
 

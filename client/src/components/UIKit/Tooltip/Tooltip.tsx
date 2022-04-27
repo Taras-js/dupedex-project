@@ -1,7 +1,5 @@
-import { useRef } from 'react';
 import { combinedClass } from '../../../utils/helper';
 import styles from './tooltip.module.css';
-
 
 interface TooltipProps {
     children: React.ReactNode,
@@ -12,15 +10,14 @@ interface TooltipProps {
     textSize?: string
 }
 
-const placemenTypes = {
-    top: 'ttp_text_top',
-    left: 'ttp_text_left',
-    right: 'ttp_text_right',
-    bottom: 'ttp_text_bottom'
-}
+enum placemenTypes {
+    top = 'tooltip__top',
+    left = 'tooltip__left',
+    right = 'tooltip__right',
+    bottom = 'tooltip__bottom',
+    }
 
-function Tooltip(props: TooltipProps) {
-    const refSpantext = useRef<HTMLSpanElement>(null)
+const Tooltip:React.FC<TooltipProps> = (props: TooltipProps) => {
     const {
         children,
         className,
@@ -30,19 +27,24 @@ function Tooltip(props: TooltipProps) {
         textSize = "16"
     } = props
 
-
-    if (null !== refSpantext.current) {
-        refSpantext.current.style.fontSize = `${textSize}px`;
-        refSpantext.current.style.backgroundColor = bgColor;
+    const arrowColorGenerator = (placement:string) => {
+        const placementArray:Array<string> = ['top', 'right', 'bottom', 'left']
+        let arrowColor:string = placementArray.map((el) => el == placement ? bgColor : 'transparent').join(' ')
+        return arrowColor
     }
-    
-    const ttpStyle = combinedClass(styles, 'ttp', className)
-    const ttpTextStyle = combinedClass(styles, 'ttp_text', placemenTypes[`${placement}`])
+
+    const tooltipStyle = combinedClass(styles, 'tooltip', className, placemenTypes[`${placement}`])
+    const tooltipTextStyle = combinedClass(styles, 'tooltip__text')
 
     return (
-        <div className={ttpStyle}>
-                <span ref={refSpantext} className={ttpTextStyle}>{title}</span>
+        <div className={combinedClass(styles, 'tooltip__wrapper')}>
             {children}
+            <div className={tooltipStyle}>
+                <div style={{fontSize:textSize, backgroundColor: bgColor}} className={tooltipTextStyle}>
+                    {title}
+                    <span style={{borderColor: `${arrowColorGenerator(placement)}`}} className={combinedClass(styles, 'tooltip__arrow', `tooltip__arrow_${placement}`)}></span>
+                </div>
+            </div>
         </div>
     )
 }
