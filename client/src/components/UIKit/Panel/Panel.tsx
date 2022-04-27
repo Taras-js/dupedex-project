@@ -1,4 +1,4 @@
-import { combinedClass } from "../../../utils/helper";
+import { cls } from "../../../utils/helper";
 import styles from "./panel.module.css";
 
 interface PanelProps {
@@ -10,7 +10,7 @@ interface PanelProps {
 const Panel: React.FC<PanelProps> = (props: PanelProps) => {
   const { children, padding = 0, className } = props;
 
-  const panelClass = combinedClass(styles, "panel", className);
+  const panelClass = cls(styles, "panel", className);
 
   return (
     <div className={panelClass} style={{ padding }}>
