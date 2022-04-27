@@ -18,15 +18,12 @@
 }
 
 .toolbar__btn_tutorial:hover > svg {
-  /* fill: var(--color-grey-dark); */
 }
 
 .toolbar__btn_prevstep:hover > svg {
-  /* fill: var(--color-grey-dark); */
 }
 
 .toolbar__btn_nextstep:hover > svg {
-  /* fill: var(--color-grey-dark); */
 }
 
 .toolbar__btn_showreviews:hover > svg {
