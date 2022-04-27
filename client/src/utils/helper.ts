@@ -1,3 +1,11 @@
+import classNames from "classnames/bind";
+
+export function cls(styles, ...args) {
+  const sx = classNames.bind(styles);
+  const className = sx(...args);
+  return className;
+}
+
 export function sort(array: Array<any>, key: any): Array<any> {
   const sortedArray = array.sort((a, b) => (a[key] < b[key] ? 1 : -1));
 

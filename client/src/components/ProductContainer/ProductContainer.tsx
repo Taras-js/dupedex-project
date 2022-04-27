@@ -1,11 +1,11 @@
-import { Panel } from '../UIKit';
-import { ProductItem } from './ProductItem';
+import { Panel } from "../UIKit";
+import { ProductItem } from "./ProductItem";
+import { ReviewItem } from './ReviewItem';
 
-import { productsMock } from '../../shared/mocks/productmock';
+import { ProductContent } from "../../shared/types";
+import { productsMock } from "../../shared/mocks/productmock";
 
 import styles from './productContainer.module.css';
-import { ProductContent } from '../../shared/types';
-import { ReviewItem } from './ReviewItem';
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {

@@ -1,5 +1,6 @@
-import classnames from 'classnames';
-import styles from './button.module.css';
+import { cls } from "../../../utils/helper";
+
+import styles from "./button.module.css";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -26,18 +27,17 @@ function Button(props: ButtonProps) {
     isDisabled,
   } = props;
 
-  const classPropMap = {
-    [styles.btn]: true,
-    [styles.btn_filled]: filled,
-    [styles.btn_outlined]: outlined,
-    [styles.btn_icon]: icon,
-    [styles.btn_text]: (!filled && !outlined && !icon),
+  const btnClassMap = {
+    btn_filled: filled,
+    btn_outlined: outlined,
+    btn_icon: icon,
+    btn_text: !filled && !outlined && !icon,
 
-    [styles.btn_large]: large,
-    [styles.btn_small]: small,
-    [styles.btn_medium]: (!large && !small && !icon),
+    btn_large: large,
+    btn_small: small,
+    btn_medium: !large && !small && !icon,
   };
-  const btnStyle = classnames(classPropMap, className);
+  const btnStyle = cls(styles, "btn", btnClassMap, className);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();

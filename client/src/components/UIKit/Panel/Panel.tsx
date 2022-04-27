@@ -1,5 +1,6 @@
-import classNames from 'classnames';
-import styles from './panel.module.css';
+import { cls } from "../../../utils/helper";
+
+import styles from "./panel.module.css";
 
 interface PanelProps {
   children: React.ReactNode;
@@ -10,7 +11,7 @@ interface PanelProps {
 const Panel: React.FC<PanelProps> = (props: PanelProps) => {
   const { children, padding = 0, className } = props;
 
-  const panelClass = classNames(styles.panel, className);
+  const panelClass = cls(styles, "panel", className);
 
   return (
     <div className={panelClass}>
