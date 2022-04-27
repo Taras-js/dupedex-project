@@ -1,7 +1,8 @@
+import { toggleReviews } from '../../ToolbarContainer/toolbarSlice';
+import { Button, Icon } from '../../UIKit';
+
 import { useAppDispatch } from '../../../app/hooks';
 import { productsMock } from '../../../shared/mocks/productmock';
-import { showOrHideReviews } from '../../ToolbarContainer/toolbarSlice';
-import { Button, Icon } from '../../UIKit';
 
 import styles from './reviewItem.module.css';
 
@@ -13,7 +14,7 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
   const { id } = props;
   const dispatch = useAppDispatch();
 
-  const onShowReviewsClick = () => { dispatch(showOrHideReviews()); };
+  const onShowReviewsClick = () => { dispatch(toggleReviews()); };
 
   return (
     <div className={styles.review__container}>
@@ -25,7 +26,7 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
         className={styles.close_btn}
         onClick={onShowReviewsClick}
       >
-        <Icon type="showOrHideReviews" width={28} height={28} />
+        <Icon type="toggleReviews" width={28} height={28} />
       </Button>
     </div>
   );

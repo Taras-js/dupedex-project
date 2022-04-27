@@ -3,7 +3,7 @@ import { showItem, removeItem } from "../../ToolbarContainer/toolbarSlice";
 import { getLabels } from '../../../utils/helper';
 
 import { Button, Icon } from '../../UIKit';
-import { LabelItem } from '../LabelItem';
+import { LabelList } from '../LabelList';
 
 import { productsMock } from "../../../shared/mocks/productmock";
 import { Filter } from "../../../shared/types";
@@ -34,9 +34,8 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
 
   return (
     <div key={id} className={styles.products__item}>
-      <button onClick={onSelectProduct}>
+      <button className={styles.products__img} onClick={onSelectProduct}>
         <img
-          className={styles.img__link}
           src={item.img_link}
           alt={item.prod_link}
         />
@@ -51,7 +50,11 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
         {item.prod_name}
       </h4>
 
-      <LabelItem labels={labels} filter={filter} />
+      <LabelList
+        labels={labels}
+        filter={filter}
+        maxQuantity={9}
+      />
 
       {isShowClose && (
         <Button
