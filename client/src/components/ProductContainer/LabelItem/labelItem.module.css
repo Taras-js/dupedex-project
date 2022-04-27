@@ -1,11 +1,3 @@
-.review_taglist {
-    display: block;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
 .review__tag {
     display: flex;
     justify-content: space-between;
