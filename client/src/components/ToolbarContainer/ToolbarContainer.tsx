@@ -1,6 +1,6 @@
-import classnames from 'classnames';
-import { Button, Icon } from '../UIKit';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { cls } from "../../utils/helper";
+import { Button, Icon } from "../UIKit";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
   posReviews,
   negReviews,
@@ -8,51 +8,51 @@ import {
   previousStep,
   followingStep,
   productState,
-} from './toolbarSlice';
+} from "./toolbarSlice";
+import { Filter } from "../../shared/types";
 
-import styles from './toolbarContainer.module.css';
-import { Filter } from '../../shared/types';
+import styles from "./toolbarContainer.module.css";
 
-const Divider = () => (<div className={styles.divider} />);
+const Divider = () => <div className={styles.divider} />;
 
 const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
   const product = useAppSelector(productState);
 
   const onTutorialClick = () => {};
-  const onTutorialClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_tutorial);
+  const onTutorialClassName = cls(styles, "toolbar__btn", "toolbar__btn_tutorial");
 
   const isPrevDisabled = product.historyStep === 1;
   const onPrevStepClick = () => { dispatch(previousStep()); };
-  const onPrevStepClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_prevstep);
+  const onPrevStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_prevstep");
 
   const isNextDisabled = product.historyStep === product.history.length;
   const onNextStepClick = () => { dispatch(followingStep()); };
-  const onNextStepClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_nextstep);
+  const onNextStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_nextstep");
 
   const isReviewShown = product.isReviewShown === false;
   const onShowReviewsClick = () => { dispatch(showOrHideReviews()); };
-  const onShowReviewsClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_showreviews, { [styles.toolbar__btn_showreviews_active]: isReviewShown });
+  const onShowReviewsClassName = cls(styles, "toolbar__btn", "toolbar__btn_showreviews", { toolbar__btn_showreviews_active: isReviewShown });
 
   const isPositive = product.filter === Filter.positive;
   const onShowPositiveClick = () => { dispatch(posReviews()); };
-  const onShowPositiveClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_positive, { [styles.toolbar__btn_positive_active]: isPositive });
+  const onShowPositiveClassName = cls(styles, "toolbar__btn", "toolbar__btn_positive", { toolbar__btn_positive_active: isPositive });
 
   const isNegative = product.filter === Filter.negative;
   const onShowNegativeClick = () => { dispatch(negReviews()); };
-  const onShowNegativeClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_negative, { [styles.toolbar__btn_negative_active]: isNegative });
+  const onShowNegativeClassName = cls(styles, "toolbar__btn", "toolbar__btn_negative", { toolbar__btn_negative_active: isNegative });
 
   const onProductClaimsClick = () => {};
-  const onProductClaimsClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_productclaims);
+  const onProductClaimsClassName = cls(styles, "toolbar__btn", "toolbar__btn_productclaims");
 
   const onWriteNotesClick = () => {};
-  const onWriteNotesClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_writenotes);
+  const onWriteNotesClassName = cls(styles, "toolbar__btn", "toolbar__btn_writenotes");
 
   const onShareClick = () => {};
-  const onShareClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_share);
+  const onShareClassName = cls(styles, "toolbar__btn", "toolbar__btn_share");
 
   const onSaveClick = () => {};
-  const onSaveClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_save);
+  const onSaveClassName = cls(styles, "toolbar__btn", "toolbar__btn_save");
 
   return (
     <div className={styles.container}>
@@ -144,7 +144,6 @@ const ToolbarContainer = () => {
         <Icon type="save" width={28} height={28} />
         <span>Save</span>
       </Button>
-
     </div>
   );
 };

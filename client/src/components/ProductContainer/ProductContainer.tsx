@@ -1,10 +1,10 @@
-import { Panel } from '../UIKit';
-import { ProductItem } from './ProductItem';
+import { Panel } from "../UIKit";
+import { ProductItem } from "./ProductItem";
 
-import { productsMock } from '../../shared/mocks/productmock';
+import { productsMock } from "../../shared/mocks/productmock";
 
-import styles from './productContainer.module.css';
-import { ProductContent } from '../../shared/types';
+import styles from "./productContainer.module.css";
+import { ProductContent } from "../../shared/types";
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
@@ -23,10 +23,10 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
         ))}
 
         {isReviewShown && (
-        <Panel padding={16} className={styles.products__panel}>
-          <h3>Review</h3>
-          {productsMock.find((item) => item.id === currentItemId).Details}
-        </Panel>
+          <Panel padding={16} className={styles.products__panel}>
+            <h3>Review</h3>
+            {productsMock.find((item) => item.id === currentItemId).Details}
+          </Panel>
         )}
       </div>
 

@@ -1,4 +1,4 @@
-@import url('../fonts/fonts.css');
+@import url("../fonts/fonts.css");
 
 :root {
   --color-white: #ffffff;
@@ -13,7 +13,7 @@
 
   --color-peach: rgb(249, 228, 226);
   --color-peach-dark: rgb(249, 218, 216);
-  
+
   --color-turquoise: rgb(199, 232, 235);
   --color-turquoise-dark: rgb(179, 232, 235);
   --color-turquoise-darker: rgb(159, 232, 235);
@@ -38,13 +38,13 @@
 
   --color-main-bg: #fffbfb;
 
-  --color-txt:  #585858;
-  --color-txt-dark:  #383838;
+  --color-txt: #585858;
+  --color-txt-dark: #383838;
   --color-txt-white: #f7fcff;
 
   --container-padding: 50px;
-  --header-height: 95px;
-  --header-padding: 8px;
+  --header-height: 80px;
+  --header-padding: 16px;
 
   --heading-font-size: 77px;
   --text-font-size: 25px;
@@ -57,7 +57,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 

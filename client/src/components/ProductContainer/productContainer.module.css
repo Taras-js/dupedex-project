@@ -4,5 +4,5 @@
 }
 
 .products__panel:not(:last-child) {
-    margin-right: var(--horizontal-gap);
+  margin-right: var(--horizontal-gap);
 }
