@@ -1,10 +1,10 @@
 import { Panel } from "../UIKit";
 import { ProductItem } from "./ProductItem";
 
+import { ProductContent } from "../../shared/types";
 import { productsMock } from "../../shared/mocks/productmock";
 
 import styles from "./productContainer.module.css";
-import { ProductContent } from "../../shared/types";
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {

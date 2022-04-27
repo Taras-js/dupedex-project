@@ -1,4 +1,5 @@
 import { cls } from "../../../utils/helper";
+
 import styles from "./panel.module.css";
 
 interface PanelProps {

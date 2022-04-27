@@ -2,8 +2,9 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 
 import type { AppState } from "../../app/store";
-import { itemsIdListMock } from "../../shared/mocks/consts";
+
 import { Filter, ProductContent } from "../../shared/types";
+import { itemsIdListMock } from "../../shared/mocks/consts";
 
 export interface ProductState extends ProductContent {
   history: ProductContent[];
@@ -60,7 +61,7 @@ export const toolbarSlice = createSlice({
       state.isReviewShown = !state.isReviewShown;
       saveStep(state);
     },
-    getHistoryStep: (state, action: { type: '', payload: number }) => {
+    getHistoryStep: (state, action: { type: '', payload: 1 | -1 }) => {
       state.historyStep += action.payload;
       state.currentItemId = current(state.history)[state.historyStep - 1].currentItemId;
       state.itemsIdList = current(state.history)[state.historyStep - 1].itemsIdList;

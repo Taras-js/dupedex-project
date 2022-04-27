@@ -1,8 +1,9 @@
 import { useAppDispatch } from "../../../app/hooks";
+import { showItem } from "../../ToolbarContainer/toolbarSlice";
+import { getReviews } from "../../../utils/helper";
+
 import { productsMock } from "../../../shared/mocks/productmock";
 import { Filter } from "../../../shared/types";
-import { getReviews } from "../../../utils/helper";
-import { showItem } from "../../ToolbarContainer/toolbarSlice";
 
 import styles from "./productItem.module.css";
 
