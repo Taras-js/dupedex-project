@@ -2,11 +2,9 @@ import { cls } from "../../utils/helper";
 import { Button, Icon } from "../UIKit";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
-  posReviews,
-  negReviews,
+  setFilter,
   toggleReviews,
-  previousStep,
-  followingStep,
+  getHistoryStep,
   productState,
 } from "./toolbarSlice";
 import { Filter } from "../../shared/types";
@@ -19,47 +17,47 @@ const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
   const product = useAppSelector(productState);
 
-  const onTutorialClick = () => {};
-  const onTutorialClassName = cls(styles, "toolbar__btn", "toolbar__btn_tutorial");
+  const onShowTutorial = () => {};
+  const onShowTutorialClassName = cls(styles, "toolbar__btn", "toolbar__btn_tutorial");
 
   const isPrevDisabled = product.historyStep === 1;
-  const onPrevStepClick = () => { dispatch(previousStep()); };
-  const onPrevStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_prevstep");
+  const onGetPrevStep = () => { dispatch(getHistoryStep(-1)); };
+  const onGetPrevStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_prev_step");
 
   const isNextDisabled = product.historyStep === product.history.length;
-  const onNextStepClick = () => { dispatch(followingStep()); };
-  const onNextStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_nextstep");
+  const onGetNextStep = () => { dispatch(getHistoryStep(+1)); };
+  const onGetNextStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_next_step");
 
   const isReviewShown = product.isReviewShown === false;
-  const onToggleReviewsClick = () => { dispatch(toggleReviews()); };
+  const onToggleReviews = () => { dispatch(toggleReviews()); };
   const onToggleReviewsClassName = cls(styles, "toolbar__btn", "toolbar__btn_toggle_reviews", { toolbar__btn_toggle_reviews_active: isReviewShown });
 
   const isPositive = product.filter === Filter.positive;
-  const onShowPositiveClick = () => { dispatch(posReviews()); };
-  const onShowPositiveClassName = cls(styles, "toolbar__btn", "toolbar__btn_positive", { toolbar__btn_positive_active: isPositive });
+  const onFilterPositive = () => { dispatch(setFilter(Filter.positive)); };
+  const onFilterPositiveClassName = cls(styles, "toolbar__btn", "toolbar__btn_positive", { toolbar__btn_positive_active: isPositive });
 
   const isNegative = product.filter === Filter.negative;
-  const onShowNegativeClick = () => { dispatch(negReviews()); };
-  const onShowNegativeClassName = cls(styles, "toolbar__btn", "toolbar__btn_negative", { toolbar__btn_negative_active: isNegative });
+  const onFilterNegative = () => { dispatch(setFilter(Filter.negative)); };
+  const onFilterNegativeClassName = cls(styles, "toolbar__btn", "toolbar__btn_negative", { toolbar__btn_negative_active: isNegative });
 
-  const onProductClaimsClick = () => {};
-  const onProductClaimsClassName = cls(styles, "toolbar__btn", "toolbar__btn_productclaims");
+  const onShowProductClaims = () => {};
+  const onShowProductClaimsClassName = cls(styles, "toolbar__btn", "toolbar__btn_product_claims");
 
-  const onWriteNotesClick = () => {};
-  const onWriteNotesClassName = cls(styles, "toolbar__btn", "toolbar__btn_writenotes");
+  const onWriteNotes = () => {};
+  const onWriteNotesClassName = cls(styles, "toolbar__btn", "toolbar__btn_write_notes");
 
-  const onShareClick = () => {};
-  const onShareClassName = cls(styles, "toolbar__btn", "toolbar__btn_share");
+  const onShareLibrary = () => {};
+  const onShareLibraryClassName = cls(styles, "toolbar__btn", "toolbar__btn_share");
 
-  const onSaveClick = () => {};
-  const onSaveClassName = cls(styles, "toolbar__btn", "toolbar__btn_save");
+  const onSaveLibrary = () => {};
+  const onSaveLibraryClassName = cls(styles, "toolbar__btn", "toolbar__btn_save");
 
   return (
     <div className={styles.container}>
       <Button
         icon
-        className={onTutorialClassName}
-        onClick={onTutorialClick}
+        className={onShowTutorialClassName}
+        onClick={onShowTutorial}
       >
         <Icon type="tutorial" width={28} height={28} />
       </Button>
@@ -68,8 +66,8 @@ const ToolbarContainer = () => {
 
       <Button
         icon
-        className={onPrevStepClassName}
-        onClick={onPrevStepClick}
+        className={onGetPrevStepClassName}
+        onClick={onGetPrevStep}
         isDisabled={isPrevDisabled}
       >
         <Icon type="comeBack" width={28} height={28} />
@@ -77,8 +75,8 @@ const ToolbarContainer = () => {
 
       <Button
         icon
-        className={onNextStepClassName}
-        onClick={onNextStepClick}
+        className={onGetNextStepClassName}
+        onClick={onGetNextStep}
         isDisabled={isNextDisabled}
       >
         <Icon type="comeAhead" width={28} height={28} />
@@ -89,31 +87,31 @@ const ToolbarContainer = () => {
       <Button
         icon
         className={onToggleReviewsClassName}
-        onClick={onToggleReviewsClick}
+        onClick={onToggleReviews}
       >
         <Icon type="toggleReviews" width={28} height={28} />
       </Button>
 
       <Button
         icon
-        className={onShowPositiveClassName}
-        onClick={onShowPositiveClick}
+        className={onFilterPositiveClassName}
+        onClick={onFilterPositive}
       >
         <Icon type="positiveReviews" width={28} height={28} />
       </Button>
 
       <Button
         icon
-        className={onShowNegativeClassName}
-        onClick={onShowNegativeClick}
+        className={onFilterNegativeClassName}
+        onClick={onFilterNegative}
       >
         <Icon type="negativeReviews" width={28} height={28} />
       </Button>
 
       <Button
         icon
-        className={onProductClaimsClassName}
-        onClick={onProductClaimsClick}
+        className={onShowProductClaimsClassName}
+        onClick={onShowProductClaims}
       >
         <Icon type="productClaims" width={28} height={28} />
       </Button>
@@ -121,7 +119,7 @@ const ToolbarContainer = () => {
       <Button
         icon
         className={onWriteNotesClassName}
-        onClick={onWriteNotesClick}
+        onClick={onWriteNotes}
       >
         <Icon type="writeNotes" width={28} height={28} />
       </Button>
@@ -130,16 +128,16 @@ const ToolbarContainer = () => {
 
       <Button
         icon
-        className={onShareClassName}
-        onClick={onShareClick}
+        className={onShareLibraryClassName}
+        onClick={onShareLibrary}
       >
         <Icon type="share" width={28} height={28} />
         <span>Share</span>
       </Button>
       <Button
         icon
-        className={onSaveClassName}
-        onClick={onSaveClick}
+        className={onSaveLibraryClassName}
+        onClick={onSaveLibrary}
       >
         <Icon type="save" width={28} height={28} />
         <span>Save</span>

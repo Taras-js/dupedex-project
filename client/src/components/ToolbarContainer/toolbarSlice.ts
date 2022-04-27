@@ -39,14 +39,6 @@ const saveStep = (state: ProductState) => {
   state.historyStep = state.history.length;
 };
 
-const getStep = (state: ProductState, step: number) => {
-  state.currentItemId = current(state.history)[step - 1].currentItemId;
-  state.itemsIdList = current(state.history)[step - 1].itemsIdList;
-  state.filter = current(state.history)[step - 1].filter;
-  state.isReviewShown = current(state.history)[step - 1].isReviewShown;
-  state.historyStep = step;
-};
-
 export const toolbarSlice = createSlice({
   name: "toolbar",
   initialState,
@@ -59,13 +51,8 @@ export const toolbarSlice = createSlice({
       state.itemsIdList = state.itemsIdList.filter((id) => id !== action.payload);
       saveStep(state);
     },
-    posReviews: (state) => {
-      if (state.filter !== Filter.positive) state.filter = Filter.positive;
-      else state.filter = null;
-      saveStep(state);
-    },
-    negReviews: (state) => {
-      if (state.filter !== Filter.negative) state.filter = Filter.negative;
+    setFilter: (state, action: { type: '', payload: Filter }) => {
+      if (state.filter !== action.payload) state.filter = action.payload;
       else state.filter = null;
       saveStep(state);
     },
@@ -73,22 +60,21 @@ export const toolbarSlice = createSlice({
       state.isReviewShown = !state.isReviewShown;
       saveStep(state);
     },
-    previousStep: (state) => {
-      getStep(state, state.historyStep - 1);
-    },
-    followingStep: (state) => {
-      getStep(state, state.historyStep + 1);
+    getHistoryStep: (state, action: { type: '', payload: number }) => {
+      state.historyStep += action.payload;
+      state.currentItemId = current(state.history)[state.historyStep - 1].currentItemId;
+      state.itemsIdList = current(state.history)[state.historyStep - 1].itemsIdList;
+      state.filter = current(state.history)[state.historyStep - 1].filter;
+      state.isReviewShown = current(state.history)[state.historyStep - 1].isReviewShown;
     },
   },
 });
 
 export const {
   showItem,
-  posReviews,
-  negReviews,
+  setFilter,
   toggleReviews,
-  previousStep,
-  followingStep,
+  getHistoryStep,
 } = toolbarSlice.actions;
 
 export const productState = (state: AppState) => state.product;
