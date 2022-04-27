@@ -19,7 +19,11 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
         .map((review) => (
           <li key={review[0]} className={classNames(styles.review__tag, styles.positive)}>
             <span>{review[0]}</span>
-            <span>{Number(review[1].count).toFixed(2)}</span>
+            <span>
+              (
+              {Number(review[1].count).toFixed(0)}
+              %)
+            </span>
           </li>
         ))}
 
@@ -29,7 +33,11 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
         .map((review) => (
           <li key={review[0]} className={classNames(styles.review__tag, styles.negative)}>
             <span>{review[0]}</span>
-            <span>{Number(review[1].count).toFixed(2)}</span>
+            <span>
+              (
+              {Number(review[1].count).toFixed(0)}
+              %)
+            </span>
           </li>
         ))}
 
@@ -49,7 +57,11 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
               }
           >
             <span>{review[0]}</span>
-            <span>{Number(review[1].count).toFixed(2)}</span>
+            <span>
+              (
+              {Number(review[1].count).toFixed(0)}
+              %)
+            </span>
           </li>
         ))}
     </ul>

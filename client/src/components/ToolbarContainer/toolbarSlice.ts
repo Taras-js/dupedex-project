@@ -73,6 +73,7 @@ export const toolbarSlice = createSlice({
 
 export const {
   showItem,
+  removeItem,
   setFilter,
   toggleReviews,
   getHistoryStep,

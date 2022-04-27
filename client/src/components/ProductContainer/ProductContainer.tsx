@@ -16,6 +16,7 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
   if (productList.length === 1) {
     return (
+
       <div className={styles.product__container}>
         {productList.map((item) => (
           <Panel key={item.id} className={styles.products__panel}>
@@ -24,9 +25,9 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
         ))}
 
         {isReviewShown && (
-        <Panel padding={16} className={styles.products__panel}>
-          <ReviewItem id={currentItemId} />
-        </Panel>
+          <Panel padding={16} className={styles.products__panel}>
+            <ReviewItem id={currentItemId} />
+          </Panel>
         )}
       </div>
 

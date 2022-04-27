@@ -9,13 +9,16 @@ interface PanelProps {
 }
 
 const Panel: React.FC<PanelProps> = (props: PanelProps) => {
-  const { children, padding = 0, className } = props;
+  const {
+    children, padding = 0, className,
+  } = props;
 
-  const panelClass = cls(styles, "panel", className);
+  const panelClass = cls(styles, "panel");
+  const innerPanelClass = cls(styles, "inner_panel", className);
 
   return (
     <div className={panelClass}>
-      <div className={styles.innerpanel} style={{ padding }}>
+      <div className={innerPanelClass} style={{ padding }}>
         {children}
       </div>
     </div>
