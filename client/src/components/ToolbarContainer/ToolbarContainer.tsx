@@ -4,7 +4,7 @@ import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
   posReviews,
   negReviews,
-  showOrHideReviews,
+  toggleReviews,
   previousStep,
   followingStep,
   productState,
@@ -31,8 +31,8 @@ const ToolbarContainer = () => {
   const onNextStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_nextstep");
 
   const isReviewShown = product.isReviewShown === false;
-  const onShowReviewsClick = () => { dispatch(showOrHideReviews()); };
-  const onShowReviewsClassName = cls(styles, "toolbar__btn", "toolbar__btn_showreviews", { toolbar__btn_showreviews_active: isReviewShown });
+  const onToggleReviewsClick = () => { dispatch(toggleReviews()); };
+  const onToggleReviewsClassName = cls(styles, "toolbar__btn", "toolbar__btn_toggle_reviews", { toolbar__btn_toggle_reviews_active: isReviewShown });
 
   const isPositive = product.filter === Filter.positive;
   const onShowPositiveClick = () => { dispatch(posReviews()); };
@@ -88,10 +88,10 @@ const ToolbarContainer = () => {
 
       <Button
         icon
-        className={onShowReviewsClassName}
-        onClick={onShowReviewsClick}
+        className={onToggleReviewsClassName}
+        onClick={onToggleReviewsClick}
       >
-        <Icon type="showOrHideReviews" width={28} height={28} />
+        <Icon type="toggleReviews" width={28} height={28} />
       </Button>
 
       <Button

@@ -138,7 +138,7 @@ export const negativeReviews = {
   ),
 };
 
-export const showOrHideReviews = {
+export const toggleReviews = {
   viewBox: "0 0 31.5 27.0",
   path: (
     <g transform="translate(-2.252 -4.499)">

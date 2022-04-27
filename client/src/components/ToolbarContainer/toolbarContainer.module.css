@@ -26,10 +26,10 @@
 .toolbar__btn_nextstep:hover > svg {
 }
 
-.toolbar__btn_showreviews:hover > svg {
+.toolbar__btn_toggle_reviews:hover > svg {
   fill: var(--color-neutral_yellow-dark);
 }
-.toolbar__btn_showreviews_active > svg {
+.toolbar__btn_toggle_reviews_active > svg {
   fill: var(--color-neutral_yellow);
 }
 
@@ -47,17 +47,17 @@
   fill: var(--color-negative_red);
 }
 
-.toolbar__btn_productclaims:hover > svg {
+.toolbar__btn_product_claims:hover > svg {
   fill: var(--color-neutral_yellow-dark);
 }
-.toolbar__btn_productclaims:hover > svg {
+.toolbar__btn_product_claims:hover > svg {
   fill: var(--color-neutral_yellow-dark);
 }
 
-.toolbar__btn_writenotes:hover > svg {
+.toolbar__btn_write_notes:hover > svg {
   fill: var(--color-neutral_yellow-dark);
 }
-.toolbar__btn_writenotes:hover > svg {
+.toolbar__btn_write_notes:hover > svg {
   fill: var(--color-neutral_yellow-dark);
 }
 

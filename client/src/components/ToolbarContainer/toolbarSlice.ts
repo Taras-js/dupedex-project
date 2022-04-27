@@ -69,7 +69,7 @@ export const toolbarSlice = createSlice({
       else state.filter = null;
       saveStep(state);
     },
-    showOrHideReviews: (state) => {
+    toggleReviews: (state) => {
       state.isReviewShown = !state.isReviewShown;
       saveStep(state);
     },
@@ -86,7 +86,7 @@ export const {
   showItem,
   posReviews,
   negReviews,
-  showOrHideReviews,
+  toggleReviews,
   previousStep,
   followingStep,
 } = toolbarSlice.actions;

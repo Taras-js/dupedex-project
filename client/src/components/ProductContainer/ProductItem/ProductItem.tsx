@@ -24,13 +24,11 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
 
   return (
     <button key={id} className={styles.products__item} onClick={onSelectProduct}>
-      <a href={item.prod_link}>
-        <img
-          className={styles.img__link}
-          src={item.img_link}
-          alt={item.prod_link}
-        />
-      </a>
+      <img
+        className={styles.img__link}
+        src={item.img_link}
+        alt={item.prod_link}
+      />
       <h3 className={styles.heading}>{item.brand_name}</h3>
       <h4 className={styles.heading}>{item.prod_name}</h4>
       <h4 className={styles.heading}>
