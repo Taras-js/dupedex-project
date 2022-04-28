@@ -1,1 +1,3 @@
-export * from "./LayoutItem";
+import LayoutItem from "./LayoutItem";
+
+export { LayoutItem };

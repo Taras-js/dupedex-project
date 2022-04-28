@@ -1,1 +1,3 @@
-export * from "./ProductItem";
+import ProductItem from "./ProductItem";
+
+export { ProductItem };

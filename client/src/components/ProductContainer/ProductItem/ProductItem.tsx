@@ -50,4 +50,4 @@ function ProductItem(props: ProductProps) {
   );
 }
 
-export { ProductItem };
+export default ProductItem;

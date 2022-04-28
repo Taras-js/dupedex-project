@@ -22,4 +22,4 @@ const LayoutItem = (props: LayoutItemProps) => {
   );
 };
 
-export { LayoutItem };
+export default LayoutItem;

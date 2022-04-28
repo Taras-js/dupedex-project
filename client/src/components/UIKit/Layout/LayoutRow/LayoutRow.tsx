@@ -22,4 +22,4 @@ const LayoutRow = (props: LayoutRowProps) => {
   );
 };
 
-export { LayoutRow };
+export default LayoutRow;

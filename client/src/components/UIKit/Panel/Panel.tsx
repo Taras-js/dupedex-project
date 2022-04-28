@@ -19,4 +19,4 @@ const Panel: React.FC<PanelProps> = (props: PanelProps) => {
   );
 };
 
-export { Panel };
+export default Panel;

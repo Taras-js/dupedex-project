@@ -32,4 +32,4 @@ const Icon: React.FC<IconProps> = (props: IconProps) => {
   );
 };
 
-export { Icon };
+export default Icon;

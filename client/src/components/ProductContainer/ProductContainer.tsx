@@ -42,4 +42,4 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   );
 };
 
-export { ProductContainer };
+export default ProductContainer;
