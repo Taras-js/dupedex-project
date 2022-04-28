@@ -2,16 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 16px;
+  width: 100%;
+  padding: 8px 4px;
 }
 
-.img__link {
+.products__img {
   max-width: 200px;
   max-height: 200px;
 }
 
+.products__link {
+  margin-bottom: 6px;
+  text-decoration: underline;
+}
+
 .heading {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+}
+
+.close_btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
