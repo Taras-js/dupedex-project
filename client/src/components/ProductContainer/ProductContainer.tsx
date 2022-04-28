@@ -1,10 +1,10 @@
-import { Panel } from '../UIKit';
-import { ProductItem } from './ProductItem';
+import { Panel } from "../UIKit";
+import { ProductItem } from "./ProductItem";
 
-import { productsMock } from '../../shared/mocks/productmock';
+import { productsMock } from "../../shared/mocks/productmock";
 
-import styles from './productContainer.module.css';
-import { ProductContent } from '../../shared/types';
+import styles from "./productContainer.module.css";
+import { ProductContent } from "../../shared/types";
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
@@ -23,15 +23,15 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
         ))}
 
         {isReviewShown && (
-        <Panel padding={16}>
-          <h3>Review</h3>
-          {productsMock.find((item) => item.id === currentItemId).Details}
-        </Panel>
+          <Panel padding={16}>
+            <h3>Review</h3>
+            {productsMock.find((item) => item.id === currentItemId).Details}
+          </Panel>
         )}
       </>
-
     );
-  } return (
+  }
+  return (
     <>
       {productList.map((item) => (
         <Panel key={item.id} className={styles.products__panel}>
@@ -42,4 +42,4 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   );
 };
 
-export default ProductContainer;
+export { ProductContainer };

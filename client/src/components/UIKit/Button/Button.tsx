@@ -1,5 +1,5 @@
-import { combinedClass } from '../../../utils/helper';
-import styles from './button.module.css';
+import { cls } from "../../../utils/helper";
+import styles from "./button.module.css";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -26,17 +26,17 @@ function Button(props: ButtonProps) {
     isDisabled,
   } = props;
 
-  const classPropMap = {
+  const btnClassMap = {
     btn_filled: filled,
     btn_outlined: outlined,
     btn_icon: icon,
-    btn_text: (!filled && !outlined && !icon),
+    btn_text: !filled && !outlined && !icon,
 
     btn_large: large,
     btn_small: small,
-    btn_medium: (!large && !small && !icon),
+    btn_medium: !large && !small && !icon,
   };
-  const btnStyle = combinedClass(styles, 'btn', className, classPropMap);
+  const btnStyle = cls(styles, "btn", btnClassMap, className);
 
   const handleClick = () => {
     if (onClick) onClick();
@@ -54,4 +54,4 @@ function Button(props: ButtonProps) {
   );
 }
 
-export default Button;
+export { Button };

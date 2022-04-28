@@ -1,3 +1,1 @@
-import LayoutRow from './LayoutRow';
-
-export { LayoutRow };
+export * from "./LayoutRow";

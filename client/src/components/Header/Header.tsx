@@ -1,22 +1,22 @@
-import { Icon, Button } from '../UIKit';
+import { Icon, Button } from "../UIKit";
 
-import styles from './header.module.css';
+import styles from "./header.module.css";
 
 function Header() {
   const onClickMain = () => {
-    console.log('click Main');
+    console.log("click Main");
   };
 
   const onClickSignIn = () => {
-    console.log('click SignIn');
+    console.log("click SignIn");
   };
 
   const onClickSignUp = () => {
-    console.log('click SignUp');
+    console.log("click SignUp");
   };
 
   const onClickDarkMode = () => {
-    console.log('click DarkMode');
+    console.log("click DarkMode");
   };
 
   return (
@@ -29,10 +29,18 @@ function Header() {
         </Button>
 
         <div className={styles.header__btn_wrapper}>
-          <Button large onClick={onClickSignIn}>SIGN IN</Button>
-          <Button large outlined onClick={onClickSignUp}>SIGN UP</Button>
+          <Button large onClick={onClickSignIn}>
+            SIGN IN
+          </Button>
+          <Button large outlined onClick={onClickSignUp}>
+            SIGN UP
+          </Button>
 
-          <Button icon className={styles.btn_darkMode} onClick={onClickDarkMode}>
+          <Button
+            icon
+            className={styles.btn_darkMode}
+            onClick={onClickDarkMode}
+          >
             <Icon type="darkmode" width="50" height="50" color="#000" />
           </Button>
         </div>
@@ -41,4 +49,4 @@ function Header() {
   );
 }
 
-export default Header;
+export { Header };
