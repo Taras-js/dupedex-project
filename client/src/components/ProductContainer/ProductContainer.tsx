@@ -1,4 +1,4 @@
-import { Panel } from "../UIKit";
+import { Panel, ScrollPanel } from "../UIKit";
 import { ProductItem } from "./ProductItem";
 import { ReviewItem } from './ReviewItem';
 
@@ -19,9 +19,9 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
       <div className={styles.product__container}>
         {productList.map((item) => (
-          <Panel key={item.id} className={styles.products__panel}>
+          <ScrollPanel key={item.id} className={styles.products__panel}>
             <ProductItem id={item.id} filter={filter} />
-          </Panel>
+          </ScrollPanel>
         ))}
 
         {isReviewShown && (
@@ -35,9 +35,9 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   } return (
     <div className={styles.product__container}>
       {productList.map((item) => (
-        <Panel key={item.id} className={styles.products__panel}>
+        <ScrollPanel key={item.id} className={styles.products__panel}>
           <ProductItem isShowClose id={item.id} filter={filter} />
-        </Panel>
+        </ScrollPanel>
       ))}
     </div>
   );
