@@ -26,23 +26,21 @@ const IndexPage: NextPage = () => {
             <Panel>SearchBar</Panel>
           </LayoutItem>
           <LayoutItem itemWidth={760} noResize>
-            <Panel>
+            <Panel padding="0px 25px">
               <ToolbarContainer />
             </Panel>
           </LayoutItem>
         </LayoutRow>
         <LayoutRow rowHeight={700}>
-          <LayoutItem itemWidth={1}>
-            <div style={{ display: "flex", height: "100%" }}>
-              <ProductContainer
-                itemsIdList={itemsIdList}
-                currentItemId={currentItemId}
-                filter={filter}
-                isReviewShown={isReviewShown}
-              />
-            </div>
+          <LayoutItem itemWidth={1340}>
+            <ProductContainer
+              itemsIdList={itemsIdList}
+              currentItemId={currentItemId}
+              filter={filter}
+              isReviewShown={isReviewShown}
+            />
           </LayoutItem>
-          <LayoutItem itemWidth={370} noResize>
+          <LayoutItem itemWidth={370}>
             <Panel>
               Library
               <br />

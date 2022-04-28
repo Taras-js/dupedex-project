@@ -1,4 +1,5 @@
 import { cls } from "../../../utils/helper";
+
 import styles from "./button.module.css";
 
 interface ButtonProps {
@@ -38,7 +39,8 @@ function Button(props: ButtonProps) {
   };
   const btnStyle = cls(styles, "btn", btnClassMap, className);
 
-  const handleClick = () => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
     if (onClick) onClick();
   };
 

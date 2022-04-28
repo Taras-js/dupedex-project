@@ -5,15 +5,11 @@
   --btn-ver-gap-size: 10px;
   --btn-hor-gap-size: 35px;
 
-  background-color: transparent;
-  border: none;
-  outline: none;
-
   color: var(--color-txt);
   padding: 0;
   border-radius: 7px;
   text-align: center;
-
+  font-size: var(--btn-font-size);
   white-space: nowrap;
 
   transition-property: color, background-color, text-decoration, transform;
@@ -108,6 +104,13 @@
 }
 
 .btn_icon {
+  --btn-font-size: 25px;
+
+  display: flex;
+  align-items: center;
+}
+.btn_icon > svg + span {
+  padding-left: 16px;
 }
 
 .btn:disabled {
