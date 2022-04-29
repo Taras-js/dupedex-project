@@ -4,10 +4,12 @@ import React, {
 import styles from './Search.module.css';
 import { Icon } from '../Icon';
 import ModalComponent from './modalComponent';
+import ResultItem from './ResultItem';
 
 export interface Results {
-  prod_name?: string;
-  brand_name?: string;
+  id?: number;
+  title?: string;
+  subtitle?: string;
   image?: string;
 }
 
@@ -18,10 +20,12 @@ export interface SearchProps {
   onChange?: (e: React.ChangeEvent) => void;
 }
 
-const Search: React.FC<SearchProps> = ({
-  placeholder, onChange, results, withDebounce,
-}) => {
-  const optomizedVersion = useCallback(withDebounce(onChange), []);
+const Search: React.FC<SearchProps> = (props) => {
+  const {
+    results, placeholder, withDebounce, onChange,
+  } = props;
+
+  const optomized = useCallback(withDebounce(onChange), []);
 
   const { clickedOutside, myRef, handleClickInside } = ModalComponent(false);
 
@@ -34,20 +38,16 @@ const Search: React.FC<SearchProps> = ({
           ref={myRef}
           type="text"
           placeholder={placeholder}
-          onChange={optomizedVersion}
+          onChange={optomized}
         />
         <Icon type="search" width={25} height={25} />
       </form>
       <div className={clickedOutside ? styles.search__dropdown : styles.search__dropdown_passive}>
         {results && results.map((result) => (
-          <div className={styles.search__item}>
-            <p className={styles.search__prod_name}>{`${result.prod_name}`}</p>
-            <p className={styles.search__brand_name}>{ `- ${result.brand_name}`}</p>
-          </div>
+          <ResultItem key={result.id} title={result.title} subtitle={result.subtitle} />
         ))}
       </div>
     </div>
   );
 };
-
 export default Search;

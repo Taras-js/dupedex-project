@@ -1,0 +1,18 @@
+.search__item{
+    border: none;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    background-color: #ffff;
+}
+
+.search__item:hover{
+    background-color:#EAE8E8;
+    box-shadow: #000000;
+    transition: background-color 0.5s
+}
+
+.search__subtitle{
+    margin-right: 5px;
+    color: #B8B4B4;
+}
