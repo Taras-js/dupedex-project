@@ -6,7 +6,7 @@
   height: 100%;
 }
   
-.container_wrapper {
+.container__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;

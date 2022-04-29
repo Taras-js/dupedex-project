@@ -12,7 +12,7 @@ const LibraryItem = (props: LibraryItemProps) => {
   const items = libraryMock.find((item) => item.id === id);
 
   const [title, setTitle] = useState(items.title);
-  const [isEdit, setIsEdit] = useState(true);
+  const [isEdit, setIsEdit] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(
@@ -59,7 +59,7 @@ const LibraryItem = (props: LibraryItemProps) => {
             : <Button className={styles.title_button} onClick={handleClick}>{title}</Button>
         }
         <Button icon>
-          <Icon type="ellipsis" width={32} />
+          <Icon type="ellipsis" width={32} color="var(--color-border-grey)" />
         </Button>
       </div>
     </Panel>

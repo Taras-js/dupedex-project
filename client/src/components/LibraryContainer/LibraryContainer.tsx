@@ -7,7 +7,7 @@ import { itemsIdListMock } from "../../shared/mocks/consts";
 
 const LibraryContainer = () => (
   <div className={styles.container}>
-    <div className={styles.container_wrapper}>
+    <div className={styles.container__wrapper}>
       <Button className={`${styles.menu_button} ${styles.is_active}`}>
         My Library
       </Button>
@@ -16,7 +16,7 @@ const LibraryContainer = () => (
       </Button>
     </div>
 
-    <div className={styles.container_wrapper}>
+    <div className={styles.container__wrapper}>
       <TextInput placeholder="Search for routines" />
     </div>
 
