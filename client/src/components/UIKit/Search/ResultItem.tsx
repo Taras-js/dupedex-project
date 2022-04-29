@@ -9,9 +9,17 @@ interface ResultItemProps {
 }
 
 const ResultItem: React.FC<ResultItemProps> = (props) => {
-  const { title, subtitle } = props;
+  const {
+    title, subtitle, image, onClick,
+  } = props;
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onClick();
+  };
   return (
-    <button className={styles.search__item}>
+    <button onClick={handleClick} className={styles.search__item}>
       <p className={styles.search__subtitle}>{`${subtitle}`}</p>
       <p className={styles.search__title}>{ `- ${title}`}</p>
     </button>

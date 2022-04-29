@@ -1,7 +1,7 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
 import counterReducer from "../features/counter/counterSlice";
-import goodsReducer from '../features/Search/productSlice';
+import goodsReducer from "../features/Search/productSlice";
 import productReducer from "../components/ToolbarContainer/toolbarSlice";
 
 export function makeStore() {
