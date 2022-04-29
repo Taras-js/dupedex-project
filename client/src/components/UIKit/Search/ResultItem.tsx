@@ -1,22 +1,27 @@
 import React from 'react';
 import styles from './resultItem.module.css';
+import { useAppDispatch } from '../../../app/hooks';
+import { showItem } from '../../ToolbarContainer/toolbarSlice';
 
 interface ResultItemProps {
+  id: number;
   title?: string;
   subtitle?: string;
   image?: string;
-  onClick?: () => void;
 }
 
 const ResultItem: React.FC<ResultItemProps> = (props) => {
   const {
-    title, subtitle, image, onClick,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    title, subtitle, image, id,
   } = props;
+
+  const dispatch = useAppDispatch();
 
   const handleClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    onClick();
+    dispatch(showItem([id]));
   };
   return (
     <button onClick={handleClick} className={styles.search__item}>

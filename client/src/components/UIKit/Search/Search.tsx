@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, {
   useCallback,
 } from 'react';
@@ -5,8 +6,6 @@ import styles from './Search.module.css';
 import { Icon } from '../Icon';
 import ModalComponent from './modalComponent';
 import ResultItem from './ResultItem';
-import { Dispatch } from 'react';
-import { useDispatch } from 'react-redux';
 
 export interface Results {
   id?: number;
@@ -27,22 +26,21 @@ const Search: React.FC<SearchProps> = (props) => {
     results, placeholder, withDebounce, onChange,
   } = props;
 
-  const dispatch = useDispatch();
   const optimized = useCallback(withDebounce(onChange), []);
 
   const { clickedOutside, myRef, handleClickInside } = ModalComponent(false);
 
-
-  const onClick = () => {
-    dispatch(getItem)
-  } 
   return (
-    <div className={styles.search}>
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <div
+      onClick={handleClickInside}
+      ref={myRef}
+      className={styles.search}
+      role="button"
+    >
       <form className={styles.search__form}>
         <input
           className={styles.search__input}
-          onClick={handleClickInside}
-          ref={myRef}
           type="text"
           placeholder={placeholder}
           onChange={optimized}
@@ -51,7 +49,7 @@ const Search: React.FC<SearchProps> = (props) => {
       </form>
       <div className={clickedOutside ? styles.search__dropdown : styles.search__dropdown_passive}>
         {results && results.map((result) => (
-          <ResultItem key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} onClick={onClick} />
+          <ResultItem key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} id={result.id} />
         ))}
       </div>
     </div>

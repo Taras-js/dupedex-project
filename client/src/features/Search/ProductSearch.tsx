@@ -12,8 +12,9 @@ const ProductSearch = () => {
 
   const goods = useAppSelector((state) => state.goods.products);
 
-  const handleChange = (event) => {
-    setSearch(event.target.value);
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
   };
 
   useEffect(() => {
