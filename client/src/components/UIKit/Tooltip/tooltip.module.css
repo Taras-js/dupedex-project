@@ -1,0 +1,110 @@
+/* Common styles */
+.tooltip__wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    line-height: 1;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    max-width: 100px;
+    z-index: 999;
+}
+
+.tooltip {
+    --ttp-font-size: 12px;
+    --ttp-gap-size: 10px;
+
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: auto;
+    display: flex;
+    flex-direction:row;   
+    justify-content: center;
+}
+
+.tooltip__text {
+    position: absolute;
+    height: fit-content;
+    margin-top: 0px;
+    min-width: 40px;
+    text-align: center;
+    background-color: #202020;
+    color: #fff;
+    border-radius: 4px;
+    padding: calc(1 * var(--ttp-gap-size)) calc(2 * var(--ttp-gap-size));;
+    line-height: 1.2rem;
+    transition: opacity .2s 0 ease;
+
+    visibility: visible;
+    opacity: 0;
+}
+
+.tooltip__wrapper:hover .tooltip__text {
+    transition: opacity .4s 0.7s ease;
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip__arrow {
+    position: absolute;
+	width: 0;
+    height: 0;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #202020 transparent transparent transparent;
+}
+
+.tooltip__top {
+    transform: translate(0, -34px); 
+    align-items:flex-end;
+}
+
+.tooltip__top .tooltip__arrow_top {
+    border-width: 10px 14px 14px 14px;
+    top: 97%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.tooltip__bottom {
+    transform: translate(0, 34px);
+    align-items:flex-start;
+}
+
+.tooltip__bottom .tooltip__arrow_bottom {
+    border-width: 14px 14px 10px 14px;
+    bottom: 98%;
+    right: 50%;
+    transform: translateX(50%)
+}
+
+.tooltip__right {
+    transform: translate(32px, 0px);
+    align-items:flex-start;
+    flex-direction:column;   
+}
+
+.tooltip__right .tooltip__arrow_right {
+    border-width: 12px 8px 12px 12px;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%); 
+}
+
+.tooltip__left {
+    transform: translate(-32px, 0px);
+    align-items:flex-end;
+    flex-direction:column;   
+}
+
+.tooltip__left .tooltip__arrow_left {
+    border-width: 12px  12px 12px 8px;
+    top: 50%;
+    left: 98%;
+    transform: translateY(-50%); 
+}
