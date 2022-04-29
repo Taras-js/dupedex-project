@@ -1,8 +1,10 @@
 .search__item{
-    border: none;
+    display: flex;
+    font-size: inherit;
+    font-family: inherit;
     width: 100%;
     padding: 5px;
-    display: flex;
+    border: none;
     background-color: #ffff;
 }
 

@@ -38,23 +38,6 @@
     display: none;
 }
 
-.search__item{
-    padding: 5px;
-    display: flex;
-}
-
-.search__item:hover{
-    background-color:#EAE8E8;
-    box-shadow: #000000;
-    transition: background-color 0.5s
-}
-
-.search__brand_name{
-    margin-left: 5px;
-    color: #B8B4B4;
-}
-
-
 .search__dropdown_not_found{
     display: flex;
     justify-content: center;
