@@ -8,7 +8,6 @@ import { ProductContainer } from "../components/ProductContainer";
 import { ToolbarContainer } from "../components/ToolbarContainer";
 import { useAppSelector } from "../app/hooks";
 import { productState } from "../components/ToolbarContainer/toolbarSlice";
-import { libraryMock } from "../shared/mocks/librarymock";
 import { LibraryContainer } from "../components/LibraryContainer";
 
 const IndexPage: NextPage = () => {
@@ -44,7 +43,7 @@ const IndexPage: NextPage = () => {
           </LayoutItem>
           <LayoutItem itemWidth={370} noResize>
             <Panel>
-              <LibraryContainer content={libraryMock} />
+              <LibraryContainer />
             </Panel>
           </LayoutItem>
         </LayoutRow>

@@ -1,52 +1,39 @@
 import React from "react";
 import styles from "./librarycontainer.module.css";
 import TextInput from "../TextInput";
+import { LibraryItem } from "./LibraryItem";
+import { Button, Icon, ScrollPanel } from "../UIKit";
+import { itemsIdListMock } from "../../shared/mocks/consts";
 
-const LibraryContainer = ({ content }:any) => (content.length ? (
+const LibraryContainer = () => (
   <div className={styles.container}>
-    <div className={styles.container_menu}>
-      <button className={styles.menu_link}>
+    <div className={styles.container_wrapper}>
+      <Button className={`${styles.menu_button} ${styles.is_active}`}>
         My Library
-      </button>
-      <button className={styles.menu_link}>
+      </Button>
+      <Button className={styles.menu_button}>
         Explore
-      </button>
+      </Button>
     </div>
-    <div className={styles.container_menu}>
-      <TextInput placeholder="Search for routies" />
+
+    <div className={styles.container_wrapper}>
+      <TextInput placeholder="Search for routines" />
     </div>
-    <div className={styles.container_content}>
-      {content.map((item) => (
-        <div key={item.id} className={styles.content}>
-          <div className={styles.content_wrapper}>
-            {item.products.map((elem) => (
-              <div className={styles.test}>
-                <img className={styles.image_content} src={elem.img} alt="item" />
-              </div>
-            ))}
-          </div>
-          <div className={styles.title_container}>
-            <p className={styles.title}>{item.title}</p>
-          </div>
-        </div>
+
+    <ScrollPanel padding={8}>
+      {itemsIdListMock.map((item) => (
+        <LibraryItem key={item} id={item} />
       ))}
-    </div>
+    </ScrollPanel>
+
+    <Button
+      icon
+      className={styles.close_btn}
+      onClick={() => {}}
+    >
+      <Icon type="exit" width={18} height={18} color="var(--color-cross-grey)" />
+    </Button>
   </div>
-) : (
-  <div className={styles.container}>
-    <div className={styles.container_menu}>
-      <p className={styles.menu_link}>My Library</p>
-      <p className={styles.menu_link}>Explore</p>
-    </div>
-    <div className={styles.container_menu}>
-      <TextInput placeholder="Search for routies" />
-    </div>
-    <div className={styles.container_content}>
-      <div className={styles.content} />
-      <div className={styles.content} />
-      <div className={styles.content} />
-    </div>
-  </div>
-));
+);
 
 export { LibraryContainer };

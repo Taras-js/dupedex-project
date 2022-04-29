@@ -1,56 +1,90 @@
 export const libraryMock = [
   {
     id: 1,
+    title: "Library 1",
     products: [
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
     ],
-    title: "title1",
   },
   {
     id: 2,
+    title: "Library 2",
     products: [
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
     ],
-    title: "title2",
   },
   {
     id: 3,
+    title: "Library 3",
     products: [
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
       {
-        img: "https://kartinkin.net/uploads/posts/2021-07/thumbs/1625151191_43-kartinkin-com-p-drakon-art-art-krasivo-50.jpg",
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
       },
     ],
-    title: "title3",
+  },
+  {
+    id: 4,
+    title: "Library 4",
+    products: [
+      {
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
+      },
+      {
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
+      },
+      {
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
+      },
+      {
+        img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+        prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
+      },
+    ],
   },
 ];
