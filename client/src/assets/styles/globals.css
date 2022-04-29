@@ -1,4 +1,4 @@
-@import url('../fonts/fonts.css');
+@import url("../fonts/fonts.css");
 
 :root {
   --color-white: #ffffff;
@@ -13,7 +13,7 @@
 
   --color-peach: rgb(249, 228, 226);
   --color-peach-dark: rgb(249, 218, 216);
-  
+
   --color-turquoise: rgb(199, 232, 235);
   --color-turquoise-dark: rgb(179, 232, 235);
   --color-turquoise-darker: rgb(159, 232, 235);
@@ -25,25 +25,41 @@
   --color-share_pink: rgba(255, 195, 200, 0.74);
   --color-share_blue: rgba(219, 245, 255, 0.74);
 
+  --color-negative_red: rgb(255, 159, 176);
+  --color-negative_red-dark: rgb(255, 119, 136);
+
+  --color-positive_green: rgb(143, 239, 186);
+  --color-positive_green-dark: rgb(103, 239, 146);
+
+  --color-neutral_yellow: rgb(248, 226, 166);
+  --color-neutral_yellow-dark: rgb(248, 186, 126);
+
+  --color-darkmode-circle: #f4cac6;
+
   --color-main-bg: #fffbfb;
 
-  --color-txt:  #585858;
-  --color-txt-dark:  #383838;
+  --color-txt: #585858;
+  --color-txt-dark: #383838;
   --color-txt-white: #f7fcff;
 
   --container-padding: 50px;
-  --header-height: 95px;
-  --header-padding: 8px;
+  --header-height: 80px;
+  --header-padding: 16px;
 
   --heading-font-size: 77px;
   --text-font-size: 25px;
+
+  --vertical-gap: 24px;
+  --horizontal-gap: 12px;
 }
 
 html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -68,10 +84,15 @@ body::-webkit-scrollbar-thumb {
 a {
   color: inherit;
   text-decoration: none;
+  font: inherit;
   cursor: pointer;
 }
 
 button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font: inherit;
   cursor: pointer;
 }
 
