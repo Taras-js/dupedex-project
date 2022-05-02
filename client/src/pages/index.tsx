@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import ProductSearch from '../features/Search/ProductSearch';
 import {
   Layout, LayoutRow, LayoutItem, Panel,
 } from "../components/UIKit";
@@ -9,6 +8,7 @@ import { ProductContainer } from "../components/ProductContainer";
 import { ToolbarContainer } from "../components/ToolbarContainer";
 import { useAppSelector } from "../app/hooks";
 import { productState } from "../components/ToolbarContainer/toolbarSlice";
+import ProductSearch from "../features/Search/ProductSearch";
 
 const IndexPage: NextPage = () => {
   const {
@@ -20,7 +20,6 @@ const IndexPage: NextPage = () => {
       <Head>
         <title>dupedex | Skincare reviews App</title>
       </Head>
-
       <Layout>
         <LayoutRow rowHeight={54} noResize>
           <LayoutItem itemWidth={1}>

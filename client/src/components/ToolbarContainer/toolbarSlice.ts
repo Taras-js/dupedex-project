@@ -44,6 +44,10 @@ export const toolbarSlice = createSlice({
   name: "toolbar",
   initialState,
   reducers: {
+    AddItem: (state, action: { type: ""; payload }) => {
+      state.itemsIdList.push(action.payload);
+      saveStep(state);
+    },
     showItem: (state, action: { type: ""; payload: number[] }) => {
       state.itemsIdList = action.payload;
       saveStep(state);
@@ -72,6 +76,7 @@ export const toolbarSlice = createSlice({
 });
 
 export const {
+  AddItem,
   showItem,
   removeItem,
   setFilter,

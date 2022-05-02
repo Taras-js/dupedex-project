@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, {
-  useCallback,
+  useCallback, useEffect, useRef,
 } from 'react';
 import styles from './Search.module.css';
 import { Icon } from '../Icon';
 import ModalComponent from './modalComponent';
 import ResultItem from './ResultItem';
+import { useAppSelector } from '../../../app/hooks';
 
 export interface Results {
   id?: number;
@@ -27,8 +28,13 @@ const Search: React.FC<SearchProps> = (props) => {
   } = props;
 
   const optimized = useCallback(withDebounce(onChange), []);
-
   const { clickedOutside, myRef, handleClickInside } = ModalComponent(false);
+  const isAddItemToList = useAppSelector((state) => state.goods.isAddItemToList);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, [isAddItemToList]);
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
@@ -40,6 +46,7 @@ const Search: React.FC<SearchProps> = (props) => {
     >
       <form className={styles.search__form}>
         <input
+          ref={inputRef}
           className={styles.search__input}
           type="text"
           placeholder={placeholder}

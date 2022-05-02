@@ -6,6 +6,7 @@ import { ProductContent } from "../../shared/types";
 import { productsMock } from "../../shared/mocks/productmock";
 
 import styles from './productContainer.module.css';
+import AddProductButton from "../../features/counter/ProductButton/AddProductButton";
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
@@ -13,7 +14,6 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   } = props;
 
   const productList = productsMock.filter((item) => itemsIdList.includes(item.id));
-
   if (productList.length === 1) {
     return (
 
@@ -30,7 +30,6 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
           </Panel>
         )}
       </div>
-
     );
   } return (
     <div className={styles.product__container}>
@@ -39,6 +38,7 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
           <ProductItem isShowClose id={item.id} filter={filter} />
         </ScrollPanel>
       ))}
+      {productList.length < 3 && <AddProductButton />}
     </div>
   );
 };
