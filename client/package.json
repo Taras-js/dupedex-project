@@ -6,7 +6,8 @@
     "start": "next start",
     "type-check": "tsc",
     "test": "jest",
-    "lint": "npx eslint . --fix"
+    "lint": "npx eslint . --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@next/env": "^12.1.5",

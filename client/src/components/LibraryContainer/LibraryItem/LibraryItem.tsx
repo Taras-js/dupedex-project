@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { libraryMock } from "../../../shared/mocks/librarymock";
 import { Button, Icon, Panel } from "../../UIKit";
 import styles from "./libraryitem.module.css";
@@ -15,15 +15,11 @@ const LibraryItem = (props: LibraryItemProps) => {
   const [isEdit, setIsEdit] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(
-    () => {
-      if (isEdit) {
-        inputRef.current.focus();
-      }
-    },
-
-    [isEdit],
-  );
+  useEffect(() => {
+    if (isEdit) {
+      inputRef.current.focus();
+    }
+  }, [isEdit]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
@@ -53,11 +49,19 @@ const LibraryItem = (props: LibraryItemProps) => {
       </div>
 
       <div className={styles.title_wrapper}>
-        {
-          isEdit
-            ? <input className={styles.title_input} value={title} onChange={handleChange} onBlur={handleBlur} ref={inputRef} />
-            : <Button className={styles.title_button} onClick={handleClick}>{title}</Button>
-        }
+        {isEdit ? (
+          <input
+            className={styles.title_input}
+            value={title}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            ref={inputRef}
+          />
+        ) : (
+          <Button className={styles.title_button} onClick={handleClick}>
+            {title}
+          </Button>
+        )}
         <Button icon>
           <Icon type="ellipsis" width={32} color="var(--color-border-grey)" />
         </Button>

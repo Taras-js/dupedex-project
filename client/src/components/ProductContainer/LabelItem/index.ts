@@ -1,3 +1,3 @@
-import LabelItem from './LabelItem';
+import LabelItem from "./LabelItem";
 
 export { LabelItem };
