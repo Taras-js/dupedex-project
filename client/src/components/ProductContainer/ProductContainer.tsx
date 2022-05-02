@@ -1,10 +1,11 @@
-import { Panel } from '../UIKit';
-import { ProductItem } from './ProductItem';
+import { Panel, ScrollPanel } from "../UIKit";
+import { ProductItem } from "./ProductItem";
+import { ReviewItem } from './ReviewItem';
 
-import { productsMock } from '../../shared/mocks/productmock';
+import { ProductContent } from "../../shared/types";
+import { productsMock } from "../../shared/mocks/productmock";
 
 import styles from './productContainer.module.css';
-import { ProductContent } from '../../shared/types';
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
@@ -15,30 +16,30 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
   if (productList.length === 1) {
     return (
-      <>
+
+      <div className={styles.product__container}>
         {productList.map((item) => (
-          <Panel key={item.id} className={styles.products__panel}>
+          <ScrollPanel key={item.id} className={styles.products__panel}>
             <ProductItem id={item.id} filter={filter} />
-          </Panel>
+          </ScrollPanel>
         ))}
 
         {isReviewShown && (
-        <Panel padding={16}>
-          <h3>Review</h3>
-          {productsMock.find((item) => item.id === currentItemId).Details}
-        </Panel>
+          <Panel padding={16} className={styles.products__panel}>
+            <ReviewItem id={currentItemId} />
+          </Panel>
         )}
-      </>
+      </div>
 
     );
   } return (
-    <>
+    <div className={styles.product__container}>
       {productList.map((item) => (
-        <Panel key={item.id} className={styles.products__panel}>
-          <ProductItem id={item.id} filter={filter} />
-        </Panel>
+        <ScrollPanel key={item.id} className={styles.products__panel}>
+          <ProductItem isShowClose id={item.id} filter={filter} />
+        </ScrollPanel>
       ))}
-    </>
+    </div>
   );
 };
 

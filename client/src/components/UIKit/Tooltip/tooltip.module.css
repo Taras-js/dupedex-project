@@ -9,13 +9,12 @@
     align-items:center;
     justify-content: center;
     max-width: 100px;
-    z-index: 999;
 }
 
 .tooltip {
     --ttp-font-size: 12px;
     --ttp-gap-size: 10px;
-
+    z-index: 999;
     border: none;
     background-color: transparent;
     margin: 0;
