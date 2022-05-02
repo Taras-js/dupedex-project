@@ -27,17 +27,20 @@ export function getLabels(reviews: Array<any>) {
 
   for (let i = 0; i < allLabels.length; i += 1) {
     const a = allLabels[i].toString();
+    let currentTag: string | null = null;
+
+    if (a.includes("(positive")) currentTag = "positive";
+    if (a.includes("(negative")) currentTag = "negative";
+    if (a.includes("(neutral")) currentTag = "neutral";
+    const currentName = a.replace(/(\((.*?)\))/gi, "").trim();
 
     if (objLabels[a] === undefined) {
       objLabels[a] = {
-        tag: null,
+        tag: currentTag,
         count: 100 / reviews.length,
+        name: currentName,
       };
     } else objLabels[a].count += 100 / reviews.length;
-
-    if (a.includes("(positive")) objLabels[a].tag = "positive";
-    if (a.includes("(negative")) objLabels[a].tag = "negative";
-    if (a.includes("(neutral")) objLabels[a].tag = "neutral";
   }
 
   return sortLabels(Object.entries<number>(objLabels));

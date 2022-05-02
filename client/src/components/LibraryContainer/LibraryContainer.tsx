@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./librarycontainer.module.css";
 import { LibraryItem } from "./LibraryItem";
 import { Button, Icon, ScrollPanel } from "../UIKit";

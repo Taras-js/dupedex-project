@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import styles from "./Search.module.css";
 import { Icon } from "../Icon";
 import ModalComponent from "./modalComponent";
@@ -19,7 +19,7 @@ export interface SearchProps {
   onChange?: (e: React.ChangeEvent) => void;
 }
 
-const Search: React.FC<SearchProps> = (props) => {
+const Search: React.FC<SearchProps> = (props: SearchProps) => {
   const {
     results, placeholder, withDebounce, onChange,
   } = props;

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./resultItem.module.css";
 import { useAppDispatch } from "../../../app/hooks";
 import { showItem } from "../../ToolbarContainer/toolbarSlice";
@@ -10,9 +9,8 @@ interface ResultItemProps {
   image?: string;
 }
 
-const ResultItem: React.FC<ResultItemProps> = (props) => {
+const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
   const {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     title,
     subtitle,
     image,

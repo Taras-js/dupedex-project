@@ -21,7 +21,7 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
 
   return (
     <li style={getTagStyle(review)} className={cls(styles, labelItemClass)}>
-      <span>{review[0]}</span>
+      <span>{review[1].name}</span>
       <span>
         (
         {
