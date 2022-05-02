@@ -9,7 +9,8 @@
   margin-bottom: 8px;
 }
 .library__pack:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
+  box-shadow: 0px 3px 6px rgba(222, 77, 84, 0.16);
 }
 
 .content_wrapper {
