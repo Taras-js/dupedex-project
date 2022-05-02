@@ -5,6 +5,8 @@
   inset: 0;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.15);
+  animation-name: showModal;
+  animation-duration: .3s;
 }
 
 .modal__inner {
@@ -15,11 +17,11 @@
   overflow-y: auto;
   background: #FFFFFF;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-  border-radius: 7px;
+  border-radius: 21px;
   min-width: 200px;
   min-height: 160px;
   max-width: 80%;
-  padding: 24px;
+  /* padding: 24px; */
   margin-bottom: 25px;
 }
 
@@ -33,4 +35,13 @@
   height: 40px;
   margin: -24px;
   color: #000
+}
+
+@keyframes showModal {
+  from {
+      opacity: 0
+  }
+  to {
+      opacity: 1;
+  }
 }

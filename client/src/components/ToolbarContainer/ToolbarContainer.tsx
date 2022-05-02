@@ -12,8 +12,9 @@ import {
 
 import styles from './toolbarContainer.module.css';
 import { Filter } from '../../shared/types';
-import { modalState, toggleModal } from '../UIKit/Modal/modalSlice';
+import { modalState, setModalComponent, toggleModal } from '../UIKit/Modal/modalSlice';
 import { Modal } from '../UIKit/Modal';
+import {ModalShare} from './Modal/ModalShare';
 
 const Divider = () => (<div className={styles.divider} />);
 
@@ -51,12 +52,16 @@ const ToolbarContainer = () => {
   const onWriteNotesClick = () => {};
   const onWriteNotesClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_writenotes);
 
-  const onShareClick = () => { dispatch(toggleModal()); };
+  const onShareClick = () => { 
+    dispatch(setModalComponent("ModalShare"));
+    // if (modal.modalComponent === "ModalShare") dispatch(toggleModal())
+    dispatch(toggleModal()); console.log('onShareClick')
+  };
   const onShareClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_share);
 
   const onSaveClick = () => {};
   const onSaveClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_save);
-
+  
   return (
     <div className={styles.container}>
       <Button
@@ -148,9 +153,9 @@ const ToolbarContainer = () => {
         <span>Save</span>
       </Button>
 
-      {modal.isModalShown && (
+      {modal.isModalShown && modal.modalComponent === "ModalShare" && (
         <Modal onClose={() => { dispatch(toggleModal()); }}>
-          this is a modal
+          <ModalShare />
         </Modal>
       )}
     </div>
