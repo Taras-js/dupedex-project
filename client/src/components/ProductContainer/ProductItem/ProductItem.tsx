@@ -62,7 +62,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
           className={styles.close_btn}
           onClick={onCloseSelected}
         >
-          <Icon type="exit" width={18} height={18} />
+          <Icon type="exit" width={18} height={18} color="var(--color-cross-grey)" />
         </Button>
       )}
     </div>

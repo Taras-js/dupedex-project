@@ -9,10 +9,11 @@ import { ProductContainer } from "../components/ProductContainer";
 import { ToolbarContainer } from "../components/ToolbarContainer";
 import { useAppSelector } from "../app/hooks";
 import { productState } from "../components/ToolbarContainer/toolbarSlice";
+import { LibraryContainer } from "../components/LibraryContainer";
 
 const IndexPage: NextPage = () => {
   const {
-    currentItemId, itemsIdList, filter, isReviewShown, historyStep,
+    currentItemId, itemsIdList, filter, isReviewShown,
   } = useAppSelector(productState);
 
   return (
@@ -43,12 +44,9 @@ const IndexPage: NextPage = () => {
               isReviewShown={isReviewShown}
             />
           </LayoutItem>
-          <LayoutItem itemWidth={370}>
+          <LayoutItem itemWidth={370} noResize>
             <Panel>
-              Library
-              <br />
-              Step
-              {historyStep}
+              <LibraryContainer />
             </Panel>
           </LayoutItem>
         </LayoutRow>
