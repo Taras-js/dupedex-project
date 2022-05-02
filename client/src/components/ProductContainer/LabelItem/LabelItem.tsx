@@ -1,4 +1,5 @@
 import { Filter } from '../../../shared/types';
+import { getTagStyle } from '../../../utils/getTagStyle';
 
 import { cls } from "../../../utils/helper";
 import styles from './labelItem.module.css';
@@ -19,7 +20,7 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
   };
 
   return (
-    <li className={cls(styles, labelItemClass)}>
+    <li style={getTagStyle(review)} className={cls(styles, labelItemClass)}>
       <span>{review[0]}</span>
       <span>
         (
