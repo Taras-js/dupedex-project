@@ -1,17 +1,19 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from "next";
+import Head from "next/head";
 
+import ProductSearch from '../features/Search/ProductSearch';
 import {
   Layout, LayoutRow, LayoutItem, Panel,
-} from '../components/UIKit';
-import { ProductContainer } from '../components/ProductContainer';
-import { ToolbarContainer } from '../components/ToolbarContainer';
-import { useAppSelector } from '../app/hooks';
-import { productState } from '../components/ToolbarContainer/toolbarSlice';
+} from "../components/UIKit";
+import { ProductContainer } from "../components/ProductContainer";
+import { ToolbarContainer } from "../components/ToolbarContainer";
+import { useAppSelector } from "../app/hooks";
+import { productState } from "../components/ToolbarContainer/toolbarSlice";
+import { LibraryContainer } from "../components/LibraryContainer";
 
 const IndexPage: NextPage = () => {
   const {
-    currentItemId, itemsIdList, filter, isReviewShown, historyStep,
+    currentItemId, itemsIdList, filter, isReviewShown,
   } = useAppSelector(productState);
 
   return (
@@ -24,32 +26,27 @@ const IndexPage: NextPage = () => {
         <LayoutRow rowHeight={54} noResize>
           <LayoutItem itemWidth={1}>
             <Panel>
-              SearchBar
+              <ProductSearch />
             </Panel>
           </LayoutItem>
           <LayoutItem itemWidth={760} noResize>
-            <Panel>
+            <Panel padding="0px 25px">
               <ToolbarContainer />
             </Panel>
           </LayoutItem>
         </LayoutRow>
         <LayoutRow rowHeight={700}>
-          <LayoutItem itemWidth={1}>
-            <div style={{ display: 'flex', height: '100%' }}>
-              <ProductContainer
-                itemsIdList={itemsIdList}
-                currentItemId={currentItemId}
-                filter={filter}
-                isReviewShown={isReviewShown}
-              />
-            </div>
+          <LayoutItem itemWidth={1340}>
+            <ProductContainer
+              itemsIdList={itemsIdList}
+              currentItemId={currentItemId}
+              filter={filter}
+              isReviewShown={isReviewShown}
+            />
           </LayoutItem>
           <LayoutItem itemWidth={370} noResize>
             <Panel>
-              Library
-              <br />
-              Step
-              {historyStep}
+              <LibraryContainer />
             </Panel>
           </LayoutItem>
         </LayoutRow>

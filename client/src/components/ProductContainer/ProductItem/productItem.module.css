@@ -1,12 +1,19 @@
 .products__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 8px 4px;
 }
 
-.img__link {
-    max-width: 200px;
-    max-height: 200px;
+.products__img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.products__link {
+  margin-bottom: 6px;
+  text-decoration: underline;
 }
 
 .heading {
@@ -20,4 +27,10 @@
     margin: 5px;
     min-width: 160px;
     text-align: center
+}
+
+.close_btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }

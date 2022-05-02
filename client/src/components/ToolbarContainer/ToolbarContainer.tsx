@@ -1,98 +1,160 @@
-import { Button, Icon } from '../UIKit';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { cls } from "../../utils/helper";
+import { Button, Icon, Tooltip } from "../UIKit";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
-  showItem,
-  posReviews,
-  negReviews,
-  showOrHideReviews,
-  previousStep,
-  followingStep,
+  setFilter,
+  toggleReviews,
+  getHistoryStep,
   productState,
-} from './toolbarSlice';
+} from "./toolbarSlice";
+import { Filter } from "../../shared/types";
 
 import styles from './toolbarContainer.module.css';
 
-const Divider = () => (<div className={styles.divider} />);
+const Divider = () => <div className={styles.divider} />;
 
 const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
   const product = useAppSelector(productState);
 
-  const onComeBack = () => { dispatch(previousStep()); };
-  const onComeAhead = () => { dispatch(followingStep()); };
-
-  const onButtonClick1 = () => { dispatch(showItem([1])); };
-  const onButtonClick2 = () => { dispatch(showItem([1, 2])); };
-  const onButtonClick3 = () => { dispatch(showItem([1, 2, 3])); };
-  const onButtonClick4 = () => { dispatch(showItem([1, 2, 3, 4])); };
-
-  const onShowPositive = () => { dispatch(posReviews()); };
-  const onShowNegative = () => { dispatch(negReviews()); };
-  const onShowReviews = () => { dispatch(showOrHideReviews()); };
+  const onShowTutorial = () => {};
+  const onShowTutorialClassName = cls(styles, "toolbar__btn", "toolbar__btn_tutorial");
 
   const isPrevDisabled = product.historyStep === 1;
+  const onGetPrevStep = () => { dispatch(getHistoryStep(-1)); };
+  const onGetPrevStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_prev_step");
+
   const isNextDisabled = product.historyStep === product.history.length;
+  const onGetNextStep = () => { dispatch(getHistoryStep(+1)); };
+  const onGetNextStepClassName = cls(styles, "toolbar__btn", "toolbar__btn_next_step");
+
+  const isReviewShown = product.isReviewShown === false;
+  const onToggleReviews = () => { dispatch(toggleReviews()); };
+  const onToggleReviewsClassName = cls(styles, "toolbar__btn", "toolbar__btn_toggle_reviews", { toolbar__btn_toggle_reviews_active: isReviewShown });
+
+  const isPositive = product.filter === Filter.positive;
+  const onFilterPositive = () => { dispatch(setFilter(Filter.positive)); };
+  const onFilterPositiveClassName = cls(styles, "toolbar__btn", "toolbar__btn_positive", { toolbar__btn_positive_active: isPositive });
+
+  const isNegative = product.filter === Filter.negative;
+  const onFilterNegative = () => { dispatch(setFilter(Filter.negative)); };
+  const onFilterNegativeClassName = cls(styles, "toolbar__btn", "toolbar__btn_negative", { toolbar__btn_negative_active: isNegative });
+
+  const onShowProductClaims = () => {};
+  const onShowProductClaimsClassName = cls(styles, "toolbar__btn", "toolbar__btn_product_claims");
+
+  const onWriteNotes = () => {};
+  const onWriteNotesClassName = cls(styles, "toolbar__btn", "toolbar__btn_write_notes");
+
+  const onShareLibrary = () => {};
+  const onShareLibraryClassName = cls(styles, "toolbar__btn", "toolbar__btn_share");
+
+  const onSaveLibrary = () => {};
+  const onSaveLibraryClassName = cls(styles, "toolbar__btn", "toolbar__btn_save");
 
   return (
     <div className={styles.container}>
-      <Button icon onClick={() => {}}>
-        <Icon type="tutorial" width={28} height={28} />
-      </Button>
+      <Tooltip placement="top" title="Tutorial">
+        <Button
+          icon
+          className={onShowTutorialClassName}
+          onClick={onShowTutorial}
+        >
+          <Icon type="tutorial" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Button icon onClick={onComeBack} isDisabled={isPrevDisabled}>
-        <Icon type="comeBack" width={28} height={28} />
-      </Button>
-      <Button icon onClick={onComeAhead} isDisabled={isNextDisabled}>
-        <Icon type="comeAhead" width={28} height={28} />
-      </Button>
+      <Tooltip title="undo">
+        <Button
+          icon
+          className={onGetPrevStepClassName}
+          onClick={onGetPrevStep}
+          isDisabled={isPrevDisabled}
+        >
+          <Icon type="comeBack" width={28} height={28} />
+        </Button>
+      </Tooltip>
+
+      <Tooltip placement="bottom" title="redo">
+        <Button
+          icon
+          className={onGetNextStepClassName}
+          onClick={onGetNextStep}
+          isDisabled={isNextDisabled}
+        >
+          <Icon type="comeAhead" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Button icon onClick={onShowReviews}>
-        <Icon type="showOrHideReviews" width={28} height={28} />
-      </Button>
-      <Button icon onClick={onShowPositive}>
+      <Tooltip title="Show/hide reviews">
+        <Button
+          icon
+          className={onToggleReviewsClassName}
+          onClick={onToggleReviews}
+        >
+          <Icon type="toggleReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
+
+      <Button
+        icon
+        className={onFilterPositiveClassName}
+        onClick={onFilterPositive}
+      >
         <Icon type="positiveReviews" width={28} height={28} />
       </Button>
-      <Button icon onClick={onShowNegative}>
+
+      <Button
+        icon
+        className={onFilterNegativeClassName}
+        onClick={onFilterNegative}
+      >
         <Icon type="negativeReviews" width={28} height={28} />
       </Button>
-      <Button icon onClick={() => {}}>
+
+      <Button
+        icon
+        className={onShowProductClaimsClassName}
+        onClick={onShowProductClaims}
+      >
         <Icon type="productClaims" width={28} height={28} />
       </Button>
-      <Button icon onClick={() => {}}>
+
+      <Button
+        icon
+        className={onWriteNotesClassName}
+        onClick={onWriteNotes}
+      >
         <Icon type="writeNotes" width={28} height={28} />
       </Button>
 
       <Divider />
 
-      <div>
-        <Button onClick={onButtonClick1}>
-          1
+      <Tooltip title="Share library">
+        <Button
+          icon
+          className={onShareLibraryClassName}
+          onClick={onShareLibrary}
+        >
+          <Icon type="share" width={28} height={28} />
+          <span>Share</span>
         </Button>
-        <Button onClick={onButtonClick2}>
-          2
-        </Button>
-        <Button onClick={onButtonClick3}>
-          3
-        </Button>
-        <Button onClick={onButtonClick4}>
-          4
-        </Button>
-      </div>
+      </Tooltip>
 
-      <Divider />
-
-      <Button icon onClick={onButtonClick1}>
-        <Icon type="share" width={28} height={28} />
-        Share
-      </Button>
-      <Button icon onClick={onButtonClick2}>
-        <Icon type="save" width={28} height={28} />
-        Save
-      </Button>
+      <Tooltip title="Save library">
+        <Button
+          icon
+          className={onSaveLibraryClassName}
+          onClick={onSaveLibrary}
+        >
+          <Icon type="save" width={28} height={28} />
+          <span>Save</span>
+        </Button>
+      </Tooltip>
 
     </div>
   );

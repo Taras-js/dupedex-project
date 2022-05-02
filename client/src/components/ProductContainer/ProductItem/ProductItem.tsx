@@ -1,53 +1,72 @@
-import { productsMock } from '../../../shared/mocks/productmock';
-import { Filter } from '../../../shared/types';
-import { getReviews, getTagStyle } from '../../../utils/helper';
+import { useAppDispatch } from '../../../app/hooks';
+import { showItem, removeItem } from "../../ToolbarContainer/toolbarSlice";
+import { getLabels } from '../../../utils/helper';
 
-import styles from './productItem.module.css';
+import { Button, Icon } from '../../UIKit';
+import { LabelList } from '../LabelList';
+
+import { productsMock } from "../../../shared/mocks/productmock";
+import { Filter } from "../../../shared/types";
+
+import styles from "./productItem.module.css";
 
 interface ProductProps {
   id: number;
+  isShowClose?: boolean;
   filter?: Filter;
 }
 
-function ProductItem(props: ProductProps) {
-  const { id, filter } = props;
-  
+const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
+  const { id, isShowClose = false, filter } = props;
+  const dispatch = useAppDispatch();
+
+  const onSelectProduct = () => {
+    dispatch(showItem([id]));
+  };
+
+  const onCloseSelected = () => {
+    dispatch(removeItem(id));
+  };
+
   const item = productsMock.find((itemToFind) => itemToFind.id === id);
 
-  const reviews = getReviews(item.reviews);
-  
+  const labels = getLabels(item.reviews);
+
   return (
     <div key={id} className={styles.products__item}>
-      <a href={item.prod_link}><img className={styles.img__link} src={item.img_link} alt={item.prod_link} /></a>
+      <button className={styles.products__img} onClick={onSelectProduct}>
+        <img
+          src={item.img_link}
+          alt={item.prod_link}
+        />
+      </button>
       <h3 className={styles.heading}>
         {item.brand_name}
       </h3>
+      <a className={styles.products__link} target="_blank" rel="noreferrer" href={item.prod_link}>
+        (www.meccabeauty.co.nz)
+      </a>
       <h4 className={styles.heading}>
         {item.prod_name}
       </h4>
 
-      <h4 className={styles.heading}>
-        {filter}
-        reviews:
-      </h4>
-      {reviews
-        .filter((review) => (review[1] > 1))
-        .map((review) => (
-          <div style={getTagStyle(review[0], Number(review[1]))} className={styles.tag__item}>
-            <span>{review[0]}</span>
-            {': '}
-            <span>{Number(review[1]).toFixed(2)}</span>
-          </div>
-        ))}
-      other:
-      {reviews
-        .filter((review) => (review[1] < 1))
-        .map((review) => review[1])
-        .reduce((acc, value) => acc + value)
-        .toFixed(2)}
+      <LabelList
+        labels={labels}
+        filter={filter}
+        maxQuantity={9}
+      />
 
+      {isShowClose && (
+        <Button
+          icon
+          className={styles.close_btn}
+          onClick={onCloseSelected}
+        >
+          <Icon type="exit" width={18} height={18} color="var(--color-cross-grey)" />
+        </Button>
+      )}
     </div>
   );
-}
+};
 
 export default ProductItem;
