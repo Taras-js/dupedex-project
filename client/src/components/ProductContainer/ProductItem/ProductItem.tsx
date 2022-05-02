@@ -9,19 +9,6 @@ interface ProductProps {
   filter?: Filter;
 }
 
-type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
-interface getTagStyle {
-  backgroundColor: RGBA,
-  color: string
-}
-
-enum Marks {
-  positive = "28, 191, 96",
-  negative = "251, 120, 142",
-  neutral = "254, 226, 148",
-  other = "140, 140, 140"
-}
-
 function ProductItem(props: ProductProps) {
   const { id, filter } = props;
   
