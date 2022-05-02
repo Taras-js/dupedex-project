@@ -43,3 +43,15 @@ export function getLabels(reviews: Array<any>) {
 
   return sortLabels(Object.entries<number>(objLabels));
 }
+
+export const debounce = (func) => {
+  let timer;
+  return function (...args) {
+    const context = this;
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      func.apply(context, args);
+    }, 500);
+  };
+};

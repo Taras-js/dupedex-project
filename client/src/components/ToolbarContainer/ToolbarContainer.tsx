@@ -1,5 +1,5 @@
 import { cls } from "../../utils/helper";
-import { Button, Icon } from "../UIKit";
+import { Button, Icon, Tooltip } from "../UIKit";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
   setFilter,
@@ -9,7 +9,7 @@ import {
 } from "./toolbarSlice";
 import { Filter } from "../../shared/types";
 
-import styles from "./toolbarContainer.module.css";
+import styles from './toolbarContainer.module.css';
 
 const Divider = () => <div className={styles.divider} />;
 
@@ -54,43 +54,51 @@ const ToolbarContainer = () => {
 
   return (
     <div className={styles.container}>
-      <Button
-        icon
-        className={onShowTutorialClassName}
-        onClick={onShowTutorial}
-      >
-        <Icon type="tutorial" width={28} height={28} />
-      </Button>
+      <Tooltip placement="top" title="Tutorial">
+        <Button
+          icon
+          className={onShowTutorialClassName}
+          onClick={onShowTutorial}
+        >
+          <Icon type="tutorial" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Button
-        icon
-        className={onGetPrevStepClassName}
-        onClick={onGetPrevStep}
-        isDisabled={isPrevDisabled}
-      >
-        <Icon type="comeBack" width={28} height={28} />
-      </Button>
+      <Tooltip title="undo">
+        <Button
+          icon
+          className={onGetPrevStepClassName}
+          onClick={onGetPrevStep}
+          isDisabled={isPrevDisabled}
+        >
+          <Icon type="comeBack" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
-      <Button
-        icon
-        className={onGetNextStepClassName}
-        onClick={onGetNextStep}
-        isDisabled={isNextDisabled}
-      >
-        <Icon type="comeAhead" width={28} height={28} />
-      </Button>
+      <Tooltip placement="bottom" title="redo">
+        <Button
+          icon
+          className={onGetNextStepClassName}
+          onClick={onGetNextStep}
+          isDisabled={isNextDisabled}
+        >
+          <Icon type="comeAhead" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Button
-        icon
-        className={onToggleReviewsClassName}
-        onClick={onToggleReviews}
-      >
-        <Icon type="toggleReviews" width={28} height={28} />
-      </Button>
+      <Tooltip title="Show/hide reviews">
+        <Button
+          icon
+          className={onToggleReviewsClassName}
+          onClick={onToggleReviews}
+        >
+          <Icon type="toggleReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Button
         icon
@@ -126,22 +134,28 @@ const ToolbarContainer = () => {
 
       <Divider />
 
-      <Button
-        icon
-        className={onShareLibraryClassName}
-        onClick={onShareLibrary}
-      >
-        <Icon type="share" width={28} height={28} />
-        <span>Share</span>
-      </Button>
-      <Button
-        icon
-        className={onSaveLibraryClassName}
-        onClick={onSaveLibrary}
-      >
-        <Icon type="save" width={28} height={28} />
-        <span>Save</span>
-      </Button>
+      <Tooltip title="Share library">
+        <Button
+          icon
+          className={onShareLibraryClassName}
+          onClick={onShareLibrary}
+        >
+          <Icon type="share" width={28} height={28} />
+          <span>Share</span>
+        </Button>
+      </Tooltip>
+
+      <Tooltip title="Save library">
+        <Button
+          icon
+          className={onSaveLibraryClassName}
+          onClick={onSaveLibrary}
+        >
+          <Icon type="save" width={28} height={28} />
+          <span>Save</span>
+        </Button>
+      </Tooltip>
+
     </div>
   );
 };
