@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./librarycontainer.module.css";
-import TextInput from "../TextInput";
 import { LibraryItem } from "./LibraryItem";
 import { Button, Icon, ScrollPanel } from "../UIKit";
 import { itemsIdListMock } from "../../shared/mocks/consts";
+import Search from "../UIKit/Search/Search";
+import { libraryMock } from "../../shared/mocks/librarymock";
 
 const LibraryContainer = () => (
   <div className={styles.container}>
@@ -17,7 +18,9 @@ const LibraryContainer = () => (
     </div>
 
     <div className={styles.container__wrapper}>
-      <TextInput placeholder="Search for routines" />
+      <div className={styles.search__wrapper}>
+        <Search results={libraryMock} placeholder="Search for routines" withDebounce={() => {}} />
+      </div>
     </div>
 
     <ScrollPanel padding={8}>

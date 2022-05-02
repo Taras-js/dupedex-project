@@ -14,6 +14,14 @@
   height: 71px;
 }
 
+.search__wrapper {
+  position: relative;
+  width: 282px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #707070;
+}
+
 .menu_button {
   position: relative;
   height: 100%;
