@@ -3,8 +3,9 @@
 :root {
   --color-white: #ffffff;
   --color-border-grey: #d2d5e4;
-  --color-footer-grey: #383a4d;
+  --color-search-grey: #b8b4b4;
   --color-cross-grey: #99a1a8;
+  --color-footer-grey: #383a4d;
   --color-black: #000000;
 
   --color-grey: #707070;

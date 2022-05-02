@@ -5,6 +5,8 @@ import Search, { Results } from "../../components/UIKit/Search/Search";
 import { debounce } from "../../utils/helper";
 import { getProductBySearch } from "./SearchSelector";
 
+import styles from "./productSearch.module.css";
+
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>("");
   const [result, setResult] = useState<Results[]>();
@@ -26,13 +28,14 @@ const ProductSearch = () => {
   }, [search]);
 
   return (
-    // eslint-disable-next-line react/react-in-jsx-scope
-    <Search
-      onChange={handleChange}
-      placeholder="Look for a skincare product name, brand name and etc."
-      results={result}
-      withDebounce={debounce}
-    />
+    <div className={styles.product__search}>
+      <Search
+        onChange={handleChange}
+        placeholder="Look for a skincare product name, brand name and etc."
+        results={result}
+        withDebounce={debounce}
+      />
+    </div>
   );
 };
 

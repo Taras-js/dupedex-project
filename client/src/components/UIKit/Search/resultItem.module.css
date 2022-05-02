@@ -3,7 +3,7 @@
   font-size: inherit;
   font-family: inherit;
   width: 100%;
-  padding: 5px;
+  padding: 5px 20px;
   border: none;
   background-color: #ffff;
 }
@@ -16,5 +16,9 @@
 
 .search__subtitle {
   margin-right: 5px;
-  color: #b8b4b4;
+  color: var(--color-search-grey);
+}
+
+.search__image {
+  display: none;
 }

@@ -20,7 +20,7 @@
   background: none;
   width: 100%;
   font: inherit;
-  color: #b8b4b4;
+  color: var(--color-search-grey);
 }
 
 .search__dropdown {
