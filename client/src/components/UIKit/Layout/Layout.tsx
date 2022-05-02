@@ -10,4 +10,4 @@ const Layout = (props: LayoutProps) => {
   return <div className={styles.container}>{children}</div>;
 };
 
-export default Layout;
+export { Layout };
