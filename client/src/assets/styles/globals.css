@@ -4,7 +4,7 @@
   --color-white: #ffffff;
   --color-border-grey: #d2d5e4;
   --color-footer-grey: #383a4d;
-  --color-cross-grey: #99A1A8;
+  --color-cross-grey: #99a1a8;
   --color-black: #000000;
 
   --color-grey: #707070;
@@ -90,7 +90,8 @@ a {
   cursor: pointer;
 }
 
-button, input {
+button,
+input {
   background-color: transparent;
   border: none;
   outline: none;

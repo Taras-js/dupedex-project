@@ -1,3 +1,3 @@
-import LabelList from './LabelList';
+import LabelList from "./LabelList";
 
 export { LabelList };

@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { setProduct } from './searchProductAction';
-import Search, { Results } from '../../components/UIKit/Search/Search';
-import { debounce } from '../../utils/helper';
-import { getProductBySearch } from './SearchSelector';
+import { useEffect, useState } from "react";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { setProduct } from "./searchProductAction";
+import Search, { Results } from "../../components/UIKit/Search/Search";
+import { debounce } from "../../utils/helper";
+import { getProductBySearch } from "./SearchSelector";
 
 const ProductSearch = () => {
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string>("");
   const [result, setResult] = useState<Results[]>();
   const dispatch = useAppDispatch();
 

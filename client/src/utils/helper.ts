@@ -21,8 +21,7 @@ export function sortLabels(array: Array<any>): Array<any> {
 export function getLabels(reviews: Array<any>) {
   const allLabels = [];
 
-  const objLabels = {
-  };
+  const objLabels = {};
 
   reviews.map((review) => allLabels.push(...review.labels));
 
@@ -36,9 +35,9 @@ export function getLabels(reviews: Array<any>) {
       };
     } else objLabels[a].count += 100 / reviews.length;
 
-    if (a.includes('(positive')) objLabels[a].tag = 'positive';
-    if (a.includes('(negative')) objLabels[a].tag = 'negative';
-    if (a.includes('(neutral')) objLabels[a].tag = 'neutral';
+    if (a.includes("(positive")) objLabels[a].tag = "positive";
+    if (a.includes("(negative")) objLabels[a].tag = "negative";
+    if (a.includes("(neutral")) objLabels[a].tag = "neutral";
   }
 
   return sortLabels(Object.entries<number>(objLabels));

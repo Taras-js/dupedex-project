@@ -12,14 +12,16 @@ const LibraryContainer = () => (
       <Button className={`${styles.menu_button} ${styles.is_active}`}>
         My Library
       </Button>
-      <Button className={styles.menu_button}>
-        Explore
-      </Button>
+      <Button className={styles.menu_button}>Explore</Button>
     </div>
 
     <div className={styles.container__wrapper}>
       <div className={styles.search__wrapper}>
-        <Search results={libraryMock} placeholder="Search for routines" withDebounce={() => {}} />
+        <Search
+          results={libraryMock}
+          placeholder="Search for routines"
+          withDebounce={() => {}}
+        />
       </div>
     </div>
 
@@ -29,12 +31,13 @@ const LibraryContainer = () => (
       ))}
     </ScrollPanel>
 
-    <Button
-      icon
-      className={styles.close_btn}
-      onClick={() => {}}
-    >
-      <Icon type="exit" width={18} height={18} color="var(--color-cross-grey)" />
+    <Button icon className={styles.close_btn} onClick={() => {}}>
+      <Icon
+        type="exit"
+        width={18}
+        height={18}
+        color="var(--color-cross-grey)"
+      />
     </Button>
   </div>
 );

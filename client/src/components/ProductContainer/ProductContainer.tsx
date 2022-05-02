@@ -1,11 +1,11 @@
 import { Panel, ScrollPanel } from "../UIKit";
 import { ProductItem } from "./ProductItem";
-import { ReviewItem } from './ReviewItem';
+import { ReviewItem } from "./ReviewItem";
 
 import { ProductContent } from "../../shared/types";
 import { productsMock } from "../../shared/mocks/productmock";
 
-import styles from './productContainer.module.css';
+import styles from "./productContainer.module.css";
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
@@ -16,7 +16,6 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
   if (productList.length === 1) {
     return (
-
       <div className={styles.product__container}>
         {productList.map((item) => (
           <ScrollPanel key={item.id} className={styles.products__panel}>
@@ -30,9 +29,9 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
           </Panel>
         )}
       </div>
-
     );
-  } return (
+  }
+  return (
     <div className={styles.product__container}>
       {productList.map((item) => (
         <ScrollPanel key={item.id} className={styles.products__panel}>

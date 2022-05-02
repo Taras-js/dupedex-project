@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './resultItem.module.css';
-import { useAppDispatch } from '../../../app/hooks';
-import { showItem } from '../../ToolbarContainer/toolbarSlice';
+import React from "react";
+import styles from "./resultItem.module.css";
+import { useAppDispatch } from "../../../app/hooks";
+import { showItem } from "../../ToolbarContainer/toolbarSlice";
 
 interface ResultItemProps {
   id: number;
@@ -13,7 +13,10 @@ interface ResultItemProps {
 const ResultItem: React.FC<ResultItemProps> = (props) => {
   const {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    title, subtitle, image, id,
+    title,
+    subtitle,
+    image,
+    id,
   } = props;
 
   const dispatch = useAppDispatch();
@@ -25,8 +28,9 @@ const ResultItem: React.FC<ResultItemProps> = (props) => {
   };
   return (
     <button onClick={handleClick} className={styles.search__item}>
+      {image && <img src={image} alt={title} className={styles.search__title} />}
       <p className={styles.search__subtitle}>{`${subtitle}`}</p>
-      <p className={styles.search__title}>{ `- ${title}`}</p>
+      <p className={styles.search__title}>{`- ${title}`}</p>
     </button>
   );
 };

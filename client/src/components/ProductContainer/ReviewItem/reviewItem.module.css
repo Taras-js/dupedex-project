@@ -1,17 +1,17 @@
 .review__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
-    padding: 16px;
+  padding: 16px;
 }
 
 .close_btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 .close_btn:hover > svg {
-    fill: var(--color-neutral_yellow-dark);
+  fill: var(--color-neutral_yellow-dark);
 }
