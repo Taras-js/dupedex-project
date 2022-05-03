@@ -4,6 +4,12 @@ export enum Filter {
   neutral = "neutral",
 }
 
+export enum CardSize {
+  large = "large",
+  medium = "medium",
+  small = "small",
+}
+
 export interface ProductContent {
   currentItemId: number;
   itemsIdList: number[];

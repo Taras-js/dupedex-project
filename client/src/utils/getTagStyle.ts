@@ -5,7 +5,7 @@ enum Marks {
   positive = "28, 191, 96",
   negative = "251, 120, 142",
   neutral = "254, 226, 148",
-  other = "170, 170, 170",
+  other = "180, 180, 180",
 }
 
 interface TagStyle {
@@ -13,10 +13,8 @@ interface TagStyle {
   color: string;
 }
 
-const getAlphaFromScore = (score: number, color: string): number => {
+const getAlphaFromScore = (score: number): number => {
   switch (true) {
-    case color === Marks.other:
-      return 1;
     case score > 13:
       return 1;
     case score > 7:
@@ -35,11 +33,11 @@ export const getTagStyle = ([tagLabel, tagInfo]: Array<any>): TagStyle => {
   const findMood: RegExpExecArray = re.exec(tagLabel.split(" ").pop());
 
   const color: RGBonly = !findMood ? Marks.other : Marks[findMood[1]];
-  const alpha = getAlphaFromScore(Number(tagInfo.count), color);
+  const alpha = getAlphaFromScore(Number(tagInfo.count));
 
   const tagStyle: TagStyle = {
     backgroundColor: `rgba(${color}, ${alpha})`,
-    color: color === Marks.other || alpha > 0.6 ? "#FFF" : "111",
+    color: alpha > 0.8 ? "#FFF" : "111",
   };
 
   return tagStyle;

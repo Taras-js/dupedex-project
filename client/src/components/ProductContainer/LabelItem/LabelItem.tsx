@@ -5,27 +5,27 @@ import { cls } from "../../../utils/helper";
 import styles from "./labelItem.module.css";
 
 interface LabelProps {
-  review: any;
+  label: any;
 }
 
 const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
-  const { review } = props;
+  const { label } = props;
 
   const labelItemClass = {
-    review__tag: true,
-    positive: review[1].tag === Filter.positive,
-    negative: review[1].tag === Filter.negative,
-    neutral: review[1].tag === Filter.neutral,
-    other: review[1].tag === null,
+    label__tag: true,
+    positive: label[1].tag === Filter.positive,
+    negative: label[1].tag === Filter.negative,
+    neutral: label[1].tag === Filter.neutral,
+    other: label[1].tag === null,
   };
 
   return (
-    <li style={getTagStyle(review)} className={cls(styles, labelItemClass)}>
-      <span>{review[1].name}</span>
+    <li style={getTagStyle(label)} className={cls(styles, labelItemClass)}>
+      <span>{label[1].name}</span>
       <span>
         (
         {
-          Number(review[1].count).toFixed(0)
+          Number(label[1].count).toFixed(0)
         }
         %)
       </span>

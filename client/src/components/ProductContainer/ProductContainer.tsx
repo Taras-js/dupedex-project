@@ -1,4 +1,4 @@
-import { Panel, ScrollPanel } from "../UIKit";
+import { Panel } from "../UIKit";
 import { ProductItem } from "./ProductItem";
 import { ReviewItem } from "./ReviewItem";
 
@@ -6,6 +6,7 @@ import { ProductContent } from "../../shared/types";
 import { productsMock } from "../../shared/mocks/productmock";
 
 import styles from "./productContainer.module.css";
+import { getCardSize } from "../../utils/helper";
 
 const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   const {
@@ -14,13 +15,15 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
   const productList = productsMock.filter((item) => itemsIdList.includes(item.id));
 
+  const itemSize = getCardSize(itemsIdList, isReviewShown);
+
   if (productList.length === 1) {
     return (
       <div className={styles.product__container}>
         {productList.map((item) => (
-          <ScrollPanel key={item.id} className={styles.products__panel}>
-            <ProductItem id={item.id} filter={filter} />
-          </ScrollPanel>
+          <Panel key={item.id} className={styles.products__panel}>
+            <ProductItem id={item.id} size={itemSize} filter={filter} />
+          </Panel>
         ))}
 
         {isReviewShown && (
@@ -34,9 +37,9 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
   return (
     <div className={styles.product__container}>
       {productList.map((item) => (
-        <ScrollPanel key={item.id} className={styles.products__panel}>
-          <ProductItem isShowClose id={item.id} filter={filter} />
-        </ScrollPanel>
+        <Panel key={item.id} className={styles.products__panel}>
+          <ProductItem isShowClose id={item.id} size={itemSize} filter={filter} />
+        </Panel>
       ))}
     </div>
   );

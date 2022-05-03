@@ -1,4 +1,5 @@
 import classNames from "classnames/bind";
+import { CardSize } from "../shared/types";
 
 export function cls(styles, ...args) {
   const sx = classNames.bind(styles);
@@ -56,4 +57,20 @@ export const debounce = (func) => {
       func.apply(context, args);
     }, 500);
   };
+};
+
+export const getCardSize = (productList: any[], isReviewShown: boolean): CardSize => {
+  if (productList.length === 1 && isReviewShown === false) return CardSize.large;
+
+  if (productList.length === 2 || (productList.length === 1 && isReviewShown === true)) return CardSize.medium;
+
+  return CardSize.small;
+};
+
+export const getQuantity = (size: CardSize): number => {
+  if (size === CardSize.large) return 24;
+
+  if (size === CardSize.medium) return 18;
+
+  return 6;
 };
