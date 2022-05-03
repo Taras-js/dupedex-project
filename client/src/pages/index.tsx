@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import ProductSearch from '../features/Search/ProductSearch';
+import ProductSearch from "../features/Search/ProductSearch";
 import {
   Layout, LayoutRow, LayoutItem, Panel,
 } from "../components/UIKit";

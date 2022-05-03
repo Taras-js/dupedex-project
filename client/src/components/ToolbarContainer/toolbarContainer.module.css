@@ -17,11 +17,17 @@
   fill: var(--color-grey-dark);
 }
 
-.toolbar__btn_tutorial:hover > svg {}
+.toolbar__btn_tutorial:hover > svg {
+  fill: var(--color-grey-dark);
+}
 
-.toolbar__btn_prev_step:hover > svg {}
+.toolbar__btn_prev_step:hover > svg {
+  fill: var(--color-grey-dark);
+}
 
-.toolbar__btn_next_step:hover > svg {}
+.toolbar__btn_next_step:hover > svg {
+  fill: var(--color-grey-dark);
+}
 
 .toolbar__btn_toggle_reviews:hover > svg {
   fill: var(--color-neutral_yellow-dark);
@@ -58,9 +64,13 @@
   fill: var(--color-neutral_yellow-dark);
 }
 
-.toolbar__btn_share:hover > svg {}
+.toolbar__btn_share:hover > svg {
+  fill: var(--color-grey-dark);
+}
 
-.toolbar__btn_save:hover > svg {}
+.toolbar__btn_save:hover > svg {
+  fill: var(--color-grey-dark);
+}
 
 .divider {
   width: 0.5px;

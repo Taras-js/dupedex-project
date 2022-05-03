@@ -1,10 +1,10 @@
-import { toggleReviews } from '../../ToolbarContainer/toolbarSlice';
-import { Button, Icon } from '../../UIKit';
+import { toggleReviews } from "../../ToolbarContainer/toolbarSlice";
+import { Button, Icon } from "../../UIKit";
 
-import { useAppDispatch } from '../../../app/hooks';
-import { productsMock } from '../../../shared/mocks/productmock';
+import { useAppDispatch } from "../../../app/hooks";
+import { productsMock } from "../../../shared/mocks/productmock";
 
-import styles from './reviewItem.module.css';
+import styles from "./reviewItem.module.css";
 
 interface ReviewProps {
   id: number;
@@ -14,7 +14,9 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
   const { id } = props;
   const dispatch = useAppDispatch();
 
-  const onShowReviewsClick = () => { dispatch(toggleReviews()); };
+  const onShowReviewsClick = () => {
+    dispatch(toggleReviews());
+  };
 
   return (
     <div className={styles.review__container}>
@@ -30,11 +32,7 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
           ))
       }
 
-      <Button
-        icon
-        className={styles.close_btn}
-        onClick={onShowReviewsClick}
-      >
+      <Button icon className={styles.close_btn} onClick={onShowReviewsClick}>
         <Icon type="toggleReviews" width={28} height={28} />
       </Button>
     </div>

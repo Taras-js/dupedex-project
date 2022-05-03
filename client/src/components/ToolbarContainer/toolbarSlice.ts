@@ -48,11 +48,13 @@ export const toolbarSlice = createSlice({
       state.itemsIdList = action.payload;
       saveStep(state);
     },
-    removeItem: (state, action: { type: '', payload: number }) => {
-      state.itemsIdList = state.itemsIdList.filter((id) => id !== action.payload);
+    removeItem: (state, action: { type: ""; payload: number }) => {
+      state.itemsIdList = state.itemsIdList.filter(
+        (id) => id !== action.payload,
+      );
       saveStep(state);
     },
-    setFilter: (state, action: { type: '', payload: Filter }) => {
+    setFilter: (state, action: { type: ""; payload: Filter }) => {
       if (state.filter !== action.payload) state.filter = action.payload;
       else state.filter = null;
       saveStep(state);
@@ -61,12 +63,18 @@ export const toolbarSlice = createSlice({
       state.isReviewShown = !state.isReviewShown;
       saveStep(state);
     },
-    getHistoryStep: (state, action: { type: '', payload: 1 | -1 }) => {
+    getHistoryStep: (state, action: { type: ""; payload: 1 | -1 }) => {
       state.historyStep += action.payload;
-      state.currentItemId = current(state.history)[state.historyStep - 1].currentItemId;
-      state.itemsIdList = current(state.history)[state.historyStep - 1].itemsIdList;
+      state.currentItemId = current(state.history)[
+        state.historyStep - 1
+      ].currentItemId;
+      state.itemsIdList = current(state.history)[
+        state.historyStep - 1
+      ].itemsIdList;
       state.filter = current(state.history)[state.historyStep - 1].filter;
-      state.isReviewShown = current(state.history)[state.historyStep - 1].isReviewShown;
+      state.isReviewShown = current(state.history)[
+        state.historyStep - 1
+      ].isReviewShown;
     },
   },
 });

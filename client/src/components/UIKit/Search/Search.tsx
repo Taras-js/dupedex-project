@@ -1,11 +1,9 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, {
-  useCallback,
-} from 'react';
-import styles from './Search.module.css';
-import { Icon } from '../Icon';
-import ModalComponent from './modalComponent';
-import ResultItem from './ResultItem';
+import { useCallback } from "react";
+import styles from "./Search.module.css";
+import { Icon } from "../Icon";
+import ModalComponent from "./modalComponent";
+import ResultItem from "./ResultItem";
 
 export interface Results {
   id?: number;
@@ -17,11 +15,11 @@ export interface Results {
 export interface SearchProps {
   placeholder?: string;
   results?: Results[];
-  withDebounce: (Function);
+  withDebounce: Function;
   onChange?: (e: React.ChangeEvent) => void;
 }
 
-const Search: React.FC<SearchProps> = (props) => {
+const Search: React.FC<SearchProps> = (props: SearchProps) => {
   const {
     results, placeholder, withDebounce, onChange,
   } = props;
@@ -47,10 +45,23 @@ const Search: React.FC<SearchProps> = (props) => {
         />
         <Icon type="search" width={25} height={25} />
       </form>
-      <div className={clickedOutside ? styles.search__dropdown : styles.search__dropdown_passive}>
-        {results && results.map((result) => (
-          <ResultItem key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} id={result.id} />
-        ))}
+      <div
+        className={
+          clickedOutside
+            ? styles.search__dropdown
+            : styles.search__dropdown_passive
+        }
+      >
+        {results
+          && results.map((result) => (
+            <ResultItem
+              key={result.id}
+              title={result.title}
+              subtitle={result.subtitle}
+              image={result.image}
+              id={result.id}
+            />
+          ))}
       </div>
     </div>
   );

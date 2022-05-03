@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 export default function ModalComponent(initialValue) {
   const [clickedOutside, setClickedOutside] = useState(initialValue);
@@ -12,11 +12,13 @@ export default function ModalComponent(initialValue) {
 
   const handleClickInside = () => setClickedOutside(true);
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   });
 
   return {
-    clickedOutside, myRef, handleClickInside,
+    clickedOutside,
+    myRef,
+    handleClickInside,
   };
 }
