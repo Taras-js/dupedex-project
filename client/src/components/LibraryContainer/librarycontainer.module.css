@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
 }
-  
+
 .container__wrapper {
   display: flex;
   justify-content: center;
@@ -44,7 +44,7 @@
   border-radius: 4px;
   background-color: blue;
 }
-  
+
 .close_btn {
   position: absolute;
   top: 8px;

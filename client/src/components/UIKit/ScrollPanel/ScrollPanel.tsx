@@ -9,9 +9,7 @@ interface ScrollPanelProps {
 }
 
 const ScrollPanel: React.FC<ScrollPanelProps> = (props: ScrollPanelProps) => {
-  const {
-    children, padding = 0, className,
-  } = props;
+  const { children, padding = 0, className } = props;
 
   const innerPanelClass = cls(styles, "inner_panel", className);
 

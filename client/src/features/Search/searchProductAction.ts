@@ -1,6 +1,6 @@
-import { AppDispatch } from '../../app/store';
-import { productsMock } from '../../shared/mocks/productmock';
-import { productSlice } from './productSlice';
+import { AppDispatch } from "../../app/store";
+import { productsMock } from "../../shared/mocks/productmock";
+import { productSlice } from "./productSlice";
 
 export const setProduct = () => async (dispatch: AppDispatch) => {
   await setTimeout(() => {

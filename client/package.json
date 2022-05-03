@@ -6,7 +6,8 @@
     "start": "next start",
     "type-check": "tsc",
     "test": "jest",
-    "lint": "npx eslint . --fix"
+    "lint": "npx eslint . --fix",
+    "format": "prettier --write ."
   },
   "proxy": "localhost:5000",
   "dependencies": {

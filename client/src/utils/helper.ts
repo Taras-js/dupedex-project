@@ -1,4 +1,5 @@
 import classNames from "classnames/bind";
+import { CardSize } from "../shared/types";
 
 export function cls(styles, ...args) {
   const sx = classNames.bind(styles);
@@ -21,8 +22,7 @@ export function sortLabels(array: Array<any>): Array<any> {
 export function getLabels(reviews: Array<any>) {
   const allLabels = [];
 
-  const objLabels = {
-  };
+  const objLabels = {};
 
   reviews
     .filter((review) => review.labels)
@@ -30,17 +30,20 @@ export function getLabels(reviews: Array<any>) {
 
   for (let i = 0; i < allLabels.length; i += 1) {
     const a = allLabels[i].toString();
+    let currentTag: string | null = null;
+
+    if (a.includes("(positive")) currentTag = "positive";
+    if (a.includes("(negative")) currentTag = "negative";
+    if (a.includes("(neutral")) currentTag = "neutral";
+    const currentName = a.replace(/(\((.*?)\))/gi, "").trim();
 
     if (objLabels[a] === undefined) {
       objLabels[a] = {
-        tag: null,
+        tag: currentTag,
         count: 100 / reviews.length,
+        name: currentName,
       };
     } else objLabels[a].count += 100 / reviews.length;
-
-    if (a.includes('(positive')) objLabels[a].tag = 'positive';
-    if (a.includes('(negative')) objLabels[a].tag = 'negative';
-    if (a.includes('(neutral')) objLabels[a].tag = 'neutral';
   }
 
   return sortLabels(Object.entries<number>(objLabels));
@@ -56,4 +59,20 @@ export const debounce = (func) => {
       func.apply(context, args);
     }, 500);
   };
+};
+
+export const getCardSize = (productList: any[], isReviewShown: boolean): CardSize => {
+  if (productList.length === 1 && isReviewShown === false) return CardSize.large;
+
+  if (productList.length === 2 || (productList.length === 1 && isReviewShown === true)) return CardSize.medium;
+
+  return CardSize.small;
+};
+
+export const getQuantity = (size: CardSize): number => {
+  if (size === CardSize.large) return 24;
+
+  if (size === CardSize.medium) return 18;
+
+  return 6;
 };

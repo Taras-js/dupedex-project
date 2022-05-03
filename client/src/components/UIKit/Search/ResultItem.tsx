@@ -1,7 +1,6 @@
-import React from 'react';
-import styles from './resultItem.module.css';
-import { useAppDispatch } from '../../../app/hooks';
-import { showItem } from '../../ToolbarContainer/toolbarSlice';
+import styles from "./resultItem.module.css";
+import { useAppDispatch } from "../../../app/hooks";
+import { showItem } from "../../ToolbarContainer/toolbarSlice";
 
 interface ResultItemProps {
   id: number;
@@ -10,10 +9,12 @@ interface ResultItemProps {
   image?: string;
 }
 
-const ResultItem: React.FC<ResultItemProps> = (props) => {
+const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
   const {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    title, subtitle, image, id,
+    title,
+    subtitle,
+    image,
+    id,
   } = props;
 
   const dispatch = useAppDispatch();
@@ -25,8 +26,9 @@ const ResultItem: React.FC<ResultItemProps> = (props) => {
   };
   return (
     <button onClick={handleClick} className={styles.search__item}>
-      <p className={styles.search__subtitle}>{`${subtitle}`}</p>
-      <p className={styles.search__title}>{ `- ${title}`}</p>
+      {image && <img src={image} alt={title} className={styles.search__image} />}
+      <p className={styles.search__title}>{`${title} `}</p>
+      <p className={styles.search__subtitle}>{` - ${subtitle} (meccabeauty.co.nz)`}</p>
     </button>
   );
 };

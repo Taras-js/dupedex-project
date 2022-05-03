@@ -1,30 +1,29 @@
-.review__tag {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 2px;
+.label__tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-
-    padding: 4px;
-}
-
-.review__tag > span:first-child {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  min-height: 35px;
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
 }
 
-.review__tag.positive {
-    background-color: rgba(0, 200, 0, 0.3);
+.label__tag > span:first-child {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.review__tag.negative {
-    background-color: rgba(200, 0, 0, 0.3);
+
+.label__tag.positive {
+  background-color: rgba(0, 200, 0, 0.3);
 }
-.review__tag.neutral {
-    background-color: rgba(200, 200, 0, 0.3);
+.label__tag.negative {
+  background-color: rgba(200, 0, 0, 0.3);
 }
-.review__tag.other {
-    background-color: rgba(200, 200, 200, 0.3);
+.label__tag.neutral {
+  background-color: rgba(200, 200, 0, 0.3);
+}
+.label__tag.other {
+  background-color: rgba(100, 100, 200, 0.3);
 }

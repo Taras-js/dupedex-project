@@ -1,36 +1,132 @@
 .products__item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  padding: 8px 4px;
+  overflow: hidden;
 }
 
 .products__img {
-  max-width: 200px;
-  max-height: 200px;
+}
+
+.products__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-txt);
+}
+
+.products__heading {
+  margin: 0;
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 49px;
+  text-align: center;
 }
 
 .products__link {
-  margin-bottom: 6px;
   text-decoration: underline;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
 }
 
-.heading {
-    margin: 0;
-    margin-bottom: 10px;
+.products__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
 }
 
-.tag__item {
-    padding: 8px 12px;
-    border-radius: 9px;
-    margin: 5px;
-    min-width: 160px;
-    text-align: center
+.products__labels {
 }
 
 .close_btn {
   position: absolute;
   top: 8px;
   right: 8px;
+}
+
+.products__item.large {
+  flex-flow: column wrap;
+  align-self: flex-start;
+  justify-content: flex-start;
+  align-content: space-evenly;
+  padding: 40px 50px 60px;
+}
+
+.large .products__img {
+  max-width: 500px;
+  width: 50%;
+  height: 100%;
+}
+
+.large .products__text {
+  max-width: 600px;
+  width: 50%;
+  margin-bottom: 60px;
+}
+
+.large .products__labels {
+  max-width: 620px;
+  width: 100%;
+  min-height: 300px;
+}
+
+.products__item.medium {
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  padding: 40px 30px 70px;
+}
+
+.medium .products__img {
+  max-width: 125px;
+  max-height: 125px;
+}
+
+.medium .products__text {
+  min-width: 40%;
+  max-width: 80%;
+  margin-left: 50px;
+  margin-right: 25px;
+  margin-bottom: 50px;
+}
+
+.medium .products__labels {
+  width: 100%;
+}
+
+.products__item.small {
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 40px 30px 70px;
+}
+
+.small .products__img {
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 20px;
+}
+
+.small .products__text {
+  margin-bottom: 50px;
+}
+
+.small .products__heading {
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.small .products__link {
+  display: none;
+}
+
+.small .products__description {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.small .products__labels {
+  max-width: 200px;
+  width: 80%;
 }
