@@ -1,5 +1,4 @@
-export const getProductBySearch = (state, search: string) => (
-  search.length > 1
+export const getProductBySearch = (state, search: string) => search.length > 1
   && state
     .filter(
       (product) => product.prod_name
@@ -16,4 +15,4 @@ export const getProductBySearch = (state, search: string) => (
       subtitle: product.prod_name,
       image: product.img_link,
       id: product.id,
-    })));
+    }));

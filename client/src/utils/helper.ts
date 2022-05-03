@@ -61,10 +61,16 @@ export const debounce = (func) => {
   };
 };
 
-export const getCardSize = (productList: any[], isReviewShown: boolean): CardSize => {
-  if (productList.length === 1 && isReviewShown === false) return CardSize.large;
+export const getCardSize = (
+  productList: any[],
+  isReviewShown: boolean,
+): CardSize => {
+  if (productList.length === 1 && isReviewShown === false) { return CardSize.large; }
 
-  if (productList.length === 2 || (productList.length === 1 && isReviewShown === true)) return CardSize.medium;
+  if (
+    productList.length === 2
+    || (productList.length === 1 && isReviewShown === true)
+  ) { return CardSize.medium; }
 
   return CardSize.small;
 };

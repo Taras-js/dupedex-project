@@ -4,16 +4,22 @@ export const productsMock = [
       $oid: "624ea268497fd119e6ebf8b0",
     },
     id: 1,
-    brand_name: 'Tatcha',
-    prod_name: 'The Rice Wash',
-    prod_link: 'https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare',
-    price: '$56.00',
-    category: 'HomeSkin CareCleanser & TonerCleanserThe Rice Wash',
-    img_link: 'https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg',
-    Benefits: 'Cruelty-freeHydratingBrighteningExfoliatingFirmingPore minimisingOil freeSulphate-free',
-    Details: "The MECCA View:Harnessing the centuries-old Japanese practice of using rice as an essential ingredient in daily diet and beauty rituals (resulting in clear, bright and dewy skin), this pillow-soft cream cleanser helps to soften, smooth and hydrate the face while clearing away impurities. Like many of Tatcha's bestsellers, the cream cleanser is formulated with Hadasei-3, a fermented antioxidant-rich essence of Japanese superfoods, which floods the skin with moisture, replenishing the skin barrier for a softer, smoother complexion.Key ingredients:Japanese algae and hyaluronic acid blend: helps restore a healthy, protective skin barrier to retain essential moisture.Rice powder: revives the complexion for a natural glow.Hadasei-3: a twice-fermented blend of akita rice, kyoto green tea and okinawa algae to flood skin with moisture and reveal youthful, healthy-looking skin.Made without:Parabens, synthetic fragrances, mineral oil, sulfates, phthalates, urea, DEA and TEA.Pair it with:Tatcha The Dewy Skin CreamTatcha Luminous Dewy Skin MistTatcha The Essence",
-    Usage: 'Begin with wet hands and wet face. Squeeze a small amount into palms and rub together to create a creamy foam.  Gently massage the face avoiding the eye area and rinse thoroughly. Can be used daily.',
-    Ingredients: 'Aqua/Water/Eau, Microcrystalline Cellulose,\nPropanediol, Sodium Cocoyl Glutamate, Glycerin, Acrylates Copolymer, Sodium\nCaproyl Methyltaurate, Coco-Betaine, Parfum/Fragrance, Saccharomyces/Camellia\nSinensis Leaf/Cladosiphon Okamuranus/Rice Ferment Filtrate*, Oryza Sativa\n(Rice) Powder, Chondrus Crispus Extract, Sodium Hyaluronate, Betaphycus\nGelatinum Extract, Lauryl Glucoside, Potassium Hydroxide, Polyquaternium-39,\nDisodium Edta, Phenoxyethanol, Ethylhexylglycerin, Sodium Benzoate,\nSodium Carbonate, Alcohol*Hadasei-3',
+    brand_name: "Tatcha",
+    prod_name: "The Rice Wash",
+    prod_link:
+      "https://www.meccabeauty.co.nz/tatcha/the-rice-wash/V-853792.html?cgpath=skincare",
+    price: "$56.00",
+    category: "HomeSkin CareCleanser & TonerCleanserThe Rice Wash",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw8e1fb81b/product/tatcha/hr/i-043839-the-rice-wash-1-940.jpg",
+    Benefits:
+      "Cruelty-freeHydratingBrighteningExfoliatingFirmingPore minimisingOil freeSulphate-free",
+    Details:
+      "The MECCA View:Harnessing the centuries-old Japanese practice of using rice as an essential ingredient in daily diet and beauty rituals (resulting in clear, bright and dewy skin), this pillow-soft cream cleanser helps to soften, smooth and hydrate the face while clearing away impurities. Like many of Tatcha's bestsellers, the cream cleanser is formulated with Hadasei-3, a fermented antioxidant-rich essence of Japanese superfoods, which floods the skin with moisture, replenishing the skin barrier for a softer, smoother complexion.Key ingredients:Japanese algae and hyaluronic acid blend: helps restore a healthy, protective skin barrier to retain essential moisture.Rice powder: revives the complexion for a natural glow.Hadasei-3: a twice-fermented blend of akita rice, kyoto green tea and okinawa algae to flood skin with moisture and reveal youthful, healthy-looking skin.Made without:Parabens, synthetic fragrances, mineral oil, sulfates, phthalates, urea, DEA and TEA.Pair it with:Tatcha The Dewy Skin CreamTatcha Luminous Dewy Skin MistTatcha The Essence",
+    Usage:
+      "Begin with wet hands and wet face. Squeeze a small amount into palms and rub together to create a creamy foam.  Gently massage the face avoiding the eye area and rinse thoroughly. Can be used daily.",
+    Ingredients:
+      "Aqua/Water/Eau, Microcrystalline Cellulose,\nPropanediol, Sodium Cocoyl Glutamate, Glycerin, Acrylates Copolymer, Sodium\nCaproyl Methyltaurate, Coco-Betaine, Parfum/Fragrance, Saccharomyces/Camellia\nSinensis Leaf/Cladosiphon Okamuranus/Rice Ferment Filtrate*, Oryza Sativa\n(Rice) Powder, Chondrus Crispus Extract, Sodium Hyaluronate, Betaphycus\nGelatinum Extract, Lauryl Glucoside, Potassium Hydroxide, Polyquaternium-39,\nDisodium Edta, Phenoxyethanol, Ethylhexylglycerin, Sodium Benzoate,\nSodium Carbonate, Alcohol*Hadasei-3",
     reviews: [
       {
         name: " Soofie",
@@ -594,14 +600,18 @@ export const productsMock = [
     id: 2,
     brand_name: "Frank Body",
     prod_name: "Caffeinated Face Moisturiser",
-    prod_link: "https://www.meccabeauty.co.nz/frank-body/caffeinated-face-moisturiser/V-040306.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/frank-body/caffeinated-face-moisturiser/V-040306.html?cgpath=skincare",
     price: "$24.00",
     category: "HomeSkin CareMoisturiserMoisturiserCaffeinated Face Moisturiser",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw9c7e183c/product/frank/hr/i-040306-everyday-face-moisturiser-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw9c7e183c/product/frank/hr/i-040306-everyday-face-moisturiser-1-940.jpg",
     Benefits: "HydratingSulphate-freeParaben-free",
-    Details: "The MECCA view:Smoother, softer skin is just one application away with the Frank Body Caffeinated Face Moisturiser. This gentle moisturiser has a light, comforting formula that promises to never weigh down skin or clog pores over time, offering optimal breathability for your complexion.Key ingredients:Cocoa and shea butters: this hydrating duo will lock in your skin's moisture so it won't ever feel dry.Vitamin E: promotes the long term health of your skin by blocking the damaging effects of free radicals. Coconut, grapeseed & sweet almond oils: deeply nourish and hydrate the skin without blocking pores. Made without:Animal products, parabens and PEGs.Pair it with: Frank Body Charcoal Face CleanserMECCA MAX WATERCOOLER Calming Hydration SerumFrank Body Glow Mask",
+    Details:
+      "The MECCA view:Smoother, softer skin is just one application away with the Frank Body Caffeinated Face Moisturiser. This gentle moisturiser has a light, comforting formula that promises to never weigh down skin or clog pores over time, offering optimal breathability for your complexion.Key ingredients:Cocoa and shea butters: this hydrating duo will lock in your skin's moisture so it won't ever feel dry.Vitamin E: promotes the long term health of your skin by blocking the damaging effects of free radicals. Coconut, grapeseed & sweet almond oils: deeply nourish and hydrate the skin without blocking pores. Made without:Animal products, parabens and PEGs.Pair it with: Frank Body Charcoal Face CleanserMECCA MAX WATERCOOLER Calming Hydration SerumFrank Body Glow Mask",
     Usage: "Massage into face and neck.",
-    Ingredients: "Water (aqua), squalane (olive), vitis vinifera (grape) seed oil, glycerin, cetearyl olivate, caprylic/capric triglyceride, prunus amygdalus dulcis (sweet almond) oil, sorbitan olivate, olus (vegetable) oil, coffea arabica (coffee) seed oil, vitis vinifera (grape) fruit extract, cocos nucifera (coconut) oil, butyrospermum parkii (shea butter), theobroma cacao (cocoa) seed butter, tocopherol (vitamin e), glycine, soja (soybean) oil, aloe barbadensis (aloe vera) leaf juice, glycyrrhiza glabra (licorice) root extract, fragrance (parfum), chondrus crispus (carrageenan), xanthan gum (sugar), citric acid (corn), potassium sorbate, benzyl alcohol (cinnamon derived), dehydroacetic acid, sodium citrate (corn).",
+    Ingredients:
+      "Water (aqua), squalane (olive), vitis vinifera (grape) seed oil, glycerin, cetearyl olivate, caprylic/capric triglyceride, prunus amygdalus dulcis (sweet almond) oil, sorbitan olivate, olus (vegetable) oil, coffea arabica (coffee) seed oil, vitis vinifera (grape) fruit extract, cocos nucifera (coconut) oil, butyrospermum parkii (shea butter), theobroma cacao (cocoa) seed butter, tocopherol (vitamin e), glycine, soja (soybean) oil, aloe barbadensis (aloe vera) leaf juice, glycyrrhiza glabra (licorice) root extract, fragrance (parfum), chondrus crispus (carrageenan), xanthan gum (sugar), citric acid (corn), potassium sorbate, benzyl alcohol (cinnamon derived), dehydroacetic acid, sodium citrate (corn).",
     reviews: [
       {
         name: " Soofie",
@@ -783,7 +793,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "  Age 25 to 34",
         title: "  Best moisturiser for sure",
-        review_text: "  You won’t find a gorgeous clean moisturiser at this price point with any other brand. I haven’t had one breakout since I started using this moisturiser about 5 months ago. It’s really lovely. It doesn’t smell amazing (like coffee) but it feels gorgeous. Really nice product.",
+        review_text:
+          "  You won’t find a gorgeous clean moisturiser at this price point with any other brand. I haven’t had one breakout since I started using this moisturiser about 5 months ago. It’s really lovely. It doesn’t smell amazing (like coffee) but it feels gorgeous. Really nice product.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 days ago  ",
         "country name": "  Melbourne",
@@ -792,7 +803,8 @@ export const productsMock = [
         name: " Nikola K",
         age: "  Age 35 to 44",
         title: "  Great product",
-        review_text: "  Really smooth and not too heavy product. Works great for my skin type and doesn’t cost too much",
+        review_text:
+          "  Really smooth and not too heavy product. Works great for my skin type and doesn’t cost too much",
         rating: "5 out of 5 stars.",
         "review date": "  · 12 days ago  ",
         "country name": "  Brisbane",
@@ -801,7 +813,8 @@ export const productsMock = [
         name: " Annnnnnn77",
         age: "  Age 25 to 34",
         title: "  Breakout !!!!",
-        review_text: "  This gave me lots of breakouts, it’s not oily or greasy but it still gave me breakouts.",
+        review_text:
+          "  This gave me lots of breakouts, it’s not oily or greasy but it still gave me breakouts.",
         rating: "2 out of 5 stars.",
         "review date": "  · 15 days ago  ",
         "country name": "  Brunswick East",
@@ -810,7 +823,8 @@ export const productsMock = [
         name: " cdog777",
         age: "  Age 18 to 24",
         title: "  fav moisturiser!",
-        review_text: "  [This review was collected as part of a promotion.] this is my all time favourite moisturiser for the mornings. it feels so good on the face, especially when mixed in with a face oil. the smell took a bit of getting used to at first, but now i don’t even notice it. have already recommended to a few friends who have also fallen in love with this gorg moisturiser!",
+        review_text:
+          "  [This review was collected as part of a promotion.] this is my all time favourite moisturiser for the mornings. it feels so good on the face, especially when mixed in with a face oil. the smell took a bit of getting used to at first, but now i don’t even notice it. have already recommended to a few friends who have also fallen in love with this gorg moisturiser!",
         rating: "4 out of 5 stars.",
         "review date": "  · 17 days ago  ",
         "country name": "  Wellington, NZ",
@@ -819,7 +833,8 @@ export const productsMock = [
         name: " Becshepp",
         age: "  Age 35 to 44",
         title: "  Nice day moisturiser",
-        review_text: "  I quite like this moisturiser for day use but it isn’t ideal for night use. The coffee smell isn’t delightful, but it provides a good lot of moisture to your face.",
+        review_text:
+          "  I quite like this moisturiser for day use but it isn’t ideal for night use. The coffee smell isn’t delightful, but it provides a good lot of moisture to your face.",
         rating: "3 out of 5 stars.",
         "review date": "  · 21 days ago  ",
         "country name": "  Queensland",
@@ -827,8 +842,10 @@ export const productsMock = [
       {
         name: " Summer Findlay",
         age: "  Age 25 to 34",
-        title: "  Nice and light on the face and does not flare up my dermatitis.",
-        review_text: "  [This review was collected as part of a promotion.] I have been using this for almost a year now recommend by a friend and I won't go back to anything else and it's a reasonable price!",
+        title:
+          "  Nice and light on the face and does not flare up my dermatitis.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I have been using this for almost a year now recommend by a friend and I won't go back to anything else and it's a reasonable price!",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  New Zealand",
@@ -837,7 +854,8 @@ export const productsMock = [
         name: " SC038",
         age: "  Age 35 to 44",
         title: "  How did I not know this existed!",
-        review_text: "  Amazing moisturiser. Leaves skin beautiful and soft. It’s a natural light feel, perfect for summer.",
+        review_text:
+          "  Amazing moisturiser. Leaves skin beautiful and soft. It’s a natural light feel, perfect for summer.",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "",
@@ -846,7 +864,8 @@ export const productsMock = [
         name: " Krystal3108",
         age: "  Age 25 to 34",
         title: "  Light on skin",
-        review_text: "  Hydrating, quick drying and light to apply, doesn’t feel greasy alone or under make up.",
+        review_text:
+          "  Hydrating, quick drying and light to apply, doesn’t feel greasy alone or under make up.",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Victoria",
@@ -855,7 +874,8 @@ export const productsMock = [
         name: " mariadinu",
         age: "  Age 25 to 34",
         title: "  Bought it for a friend",
-        review_text: "  After using this myself I recommended it to a friend, and they love it as much as I do!",
+        review_text:
+          "  After using this myself I recommended it to a friend, and they love it as much as I do!",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Auckland, NZ",
@@ -864,7 +884,8 @@ export const productsMock = [
         name: " Haffi",
         age: "  Age 25 to 34",
         title: "  Worst moisturiser",
-        review_text: "  I bought this moisturiser to redeem beauty loop box online because I cannot go Instore to redeem. Worst decision ever. Moisturiser smells bad and loop box had sachet of samples. I was expecting nice smell from frank moisturiser but it smells like expired product.",
+        review_text:
+          "  I bought this moisturiser to redeem beauty loop box online because I cannot go Instore to redeem. Worst decision ever. Moisturiser smells bad and loop box had sachet of samples. I was expecting nice smell from frank moisturiser but it smells like expired product.",
         rating: "1 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Melbourne",
@@ -873,7 +894,8 @@ export const productsMock = [
         name: " T333",
         age: "  Age 18 to 24",
         title: "  Major pilling",
-        review_text: "  I bought this product a couple months a go as I was a fan of the previous Frank Body 'Everyday Face Moisturiser' and was instructed by a Mecca employee that this product was the replacement for the discontinued original face moisturiser. However since Frank Body have replaced the 'Everyday Face Moisturiser' with the 'Caffeinated Face moisturiser' I have tried again and again to use this product and it is very disappointing. Unfortunately I have found that this moisturiser cannot be used with any other products (including SPF/foundations/BBcreams) because of major pilling. Using the cream by itself is ok but not being able to use with with other products does make it spretty pointless addition to any skin care routine, which is why I would rate it a 2/5.",
+        review_text:
+          "  I bought this product a couple months a go as I was a fan of the previous Frank Body 'Everyday Face Moisturiser' and was instructed by a Mecca employee that this product was the replacement for the discontinued original face moisturiser. However since Frank Body have replaced the 'Everyday Face Moisturiser' with the 'Caffeinated Face moisturiser' I have tried again and again to use this product and it is very disappointing. Unfortunately I have found that this moisturiser cannot be used with any other products (including SPF/foundations/BBcreams) because of major pilling. Using the cream by itself is ok but not being able to use with with other products does make it spretty pointless addition to any skin care routine, which is why I would rate it a 2/5.",
         rating: "2 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  Sydney",
@@ -882,7 +904,8 @@ export const productsMock = [
         name: " Abbie1991",
         age: "  Age 25 to 34",
         title: "  Good for the price",
-        review_text: "  This moisturiser is pretty good for the price, my only issue is it doesn’t always fully absorb into my skin so can find I get pilling if I touch my face later on",
+        review_text:
+          "  This moisturiser is pretty good for the price, my only issue is it doesn’t always fully absorb into my skin so can find I get pilling if I touch my face later on",
         rating: "4 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  Adelaide",
@@ -891,7 +914,8 @@ export const productsMock = [
         name: " Teresse",
         age: "  Age 45 to 54",
         title: "  Face Moisturiser",
-        review_text: "  I have used this product for a relatively short time, not long enough to notice any difference, but I can say it feels lovely on your face and a little goes a long way.",
+        review_text:
+          "  I have used this product for a relatively short time, not long enough to notice any difference, but I can say it feels lovely on your face and a little goes a long way.",
         rating: "4 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  NZ",
@@ -900,7 +924,8 @@ export const productsMock = [
         name: " Lozi23",
         age: "  Age 35 to 44",
         title: "  Tried it once, threw it out",
-        review_text: "  I purchased this a couple of weeks ago. Tried it once. It was not for me, it smelt horrible and felt tacky on my skin.",
+        review_text:
+          "  I purchased this a couple of weeks ago. Tried it once. It was not for me, it smelt horrible and felt tacky on my skin.",
         rating: "2 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Victoria",
@@ -909,7 +934,8 @@ export const productsMock = [
         name: " Bec025",
         age: "  Age 25 to 34",
         title: "  Good but could be more hydrating",
-        review_text: "  I have quite dry skin so would like to leave feeling more hydrated than this. It can feel a little dry still after using although the product feels a little greasy and like it doesn’t sink in enough. I have been using in conjunction with the hyaluronic serum and my skin has been looking a lot better. Smell is lovely too",
+        review_text:
+          "  I have quite dry skin so would like to leave feeling more hydrated than this. It can feel a little dry still after using although the product feels a little greasy and like it doesn’t sink in enough. I have been using in conjunction with the hyaluronic serum and my skin has been looking a lot better. Smell is lovely too",
         rating: "3 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Sydney",
@@ -927,7 +953,8 @@ export const productsMock = [
         name: " HanPoi",
         age: "  Age 35 to 44",
         title: "  Great results",
-        review_text: "  Really nice moisturiser that moisturizes without feeling heavy on the face. Absorbs well and perfect to use as a make up base. It’s cheap and it does an excellent job. I absolutely love this product",
+        review_text:
+          "  Really nice moisturiser that moisturizes without feeling heavy on the face. Absorbs well and perfect to use as a make up base. It’s cheap and it does an excellent job. I absolutely love this product",
         rating: "5 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Qld",
@@ -936,7 +963,8 @@ export const productsMock = [
         name: "  LivJ",
         age: "",
         title: "  Love",
-        review_text: "  Doesn’t irritate my sensitive skin, moisturising and sinks into my skin well. Also it looks great under makeup, makes for a really nice day cream. I’ve bought this multiple times and it never disappoints! I love that it isn’t heavily fragranced and has simple but good ingredients.",
+        review_text:
+          "  Doesn’t irritate my sensitive skin, moisturising and sinks into my skin well. Also it looks great under makeup, makes for a really nice day cream. I’ve bought this multiple times and it never disappoints! I love that it isn’t heavily fragranced and has simple but good ingredients.",
         rating: "5 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "",
@@ -945,7 +973,8 @@ export const productsMock = [
         name: " JoHobson",
         age: "  Age 35 to 44",
         title: "  Don't love it for my dry skin",
-        review_text: "  I usually love all Frank Body products. This one isn't the perfect match for me though. I have quite dry skin and this isn't quite moisturising enough for me. It does feel lovely to apply though.",
+        review_text:
+          "  I usually love all Frank Body products. This one isn't the perfect match for me though. I have quite dry skin and this isn't quite moisturising enough for me. It does feel lovely to apply though.",
         rating: "3 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Yallingup Siding",
@@ -963,7 +992,8 @@ export const productsMock = [
         name: " El P",
         age: "  Age 25 to 34",
         title: "  Smooth skin",
-        review_text: "  Great product for exfoliating the skin - and it smells good too",
+        review_text:
+          "  Great product for exfoliating the skin - and it smells good too",
         rating: "5 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Sydney",
@@ -972,7 +1002,8 @@ export const productsMock = [
         name: " Taraxox",
         age: "  Age 18 to 24",
         title: "  Great moisturiser!",
-        review_text: "  This moisturiser is my go to and absolutely love it!! Not too heavy which I found with a lot of other brands! Only wish was that it had SPF!",
+        review_text:
+          "  This moisturiser is my go to and absolutely love it!! Not too heavy which I found with a lot of other brands! Only wish was that it had SPF!",
         rating: "5 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Australia",
@@ -981,7 +1012,8 @@ export const productsMock = [
         name: " nevesk",
         age: "  Age 18 to 24",
         title: "  Love this product!",
-        review_text: "  I’ve been using this for just about two weeks and I loooove it, my makeup sits so nicely over the top and it makes my skin feel plump.",
+        review_text:
+          "  I’ve been using this for just about two weeks and I loooove it, my makeup sits so nicely over the top and it makes my skin feel plump.",
         rating: "5 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Auckland, NZ",
@@ -990,7 +1022,8 @@ export const productsMock = [
         name: " Lmr23",
         age: "  Age 25 to 34",
         title: "  Love it",
-        review_text: "  Only been using this for 3 weeks now but I love this. Is light but very moisturising, will buy the full size!",
+        review_text:
+          "  Only been using this for 3 weeks now but I love this. Is light but very moisturising, will buy the full size!",
         rating: "5 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Sydney",
@@ -999,7 +1032,8 @@ export const productsMock = [
         name: " PU21731",
         age: "  Age 25 to 34",
         title: "  Nice consistency",
-        review_text: "  First time purchase and I like the consistency of it but haven’t had it long enough to say it does or doesn’t do the job",
+        review_text:
+          "  First time purchase and I like the consistency of it but haven’t had it long enough to say it does or doesn’t do the job",
         rating: "4 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Melbourne",
@@ -1008,7 +1042,8 @@ export const productsMock = [
         name: " F2701",
         age: "  Age 25 to 34",
         title: "  Not a fan",
-        review_text: "  Unfortunately, I find this cream too thick and not a fan of the smell.",
+        review_text:
+          "  Unfortunately, I find this cream too thick and not a fan of the smell.",
         rating: "2 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  melbourne, australia",
@@ -1017,7 +1052,8 @@ export const productsMock = [
         name: " Kirkss",
         age: "  Age 17 or under",
         title: "  Nourishing and Hydrating Cream",
-        review_text: "  [This review was collected as part of a promotion.] I bought this around 2 weeks ago because I was looking for a lightweight cream for day and night. I found this product and was a bit worried that it might be oily or too heavy. But as I rubbed the tester into my hand I was astonished at how: Little you need to use for full coverage, how light it felt on my hand and how it left my hands soft yet not oily. I thought wow this is a great product but considering it ticked all my boxes of a perfect cream it would probably be quite expensive but to my surprise, it was way cheaper than what I was anticipating this product to be. Overall this cream ticks all my boxes of perfect lightweight non-oily face cream.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I bought this around 2 weeks ago because I was looking for a lightweight cream for day and night. I found this product and was a bit worried that it might be oily or too heavy. But as I rubbed the tester into my hand I was astonished at how: Little you need to use for full coverage, how light it felt on my hand and how it left my hands soft yet not oily. I thought wow this is a great product but considering it ticked all my boxes of a perfect cream it would probably be quite expensive but to my surprise, it was way cheaper than what I was anticipating this product to be. Overall this cream ticks all my boxes of perfect lightweight non-oily face cream.",
         rating: "5 out of 5 stars.",
         "review date": "  · 5 months ago  ",
         "country name": "  Melbourne",
@@ -1026,7 +1062,8 @@ export const productsMock = [
         name: " Mclozzin",
         age: "  Age 35 to 44",
         title: "  The moisturiser that made me moisturise",
-        review_text: "  I have had problem oily skin for a long time. So much so that I stopped moisturising, because they all just sat on top of my skin and made my face greasy (which as we all know was the worst thing I could do). Enter Frank Body. I use this everyday, even in winter.",
+        review_text:
+          "  I have had problem oily skin for a long time. So much so that I stopped moisturising, because they all just sat on top of my skin and made my face greasy (which as we all know was the worst thing I could do). Enter Frank Body. I use this everyday, even in winter.",
         rating: "4 out of 5 stars.",
         "review date": "  · 5 months ago  ",
         "country name": "  Sydney NSW",
@@ -1035,7 +1072,8 @@ export const productsMock = [
         name: " Tirednurse",
         age: "  Age 25 to 34",
         title: "  Staple",
-        review_text: "  I have been using this for years and I just can’t fault it. It feels really moisturising without it being too think. It sinks in quickly and had a subtle smell of coffee which is amazing always,",
+        review_text:
+          "  I have been using this for years and I just can’t fault it. It feels really moisturising without it being too think. It sinks in quickly and had a subtle smell of coffee which is amazing always,",
         rating: "5 out of 5 stars.",
         "review date": "  · 5 months ago  ",
         "country name": "  Australia",
@@ -1044,7 +1082,8 @@ export const productsMock = [
         name: " Moncini88",
         age: "  Age 25 to 34",
         title: "  Unappealing Scent",
-        review_text: "  I purchased this recently and I like the texture and quick absorption of the proudest- but what I can not get used to is the smell. It smells faintly of coffee but with a strong hint of plastic.",
+        review_text:
+          "  I purchased this recently and I like the texture and quick absorption of the proudest- but what I can not get used to is the smell. It smells faintly of coffee but with a strong hint of plastic.",
         rating: "2 out of 5 stars.",
         "review date": "  · 5 months ago  ",
         "country name": "  ADELAIDE",
@@ -1053,7 +1092,8 @@ export const productsMock = [
         name: " Remi1401",
         age: "  Age 18 to 24",
         title: "  Amazing moisturiser",
-        review_text: "  This moisturiser makes my skin so smooth and hydrated and is a great base under makeup. A little goes a long way so is definitely worth the money",
+        review_text:
+          "  This moisturiser makes my skin so smooth and hydrated and is a great base under makeup. A little goes a long way so is definitely worth the money",
         rating: "5 out of 5 stars.",
         "review date": "  · 6 months ago  ",
         "country name": "  Queensland",
@@ -1062,16 +1102,20 @@ export const productsMock = [
         name: " Alilou22",
         age: "  Age 35 to 44",
         title: "  Love it",
-        review_text: "  I’ve been using this for a while now and it always leaves my skin super soft",
+        review_text:
+          "  I’ve been using this for a while now and it always leaves my skin super soft",
         rating: "5 out of 5 stars.",
         "review date": "  · 6 months ago  ",
         "country name": "  Melbourne Australia",
       },
     ],
     key_ingredients: {
-      "Cocoa and shea butters": " this hydrating duo will lock in your skin's moisture so it won't ever feel dry",
-      "Vitamin E": " promotes the long term health of your skin by blocking the damaging effects of free radicals",
-      "Coconut, grapeseed & sweet almond oils": " deeply nourish and hydrate the skin without blocking pores",
+      "Cocoa and shea butters":
+        " this hydrating duo will lock in your skin's moisture so it won't ever feel dry",
+      "Vitamin E":
+        " promotes the long term health of your skin by blocking the damaging effects of free radicals",
+      "Coconut, grapeseed & sweet almond oils":
+        " deeply nourish and hydrate the skin without blocking pores",
     },
   },
   {
@@ -1079,13 +1123,19 @@ export const productsMock = [
     id: 3,
     brand_name: "Elizabeth Arden",
     prod_name: "Eight Hour Cream Skin Protectant Original",
-    prod_link: "https://www.meccabeauty.co.nz/elizabeth-arden/eight-hour-cream-skin-protectant-original/I-039399.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/elizabeth-arden/eight-hour-cream-skin-protectant-original/I-039399.html?cgpath=skincare",
     price: "$37.00",
-    category: "HomeSkin CareTreatmentOils & SerumsEight Hour Cream Skin Protectant Original",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw9a8abdec/product/elizab/hr/i-039399-8-hr-cream-original-50ml-1-940.jpg",
-    Details: "The MECCA view:An award-winning moisturiser multi hero that hydrates skin, soothes sunburn, relieves chapped lips and heals rough elbows. This cult favourite product is praised for its ability to be used all over the body, use a generous amount on feet for a heal restoring foot mask, massage into cuticles, apply on chapped lips and eyes. It truly does it all!Key ingredients:Lanolin:  a deeply hydrating and repairing emollient to restore the most dry skinMade without:Alcohol free, paraben and sulphate free.Pair it with: Elizabeth Arden Eight Hour Miracle Hydrating MistMecca Cosmetica Bright Eyes Eye MaskRodin Facial Oil",
-    Usage: "Apply head-to-toe to seal in moisture for up to 8 hours.For the face: Rub a pea-sized amount in the palms of hands to warm through, then pat onto the face to seal in moisture. Can also be used to re-hydrate chapped lipsFor the hands: Work the cream into palms and over the fingers, then wrap each hand in a warm towel for 10 minutesFor the feet: Massage into soles, pads and heels. Wear cotton socks on top to further heal dry skinFor the brows: Run the tiniest amount through brows to tame and groom hairsPro Tip: Apply to areas what usually catch light, such as legs, shoulders, collarbone, cheeks and bow of lips for a flash of illumination ",
-    Ingredients: "Petrolatum, Lanolin, Mineral Oil/Paraffinum Liquidum/Huile Minérale, Tocopherol, Bht, Salicylic Acid, Ricinus Communis (Castor) Seed Oil, Vegetable Oil/Olus/Huile Végétale, Zea Mays (Corn) Oil, Parfum/Fragrance, Citral, Citronellol, Geraniol, Limonene, Linalool, Propylparaben, Iron Oxides (Ci 77491, Ci 77492).",
+    category:
+      "HomeSkin CareTreatmentOils & SerumsEight Hour Cream Skin Protectant Original",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw9a8abdec/product/elizab/hr/i-039399-8-hr-cream-original-50ml-1-940.jpg",
+    Details:
+      "The MECCA view:An award-winning moisturiser multi hero that hydrates skin, soothes sunburn, relieves chapped lips and heals rough elbows. This cult favourite product is praised for its ability to be used all over the body, use a generous amount on feet for a heal restoring foot mask, massage into cuticles, apply on chapped lips and eyes. It truly does it all!Key ingredients:Lanolin:  a deeply hydrating and repairing emollient to restore the most dry skinMade without:Alcohol free, paraben and sulphate free.Pair it with: Elizabeth Arden Eight Hour Miracle Hydrating MistMecca Cosmetica Bright Eyes Eye MaskRodin Facial Oil",
+    Usage:
+      "Apply head-to-toe to seal in moisture for up to 8 hours.For the face: Rub a pea-sized amount in the palms of hands to warm through, then pat onto the face to seal in moisture. Can also be used to re-hydrate chapped lipsFor the hands: Work the cream into palms and over the fingers, then wrap each hand in a warm towel for 10 minutesFor the feet: Massage into soles, pads and heels. Wear cotton socks on top to further heal dry skinFor the brows: Run the tiniest amount through brows to tame and groom hairsPro Tip: Apply to areas what usually catch light, such as legs, shoulders, collarbone, cheeks and bow of lips for a flash of illumination ",
+    Ingredients:
+      "Petrolatum, Lanolin, Mineral Oil/Paraffinum Liquidum/Huile Minérale, Tocopherol, Bht, Salicylic Acid, Ricinus Communis (Castor) Seed Oil, Vegetable Oil/Olus/Huile Végétale, Zea Mays (Corn) Oil, Parfum/Fragrance, Citral, Citronellol, Geraniol, Limonene, Linalool, Propylparaben, Iron Oxides (Ci 77491, Ci 77492).",
     reviews: [
       {
         name: " Mimi love",
@@ -1623,7 +1673,8 @@ export const productsMock = [
         name: " Renee B",
         age: "",
         title: "  Love this skin protectant!",
-        review_text: "  I love this cream skin protectant!  It goes on easily and  I love the way it moisturizers my face.",
+        review_text:
+          "  I love this cream skin protectant!  It goes on easily and  I love the way it moisturizers my face.",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "",
@@ -1632,7 +1683,8 @@ export const productsMock = [
         name: " AndreaFS",
         age: "  Age 25 to 34",
         title: "  Disappointed",
-        review_text: "  I was very much looking forward to trying this, however it seems like Vaseline in a prettier tube. The scent is off putting and I am overall disappointed.",
+        review_text:
+          "  I was very much looking forward to trying this, however it seems like Vaseline in a prettier tube. The scent is off putting and I am overall disappointed.",
         rating: "2 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Philadelphia",
@@ -1640,7 +1692,8 @@ export const productsMock = [
       {
         name: " belivingthemoment",
         age: "  Age 25 to 34",
-        title: "  Dear Valued Customer,We will be glad to assist you, please contact our Customer Service Team in order to do it.Email: cs@elizabetharden.comTo initiate a LiveChat conversation with us at ElizabethArden.com or TEXT us at 1-954-613-6983, we can also be reached by phone calls at 855 289 6405. Our Customer Care team is available 5 days a week from Monday to Friday, 10 AM – 7 PM EST, from 10 AM – 7 PM EST.",
+        title:
+          "  Dear Valued Customer,We will be glad to assist you, please contact our Customer Service Team in order to do it.Email: cs@elizabetharden.comTo initiate a LiveChat conversation with us at ElizabethArden.com or TEXT us at 1-954-613-6983, we can also be reached by phone calls at 855 289 6405. Our Customer Care team is available 5 days a week from Monday to Friday, 10 AM – 7 PM EST, from 10 AM – 7 PM EST.",
         review_text: " ",
         rating: " Response from elizabetharden.com:",
         "review date": "  · 18 days ago  ",
@@ -1650,7 +1703,8 @@ export const productsMock = [
         name: " petal face",
         age: "  Age 45 to 54",
         title: "  Super soothing!",
-        review_text: "  I bought this product after receiving a sample from the Beauty Loop and when I tried it I was mesmerised!! I get really dry cracks on my hands from running in the cold mornings and they get super chapped. Before I go to bed I put this amazing cream on and just like the same in ‘eight hours’ time once I’m up the cracks are soothed and it doesn’t hurt to move my fingers!! Absolutely amazing and super soothing healing powers!!",
+        review_text:
+          "  I bought this product after receiving a sample from the Beauty Loop and when I tried it I was mesmerised!! I get really dry cracks on my hands from running in the cold mornings and they get super chapped. Before I go to bed I put this amazing cream on and just like the same in ‘eight hours’ time once I’m up the cracks are soothed and it doesn’t hurt to move my fingers!! Absolutely amazing and super soothing healing powers!!",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  Nashville, Tennessee",
@@ -1659,7 +1713,8 @@ export const productsMock = [
         name: " Kaiser",
         age: "",
         title: "  Sold on this! It is  not just an average cream",
-        review_text: "  I bought this cream simply because I started using Elizabeth Arden's cerimide capsules and was amazed with the results. With my arms showing aging, I thought why not buy one of EA creams and use it on my body.  So, for a few years now. I've had tiny rough bumps on the back tops of my arms.  Bothered me, because, I've always had soft nice skin.",
+        review_text:
+          "  I bought this cream simply because I started using Elizabeth Arden's cerimide capsules and was amazed with the results. With my arms showing aging, I thought why not buy one of EA creams and use it on my body.  So, for a few years now. I've had tiny rough bumps on the back tops of my arms.  Bothered me, because, I've always had soft nice skin.",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "",
@@ -1668,7 +1723,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "  Age 55 to 64",
         title: "  Keeps me moisturized.",
-        review_text: "  I like that my face holds onto the moisture using this.",
+        review_text:
+          "  I like that my face holds onto the moisture using this.",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  New Market, MD",
@@ -1677,7 +1733,8 @@ export const productsMock = [
         name: " MES62",
         age: "  Age 55 to 64",
         title: "  Love this Product",
-        review_text: "  I love using this product in the morning as a base before makeup.  It replenishes the moisture lost during the night. My daughter-in-law uses this on her dry elbows and my husband on his dry, cracking feet.",
+        review_text:
+          "  I love using this product in the morning as a base before makeup.  It replenishes the moisture lost during the night. My daughter-in-law uses this on her dry elbows and my husband on his dry, cracking feet.",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  The Adirondacks",
@@ -1686,7 +1743,8 @@ export const productsMock = [
         name: " Capitola",
         age: "",
         title: "  Skin Cancer Surgery",
-        review_text: "  For years I have tried to find a product that would mositurize the drying side effects of the skin cancer surguries I have had. I am very pleased. Too bad I had to wait until I was 62 to find it!",
+        review_text:
+          "  For years I have tried to find a product that would mositurize the drying side effects of the skin cancer surguries I have had. I am very pleased. Too bad I had to wait until I was 62 to find it!",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  Raleigh, NC",
@@ -1695,7 +1753,8 @@ export const productsMock = [
         name: " Boymom",
         age: "",
         title: "  The smell is so bad!",
-        review_text: "  I wanted to love this so much after spending that kind of money, BUT...the smell is just awful..kinda like something my Grandmother would like. I ignored other reviews about the strong scent, hoping I wouldn't mind....bad idea! The lip balm jar is the same scent, so basically they are both unusable to me. The cream is like smelly vaseline, didn't find it worked any different.",
+        review_text:
+          "  I wanted to love this so much after spending that kind of money, BUT...the smell is just awful..kinda like something my Grandmother would like. I ignored other reviews about the strong scent, hoping I wouldn't mind....bad idea! The lip balm jar is the same scent, so basically they are both unusable to me. The cream is like smelly vaseline, didn't find it worked any different.",
         rating: "2 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  Michigan",
@@ -1703,7 +1762,8 @@ export const productsMock = [
       {
         name: " Chapstick",
         age: "  Age 55 to 64",
-        title: "  Dear Valued Customer,We will be glad to assist you, please contact our Customer Service Team in order to do it.Email: cs@elizabetharden.comTo initiate a LiveChat conversation with us at ElizabethArden.com or TEXT us at 1-954-613-6983, we can also be reached by phone calls at 855 289 6405. Our Customer Care team is available 5 days a week from Monday to Friday, 10 AM – 7 PM EST, from 10 AM – 7 PM EST.",
+        title:
+          "  Dear Valued Customer,We will be glad to assist you, please contact our Customer Service Team in order to do it.Email: cs@elizabetharden.comTo initiate a LiveChat conversation with us at ElizabethArden.com or TEXT us at 1-954-613-6983, we can also be reached by phone calls at 855 289 6405. Our Customer Care team is available 5 days a week from Monday to Friday, 10 AM – 7 PM EST, from 10 AM – 7 PM EST.",
         review_text: " ",
         rating: " Response from elizabetharden.com:",
         "review date": "  · 2 months ago  ",
@@ -1713,7 +1773,8 @@ export const productsMock = [
         name: " Slynnp",
         age: "",
         title: "  Super hydrating!",
-        review_text: "  I work outside a lot no this really soothes my skin after a long day!",
+        review_text:
+          "  I work outside a lot no this really soothes my skin after a long day!",
         rating: "5 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "",
@@ -1722,7 +1783,8 @@ export const productsMock = [
         name: " MrsSadowski",
         age: "  Age 55 to 64",
         title: "  Eight Hour Cream Skin Protectant",
-        review_text: "  This product has a medicinal smell which I’m not crazy about. I would not be inclined to use it on my face. I have used it on some cuts and burns on my body and it does seem to speed up the healing process.",
+        review_text:
+          "  This product has a medicinal smell which I’m not crazy about. I would not be inclined to use it on my face. I have used it on some cuts and burns on my body and it does seem to speed up the healing process.",
         rating: "4 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Illinois",
@@ -1731,7 +1793,8 @@ export const productsMock = [
         name: " Shelli",
         age: "  Age 55 to 64",
         title: "  My skin felt hydrated",
-        review_text: "  I use the 8 Hour at bedtime on my hands, elbows and forehead.  It relaxes me and my hands and elbows look better after 1 week.  My forehead lines don’t look so deep either.",
+        review_text:
+          "  I use the 8 Hour at bedtime on my hands, elbows and forehead.  It relaxes me and my hands and elbows look better after 1 week.  My forehead lines don’t look so deep either.",
         rating: "5 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Lakeland FL",
@@ -1740,7 +1803,8 @@ export const productsMock = [
         name: " Sherip",
         age: "",
         title: "  LOVE THIS PRODUCT.",
-        review_text: "  LOVE THIS SO MUCH. HAD SEVER DRY SKIN ON EYELIDS AND UNDERNEATH EYE AREA DUE TO ALLERGIES. NOTHING, I MEAN OTHING WORKED TO HELP THIS AREA UNTIL MY 8 HOUR CREAM ARRIVED. IT HAS BEEN A MIRACLE FOR THIS. WILL ALWAYS KEEP A SUPPLY IN MY HOUSE, MY CAR AND MY BEACH BAG.",
+        review_text:
+          "  LOVE THIS SO MUCH. HAD SEVER DRY SKIN ON EYELIDS AND UNDERNEATH EYE AREA DUE TO ALLERGIES. NOTHING, I MEAN OTHING WORKED TO HELP THIS AREA UNTIL MY 8 HOUR CREAM ARRIVED. IT HAS BEEN A MIRACLE FOR THIS. WILL ALWAYS KEEP A SUPPLY IN MY HOUSE, MY CAR AND MY BEACH BAG.",
         rating: "5 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Portland OR",
@@ -1749,7 +1813,8 @@ export const productsMock = [
         name: " Teresa T",
         age: "  Age 45 to 54",
         title: "  Eight Hour Cream",
-        review_text: "  This is the first time using this product. Unfortunately, the smell is off putting. I definitely won’t use it on my face.  I have only been using it for a week so it’s too soon to tell if it works.",
+        review_text:
+          "  This is the first time using this product. Unfortunately, the smell is off putting. I definitely won’t use it on my face.  I have only been using it for a week so it’s too soon to tell if it works.",
         rating: "3 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Chicago, IL",
@@ -1757,7 +1822,8 @@ export const productsMock = [
       {
         name: " AuNatural",
         age: "",
-        title: "  Dear Valued Customer,We will be glad to assist you, please contact our Customer Service Team in order to do it.Email: cs@elizabetharden.comTo initiate a LiveChat conversation with us at ElizabethArden.com or TEXT us at 1-954-613-6983, we can also be reached by phone calls at 855 289 6405. Our Customer Care team is available 5 days a week from Monday to Friday, 10 AM – 7 PM EST, from 10 AM – 7 PM EST.",
+        title:
+          "  Dear Valued Customer,We will be glad to assist you, please contact our Customer Service Team in order to do it.Email: cs@elizabetharden.comTo initiate a LiveChat conversation with us at ElizabethArden.com or TEXT us at 1-954-613-6983, we can also be reached by phone calls at 855 289 6405. Our Customer Care team is available 5 days a week from Monday to Friday, 10 AM – 7 PM EST, from 10 AM – 7 PM EST.",
         review_text: " ",
         rating: " Response from elizabetharden.com:",
         "review date": "  · 2 months ago  ",
@@ -1768,7 +1834,8 @@ export const productsMock = [
         name: " Marcus",
         age: "",
         title: "  Excellent for climbers",
-        review_text: "  As a climber, I often find the skin on my hands hard, rough and full of blisters, callus and small wounds. Applying some of this magic stuff before going to bed makes a huge difference to the way my skin heals and really allows me to push hard several days in a row!",
+        review_text:
+          "  As a climber, I often find the skin on my hands hard, rough and full of blisters, callus and small wounds. Applying some of this magic stuff before going to bed makes a huge difference to the way my skin heals and really allows me to push hard several days in a row!",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "",
@@ -1776,8 +1843,10 @@ export const productsMock = [
       {
         name: " Cathyj",
         age: "",
-        title: "  Great for sunburns and preventing stretch marks while pregnant.",
-        review_text: "  Whenever we have tender sunburns, we use eight our cream and it seems to take the burn away in little time. When I was pregnant, both times, I used eight hour on my skin the last 3 months and I don't have one stretch mark. I really feel the cream prevented them.",
+        title:
+          "  Great for sunburns and preventing stretch marks while pregnant.",
+        review_text:
+          "  Whenever we have tender sunburns, we use eight our cream and it seems to take the burn away in little time. When I was pregnant, both times, I used eight hour on my skin the last 3 months and I don't have one stretch mark. I really feel the cream prevented them.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "",
@@ -1786,7 +1855,8 @@ export const productsMock = [
         name: " lopia",
         age: "  Age 55 to 64",
         title: "  for wrinkle mositure",
-        review_text: "  the product is good as long as u apply it at night . for day time use it is oily and sticky",
+        review_text:
+          "  the product is good as long as u apply it at night . for day time use it is oily and sticky",
         rating: "4 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  glasgow ky",
@@ -1795,7 +1865,8 @@ export const productsMock = [
         name: " Cristina",
         age: "  Age 35 to 44",
         title: "  Amazing Results",
-        review_text: "  Horrible smell and taste (like fish oil). However, when I apply it at night, before bed, my badly chapped lips are perfectly smooth, soft, and plump in the morning. This one is a mighty powerful cream.",
+        review_text:
+          "  Horrible smell and taste (like fish oil). However, when I apply it at night, before bed, my badly chapped lips are perfectly smooth, soft, and plump in the morning. This one is a mighty powerful cream.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Canada",
@@ -1804,7 +1875,8 @@ export const productsMock = [
         name: " SMH1",
         age: "  Age 45 to 54",
         title: "  Terrific for dry skin on hands",
-        review_text: "  This very thick and greasy formula is not suitable for the day for me, as I work with a lot of papers. However, it is a terrific cream for use at night. I first apply the skin tone corrector on top of my hands (spots have faded!) and then use this sparingly all over my hands and wrists. A little goes a long way. I wear cotton gloves to make sure that my hands are as hydrated as possible. Friends often comment on how soft and youthful my hands look!",
+        review_text:
+          "  This very thick and greasy formula is not suitable for the day for me, as I work with a lot of papers. However, it is a terrific cream for use at night. I first apply the skin tone corrector on top of my hands (spots have faded!) and then use this sparingly all over my hands and wrists. A little goes a long way. I wear cotton gloves to make sure that my hands are as hydrated as possible. Friends often comment on how soft and youthful my hands look!",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Perkasie, PA",
@@ -1813,7 +1885,8 @@ export const productsMock = [
         name: " Bethy4964",
         age: "  Age 45 to 54",
         title: "  Has an unpleasant odor",
-        review_text: "  This cream smells awful. I must admit I havent tried it yet becuase I will need to spend the entire day alone. No one wants to smell like this.",
+        review_text:
+          "  This cream smells awful. I must admit I havent tried it yet becuase I will need to spend the entire day alone. No one wants to smell like this.",
         rating: "1 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Lynchburg, VA",
@@ -1822,7 +1895,8 @@ export const productsMock = [
         name: " FLOJO",
         age: "",
         title: "  Good for simple skin issues",
-        review_text: "  I love this product. I use it for simple skin issues and most recently for several fever blisters on my lips. It is just reliable.",
+        review_text:
+          "  I love this product. I use it for simple skin issues and most recently for several fever blisters on my lips. It is just reliable.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "",
@@ -1831,7 +1905,8 @@ export const productsMock = [
         name: " Faye",
         age: "  Age 55 to 64",
         title: "  Really great for my dry skin",
-        review_text: "  This product worked wonders for my dry skin. Helped my skin with the dullness dry skin leaves.",
+        review_text:
+          "  This product worked wonders for my dry skin. Helped my skin with the dullness dry skin leaves.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Louisiana",
@@ -1840,7 +1915,8 @@ export const productsMock = [
         name: " NancyDrew",
         age: "  Age 25 to 34",
         title: "  Great all rounder!!!",
-        review_text: "  I have been using this product since 2001, I was working at Harrods as a casual on the EA counter and my manager at the time told me this product was a No1 fave with all makeup artists and models alike. It is my trusty travel companion especially after long haul flights and not to mention great for my hands / cuticles. Its the one product I always have in the bag. Unfortuanetly I do not like any of the other spin off products as I feel this can serve the purpose quite well.",
+        review_text:
+          "  I have been using this product since 2001, I was working at Harrods as a casual on the EA counter and my manager at the time told me this product was a No1 fave with all makeup artists and models alike. It is my trusty travel companion especially after long haul flights and not to mention great for my hands / cuticles. Its the one product I always have in the bag. Unfortuanetly I do not like any of the other spin off products as I feel this can serve the purpose quite well.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  South Africa",
@@ -1849,7 +1925,8 @@ export const productsMock = [
         name: " trise",
         age: "",
         title: "  eight hour cream",
-        review_text: "  i have used this product for over thirty years and have found it an excellent dry skin cream. The jar was more convenient to remove all traces of the cream rather than a tube but the product itself is great.",
+        review_text:
+          "  i have used this product for over thirty years and have found it an excellent dry skin cream. The jar was more convenient to remove all traces of the cream rather than a tube but the product itself is great.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  madison, wi",
@@ -1858,7 +1935,8 @@ export const productsMock = [
         name: " TJcheng",
         age: "",
         title: "  good for hand",
-        review_text: "  It was too oily when I applied it onto my face, so I put the extra on my hands. The next morning after I woke up, I noticed my hands became really soft. Maybe I should try a little less on my face to see how it works.",
+        review_text:
+          "  It was too oily when I applied it onto my face, so I put the extra on my hands. The next morning after I woke up, I noticed my hands became really soft. Maybe I should try a little less on my face to see how it works.",
         rating: "4 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "",
@@ -1867,7 +1945,8 @@ export const productsMock = [
         name: " Molly21",
         age: "  Age 55 to 64",
         title: "  Maybe I Received A Bad Batch???",
-        review_text: "  I just received the mega-bonus sized (17.9 oz) on special. I've never used this before and was excited to after reading the reviews. I put it on one arm just to see how soft it made it, then went about my business. Everyone that came within 10 feet of me asked if I just used bug spray....Raid....or wasp killer. The scent of citronella is immensely overpowering for a whole body cream. So glad I did not apply it all over me, as I have just washed my arm for the third time and it still smells like bug spray. I love EA and all the goodies I've received, however this is definitely a bad batch. I cannot image a woman wanting to smell like mosquito spray.",
+        review_text:
+          "  I just received the mega-bonus sized (17.9 oz) on special. I've never used this before and was excited to after reading the reviews. I put it on one arm just to see how soft it made it, then went about my business. Everyone that came within 10 feet of me asked if I just used bug spray....Raid....or wasp killer. The scent of citronella is immensely overpowering for a whole body cream. So glad I did not apply it all over me, as I have just washed my arm for the third time and it still smells like bug spray. I love EA and all the goodies I've received, however this is definitely a bad batch. I cannot image a woman wanting to smell like mosquito spray.",
         rating: "1 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Central, NJ",
@@ -1876,7 +1955,8 @@ export const productsMock = [
         name: " Crabbyabc",
         age: "  Age 18 to 24",
         title: "  Not for me.",
-        review_text: "  The cream smells really bad. And it is hard to put on my skin.",
+        review_text:
+          "  The cream smells really bad. And it is hard to put on my skin.",
         rating: "1 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Seattle, WA",
@@ -1885,7 +1965,8 @@ export const productsMock = [
         name: " Trix",
         age: "",
         title: "  The Product",
-        review_text: "  Eight Hour Cream Skin Protectant does as its name says.... it protects. I would call it \"emollient\" because you can \"feel\" it hugging your skin as you apply it. Very good for the feet as well.",
+        review_text:
+          '  Eight Hour Cream Skin Protectant does as its name says.... it protects. I would call it "emollient" because you can "feel" it hugging your skin as you apply it. Very good for the feet as well.',
         rating: "4 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Florida",
@@ -1894,7 +1975,8 @@ export const productsMock = [
         name: " Chickybabe1",
         age: "",
         title: "  Multi-purpose product",
-        review_text: "  [This review was collected as part of a promotion.] This cream has so many uses. I use it as a lip balm, on dry hands/elbows/knees, and even on scratches and bites. It is more of a gel consistency than a cream and is orange in colour. The smell is unusual but I don't mind the smell. It is super nourishing and hydrating and it leaves my skin feeling soft and smooth. Great product!",
+        review_text:
+          "  [This review was collected as part of a promotion.] This cream has so many uses. I use it as a lip balm, on dry hands/elbows/knees, and even on scratches and bites. It is more of a gel consistency than a cream and is orange in colour. The smell is unusual but I don't mind the smell. It is super nourishing and hydrating and it leaves my skin feeling soft and smooth. Great product!",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  BRISBANE, QLD",
@@ -1903,7 +1985,8 @@ export const productsMock = [
         name: " pamBakbh",
         age: "",
         title: "  The best cream ever!",
-        review_text: "  I have tried many creams for my cuticles but nothing works like this cream. It's so rich and creamy that it leaves my skin totally supple.",
+        review_text:
+          "  I have tried many creams for my cuticles but nothing works like this cream. It's so rich and creamy that it leaves my skin totally supple.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Glen Rock, NJ",
@@ -1912,7 +1995,8 @@ export const productsMock = [
         name: " Lexa2014",
         age: "",
         title: "  Excellent for dry lips",
-        review_text: "  I've been using this product for decades and it's the only thing that works for very chapped lips.",
+        review_text:
+          "  I've been using this product for decades and it's the only thing that works for very chapped lips.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "",
@@ -1921,7 +2005,8 @@ export const productsMock = [
         name: " PRP2012",
         age: "  Age 55 to 64",
         title: "  Great!",
-        review_text: "  I have rough hands and this cream really does soothe them. I also tried it on my lips and got positive results. This is good stuff.",
+        review_text:
+          "  I have rough hands and this cream really does soothe them. I also tried it on my lips and got positive results. This is good stuff.",
         rating: "5 out of 5 stars.",
         "review date": "  · 8 years ago  ",
         "country name": "  Minneapolis, MN",
@@ -1939,7 +2024,8 @@ export const productsMock = [
         name: " ruggles123",
         age: "",
         title: "  very different",
-        review_text: "  just received it--using it everyday to see how it goes for a very dry face. thank you",
+        review_text:
+          "  just received it--using it everyday to see how it goes for a very dry face. thank you",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Port Saint Lucie, FL",
@@ -1957,7 +2043,8 @@ export const productsMock = [
         name: " aguan",
         age: "",
         title: "  Excellent product",
-        review_text: "  I have very dry nails and this product really helps to keep my fingers smooth. It does have a little smell since there is no perfume in it, so I apply a little bit of my favorite lotion over it and it works really well for me.",
+        review_text:
+          "  I have very dry nails and this product really helps to keep my fingers smooth. It does have a little smell since there is no perfume in it, so I apply a little bit of my favorite lotion over it and it works really well for me.",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -1966,7 +2053,8 @@ export const productsMock = [
         name: " Trish74",
         age: "",
         title: "  great for imperfections on skin",
-        review_text: "  At first I thought it was too thick. But after using it I find that it diminishes the small imperfections on the face; soothes dry hands & is great for my cuticles. My only complaint is that it does not smell good.",
+        review_text:
+          "  At first I thought it was too thick. But after using it I find that it diminishes the small imperfections on the face; soothes dry hands & is great for my cuticles. My only complaint is that it does not smell good.",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Cleveland, OH",
@@ -1975,7 +2063,8 @@ export const productsMock = [
         name: " Doodlebug",
         age: "",
         title: "  Very sorry, this doesn't work for me",
-        review_text: "  Though I'm sure this product is effective,I can't use it because of the strong odor. It offended my nose and causedmy eyes to water. I'll be returning it andcontinuing to use the Elizabeth Ardenproducts I love.",
+        review_text:
+          "  Though I'm sure this product is effective,I can't use it because of the strong odor. It offended my nose and causedmy eyes to water. I'll be returning it andcontinuing to use the Elizabeth Ardenproducts I love.",
         rating: "1 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -1984,7 +2073,8 @@ export const productsMock = [
         name: " Diane26",
         age: "",
         title: "  Offending odor",
-        review_text: "  The strong odor of this cream is such the I can not use it. While it is very thick and protective, I can't use it on my face or hands.",
+        review_text:
+          "  The strong odor of this cream is such the I can not use it. While it is very thick and protective, I can't use it on my face or hands.",
         rating: "3 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -1993,7 +2083,8 @@ export const productsMock = [
         name: " chikpea",
         age: "",
         title: "  Sleeper hit!",
-        review_text: "  For a product that is greasy when applied and doesn't always have the most appealing smell, 8 hour is a sleeper hit in my book. I can easily apply primer over a freshly coated face (also use Arden Good Morning Primer) and it enhances any make-up that I use. I am now getting lot of compliments on my \"clear skin\" even though I have had break-outs. Excellent product!",
+        review_text:
+          '  For a product that is greasy when applied and doesn\'t always have the most appealing smell, 8 hour is a sleeper hit in my book. I can easily apply primer over a freshly coated face (also use Arden Good Morning Primer) and it enhances any make-up that I use. I am now getting lot of compliments on my "clear skin" even though I have had break-outs. Excellent product!',
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2002,7 +2093,8 @@ export const productsMock = [
         name: " Bobbi2648",
         age: "",
         title: "  Have not used it long enough to give it a title.",
-        review_text: "  The packaging is attractive. The smell is unusual...and I am hoping for some long term use for eybrows and cheeks so that I can see some results. All shipping and receipt of product was handeled very quickly....Thank you Elizabeth!!!",
+        review_text:
+          "  The packaging is attractive. The smell is unusual...and I am hoping for some long term use for eybrows and cheeks so that I can see some results. All shipping and receipt of product was handeled very quickly....Thank you Elizabeth!!!",
         rating: "3 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  dry...dry...Colorado",
@@ -2011,7 +2103,8 @@ export const productsMock = [
         name: " KHIGHER",
         age: "  Age 18 to 24",
         title: "  NOTHIN BUT THE BEST",
-        review_text: "  I WAS ON ACNE TREATMENT AND KEPT GETTING ABRASIONS, DRY SKIN AND CRACKED LIP... THAT WAS THE WORST, BUT THANK GOODNES FOR THE EIGHT HOUR CREAM, I LOOKED NORMAL.I DONT USE ANY OTHER LIPGLOSS BUT THIS EIGHT HOUR CREAM.NO COMPROMISE",
+        review_text:
+          "  I WAS ON ACNE TREATMENT AND KEPT GETTING ABRASIONS, DRY SKIN AND CRACKED LIP... THAT WAS THE WORST, BUT THANK GOODNES FOR THE EIGHT HOUR CREAM, I LOOKED NORMAL.I DONT USE ANY OTHER LIPGLOSS BUT THIS EIGHT HOUR CREAM.NO COMPROMISE",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  SOUTH AFRICA",
@@ -2020,7 +2113,8 @@ export const productsMock = [
         name: " LVgirl",
         age: "  Age 35 to 44",
         title: "  Dry Skin Treatment",
-        review_text: "  It is my first time trying this product. I am amazed how how well it works. The smell is not very good, but it does work to help out with my dry skin. I am now a customer for life with this product",
+        review_text:
+          "  It is my first time trying this product. I am amazed how how well it works. The smell is not very good, but it does work to help out with my dry skin. I am now a customer for life with this product",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  henderson, nv",
@@ -2029,7 +2123,8 @@ export const productsMock = [
         name: " Sharky5",
         age: "",
         title: "  Saves my lips!!",
-        review_text: "  [This review was collected as part of a promotion.] When I first got this I really had no idea what it was for, luckily my cousin told me. That was about 8 years ago and this is the only product I have found that helps with sore cracked lips. I have several tubes but it works best If applied before bed so it works its magic all night. The smell is best described as strange but seriously buy it! Even better it lasts ages and also comes in a lipstick style tube if you prefer",
+        review_text:
+          "  [This review was collected as part of a promotion.] When I first got this I really had no idea what it was for, luckily my cousin told me. That was about 8 years ago and this is the only product I have found that helps with sore cracked lips. I have several tubes but it works best If applied before bed so it works its magic all night. The smell is best described as strange but seriously buy it! Even better it lasts ages and also comes in a lipstick style tube if you prefer",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Piara Waters, WA",
@@ -2038,7 +2133,8 @@ export const productsMock = [
         name: " jennD",
         age: "  Age 35 to 44",
         title: "  great for chapped lips",
-        review_text: "  I use this on dry spots on my face and my lips. It healed some seriously chapped lips with in a few days. Fantastic product!!!",
+        review_text:
+          "  I use this on dry spots on my face and my lips. It healed some seriously chapped lips with in a few days. Fantastic product!!!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Richmond, VA",
@@ -2047,7 +2143,8 @@ export const productsMock = [
         name: " Juliebird",
         age: "  Age 45 to 54",
         title: "  Love this product",
-        review_text: "  Have used for 4 days and already notice smoother skin in problem spots....elbows and knuckles. The scent is not a big deal...smells like ointment but not as bad as some described. Worth every penny!",
+        review_text:
+          "  Have used for 4 days and already notice smoother skin in problem spots....elbows and knuckles. The scent is not a big deal...smells like ointment but not as bad as some described. Worth every penny!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Missouri",
@@ -2056,7 +2153,8 @@ export const productsMock = [
         name: " Kimmy71",
         age: "  Age 18 to 24",
         title: "  Works amazingly",
-        review_text: "  This product does exactly what it says it does. I have very sensitive oily skin and I was skeptical at first. But it really does wonders. Not only did it made my skin softer, but it also helped heal my acne and scars. The smell isn't that pleasant and it's awfully greasy, but for what it does it's certainly worth it.",
+        review_text:
+          "  This product does exactly what it says it does. I have very sensitive oily skin and I was skeptical at first. But it really does wonders. Not only did it made my skin softer, but it also helped heal my acne and scars. The smell isn't that pleasant and it's awfully greasy, but for what it does it's certainly worth it.",
         rating: "4 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2065,7 +2163,8 @@ export const productsMock = [
         name: " Sarah13",
         age: "",
         title: "  Fantastic Product",
-        review_text: "  This winter has been wreaking havoc on my lips and skin so I ordered the 8 hour cream and I was not disappointed! Completely changed the texture of my dry, itchy, chapped lips (and left other bits of skin super soft) overnight! Yes, it has a strong smell, not as strong as I thought it'd be, but it's worth ignoring for the results!",
+        review_text:
+          "  This winter has been wreaking havoc on my lips and skin so I ordered the 8 hour cream and I was not disappointed! Completely changed the texture of my dry, itchy, chapped lips (and left other bits of skin super soft) overnight! Yes, it has a strong smell, not as strong as I thought it'd be, but it's worth ignoring for the results!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  United States",
@@ -2074,7 +2173,8 @@ export const productsMock = [
         name: " AFmama",
         age: "  Age 45 to 54",
         title: "  Love this product",
-        review_text: "  I got this as a sample first and when I put it on my face the first time, it felt like vasoline!.I didn't think I would like it, but when I woke up the next morning my skin felt fantastic.I normally have extremely dry skin and this made it soft and supple. In the mornings my foundation went on very smoothly and I had no dry patches!",
+        review_text:
+          "  I got this as a sample first and when I put it on my face the first time, it felt like vasoline!.I didn't think I would like it, but when I woke up the next morning my skin felt fantastic.I normally have extremely dry skin and this made it soft and supple. In the mornings my foundation went on very smoothly and I had no dry patches!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  New Jersey",
@@ -2083,7 +2183,8 @@ export const productsMock = [
         name: " Marg",
         age: "  Age 55 to 64",
         title: "  Best cream for dry, irritated skin.",
-        review_text: "  I use this cream on my eyelids instead of eyeshadow, on my cheekbones for dewy look. It is great for lips and for skin after waxing. Perfect pertection for skin for sking, or any outdoor activity during winter.",
+        review_text:
+          "  I use this cream on my eyelids instead of eyeshadow, on my cheekbones for dewy look. It is great for lips and for skin after waxing. Perfect pertection for skin for sking, or any outdoor activity during winter.",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Philadelphia",
@@ -2092,7 +2193,8 @@ export const productsMock = [
         name: " skjones3",
         age: "",
         title: "  Works well but smells funny",
-        review_text: "  I use this on my cuticles and on dry patches on my face. I love the results, but this product has an unpleasant scent. That is the only reason I could not give this product 5 stars.",
+        review_text:
+          "  I use this on my cuticles and on dry patches on my face. I love the results, but this product has an unpleasant scent. That is the only reason I could not give this product 5 stars.",
         rating: "4 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2101,7 +2203,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "  Age 45 to 54",
         title: "  Lip scrub",
-        review_text: "  A dime of 8 hr plus a packet of sugar makes an amazing lip scrub. Once a week is all you need. 8 hour is so versatile. Also, great for soothing dry cracked cuticles.",
+        review_text:
+          "  A dime of 8 hr plus a packet of sugar makes an amazing lip scrub. Once a week is all you need. 8 hour is so versatile. Also, great for soothing dry cracked cuticles.",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  CA",
@@ -2110,7 +2213,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "",
         title: "  Unique product with many benefits",
-        review_text: "  [This review was collected as part of a promotion.] The first thing I have noticed about any products in the 8 Hour range is the smell - it's very distinctive & is almost (but not quite) too powerful.",
+        review_text:
+          "  [This review was collected as part of a promotion.] The first thing I have noticed about any products in the 8 Hour range is the smell - it's very distinctive & is almost (but not quite) too powerful.",
         rating: "4 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Beechboro, WA",
@@ -2119,7 +2223,8 @@ export const productsMock = [
         name: " Madee",
         age: "  Age 55 to 64",
         title: "  Very subtle",
-        review_text: "  I've purchased this hand repair cream, which is really an ointment, twice and have begun to notice a great improvement in the texture of my hands. I am a knitter and always stop to cream my hand. This is how I am noticing the subtle changes. I also use the hand cream sold by EA.",
+        review_text:
+          "  I've purchased this hand repair cream, which is really an ointment, twice and have begun to notice a great improvement in the texture of my hands. I am a knitter and always stop to cream my hand. This is how I am noticing the subtle changes. I also use the hand cream sold by EA.",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Bronx, NY",
@@ -2137,7 +2242,8 @@ export const productsMock = [
         name: " mang1",
         age: "",
         title: "  Vaseline repackaged",
-        review_text: "  This is nothing more than petroleum jelly. Its fatty, its cheap and smells unpleasant. I got this as a gift and thought its one of EA's skin care products. Who knew that it was basically petroleum jelly (A&E) cream which can be bought for pennies at the local drug store. Don't waste your money!",
+        review_text:
+          "  This is nothing more than petroleum jelly. Its fatty, its cheap and smells unpleasant. I got this as a gift and thought its one of EA's skin care products. Who knew that it was basically petroleum jelly (A&E) cream which can be bought for pennies at the local drug store. Don't waste your money!",
         rating: "1 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2146,7 +2252,8 @@ export const productsMock = [
         name: " AoifeD",
         age: "",
         title: "  Wonderful for healing burns",
-        review_text: "  I got a nasty burn from the oven on my wrist on Christmas day. After a day or two the burn had subsided but the skin became cracked and painful. Medical creams didn't help, but eight hour cream was fantastic. After 4 days of using it the burn is healing well and it looks like it is not going to scar badly. Thank you!",
+        review_text:
+          "  I got a nasty burn from the oven on my wrist on Christmas day. After a day or two the burn had subsided but the skin became cracked and painful. Medical creams didn't help, but eight hour cream was fantastic. After 4 days of using it the burn is healing well and it looks like it is not going to scar badly. Thank you!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2155,7 +2262,8 @@ export const productsMock = [
         name: " Sherrelyn",
         age: "",
         title: "  Eerily similar to A&D ointment",
-        review_text: "  This cannot be anything besides good old fashoined A&D ointment. It looks like it, and it smells like it! I don't know why anyone wouldn't pick up on that. You know what they say... If it walkes like a duck...",
+        review_text:
+          "  This cannot be anything besides good old fashoined A&D ointment. It looks like it, and it smells like it! I don't know why anyone wouldn't pick up on that. You know what they say... If it walkes like a duck...",
         rating: "1 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2164,7 +2272,8 @@ export const productsMock = [
         name: " PRP2013",
         age: "  Age 55 to 64",
         title: "  The legend continues",
-        review_text: "  This product is known as \"the original.\" It has stood the test of time because it truly does heal and protect the skin. Great on elbows and feet.",
+        review_text:
+          '  This product is known as "the original." It has stood the test of time because it truly does heal and protect the skin. Great on elbows and feet.',
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Minneapolis",
@@ -2173,7 +2282,8 @@ export const productsMock = [
         name: " Quilting and Performing G",
         age: "",
         title: "  Wonderful skin protectant",
-        review_text: "  I have loved this product since 1991 when I sold Elizabeth Arden in L&T in Westfield, NJ and gave it to all my family for christmas",
+        review_text:
+          "  I have loved this product since 1991 when I sold Elizabeth Arden in L&T in Westfield, NJ and gave it to all my family for christmas",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2182,7 +2292,8 @@ export const productsMock = [
         name: " CaliAnna",
         age: "  Age 55 to 64",
         title: "  Dry no more",
-        review_text: "  When no other creams or lotions made any difference to the dry, tight skin around my eyes, Eight Hour did the job. The condition is improving daily. I have shared my Eight Hour recommendation with friends who share my excellent experience...it works!",
+        review_text:
+          "  When no other creams or lotions made any difference to the dry, tight skin around my eyes, Eight Hour did the job. The condition is improving daily. I have shared my Eight Hour recommendation with friends who share my excellent experience...it works!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Sacramento, CA",
@@ -2191,7 +2302,8 @@ export const productsMock = [
         name: " Englishlass1",
         age: "",
         title: "  The best for dry skin",
-        review_text: "  Smells medicinal, but once its on your face you forget about it. Great for very dry skin. Absolutley love this!",
+        review_text:
+          "  Smells medicinal, but once its on your face you forget about it. Great for very dry skin. Absolutley love this!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2200,7 +2312,8 @@ export const productsMock = [
         name: " victoriao",
         age: "",
         title: "  Eight hour cream is heaven!",
-        review_text: "  I think it should be the 24/7 cream--I use it for everyone in the house--it is soft supple and works for every kind of skin--young and old!! It has a magic about it --I remember my grandmother always loved it! I am so glad I bought it!!!!!!!!!!!!!!",
+        review_text:
+          "  I think it should be the 24/7 cream--I use it for everyone in the house--it is soft supple and works for every kind of skin--young and old!! It has a magic about it --I remember my grandmother always loved it! I am so glad I bought it!!!!!!!!!!!!!!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2209,7 +2322,8 @@ export const productsMock = [
         name: " daylily",
         age: "",
         title: "  Cannot be without this 8 hour cream",
-        review_text: "  I cannot be without this cream in my morning ritual of getting ready for the day.My skin is extremely dry (due to ageing)and this cream mixed with my moisturizeris great under my make-up.",
+        review_text:
+          "  I cannot be without this cream in my morning ritual of getting ready for the day.My skin is extremely dry (due to ageing)and this cream mixed with my moisturizeris great under my make-up.",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2218,7 +2332,8 @@ export const productsMock = [
         name: " Blossy77",
         age: "",
         title: "  Travel toolkit",
-        review_text: "  [This review was collected as part of a promotion.] I always bring this with me when I travel. It's great because being a compact multi-tasked, it saves space in packing as it replaces a heap of other products.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I always bring this with me when I travel. It's great because being a compact multi-tasked, it saves space in packing as it replaces a heap of other products.",
         rating: "4 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Red Hill, ACT",
@@ -2227,7 +2342,8 @@ export const productsMock = [
         name: " apple8",
         age: "",
         title: "  Effective, but overpowering smell.",
-        review_text: "  [This review was collected as part of a promotion.] This is effective for dry patches that have failed other creams, however I still have the same tube after 4 years as I can only use it occasionally, due to its smell.",
+        review_text:
+          "  [This review was collected as part of a promotion.] This is effective for dry patches that have failed other creams, however I still have the same tube after 4 years as I can only use it occasionally, due to its smell.",
         rating: "4 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Shenton Park, WA",
@@ -2236,7 +2352,8 @@ export const productsMock = [
         name: " Diane13",
         age: "  Age 55 to 64",
         title: "  My Number One Favorite Product",
-        review_text: "  This is my all-time favorite, can't-live-without-it product. I have had this with me wherever I go since the day I first walked in the Red Door at the Elizabeth Arden Salon in Washington thirty years ago! I put it on my lips the first thing every morning and the last thing every night and frequently throughout the day.",
+        review_text:
+          "  This is my all-time favorite, can't-live-without-it product. I have had this with me wherever I go since the day I first walked in the Red Door at the Elizabeth Arden Salon in Washington thirty years ago! I put it on my lips the first thing every morning and the last thing every night and frequently throughout the day.",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Choctaw Beach, Florida",
@@ -2245,7 +2362,8 @@ export const productsMock = [
         name: " Nicole714",
         age: "",
         title: "  Fantastic ointment, the smell grows on you!",
-        review_text: "  [This review was collected as part of a promotion.] I love this, I got onto it by reading about Posh Spice's love for this product (sad but true!). It has an interesting smell, and I wasn't expecting it to be dark orange, however the gel-type consistency is fantastic, and suitable for many areas of the face. I get slightly dry elbows and I find it fantastic for that too, and it doesn't cause a skin irritation, unlike some other options. It is a fair bit more expensive than say Vaseline, however the tube lasts a long time, and fits in my handbag nicely.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I love this, I got onto it by reading about Posh Spice's love for this product (sad but true!). It has an interesting smell, and I wasn't expecting it to be dark orange, however the gel-type consistency is fantastic, and suitable for many areas of the face. I get slightly dry elbows and I find it fantastic for that too, and it doesn't cause a skin irritation, unlike some other options. It is a fair bit more expensive than say Vaseline, however the tube lasts a long time, and fits in my handbag nicely.",
         rating: "4 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  Kurralta Park, SA",
@@ -2254,7 +2372,8 @@ export const productsMock = [
         name: " KellyByTheBook",
         age: "",
         title: "  Fixes everything",
-        review_text: "  What can I say? over 25 years of using Eight Hour Cream almost every day. If you burn yourself, it takes the pain away immediately. If you have a scratch or scab, it will clear it up in a few days and minimize scarring. Protects lips for longer than anything. It helps keep my ear piercings from getting infected - I put some on the post before putting it my ear. Fixes everything!",
+        review_text:
+          "  What can I say? over 25 years of using Eight Hour Cream almost every day. If you burn yourself, it takes the pain away immediately. If you have a scratch or scab, it will clear it up in a few days and minimize scarring. Protects lips for longer than anything. It helps keep my ear piercings from getting infected - I put some on the post before putting it my ear. Fixes everything!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2263,7 +2382,8 @@ export const productsMock = [
         name: " Lynn1",
         age: "  Age 55 to 64",
         title: "  Fragrance Free 8 Hour Cream",
-        review_text: "  Love the original Eight Hour Cream, and really like the fragrance free cream! Great for feet and moisturizes hands well. Thank you for the free sample to try!",
+        review_text:
+          "  Love the original Eight Hour Cream, and really like the fragrance free cream! Great for feet and moisturizes hands well. Thank you for the free sample to try!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2272,7 +2392,8 @@ export const productsMock = [
         name: " DeeDeeDeLovely",
         age: "",
         title: "  Amazing but....",
-        review_text: "  I love this product after just one use. It does what is claims. I made the choice to buy based off of suggestions made by Youtube beauty gurus, Lisa Eldridge and Pixiwoo. The challenge for me is the scent hence the reason for 4 stars. This was my first time purchasing this product and I wanted to get the original. I first opted for the unscented version and changed my mind. Now I wish had stuck with my original decision. It smells like aging topical ointment. But all in all, a great product. I will repurchase only in the unscented version.",
+        review_text:
+          "  I love this product after just one use. It does what is claims. I made the choice to buy based off of suggestions made by Youtube beauty gurus, Lisa Eldridge and Pixiwoo. The challenge for me is the scent hence the reason for 4 stars. This was my first time purchasing this product and I wanted to get the original. I first opted for the unscented version and changed my mind. Now I wish had stuck with my original decision. It smells like aging topical ointment. But all in all, a great product. I will repurchase only in the unscented version.",
         rating: "4 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "",
@@ -2281,7 +2402,8 @@ export const productsMock = [
         name: " Kelly1",
         age: "",
         title: "  eight hour cream",
-        review_text: "  I call this magic cream, there is nothing that you can not heal with this cream. from burns to chapped lips. scars disappear. it's MAGIC",
+        review_text:
+          "  I call this magic cream, there is nothing that you can not heal with this cream. from burns to chapped lips. scars disappear. it's MAGIC",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 years ago  ",
         "country name": "  United States",
@@ -2299,7 +2421,8 @@ export const productsMock = [
         name: " Anna",
         age: "  Age 35 to 44",
         title: "  Miracle worker",
-        review_text: "  I've had an eczema on my knee for about two years, nothing helped until I tried the eight hour cream. In just two days, my skin became softer and the eczema has started to disappear. It is nothing short of a miracle.",
+        review_text:
+          "  I've had an eczema on my knee for about two years, nothing helped until I tried the eight hour cream. In just two days, my skin became softer and the eczema has started to disappear. It is nothing short of a miracle.",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "",
@@ -2317,7 +2440,8 @@ export const productsMock = [
         name: " debra52",
         age: "",
         title: "  miracles still happen",
-        review_text: "  8 hour cream is wonderful for callus prone feet. I use it daily for feet and my hands get a benefit too. Just before bed, i apply a thick coat to my feet and hands with a swipe on the lips. Feet, Hands and Lips are all soft as a newborn.Only CON is: you can't use 8 hour cream and then walk on floor or touch things and not get them greasy. Needs to be a nightitme only application.",
+        review_text:
+          "  8 hour cream is wonderful for callus prone feet. I use it daily for feet and my hands get a benefit too. Just before bed, i apply a thick coat to my feet and hands with a swipe on the lips. Feet, Hands and Lips are all soft as a newborn.Only CON is: you can't use 8 hour cream and then walk on floor or touch things and not get them greasy. Needs to be a nightitme only application.",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "",
@@ -2326,7 +2450,8 @@ export const productsMock = [
         name: " MoonlightSak16",
         age: "",
         title: "  All Purpose Balm",
-        review_text: "  [This review was collected as part of a promotion.] recently I went on a trip to India and found this product really helpful and handy in many situations.",
+        review_text:
+          "  [This review was collected as part of a promotion.] recently I went on a trip to India and found this product really helpful and handy in many situations.",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "  Fletcher, NSW",
@@ -2335,7 +2460,8 @@ export const productsMock = [
         name: " AMG2",
         age: "",
         title: "  proven to work for decades",
-        review_text: "  amazing product for soft hydrated lips for overnight treatment, and for dry cuticles as well",
+        review_text:
+          "  amazing product for soft hydrated lips for overnight treatment, and for dry cuticles as well",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "",
@@ -2344,7 +2470,8 @@ export const productsMock = [
         name: " Vanity Fair23",
         age: "",
         title: "  a holy grail product",
-        review_text: "  [This review was collected as part of a promotion.] I absolutely cannot live without this. I have very dry lips and this work wonders for them. A little really goes a long way and I've even got my dad onto it, since he has the same dry lips. I also use it on dry elbows and knees and for soothing dry/chaffed parts of my feet (thank you, high heels).",
+        review_text:
+          "  [This review was collected as part of a promotion.] I absolutely cannot live without this. I have very dry lips and this work wonders for them. A little really goes a long way and I've even got my dad onto it, since he has the same dry lips. I also use it on dry elbows and knees and for soothing dry/chaffed parts of my feet (thank you, high heels).",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "  Melbourne, VIC",
@@ -2353,7 +2480,8 @@ export const productsMock = [
         name: " Courtney109",
         age: "",
         title: "  alright as a lip balm",
-        review_text: "  [This review was collected as part of a promotion.] This stuff to me smells absolutely disgusting and I hate getting tastes of it on my lips. I bought it after a friend recommended it to me because I felt my paw paw ointment wasn't really working for me any more. This stuff is pretty good but I do prefer other products. It definitely does moisturise the skin but so do other products and smell a lot better.",
+        review_text:
+          "  [This review was collected as part of a promotion.] This stuff to me smells absolutely disgusting and I hate getting tastes of it on my lips. I bought it after a friend recommended it to me because I felt my paw paw ointment wasn't really working for me any more. This stuff is pretty good but I do prefer other products. It definitely does moisturise the skin but so do other products and smell a lot better.",
         rating: "4 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "  Everton Park, QLD",
@@ -2362,7 +2490,8 @@ export const productsMock = [
         name: " Somethingforsam",
         age: "",
         title: "  Intensely moisturising and can be used so many ways",
-        review_text: "  [This review was collected as part of a promotion.] I'm constantly finding new ways to use this. The most creative way is on your cheekbones for a glossy dewy look! I personally don't like this for chapped lips and it's too thick for handcream. But it's great for dry patches on the skin. The smell is incredie strong and I can imagine most people really hating it. But it isn't that bad, you will get use to it.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I'm constantly finding new ways to use this. The most creative way is on your cheekbones for a glossy dewy look! I personally don't like this for chapped lips and it's too thick for handcream. But it's great for dry patches on the skin. The smell is incredie strong and I can imagine most people really hating it. But it isn't that bad, you will get use to it.",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "  , NSW",
@@ -2371,7 +2500,8 @@ export const productsMock = [
         name: " Floreview",
         age: "",
         title: "  Lovely",
-        review_text: "  [This review was collected as part of a promotion.] Some people might hate the smell but I adore it, it smells...clean...HAHA",
+        review_text:
+          "  [This review was collected as part of a promotion.] Some people might hate the smell but I adore it, it smells...clean...HAHA",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 years ago  ",
         "country name": "  Greystanes, NSW",
@@ -2380,7 +2510,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "",
         title: "  a bit too greasy",
-        review_text: "  [This review was collected as part of a promotion.] i bought this after my friend raved about the 8 hr cream range. It is a nice rich protectant however i do find it too greasy, i only use this cream before bed (on my feet, elbows and lips) it wouldnt be something i would apply before leaving the house. i probably would buy this product again.",
+        review_text:
+          "  [This review was collected as part of a promotion.] i bought this after my friend raved about the 8 hr cream range. It is a nice rich protectant however i do find it too greasy, i only use this cream before bed (on my feet, elbows and lips) it wouldnt be something i would apply before leaving the house. i probably would buy this product again.",
         rating: "3 out of 5 stars.",
         "review date": "  · 11 years ago  ",
         "country name": "  Wangaratta, VIC",
@@ -2389,7 +2520,8 @@ export const productsMock = [
         name: " cat lover",
         age: "",
         title: "  A great healer",
-        review_text: "  [This review was collected as part of a promotion.] I have to agree with many of the other reviewers who said that this is an ointment rather than a cream. Although 8 hour cream is not the sort of thing I'd use as a moisturiser(it has no water content, and therefore will never absorb) I have used it to heal the marks left by the odd pimple on my face. It's also really, really good for wound healing (according to legend that's how got it's name...by healing a graze on a boy's knee in eight hours!). It's also great for fading scars. The lanolin smell doesn't really worry me, but the 'flavor' can be a bit strong if used on the lips. The only downside for me would have to be that it contains a paraben preservative. All-in-all though, it's a must-have!",
+        review_text:
+          "  [This review was collected as part of a promotion.] I have to agree with many of the other reviewers who said that this is an ointment rather than a cream. Although 8 hour cream is not the sort of thing I'd use as a moisturiser(it has no water content, and therefore will never absorb) I have used it to heal the marks left by the odd pimple on my face. It's also really, really good for wound healing (according to legend that's how got it's name...by healing a graze on a boy's knee in eight hours!). It's also great for fading scars. The lanolin smell doesn't really worry me, but the 'flavor' can be a bit strong if used on the lips. The only downside for me would have to be that it contains a paraben preservative. All-in-all though, it's a must-have!",
         rating: "4 out of 5 stars.",
         "review date": "  · 11 years ago  ",
         "country name": "  Hastings, VIC",
@@ -2398,7 +2530,8 @@ export const productsMock = [
         name: " emilyhollywood",
         age: "",
         title: "  The cream / ointment of 1000 uses!",
-        review_text: "  [This review was collected as part of a promotion.] This product is so wonderfully useful. I have used (& loved) it as:",
+        review_text:
+          "  [This review was collected as part of a promotion.] This product is so wonderfully useful. I have used (& loved) it as:",
         rating: "5 out of 5 stars.",
         "review date": "  · 11 years ago  ",
         "country name": "  Cammeray, NSW",
@@ -2407,7 +2540,8 @@ export const productsMock = [
         name: " Sami85",
         age: "",
         title: "  Definately worth it!",
-        review_text: "  [This review was collected as part of a promotion.] I never believed the hype surrounding Eight Hour Cream until I tried it for myself. Now i use it for everything! It's my lipbalm, cuticle cream, serum for split ends, added shine for my makeup, intense moisturising hand cream, eye cream when i'm desperate and all round everything balm that i keep in my hand bag at all times! I'm going overseas in a few days and it's the first thing i packed in my cabin luggage!",
+        review_text:
+          "  [This review was collected as part of a promotion.] I never believed the hype surrounding Eight Hour Cream until I tried it for myself. Now i use it for everything! It's my lipbalm, cuticle cream, serum for split ends, added shine for my makeup, intense moisturising hand cream, eye cream when i'm desperate and all round everything balm that i keep in my hand bag at all times! I'm going overseas in a few days and it's the first thing i packed in my cabin luggage!",
         rating: "5 out of 5 stars.",
         "review date": "  · 11 years ago  ",
         "country name": "  Lara, VIC",
@@ -2416,7 +2550,8 @@ export const productsMock = [
         name: " Shezka",
         age: "",
         title: "  Protects & hydrates - SOS for the skin",
-        review_text: "  [This review was collected as part of a promotion.] Elizabeth Arden's 8 Hour Skin cream helps to soothe, restore, soften and protect chapped, dry or mildly irritated skin.I use it when I need super hydration and protection on my skin - when I get flakey skin around my nose after blowing it too much when I have a bad cold, or when I go skiing and get dry scaly patches from exposure to the icy wind. I've even used it on my cuticles. I always pack this if I'm going away as I never know when my next skin emergency will happen. Beware though it has a very distinctive smell and and a thick consistency - gel or balm might have been better, or for an increased sense of accuracy, gloop. I've never been able to use it on my lips as the smell puts me off but some people do love it. I guess its up to each person to decide but I'd say this is one of the must have products for anyone of any age",
+        review_text:
+          "  [This review was collected as part of a promotion.] Elizabeth Arden's 8 Hour Skin cream helps to soothe, restore, soften and protect chapped, dry or mildly irritated skin.I use it when I need super hydration and protection on my skin - when I get flakey skin around my nose after blowing it too much when I have a bad cold, or when I go skiing and get dry scaly patches from exposure to the icy wind. I've even used it on my cuticles. I always pack this if I'm going away as I never know when my next skin emergency will happen. Beware though it has a very distinctive smell and and a thick consistency - gel or balm might have been better, or for an increased sense of accuracy, gloop. I've never been able to use it on my lips as the smell puts me off but some people do love it. I guess its up to each person to decide but I'd say this is one of the must have products for anyone of any age",
         rating: "5 out of 5 stars.",
         "review date": "  · 12 years ago  ",
         "country name": "  Greenwich, NSW",
@@ -2425,7 +2560,8 @@ export const productsMock = [
         name: " Prettykitty1",
         age: "",
         title: "  A little meh.",
-        review_text: "  [This review was collected as part of a promotion.] This product is ok, but I don't think it quite lives up to the hype. I like to use it as a foot moisturiser, I rub it right in then put socks on overnight, but for my elbows and knees I find it a little too sticky, plus my sheets get little oily patches from it. I personally don't love it as a lip cream as it simply doesn't absorb, but have used it as a highlighter and to smooth my eyebrows. I've been working on my tube for over two years now....if it was all it was cracked up to be, then I think I'd use it more.",
+        review_text:
+          "  [This review was collected as part of a promotion.] This product is ok, but I don't think it quite lives up to the hype. I like to use it as a foot moisturiser, I rub it right in then put socks on overnight, but for my elbows and knees I find it a little too sticky, plus my sheets get little oily patches from it. I personally don't love it as a lip cream as it simply doesn't absorb, but have used it as a highlighter and to smooth my eyebrows. I've been working on my tube for over two years now....if it was all it was cracked up to be, then I think I'd use it more.",
         rating: "3 out of 5 stars.",
         "review date": "  · 12 years ago  ",
         "country name": "  St Albans, VIC",
@@ -2434,7 +2570,8 @@ export const productsMock = [
         name: " Sparklesparkle",
         age: "",
         title: "  More an ointment, less of a hand cream",
-        review_text: "  [This review was collected as part of a promotion.] The first thing I noticed about this was the smell. It smells like a medicinal ointment, which wasnt very nice. Texture wise it feels like a very thick ointment. I used it as a hand cream and I had to really work it into the skin otherwise it would have just sat on the surface. Even then it just felt like I had on some kind of thick glove, it felt very thick even then and very very sticky (which I hate). I don't think I'll be using this as a hand cream.",
+        review_text:
+          "  [This review was collected as part of a promotion.] The first thing I noticed about this was the smell. It smells like a medicinal ointment, which wasnt very nice. Texture wise it feels like a very thick ointment. I used it as a hand cream and I had to really work it into the skin otherwise it would have just sat on the surface. Even then it just felt like I had on some kind of thick glove, it felt very thick even then and very very sticky (which I hate). I don't think I'll be using this as a hand cream.",
         rating: "3 out of 5 stars.",
         "review date": "  · 12 years ago  ",
         "country name": "  Cherrybrook, NSW",
@@ -2443,7 +2580,8 @@ export const productsMock = [
         name: " MsCosmetics",
         age: "",
         title: "  Cult classic",
-        review_text: "  [This review was collected as part of a promotion.] This is a classic for a reason - it really is a nice ointment & apparently will reduce the healing time of a burn rather rapidly. I know older ladies who slather their faces in this, but quite simply it's like a poshed up version of vaseline, so there's no way my (oily) skin could handle that! I was using it on my lips / nails etc until i realised I was using a rather expensive product to do the job that vaseline can do, so i stopped, so as not to waste it, & now unsure as to what to use it for otherwise ha! It's in a tube & comes in different sizes which is handy, but otherwise I'll be sticking with the vaseline for a much more ecconomical price ;)",
+        review_text:
+          "  [This review was collected as part of a promotion.] This is a classic for a reason - it really is a nice ointment & apparently will reduce the healing time of a burn rather rapidly. I know older ladies who slather their faces in this, but quite simply it's like a poshed up version of vaseline, so there's no way my (oily) skin could handle that! I was using it on my lips / nails etc until i realised I was using a rather expensive product to do the job that vaseline can do, so i stopped, so as not to waste it, & now unsure as to what to use it for otherwise ha! It's in a tube & comes in different sizes which is handy, but otherwise I'll be sticking with the vaseline for a much more ecconomical price ;)",
         rating: "3 out of 5 stars.",
         "review date": "  · 12 years ago  ",
         "country name": "  Craigieburn, VIC",
@@ -2452,7 +2590,8 @@ export const productsMock = [
         name: " Travellingstranger",
         age: "",
         title: "  There's a reason everyone raves about this...",
-        review_text: "  [This review was collected as part of a promotion.] ...yes, this balm is brilliant on cuticles, elbows, knees, flyawair hair and chapped lips and yes, I would recomment it to people going to the snow or mountain hiking but not as a moisturiser (it's been known to happen) - it's just too heavy for that.",
+        review_text:
+          "  [This review was collected as part of a promotion.] ...yes, this balm is brilliant on cuticles, elbows, knees, flyawair hair and chapped lips and yes, I would recomment it to people going to the snow or mountain hiking but not as a moisturiser (it's been known to happen) - it's just too heavy for that.",
         rating: "4 out of 5 stars.",
         "review date": "  · 12 years ago  ",
         "country name": "  NA",
@@ -2461,7 +2600,8 @@ export const productsMock = [
         name: " JesSH",
         age: "",
         title: "  EA 8hr Protectant",
-        review_text: "  [This review was collected as part of a promotion.] Fantastic 8 hr cream Must have the lip/elbow cream too!",
+        review_text:
+          "  [This review was collected as part of a promotion.] Fantastic 8 hr cream Must have the lip/elbow cream too!",
         rating: "5 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  East Ryde, NSW",
@@ -2470,7 +2610,8 @@ export const productsMock = [
         name: " chattycat",
         age: "",
         title: "  Loved it!",
-        review_text: "  [This review was collected as part of a promotion.] this is really worth the hype.i got this when i had rough elbows and knees.this helped me to get rid of it.it is not your average cream especially after shaving i used this on my arms,on my hands as a moisturiser and sometimes on my face too after waxing.once i finished with the tube i had to dive it up because my husband complains about the smell so much.shame.",
+        review_text:
+          "  [This review was collected as part of a promotion.] this is really worth the hype.i got this when i had rough elbows and knees.this helped me to get rid of it.it is not your average cream especially after shaving i used this on my arms,on my hands as a moisturiser and sometimes on my face too after waxing.once i finished with the tube i had to dive it up because my husband complains about the smell so much.shame.",
         rating: "4 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  Bonogin, QLD",
@@ -2479,7 +2620,8 @@ export const productsMock = [
         name: " Melbeauty13",
         age: "",
         title: "  Great",
-        review_text: "  [This review was collected as part of a promotion.] Great product",
+        review_text:
+          "  [This review was collected as part of a promotion.] Great product",
         rating: "4 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  Mt Barker, SA",
@@ -2488,7 +2630,8 @@ export const productsMock = [
         name: " HMad",
         age: "",
         title: "  Cult Classic",
-        review_text: "  [This review was collected as part of a promotion.] I love using Eight Hour Cream for when I get very dry areas of skin. I have a mini tube that I use as a lip balm in winter and I also rub some on the soles of my feet as an overnight treatment. It is too rich and a little greasy for me to use as a regular moisturiser or hand cream.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I love using Eight Hour Cream for when I get very dry areas of skin. I have a mini tube that I use as a lip balm in winter and I also rub some on the soles of my feet as an overnight treatment. It is too rich and a little greasy for me to use as a regular moisturiser or hand cream.",
         rating: "4 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  Chipping Norton, NSW",
@@ -2497,7 +2640,8 @@ export const productsMock = [
         name: " xcrazymullet",
         age: "",
         title: "  uses.",
-        review_text: "  [This review was collected as part of a promotion.] I found this cream worked really well to replenish lips, or when you have a flaky peice of skin that wont sit well under make up, so soften it up. I used it on my cheeks as a sheen, but i felt it was too thick and oily to do so.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I found this cream worked really well to replenish lips, or when you have a flaky peice of skin that wont sit well under make up, so soften it up. I used it on my cheeks as a sheen, but i felt it was too thick and oily to do so.",
         rating: "4 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  NA",
@@ -2506,7 +2650,8 @@ export const productsMock = [
         name: " Eastgirl4",
         age: "",
         title: "  Good for dry skin and irritation",
-        review_text: "  [This review was collected as part of a promotion.] This cream is good for areas prone to dry skin, elbows, heels, cuticles and lips. It doesn't have the most pleasant smell, it smells a bit like a burn salve (well, that's one of it's uses, so no wonder).",
+        review_text:
+          "  [This review was collected as part of a promotion.] This cream is good for areas prone to dry skin, elbows, heels, cuticles and lips. It doesn't have the most pleasant smell, it smells a bit like a burn salve (well, that's one of it's uses, so no wonder).",
         rating: "5 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  Templestowe Lower, VIC",
@@ -2515,7 +2660,8 @@ export const productsMock = [
         name: " Dedide",
         age: "",
         title: "  Not for everyday use. Unless as a lip balm.",
-        review_text: "  [This review was collected as part of a promotion.] I was allergic to the hand cream but not the skin prtoectant. I would not recommend it for everyday use but for specific purposes like sunburn, flights etc. It is very greasy and it does have a strong smell but it also works wonders. I apply it to damp skin when I am feeling exceptionaly dry or when I have to fly. It is great for those specific occasions.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I was allergic to the hand cream but not the skin prtoectant. I would not recommend it for everyday use but for specific purposes like sunburn, flights etc. It is very greasy and it does have a strong smell but it also works wonders. I apply it to damp skin when I am feeling exceptionaly dry or when I have to fly. It is great for those specific occasions.",
         rating: "5 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  Bongaree, QLD",
@@ -2524,7 +2670,8 @@ export const productsMock = [
         name: " pink sparkles",
         age: "",
         title: "  Don't like the smell",
-        review_text: "  [This review was collected as part of a promotion.] I know everyone's raving about this product, yes, it's rich and ultra moisturising and multipurpose but has anyone noticed it has a rather strong, unpleasant smell?",
+        review_text:
+          "  [This review was collected as part of a promotion.] I know everyone's raving about this product, yes, it's rich and ultra moisturising and multipurpose but has anyone noticed it has a rather strong, unpleasant smell?",
         rating: "3 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  South Turramurra, NSW",
@@ -2533,7 +2680,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "",
         title: "  Must have miracle worker!",
-        review_text: "  [This review was collected as part of a promotion.] Many friends had recommended this but I was unsure about the hype. After using it, I am convinced that this balm can do anything. It smells medicinal, like it can heal most cuts and help even the driest skin to soften. Try it...you might fall in love!",
+        review_text:
+          "  [This review was collected as part of a promotion.] Many friends had recommended this but I was unsure about the hype. After using it, I am convinced that this balm can do anything. It smells medicinal, like it can heal most cuts and help even the driest skin to soften. Try it...you might fall in love!",
         rating: "5 out of 5 stars.",
         "review date": "  · 13 years ago  ",
         "country name": "  Clarkson, WA",
@@ -2542,7 +2690,8 @@ export const productsMock = [
         name: " Princess Fiona1",
         age: "",
         title: "  Fantastic",
-        review_text: "  [This review was collected as part of a promotion.] This Product is fantastic. It has so many uses from nail and cuticle cream, softening chapped lips, or adding sheen to cheek bones, although I do feel that putting it on the face leaves it very greasy looking. It is extremely great value, as a little goes a very long way.",
+        review_text:
+          "  [This review was collected as part of a promotion.] This Product is fantastic. It has so many uses from nail and cuticle cream, softening chapped lips, or adding sheen to cheek bones, although I do feel that putting it on the face leaves it very greasy looking. It is extremely great value, as a little goes a very long way.",
         rating: "5 out of 5 stars.",
         "review date": "  · 14 years ago  ",
         "country name": "  Berwick, VIC",
@@ -2551,14 +2700,16 @@ export const productsMock = [
         name: " renee.t",
         age: "",
         title: "  Fantastic",
-        review_text: "  [This review was collected as part of a promotion.] This is my handbag must have! It has so many uses - cracked lips, lip gloss, for cuticles, any dry spot etc. I use this balm mostly on my lips especially in winter. However it is a little greasy and smells funny - it kind of reminds me of good old vasaline.",
+        review_text:
+          "  [This review was collected as part of a promotion.] This is my handbag must have! It has so many uses - cracked lips, lip gloss, for cuticles, any dry spot etc. I use this balm mostly on my lips especially in winter. However it is a little greasy and smells funny - it kind of reminds me of good old vasaline.",
         rating: "5 out of 5 stars.",
         "review date": "  · 14 years ago  ",
         "country name": "  Merrylands, NSW",
       },
     ],
     key_ingredients: {
-      Lanolin: " a deeply hydrating and repairing emollient to restore the most dry skin",
+      Lanolin:
+        " a deeply hydrating and repairing emollient to restore the most dry skin",
     },
   },
   {
@@ -2566,14 +2717,20 @@ export const productsMock = [
     id: 4,
     brand_name: "Korres",
     prod_name: "Greek Yoghurt Nourishing Probiotic Gel-Cream",
-    prod_link: "https://www.meccabeauty.co.nz/korres/greek-yoghurt-nourishing-probiotic-gel-cream/I-042742.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/korres/greek-yoghurt-nourishing-probiotic-gel-cream/I-042742.html?cgpath=skincare",
     price: "$57.00",
-    category: "HomeSkin CareMoisturiserMoisturiserGreek Yoghurt Nourishing Probiotic Gel-Cream",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw79f9edef/product/korres/hr/i-042742-greek-yoghurt-gel-cream-40ml-1-940.jpg",
+    category:
+      "HomeSkin CareMoisturiserMoisturiserGreek Yoghurt Nourishing Probiotic Gel-Cream",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw79f9edef/product/korres/hr/i-042742-greek-yoghurt-gel-cream-40ml-1-940.jpg",
     Benefits: "Cruelty-freeHydratingSulphate-freeParaben-free",
-    Details: "The MECCA view:This ultra-hydrating gel-cream moisturiser features probiotic-rich Greek Yoghurt which plumps and adds bounce to a dull complexion. The whipped texture is nourishing and immediately melts into the skin and uses time-release technology which allows the skins to be hydrated for 48 hours. Key ingredients:Greek yoghurt: delivers a dose of pre and probiotics into the skin. Microbiome re-balancing technology: a cutting edge technology that has been clinically proven to balance your skin's microbiome, protect and relive signs of stress. Made without:Parabens, formaldehydes, formaldehyde-releasing agents, phthalates, mineral oil, retinyl palmitate, oxybenzone, coal tar, hydroquinone, sulfates SLS & SLES, synthetic fragrance (less than 1%),  reef-safe (SPF products), triclocarban and triclosan.   Pair it with: Greek Yoghurt Foaming Cream CleanserGreek Yoghurt Probiotic Superdose Face Mask",
-    Usage: "Apply to a cleansed face and neck during the AM and PM. Avoid the eye area. ",
-    Ingredients: "Aqua/Water/Eau, Propanediol, Glycerin, Sodium Acrylates Copolymer, C13-15 Alkane, Caprylic/Capric/Myristic/Stearic Triglyceride, Coco-Caprylate, Hexyldecyl Stearate, Passiflora Incarnata Seed Oil, Aloe Barbadensis Leaf Juice Powder, Algin, Alpha-Glucan Oligosaccharide, Ascorbic Acid, Behenyl Alcohol, Bisabolol, Caprylyl Glycol, Cellulose Gum, Cetearyl Alcohol, Chlorella Vulgaris Extract, Disodium Phosphate, Glyceryl Caprylate, Glyceryl Polyacrylate, Glyceryl Stearate Citrate, Hydrogenated Ethylhexyl Olivate, Hydrogenated Olive Oil Unsaponifiables, Hydrolyzed Sodium Hyaluronate, Lactic Acid, Lactobacillus, Laminaria Digitata Extract, Lecithin, Lonicera Caprifolium (Honeysuckle) Flower Extract, Lonicera Japonica (Honeysuckle) Flower Extract, Maltodextrin, Maris Aqua/Sea Water/Eau De Mer, Menthyl Lactate, Microcrystalline Cellulose, Panthenol, Pentylene Glycol, Phenethyl Alcohol, Polyacrylate Crosspolymer-6, Polyglyceryl-3 Diisostearate, Polymnia Sonchifolia Root Juice, Potassium Phosphate, Pullulan, Saccharide Isomerate, Salvia Hispanica Seed Oil, Serine, Sodium Carboxymethyl Beta-Glucan, Sodium Hyaluronate, Tetrasodium Glutamate Diacetate, Tocopheryl Acetate, Trehalose, Tridecane, Undecane, Urea, Xanthan Gum, Yogurt, Yogurt Powder, Zingiber Officinale (Ginger) Root Extract, Benzyl Alcohol, Phenoxyethanol, Salicylic Acid, Sorbic Acid, Parfum/Fragrance. ",
+    Details:
+      "The MECCA view:This ultra-hydrating gel-cream moisturiser features probiotic-rich Greek Yoghurt which plumps and adds bounce to a dull complexion. The whipped texture is nourishing and immediately melts into the skin and uses time-release technology which allows the skins to be hydrated for 48 hours. Key ingredients:Greek yoghurt: delivers a dose of pre and probiotics into the skin. Microbiome re-balancing technology: a cutting edge technology that has been clinically proven to balance your skin's microbiome, protect and relive signs of stress. Made without:Parabens, formaldehydes, formaldehyde-releasing agents, phthalates, mineral oil, retinyl palmitate, oxybenzone, coal tar, hydroquinone, sulfates SLS & SLES, synthetic fragrance (less than 1%),  reef-safe (SPF products), triclocarban and triclosan.   Pair it with: Greek Yoghurt Foaming Cream CleanserGreek Yoghurt Probiotic Superdose Face Mask",
+    Usage:
+      "Apply to a cleansed face and neck during the AM and PM. Avoid the eye area. ",
+    Ingredients:
+      "Aqua/Water/Eau, Propanediol, Glycerin, Sodium Acrylates Copolymer, C13-15 Alkane, Caprylic/Capric/Myristic/Stearic Triglyceride, Coco-Caprylate, Hexyldecyl Stearate, Passiflora Incarnata Seed Oil, Aloe Barbadensis Leaf Juice Powder, Algin, Alpha-Glucan Oligosaccharide, Ascorbic Acid, Behenyl Alcohol, Bisabolol, Caprylyl Glycol, Cellulose Gum, Cetearyl Alcohol, Chlorella Vulgaris Extract, Disodium Phosphate, Glyceryl Caprylate, Glyceryl Polyacrylate, Glyceryl Stearate Citrate, Hydrogenated Ethylhexyl Olivate, Hydrogenated Olive Oil Unsaponifiables, Hydrolyzed Sodium Hyaluronate, Lactic Acid, Lactobacillus, Laminaria Digitata Extract, Lecithin, Lonicera Caprifolium (Honeysuckle) Flower Extract, Lonicera Japonica (Honeysuckle) Flower Extract, Maltodextrin, Maris Aqua/Sea Water/Eau De Mer, Menthyl Lactate, Microcrystalline Cellulose, Panthenol, Pentylene Glycol, Phenethyl Alcohol, Polyacrylate Crosspolymer-6, Polyglyceryl-3 Diisostearate, Polymnia Sonchifolia Root Juice, Potassium Phosphate, Pullulan, Saccharide Isomerate, Salvia Hispanica Seed Oil, Serine, Sodium Carboxymethyl Beta-Glucan, Sodium Hyaluronate, Tetrasodium Glutamate Diacetate, Tocopheryl Acetate, Trehalose, Tridecane, Undecane, Urea, Xanthan Gum, Yogurt, Yogurt Powder, Zingiber Officinale (Ginger) Root Extract, Benzyl Alcohol, Phenoxyethanol, Salicylic Acid, Sorbic Acid, Parfum/Fragrance. ",
     reviews: [
       {
         name: " MeganLouise21",
@@ -2914,7 +3071,8 @@ export const productsMock = [
         name: " Loops157",
         age: "  Age 45 to 54",
         title: "  Light and absorbs quickly",
-        review_text: "  [This review was collected as part of a promotion.] I bought this about 3 weeks ago and so far enjoying it. It is hydrating which is what i was after however remains little sticky.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I bought this about 3 weeks ago and so far enjoying it. It is hydrating which is what i was after however remains little sticky.",
         rating: "3 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Wollongong NSW",
@@ -2923,7 +3081,8 @@ export const productsMock = [
         name: " DaniD23",
         age: "  Age 25 to 34",
         title: "  So happy",
-        review_text: "  [This review was collected as part of a promotion.] I’ve been using this product for a couple of weeks and can feel such a difference in my skin throughout the day. No more itchy tightness and even the oil build up in the afternoon has reduced since using this as my daily moisturiser. It’s silky smooth to put on and absorbs quickly and feels so nourishing all day without feeling heavy.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I’ve been using this product for a couple of weeks and can feel such a difference in my skin throughout the day. No more itchy tightness and even the oil build up in the afternoon has reduced since using this as my daily moisturiser. It’s silky smooth to put on and absorbs quickly and feels so nourishing all day without feeling heavy.",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Adelaide, South Australia",
@@ -2932,7 +3091,8 @@ export const productsMock = [
         name: " IngridMM",
         age: "  Age 35 to 44",
         title: "  Great for Summer months",
-        review_text: "  I've been buying this moisturiser for years as my Summer go to, I was using Darphin's hydra skin but find this is better value for money as it iOS just as good as Darphin but a much better price point and it lasts a bit longer. Lovely light moisturiser for warmer months, though not quite enough in the colder months when my skin needs more heavy duty moisture.",
+        review_text:
+          "  I've been buying this moisturiser for years as my Summer go to, I was using Darphin's hydra skin but find this is better value for money as it iOS just as good as Darphin but a much better price point and it lasts a bit longer. Lovely light moisturiser for warmer months, though not quite enough in the colder months when my skin needs more heavy duty moisture.",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Melbourne, VIC",
@@ -2941,7 +3101,8 @@ export const productsMock = [
         name: " BadBananas",
         age: "  Age 35 to 44",
         title: "  Go-to moisturiser",
-        review_text: "  I’ve been using this for about 6 months now, and I won’t be stopping anytime soon. I have combination, sensitive skin. Big pores around nose and chin, dry patches on forehead and cheeks, and fairly reactive skin. This is a beautiful gel-cream type of moisturiser - smells like yoghurt, sinks in beautifully, and my skin drinks it up without getting greasy or shiny. Very gentle, I use it even when I’ve been overdoing it with the actives and it isn’t irritating at all. Lovely.",
+        review_text:
+          "  I’ve been using this for about 6 months now, and I won’t be stopping anytime soon. I have combination, sensitive skin. Big pores around nose and chin, dry patches on forehead and cheeks, and fairly reactive skin. This is a beautiful gel-cream type of moisturiser - smells like yoghurt, sinks in beautifully, and my skin drinks it up without getting greasy or shiny. Very gentle, I use it even when I’ve been overdoing it with the actives and it isn’t irritating at all. Lovely.",
         rating: "5 out of 5 stars.",
         "review date": "  · a month ago  ",
         "country name": "  Melbourne, Vic",
@@ -2950,7 +3111,8 @@ export const productsMock = [
         name: " Easu",
         age: "  Age 25 to 34",
         title: "  Refreshing",
-        review_text: "  Great product. It was recommended to be a while back and I just got around it and not disappointed. Refreshing and super light.",
+        review_text:
+          "  Great product. It was recommended to be a while back and I just got around it and not disappointed. Refreshing and super light.",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  Perth",
@@ -2959,7 +3121,8 @@ export const productsMock = [
         name: " CScott",
         age: "",
         title: "  Leaves skin feeling so hydrated",
-        review_text: "  I've been using this product for a few weeks as a night cream and I'm loving it.  There isn't a strong smell to the product and you only need a tiny amount to cover you face, neck and decolletage. I use it as a night cream and my face feels so hydrated when I wake up in the morning",
+        review_text:
+          "  I've been using this product for a few weeks as a night cream and I'm loving it.  There isn't a strong smell to the product and you only need a tiny amount to cover you face, neck and decolletage. I use it as a night cream and my face feels so hydrated when I wake up in the morning",
         rating: "4 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "",
@@ -2968,7 +3131,8 @@ export const productsMock = [
         name: " LarissaE",
         age: "  Age 25 to 34",
         title: "  In LOVE..",
-        review_text: "  [This review was collected as part of a promotion.] Absolutely love this product. It was recommended by online chat staff because my skin was drinking all the moisture out of my foundation, due to using too many actives on my skin. It has greatly improved my skins hydration, and I can still use my actives.",
+        review_text:
+          "  [This review was collected as part of a promotion.] Absolutely love this product. It was recommended by online chat staff because my skin was drinking all the moisture out of my foundation, due to using too many actives on my skin. It has greatly improved my skins hydration, and I can still use my actives.",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 months ago  ",
         "country name": "  Brisbane",
@@ -2977,7 +3141,8 @@ export const productsMock = [
         name: " Amy G",
         age: "  Age 25 to 34",
         title: "  I’m obsessed!",
-        review_text: "  I’ve recently had some skin issues and this moisturiser was recommended by a Mecca skincare specialist, I’m obsessed with it! A very light smell and a little goes a long way! Goes on like a cream but melts into the skin like a gel, leaves my face feeling so fresh and hydrated throughout the day. Have been using it AM before putting on makeup and PM when I wash and cleanse my face. Will definitely be purchasing again!",
+        review_text:
+          "  I’ve recently had some skin issues and this moisturiser was recommended by a Mecca skincare specialist, I’m obsessed with it! A very light smell and a little goes a long way! Goes on like a cream but melts into the skin like a gel, leaves my face feeling so fresh and hydrated throughout the day. Have been using it AM before putting on makeup and PM when I wash and cleanse my face. Will definitely be purchasing again!",
         rating: "5 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Adelaide",
@@ -2986,7 +3151,8 @@ export const productsMock = [
         name: "  Mel1290",
         age: "  Age 25 to 34",
         title: "  Super lightweight yet hydrating",
-        review_text: "  I’ve used about 3 jars of this now as it sits perfectly on my skin under makeup and doesn’t clash with my sunscreen. Works well with my combination skin.",
+        review_text:
+          "  I’ve used about 3 jars of this now as it sits perfectly on my skin under makeup and doesn’t clash with my sunscreen. Works well with my combination skin.",
         rating: "5 out of 5 stars.",
         "review date": "  · 3 months ago  ",
         "country name": "  Auckland, New Zealand",
@@ -2995,7 +3161,8 @@ export const productsMock = [
         name: " Cameronb",
         age: "  Age 25 to 34",
         title: "  Adore it",
-        review_text: "  Don't leave reviews normally but after a long and expensive quest to find the right moisturiser and cleanser for me, this is it! Along with the Greek yoghurt cleanser. I use this moisturiser in the AM as it's beautifully light but hydrating and is the only moisturiser I've ever found that doesn't make me greasy during the day. I read another comment about it smelling like pink soap that nearly put me off purchasing. I vaguely get the comparison but I personally really like the fragrance...it is so light and not overpowering in the slightest. I think they've used the bare minimum fragrance to mask the natural smells of the various ingredients...to me it smells wonderfully clinical and fresh. Will be rebuying.",
+        review_text:
+          "  Don't leave reviews normally but after a long and expensive quest to find the right moisturiser and cleanser for me, this is it! Along with the Greek yoghurt cleanser. I use this moisturiser in the AM as it's beautifully light but hydrating and is the only moisturiser I've ever found that doesn't make me greasy during the day. I read another comment about it smelling like pink soap that nearly put me off purchasing. I vaguely get the comparison but I personally really like the fragrance...it is so light and not overpowering in the slightest. I think they've used the bare minimum fragrance to mask the natural smells of the various ingredients...to me it smells wonderfully clinical and fresh. Will be rebuying.",
         rating: "5 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Brisbane",
@@ -3004,7 +3171,8 @@ export const productsMock = [
         name: " Bella48849",
         age: "  Age 25 to 34",
         title: "  Very Good",
-        review_text: "  [This review was collected as part of a promotion.] I have been using this for a few weeks and my skin has really cleared and looks so fresh. I personally need abit more hydration so I combine it with a serum.",
+        review_text:
+          "  [This review was collected as part of a promotion.] I have been using this for a few weeks and my skin has really cleared and looks so fresh. I personally need abit more hydration so I combine it with a serum.",
         rating: "4 out of 5 stars.",
         "review date": "  · 4 months ago  ",
         "country name": "  Adelaide",
@@ -3013,7 +3181,8 @@ export const productsMock = [
         name: " arielvas",
         age: "  Age 18 to 24",
         title: "  So moisturising!",
-        review_text: "  Bought this a few weeks ago after having used the Greek yoghurt cleanser for about 5 months. Love the consistency and it is soo moisturising without being sticky on the skin! Love it",
+        review_text:
+          "  Bought this a few weeks ago after having used the Greek yoghurt cleanser for about 5 months. Love the consistency and it is soo moisturising without being sticky on the skin! Love it",
         rating: "5 out of 5 stars.",
         "review date": "  · 5 months ago  ",
         "country name": "  Melbourne",
@@ -3022,7 +3191,8 @@ export const productsMock = [
         name: " Ea13",
         age: "  Age 25 to 34",
         title: "  So light on my face",
-        review_text: "  I have bought this a few weeks ago and love everything about it, the texture, the feel on the face, it’s so light on top of that you don’t even know it’s there! Will buy again",
+        review_text:
+          "  I have bought this a few weeks ago and love everything about it, the texture, the feel on the face, it’s so light on top of that you don’t even know it’s there! Will buy again",
         rating: "5 out of 5 stars.",
         "review date": "  · 6 months ago  ",
         "country name": "  Perth, WA",
@@ -3031,7 +3201,8 @@ export const productsMock = [
         name: " Indiagrace888",
         age: "  Age 25 to 34",
         title: "  Nourishing gel cream",
-        review_text: "  Great for summer, maybe not enough hydration for when my skin is slightly drier in winter but a great cream regardless!",
+        review_text:
+          "  Great for summer, maybe not enough hydration for when my skin is slightly drier in winter but a great cream regardless!",
         rating: "4 out of 5 stars.",
         "review date": "  · 6 months ago  ",
         "country name": "  Sydney",
@@ -3040,7 +3211,8 @@ export const productsMock = [
         name: " ellaricks",
         age: "  Age 25 to 34",
         title: "  My new go-to!",
-        review_text: "  I LOVE this product so much! I was looking for a new moisturizer and I had seen this one advertised. Being a prebiotic, I thought it might be quite thick, but it is light, smells delish, and doesn't leave a sticky or shiny look. It's perfect and I will not stop using it!",
+        review_text:
+          "  I LOVE this product so much! I was looking for a new moisturizer and I had seen this one advertised. Being a prebiotic, I thought it might be quite thick, but it is light, smells delish, and doesn't leave a sticky or shiny look. It's perfect and I will not stop using it!",
         rating: "5 out of 5 stars.",
         "review date": "  · 9 months ago  ",
         "country name": "  Portland VIC",
@@ -3049,7 +3221,8 @@ export const productsMock = [
         name: " Megan4562",
         age: "  Age 18 to 24",
         title: "  Favourite Moisturiser",
-        review_text: "  This is the best mousturiser I have ever used. The texture is amazing and its so hydrating without being oily. I'm on my third tub now and I see this being my moisturiser for a long time now. My only issue is that I wish that there was more in the little tub.",
+        review_text:
+          "  This is the best mousturiser I have ever used. The texture is amazing and its so hydrating without being oily. I'm on my third tub now and I see this being my moisturiser for a long time now. My only issue is that I wish that there was more in the little tub.",
         rating: "5 out of 5 stars.",
         "review date": "  · 10 months ago  ",
         "country name": "  Adelaide, SA",
@@ -3058,7 +3231,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "  Age 18 to 24",
         title: "  Best moisturiser!",
-        review_text: "  I’ve tried so many moisturisers over the past few years and some were bad some were okay, they did the job but nothing special but I recently bought this moisturiser and I’ve loved everything about it, it makes you’re skin feel amazing, soft, hydrated. It absorbs quickly, and doesn’t feel greasy or sticky. Definitely found my moisturiser. Love it!",
+        review_text:
+          "  I’ve tried so many moisturisers over the past few years and some were bad some were okay, they did the job but nothing special but I recently bought this moisturiser and I’ve loved everything about it, it makes you’re skin feel amazing, soft, hydrated. It absorbs quickly, and doesn’t feel greasy or sticky. Definitely found my moisturiser. Love it!",
         rating: "5 out of 5 stars.",
         "review date": "  · 11 months ago  ",
         "country name": "  New Zealand",
@@ -3067,7 +3241,8 @@ export const productsMock = [
         name: " Toomuchlove4Mecca",
         age: "  Age 35 to 44",
         title: "  Beautiful!",
-        review_text: "  Bought this after finishing the KorresPomegranate moisturiser. This is divine! Very light, non-irritating fragrance, and no breakouts from this. Applied this after AHA (DE) and Apotcare’s hyalu repair serum, and skin was very soft the next morning. Highly recommend!",
+        review_text:
+          "  Bought this after finishing the KorresPomegranate moisturiser. This is divine! Very light, non-irritating fragrance, and no breakouts from this. Applied this after AHA (DE) and Apotcare’s hyalu repair serum, and skin was very soft the next morning. Highly recommend!",
         rating: "5 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "",
@@ -3076,7 +3251,8 @@ export const productsMock = [
         name: " HelenS23",
         age: "  Age 25 to 34",
         title: "  Great moisturiser for mask wear!",
-        review_text: "  I bought this a few weeks ago and am loving it for my skin. It is helping with my maskne and keeping a barrier between my skin and the fetid moisture of the N95 masks at work (I am an ED nurse).",
+        review_text:
+          "  I bought this a few weeks ago and am loving it for my skin. It is helping with my maskne and keeping a barrier between my skin and the fetid moisture of the N95 masks at work (I am an ED nurse).",
         rating: "5 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "  Melbourne, Australia",
@@ -3085,7 +3261,8 @@ export const productsMock = [
         name: " Fre18",
         age: "  Age 25 to 34",
         title: "  Wow what a cream",
-        review_text: "  I have been having skin concerns with previous other brand product and was recommended this brand and my skin is glowing plump and looking amazing with one application can’t wait for days to come",
+        review_text:
+          "  I have been having skin concerns with previous other brand product and was recommended this brand and my skin is glowing plump and looking amazing with one application can’t wait for days to come",
         rating: "5 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "  Brisbane",
@@ -3094,7 +3271,8 @@ export const productsMock = [
         name: " MJohanna",
         age: "  Age 25 to 34",
         title: "  Good consistency & hydrating.",
-        review_text: "  Have been using for a week now and so far so good! Not AS hydrating as the Tatcha moisturizer I've been using but still has a really nice feel to the skin and is a great consistency.",
+        review_text:
+          "  Have been using for a week now and so far so good! Not AS hydrating as the Tatcha moisturizer I've been using but still has a really nice feel to the skin and is a great consistency.",
         rating: "4 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "  Melbourne",
@@ -3103,7 +3281,8 @@ export const productsMock = [
         name: " Tara10",
         age: "  Age 18 to 24",
         title: "  So hydrating",
-        review_text: "  I have dry sensitive skin and this moisturiser has really made a difference. It doesn’t leave my skin feeling greasy and sits very well on the skin",
+        review_text:
+          "  I have dry sensitive skin and this moisturiser has really made a difference. It doesn’t leave my skin feeling greasy and sits very well on the skin",
         rating: "5 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "  Sydney, Aus",
@@ -3112,7 +3291,8 @@ export const productsMock = [
         name: " Eckythump",
         age: "  Age 45 to 54",
         title: "  This is gorgeous!",
-        review_text: "  I’ve had the sample for a fair while now and the thought of using a Greek yoghurt moisturiser never really appealed to me. I’ve been using up all my samples and thought I’d give it a go and OMG it’s beautiful! It’s really lightly fragranced but not offensive and it doesn’t linger. It was the perfect moisturiser to use on my wintery dry skin. I normally have super oily all over skin but this winter I have dry patches. This cream is perfect for both skin types and wasn’t sticky at all. I used it under makeup spread fairly thin and also as a thicker night mask. Both with great results. I’m buying the full size I loved it so much",
+        review_text:
+          "  I’ve had the sample for a fair while now and the thought of using a Greek yoghurt moisturiser never really appealed to me. I’ve been using up all my samples and thought I’d give it a go and OMG it’s beautiful! It’s really lightly fragranced but not offensive and it doesn’t linger. It was the perfect moisturiser to use on my wintery dry skin. I normally have super oily all over skin but this winter I have dry patches. This cream is perfect for both skin types and wasn’t sticky at all. I used it under makeup spread fairly thin and also as a thicker night mask. Both with great results. I’m buying the full size I loved it so much",
         rating: "5 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "  Australia",
@@ -3121,7 +3301,8 @@ export const productsMock = [
         name: " Nico1987",
         age: "  Age 25 to 34",
         title: "  Absolute must buy",
-        review_text: "  I recently bought this cream Amazing!!! My face felt smooth, light and nice glow.",
+        review_text:
+          "  I recently bought this cream Amazing!!! My face felt smooth, light and nice glow.",
         rating: "5 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "  Mackay QLD",
@@ -3130,7 +3311,8 @@ export const productsMock = [
         name: " shar_m",
         age: "  Age 25 to 34",
         title: "  LOVE",
-        review_text: "  I bought this a month ago! and have come back to buy this again! I have dry to normal skin (eczema , hormonal acne & can get really oily when my skin isnt hydrated enough!)  and this moisturiser has just balanced my skin ! hydrated and fresh and doesn't feel like I have anything on my face. I use Vit C oil from sunday riley underneath and works wonders :)",
+        review_text:
+          "  I bought this a month ago! and have come back to buy this again! I have dry to normal skin (eczema , hormonal acne & can get really oily when my skin isnt hydrated enough!)  and this moisturiser has just balanced my skin ! hydrated and fresh and doesn't feel like I have anything on my face. I use Vit C oil from sunday riley underneath and works wonders :)",
         rating: "5 out of 5 stars.",
         "review date": "  · a year ago  ",
         "country name": "  Australia",
@@ -3139,7 +3321,8 @@ export const productsMock = [
         name: " Angie34",
         age: "  Age 25 to 34",
         title: "  A little disappointed...",
-        review_text: "  I received this as a sample and have used it on a few occasions. It smells great! However, I found it felt sticky on my skin and took a while to absorb.",
+        review_text:
+          "  I received this as a sample and have used it on a few occasions. It smells great! However, I found it felt sticky on my skin and took a while to absorb.",
         rating: "2 out of 5 stars.",
         "review date": "  · 2 years ago  ",
         "country name": "  Perth",
@@ -3148,7 +3331,8 @@ export const productsMock = [
         name: " Stephanie Rum",
         age: "  Age 18 to 24",
         title: "  Pleasantly surprised",
-        review_text: "  I bought this moisturiser as a substitute for the Korres almond blossom I have been using and is no long stocked at Mecca. This new formula is lightweight, nourishing and a very Unique texture. I find a little goes a very long way so would recommend this moisturiser highly !",
+        review_text:
+          "  I bought this moisturiser as a substitute for the Korres almond blossom I have been using and is no long stocked at Mecca. This new formula is lightweight, nourishing and a very Unique texture. I find a little goes a very long way so would recommend this moisturiser highly !",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 years ago  ",
         "country name": "  Sydney",
@@ -3157,7 +3341,8 @@ export const productsMock = [
         name: " Anonymous",
         age: "  Age 45 to 54",
         title: "  Improved my skin",
-        review_text: "  I used the product sample from a Beauty Loop box and found it noticeably improved the appearance of my skin, which is sensitive and can be prone to redness/irritation. Have now purchased full size.",
+        review_text:
+          "  I used the product sample from a Beauty Loop box and found it noticeably improved the appearance of my skin, which is sensitive and can be prone to redness/irritation. Have now purchased full size.",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 years ago  ",
         "country name": "  Melbourne",
@@ -3166,7 +3351,8 @@ export const productsMock = [
         name: " Vanesa19909",
         age: "  Age 25 to 34",
         title: "  There’s better creams out there",
-        review_text: "  I received a sample of this product. Used it a few times under different foundations but it causes the foundation to cake and is hard to blend over it.It’s ok as a night cream or to worn on its own but there’s far better products out there",
+        review_text:
+          "  I received a sample of this product. Used it a few times under different foundations but it causes the foundation to cake and is hard to blend over it.It’s ok as a night cream or to worn on its own but there’s far better products out there",
         rating: "2 out of 5 stars.",
         "review date": "  · 2 years ago  ",
         "country name": "  Melbourne",
@@ -3175,7 +3361,8 @@ export const productsMock = [
         name: " Bellawella13",
         age: "  Age 18 to 24",
         title: "  To die for",
-        review_text: "  I bought this moisturiser a week ago and the first time I tried it I knew straight away it was perfect for my skin! I have dry/combination and this is now the holy grail of moisturisers for me. Intense hydration, leaves a dewy finish, light weight, amazing as a primer under makeup and worth every penny. 100% will continue using this Korres product.",
+        review_text:
+          "  I bought this moisturiser a week ago and the first time I tried it I knew straight away it was perfect for my skin! I have dry/combination and this is now the holy grail of moisturisers for me. Intense hydration, leaves a dewy finish, light weight, amazing as a primer under makeup and worth every penny. 100% will continue using this Korres product.",
         rating: "5 out of 5 stars.",
         "review date": "  · 2 years ago  ",
         "country name": "  Melbourne, VIC",
@@ -3183,7 +3370,8 @@ export const productsMock = [
     ],
     key_ingredients: {
       "Greek yoghurt": " delivers a dose of pre and probiotics into the skin",
-      " Microbiome re-balancing technology": " a cutting edge technology that has been clinically proven to balance your skin's microbiome, protect and relive signs of stress",
+      " Microbiome re-balancing technology":
+        " a cutting edge technology that has been clinically proven to balance your skin's microbiome, protect and relive signs of stress",
     },
   },
 ];

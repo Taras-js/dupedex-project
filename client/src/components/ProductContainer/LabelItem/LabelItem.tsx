@@ -24,9 +24,7 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
       <span>{label[1].name}</span>
       <span>
         (
-        {
-          Number(label[1].count).toFixed(0)
-        }
+        {Number(label[1].count).toFixed(0)}
         %)
       </span>
     </li>
