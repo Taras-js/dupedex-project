@@ -24,7 +24,9 @@ export function getLabels(reviews: Array<any>) {
   const objLabels = {
   };
 
-  reviews.map((review) => allLabels.push(...review.labels));
+  reviews
+    .filter((review) => review.labels)
+    .map((review) => allLabels.push(...review.labels));
 
   for (let i = 0; i < allLabels.length; i += 1) {
     const a = allLabels[i].toString();

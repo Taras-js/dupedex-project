@@ -19,7 +19,16 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
   return (
     <div className={styles.review__container}>
       <h3>Review</h3>
-      {productsMock.find((item) => item.id === id).Details}
+      {
+        productsMock
+          .find((item) => item.id === id)
+          .reviews.filter((review, index) => index < 8)
+          .map((review) => (
+            <p className={styles.review__text}>
+              {review.review_text}
+            </p>
+          ))
+      }
 
       <Button
         icon
