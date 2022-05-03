@@ -17,30 +17,24 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
   const itemSize = getCardSize(itemsIdList, isReviewShown);
 
-  if (productList.length === 1) {
-    return (
-      <div className={styles.product__container}>
-        {productList.map((item) => (
-          <Panel key={item.id} className={styles.products__panel}>
-            <ProductItem id={item.id} size={itemSize} filter={filter} />
-          </Panel>
-        ))}
-
-        {isReviewShown && (
-          <Panel padding={16} className={styles.products__panel}>
-            <ReviewItem id={currentItemId} />
-          </Panel>
-        )}
-      </div>
-    );
-  }
   return (
     <div className={styles.product__container}>
       {productList.map((item) => (
         <Panel key={item.id} className={styles.products__panel}>
-          <ProductItem isShowClose id={item.id} size={itemSize} filter={filter} />
+          <ProductItem
+            id={item.id}
+            size={itemSize}
+            filter={filter}
+            isShowClose={productList.length !== 1}
+          />
         </Panel>
       ))}
+
+      {productList.length === 1 && isReviewShown && (
+        <Panel padding={16} className={styles.products__panel}>
+          <ReviewItem id={currentItemId} />
+        </Panel>
+      )}
     </div>
   );
 };

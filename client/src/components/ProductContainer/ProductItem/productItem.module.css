@@ -20,12 +20,14 @@
   font-weight: 700;
   font-size: 43px;
   line-height: 49px;
+  text-align: center;
 }
 
 .products__link {
   text-decoration: underline;
   font-size: 20px;
   line-height: 23px;
+  text-align: center;
 }
 
 .products__description {
@@ -33,6 +35,7 @@
   font-weight: 400;
   font-size: 25px;
   line-height: 29px;
+  text-align: center;
 }
 
 .products__labels {
@@ -78,7 +81,6 @@
 
 .medium .products__img {
   max-width: 125px;
-  width: 20%;
   max-height: 125px;
 }
 
@@ -121,7 +123,7 @@
 
 .small .products__description {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 16px;
 }
 
 .small .products__labels {
