@@ -12,16 +12,14 @@ import {
 
 import styles from './toolbarContainer.module.css';
 import { Filter } from '../../shared/types';
-import { modalState, setModalComponent, toggleModal } from '../UIKit/Modal/modalSlice';
-import { Modal } from '../UIKit/Modal';
-import {ModalShare} from './Modal/ModalShare';
+import { setModalComponent, setIsUnclosable } from '../UIKit/Modal/modalSlice';
+import { modals } from '../../features/modals/helper';
 
 const Divider = () => (<div className={styles.divider} />);
 
 const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
   const product = useAppSelector(productState);
-  const modal = useAppSelector(modalState);
 
   const onTutorialClick = () => {};
   const onTutorialClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_tutorial);
@@ -51,11 +49,10 @@ const ToolbarContainer = () => {
 
   const onWriteNotesClick = () => {};
   const onWriteNotesClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_writenotes);
-
   const onShareClick = () => { 
-    dispatch(setModalComponent("ModalShare"));
-    // if (modal.modalComponent === "ModalShare") dispatch(toggleModal())
-    dispatch(toggleModal()); console.log('onShareClick')
+    dispatch(setModalComponent(modals.ModalShare));
+    dispatch(setIsUnclosable(true)); 
+    console.log('onShareClick')
   };
   const onShareClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_share);
 
@@ -153,11 +150,11 @@ const ToolbarContainer = () => {
         <span>Save</span>
       </Button>
 
-      {modal.isModalShown && modal.modalComponent === "ModalShare" && (
+      {/* {modal.isModalShown && modal.modalComponent === "ModalShare" && (
         <Modal onClose={() => { dispatch(toggleModal()); }}>
           <ModalShare />
         </Modal>
-      )}
+      )} */}
     </div>
   );
 };

@@ -1,12 +1,10 @@
-import { header } from 'express-validator';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { Icon, Button } from '../UIKit';
 import { Modal } from '../UIKit/Modal';
-import { modalState, setModalComponent, toggleModal } from '../UIKit/Modal/modalSlice';
+import { modalState, setModalComponent, toggleModal, setIsUnclosable } from '../UIKit/Modal/modalSlice';
 
 import styles from './header.module.css';
-import { ModalLogin } from './Modal/index';
-
+import { modalComponents, modals } from '../../features/modals/helper';
 
 function Header() {
   const dispatch = useAppDispatch();
@@ -18,8 +16,8 @@ function Header() {
 
   const onClickSignIn = () => {
     console.log('click SignIn');
-    dispatch(setModalComponent("ModalLogin"));
-    dispatch(toggleModal())
+    dispatch(setModalComponent(modals.ModalLogin));
+    dispatch(setIsUnclosable(false)); 
   };
 
   const onClickSignUp = () => {
@@ -48,10 +46,9 @@ function Header() {
           </Button>
         </div>
       </div>
-      
-      {modal.isModalShown && modal.modalComponent === "ModalLogin" && (
-        <Modal onClose={() => { dispatch(toggleModal()) }}>
-          <ModalLogin />
+      {modal.isModalShown && (
+        <Modal isUnclosable={modal.isUnclosable} onClose={() => { dispatch(toggleModal())}}>
+          {modalComponents[modal.modalComponent]}
         </Modal>
       )}
     </header>
