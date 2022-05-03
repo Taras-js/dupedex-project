@@ -13,7 +13,7 @@ interface LabelProps {
 
 const LabelList: React.FC<LabelProps> = (props: LabelProps) => {
   const {
-    labels, size, filter, maxQuantity,
+    labels, size, filter, maxQuantity = 6,
   } = props;
 
   const listClass = cls(styles, "labels__list", size);
