@@ -17,13 +17,9 @@ export const productSlice = createSlice({
     },
     setAddItemToList(state) {
       // eslint-disable-next-line no-param-reassign
-      state.isAddItemToList = true;
-    },
-    noSetAddItemToList(state) {
-      // eslint-disable-next-line no-param-reassign
-      state.isAddItemToList = false;
+      state.isAddItemToList = !state.isAddItemToList;
     },
   },
 });
-
+export const { setProducts, setAddItemToList } = productSlice.actions;
 export default productSlice.reducer;

@@ -6,7 +6,6 @@ import styles from './Search.module.css';
 import { Icon } from '../Icon';
 import ModalComponent from './modalComponent';
 import ResultItem from './ResultItem';
-import { useAppSelector } from '../../../app/hooks';
 
 export interface Results {
   id?: number;
@@ -17,24 +16,27 @@ export interface Results {
 
 export interface SearchProps {
   placeholder?: string;
+  isOpen: boolean;
   results?: Results[];
   withDebounce: (Function);
+  idProducts: number[]
   onChange?: (e: React.ChangeEvent) => void;
+  onClickResult?: (number)=>void;
 }
 
 const Search: React.FC<SearchProps> = (props) => {
   const {
-    results, placeholder, withDebounce, onChange,
+    results, placeholder, withDebounce, onChange, onClickResult, isOpen, idProducts,
   } = props;
 
   const optimized = useCallback(withDebounce(onChange), []);
   const { clickedOutside, myRef, handleClickInside } = ModalComponent(false);
-  const isAddItemToList = useAppSelector((state) => state.goods.isAddItemToList);
   const inputRef = useRef(null);
 
   useEffect(() => {
     inputRef.current.focus();
-  }, [isAddItemToList]);
+    handleClickInside();
+  }, [isOpen]);
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
@@ -56,7 +58,7 @@ const Search: React.FC<SearchProps> = (props) => {
       </form>
       <div className={clickedOutside ? styles.search__dropdown : styles.search__dropdown_passive}>
         {results && results.map((result) => (
-          <ResultItem key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} id={result.id} />
+          <ResultItem onClick={onClickResult} key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} id={result.id} idProducts={idProducts} />
         ))}
       </div>
     </div>

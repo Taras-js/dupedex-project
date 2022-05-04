@@ -1,5 +1,6 @@
 .product__container {
   display: flex;
+  position: relative;
   height: 100%;
 }
 .product__container > :not(:last-child) {
