@@ -24,10 +24,13 @@ const Modal = (props: ModalProps) => {
         onClose?.()
       }
     }
-    document.addEventListener('click', handleClick)
 
-    return () => {
-      document.removeEventListener('click', handleClick)
+    if (!isUnclosable) {
+      document.addEventListener('click', handleClick)
+
+      return () => {
+        document.removeEventListener('click', handleClick)
+      }
     }
   }, [])
 

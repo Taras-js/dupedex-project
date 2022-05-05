@@ -1,26 +1,18 @@
 /* eslint-disable @typescript-eslint/indent */
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
-<<<<<<< HEAD
-import counterReducer from '../features/counter/counterSlice';
-import productReducer from '../components/ToolbarContainer/toolbarSlice';
-import modalReducer from '../components/UIKit/Modal/modalSlice';
-=======
 import counterReducer from "../features/counter/counterSlice";
 import goodsReducer from "../features/Search/productSlice";
 import productReducer from "../components/ToolbarContainer/toolbarSlice";
->>>>>>> develop
+import modalReducer from '../components/UIKit/Modal/modalSlice';
 
 export function makeStore() {
   return configureStore({
     reducer: {
       counter: counterReducer,
       product: productReducer,
-<<<<<<< HEAD
       modal: modalReducer,
-=======
       goods: goodsReducer,
->>>>>>> develop
     },
   });
 }
