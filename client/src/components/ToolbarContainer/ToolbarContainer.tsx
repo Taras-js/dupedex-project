@@ -1,160 +1,205 @@
-import classnames from 'classnames';
-import { Button, Icon } from '../UIKit';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { cls } from "../../utils/helper";
+import { Button, Icon, Tooltip } from "../UIKit";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
-  posReviews,
-  negReviews,
-  showOrHideReviews,
-  previousStep,
-  followingStep,
+  setFilter,
+  toggleReviews,
+  getHistoryStep,
   productState,
-} from './toolbarSlice';
+} from "./toolbarSlice";
+import { Filter } from "../../shared/types";
 
-import styles from './toolbarContainer.module.css';
-import { Filter } from '../../shared/types';
-import { setModalComponent, setIsUnclosable } from '../UIKit/Modal/modalSlice';
-import { modals } from '../../features/modals/helper';
+import styles from "./toolbarContainer.module.css";
 
-const Divider = () => (<div className={styles.divider} />);
+const Divider = () => <div className={styles.divider} />;
 
 const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
   const product = useAppSelector(productState);
 
-  const onTutorialClick = () => {};
-  const onTutorialClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_tutorial);
+  const onShowTutorial = () => {};
+  const onShowTutorialClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_tutorial",
+  );
 
   const isPrevDisabled = product.historyStep === 1;
-  const onPrevStepClick = () => { dispatch(previousStep()); };
-  const onPrevStepClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_prevstep);
+  const onGetPrevStep = () => {
+    dispatch(getHistoryStep(-1));
+  };
+  const onGetPrevStepClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_prev_step",
+  );
 
   const isNextDisabled = product.historyStep === product.history.length;
-  const onNextStepClick = () => { dispatch(followingStep()); };
-  const onNextStepClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_nextstep);
+  const onGetNextStep = () => {
+    dispatch(getHistoryStep(+1));
+  };
+  const onGetNextStepClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_next_step",
+  );
 
   const isReviewShown = product.isReviewShown === false;
-  const onShowReviewsClick = () => { dispatch(showOrHideReviews()); };
-  const onShowReviewsClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_showreviews, { [styles.toolbar__btn_showreviews_active]: isReviewShown });
+  const onToggleReviews = () => {
+    dispatch(toggleReviews());
+  };
+  const onToggleReviewsClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_toggle_reviews",
+    { toolbar__btn_toggle_reviews_active: isReviewShown },
+  );
 
   const isPositive = product.filter === Filter.positive;
-  const onShowPositiveClick = () => { dispatch(posReviews()); };
-  const onShowPositiveClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_positive, { [styles.toolbar__btn_positive_active]: isPositive });
+  const onFilterPositive = () => {
+    dispatch(setFilter(Filter.positive));
+  };
+  const onFilterPositiveClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_positive",
+    { toolbar__btn_positive_active: isPositive },
+  );
 
   const isNegative = product.filter === Filter.negative;
-  const onShowNegativeClick = () => { dispatch(negReviews()); };
-  const onShowNegativeClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_negative, { [styles.toolbar__btn_negative_active]: isNegative });
-
-  const onProductClaimsClick = () => {};
-  const onProductClaimsClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_productclaims);
-
-  const onWriteNotesClick = () => {};
-  const onWriteNotesClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_writenotes);
-  const onShareClick = () => { 
-    dispatch(setModalComponent(modals.ModalShare));
-    dispatch(setIsUnclosable(true)); 
-    console.log('onShareClick')
+  const onFilterNegative = () => {
+    dispatch(setFilter(Filter.negative));
   };
-  const onShareClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_share);
+  const onFilterNegativeClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_negative",
+    { toolbar__btn_negative_active: isNegative },
+  );
 
-  const onSaveClick = () => {};
-  const onSaveClassName = classnames(styles.toolbar__btn, styles.toolbar__btn_save);
-  
+  const onShowProductClaims = () => {};
+  const onShowProductClaimsClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_product_claims",
+  );
+
+  const onWriteNotes = () => {};
+  const onWriteNotesClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_write_notes",
+  );
+
+  const onShareLibrary = () => {};
+  const onShareLibraryClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_share",
+  );
+
+  const onSaveLibrary = () => {};
+  const onSaveLibraryClassName = cls(
+    styles,
+    "toolbar__btn",
+    "toolbar__btn_save",
+  );
+
   return (
     <div className={styles.container}>
-      <Button
-        icon
-        className={onTutorialClassName}
-        onClick={onTutorialClick}
-      >
-        <Icon type="tutorial" width={28} height={28} />
-      </Button>
+      <Tooltip placement="top" title="Tutorial">
+        <Button
+          icon
+          className={onShowTutorialClassName}
+          onClick={onShowTutorial}
+        >
+          <Icon type="tutorial" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Button
-        icon
-        className={onPrevStepClassName}
-        onClick={onPrevStepClick}
-        isDisabled={isPrevDisabled}
-      >
-        <Icon type="comeBack" width={28} height={28} />
-      </Button>
+      <Tooltip title="undo">
+        <Button
+          icon
+          className={onGetPrevStepClassName}
+          onClick={onGetPrevStep}
+          isDisabled={isPrevDisabled}
+        >
+          <Icon type="comeBack" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
-      <Button
-        icon
-        className={onNextStepClassName}
-        onClick={onNextStepClick}
-        isDisabled={isNextDisabled}
-      >
-        <Icon type="comeAhead" width={28} height={28} />
-      </Button>
+      <Tooltip placement="bottom" title="redo">
+        <Button
+          icon
+          className={onGetNextStepClassName}
+          onClick={onGetNextStep}
+          isDisabled={isNextDisabled}
+        >
+          <Icon type="comeAhead" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Button
-        icon
-        className={onShowReviewsClassName}
-        onClick={onShowReviewsClick}
-      >
-        <Icon type="showOrHideReviews" width={28} height={28} />
-      </Button>
+      <Tooltip title="Show/hide reviews">
+        <Button
+          icon
+          className={onToggleReviewsClassName}
+          onClick={onToggleReviews}
+        >
+          <Icon type="toggleReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Button
         icon
-        className={onShowPositiveClassName}
-        onClick={onShowPositiveClick}
+        className={onFilterPositiveClassName}
+        onClick={onFilterPositive}
       >
         <Icon type="positiveReviews" width={28} height={28} />
       </Button>
 
       <Button
         icon
-        className={onShowNegativeClassName}
-        onClick={onShowNegativeClick}
+        className={onFilterNegativeClassName}
+        onClick={onFilterNegative}
       >
         <Icon type="negativeReviews" width={28} height={28} />
       </Button>
 
       <Button
         icon
-        className={onProductClaimsClassName}
-        onClick={onProductClaimsClick}
+        className={onShowProductClaimsClassName}
+        onClick={onShowProductClaims}
       >
         <Icon type="productClaims" width={28} height={28} />
       </Button>
 
-      <Button
-        icon
-        className={onWriteNotesClassName}
-        onClick={onWriteNotesClick}
-      >
+      <Button icon className={onWriteNotesClassName} onClick={onWriteNotes}>
         <Icon type="writeNotes" width={28} height={28} />
       </Button>
 
       <Divider />
 
-      <Button
-        icon
-        className={onShareClassName}
-        onClick={onShareClick}
-      >
-        <Icon type="share" width={28} height={28} />
-        <span>Share</span>
-      </Button>
-      <Button
-        icon
-        className={onSaveClassName}
-        onClick={onSaveClick}
-      >
-        <Icon type="save" width={28} height={28} />
-        <span>Save</span>
-      </Button>
+      <Tooltip title="Share library">
+        <Button
+          icon
+          className={onShareLibraryClassName}
+          onClick={onShareLibrary}
+        >
+          <Icon type="share" width={28} height={28} />
+          <span>Share</span>
+        </Button>
+      </Tooltip>
 
-      {/* {modal.isModalShown && modal.modalComponent === "ModalShare" && (
-        <Modal onClose={() => { dispatch(toggleModal()); }}>
-          <ModalShare />
-        </Modal>
-      )} */}
+      <Tooltip title="Save library">
+        <Button icon className={onSaveLibraryClassName} onClick={onSaveLibrary}>
+          <Icon type="save" width={28} height={28} />
+          <span>Save</span>
+        </Button>
+      </Tooltip>
     </div>
   );
 };

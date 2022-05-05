@@ -1,13 +1,14 @@
 /* eslint-disable no-param-reassign */
-import { createSlice, current } from '@reduxjs/toolkit';
+import { createSlice, current } from "@reduxjs/toolkit";
 
-import type { AppState } from '../../app/store';
-import { itemsIdListMock } from '../../shared/mocks/consts';
-import { Filter, ProductContent } from '../../shared/types';
+import type { AppState } from "../../app/store";
+
+import { Filter, ProductContent } from "../../shared/types";
+import { itemsIdListMock } from "../../shared/mocks/consts";
 
 export interface ProductState extends ProductContent {
-  history: ProductContent[],
-  historyStep: number,
+  history: ProductContent[];
+  historyStep: number;
 }
 
 const initialState: ProductState = {
@@ -15,12 +16,14 @@ const initialState: ProductState = {
   itemsIdList: itemsIdListMock,
   filter: null,
   isReviewShown: true,
-  history: [{
-    currentItemId: 1,
-    itemsIdList: itemsIdListMock,
-    filter: null,
-    isReviewShown: true,
-  }],
+  history: [
+    {
+      currentItemId: 1,
+      itemsIdList: itemsIdListMock,
+      filter: null,
+      isReviewShown: true,
+    },
+  ],
   historyStep: 1,
 };
 
@@ -37,59 +40,51 @@ const saveStep = (state: ProductState) => {
   state.historyStep = state.history.length;
 };
 
-const prevStep = (state: ProductState) => {
-  state.historyStep -= 1;
-  state.currentItemId = current(state.history)[state.historyStep - 1].currentItemId;
-  state.itemsIdList = current(state.history)[state.historyStep - 1].itemsIdList;
-  state.filter = current(state.history)[state.historyStep - 1].filter;
-  state.isReviewShown = current(state.history)[state.historyStep - 1].isReviewShown;
-};
-
-const nextStep = (state: ProductState) => {
-  state.historyStep += 1;
-  state.currentItemId = current(state.history)[state.historyStep - 1].currentItemId;
-  state.itemsIdList = current(state.history)[state.historyStep - 1].itemsIdList;
-  state.filter = current(state.history)[state.historyStep - 1].filter;
-  state.isReviewShown = current(state.history)[state.historyStep - 1].isReviewShown;
-};
-
 export const toolbarSlice = createSlice({
-  name: 'toolbar',
+  name: "toolbar",
   initialState,
   reducers: {
-    showItem: (state, action: { type: '', payload: number[] }) => {
+    showItem: (state, action: { type: ""; payload: number[] }) => {
       state.itemsIdList = action.payload;
       saveStep(state);
     },
-    removeItem: (state, action: { type: '', payload: number }) => {
-      state.itemsIdList = state.itemsIdList.filter((id) => id !== action.payload);
+    removeItem: (state, action: { type: ""; payload: number }) => {
+      state.itemsIdList = state.itemsIdList.filter(
+        (id) => id !== action.payload,
+      );
       saveStep(state);
     },
-    posReviews: (state) => {
-      if (state.filter !== Filter.positive) state.filter = Filter.positive;
+    setFilter: (state, action: { type: ""; payload: Filter }) => {
+      if (state.filter !== action.payload) state.filter = action.payload;
       else state.filter = null;
       saveStep(state);
     },
-    negReviews: (state) => {
-      if (state.filter !== Filter.negative) state.filter = Filter.negative;
-      else state.filter = null;
-      saveStep(state);
-    },
-    showOrHideReviews: (state) => {
+    toggleReviews: (state) => {
       state.isReviewShown = !state.isReviewShown;
       saveStep(state);
     },
-    previousStep: (state) => {
-      prevStep(state);
-    },
-    followingStep: (state) => {
-      nextStep(state);
+    getHistoryStep: (state, action: { type: ""; payload: 1 | -1 }) => {
+      state.historyStep += action.payload;
+      state.currentItemId = current(state.history)[
+        state.historyStep - 1
+      ].currentItemId;
+      state.itemsIdList = current(state.history)[
+        state.historyStep - 1
+      ].itemsIdList;
+      state.filter = current(state.history)[state.historyStep - 1].filter;
+      state.isReviewShown = current(state.history)[
+        state.historyStep - 1
+      ].isReviewShown;
     },
   },
 });
 
 export const {
-  showItem, removeItem, posReviews, negReviews, showOrHideReviews, previousStep, followingStep,
+  showItem,
+  removeItem,
+  setFilter,
+  toggleReviews,
+  getHistoryStep,
 } = toolbarSlice.actions;
 
 export const productState = (state: AppState) => state.product;

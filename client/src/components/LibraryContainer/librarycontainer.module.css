@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey);
+  height: 71px;
+}
+
+.search__wrapper {
+  position: relative;
+  width: 282px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #707070;
+}
+
+.menu_button {
+  position: relative;
+  height: 100%;
+  font-size: 20px;
+  text-decoration: none;
+  transform: none;
+}
+.menu_button:hover {
+  text-decoration: none;
+  transform: none;
+}
+.menu_button.is_active::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 80px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: blue;
+}
+
+.close_btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}

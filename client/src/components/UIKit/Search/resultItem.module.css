@@ -1,0 +1,24 @@
+.search__item {
+  display: flex;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  padding: 5px 20px;
+  border: none;
+  background-color: #ffff;
+}
+
+.search__item:hover {
+  background-color: #eae8e8;
+  box-shadow: #000000;
+  transition: background-color 0.5s;
+}
+
+.search__subtitle {
+  margin-right: 5px;
+  color: var(--color-search-grey);
+}
+
+.search__image {
+  display: none;
+}
