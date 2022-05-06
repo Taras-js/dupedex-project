@@ -10,6 +10,8 @@ import {
 import { Filter } from "../../shared/types";
 
 import styles from "./toolbarContainer.module.css";
+import { modals } from "../../features/modals/helper";
+import { setModalComponent, setIsUnclosable } from "../UIKit/Modal/modalSlice";
 
 const Divider = () => <div className={styles.divider} />;
 
@@ -21,7 +23,7 @@ const ToolbarContainer = () => {
   const onShowTutorialClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_tutorial",
+    "toolbar__btn_tutorial"
   );
 
   const isPrevDisabled = product.historyStep === 1;
@@ -31,7 +33,7 @@ const ToolbarContainer = () => {
   const onGetPrevStepClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_prev_step",
+    "toolbar__btn_prev_step"
   );
 
   const isNextDisabled = product.historyStep === product.history.length;
@@ -41,7 +43,7 @@ const ToolbarContainer = () => {
   const onGetNextStepClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_next_step",
+    "toolbar__btn_next_step"
   );
 
   const isReviewShown = product.isReviewShown === false;
@@ -52,7 +54,7 @@ const ToolbarContainer = () => {
     styles,
     "toolbar__btn",
     "toolbar__btn_toggle_reviews",
-    { toolbar__btn_toggle_reviews_active: isReviewShown },
+    { toolbar__btn_toggle_reviews_active: isReviewShown }
   );
 
   const isPositive = product.filter === Filter.positive;
@@ -63,7 +65,7 @@ const ToolbarContainer = () => {
     styles,
     "toolbar__btn",
     "toolbar__btn_positive",
-    { toolbar__btn_positive_active: isPositive },
+    { toolbar__btn_positive_active: isPositive }
   );
 
   const isNegative = product.filter === Filter.negative;
@@ -74,35 +76,38 @@ const ToolbarContainer = () => {
     styles,
     "toolbar__btn",
     "toolbar__btn_negative",
-    { toolbar__btn_negative_active: isNegative },
+    { toolbar__btn_negative_active: isNegative }
   );
 
   const onShowProductClaims = () => {};
   const onShowProductClaimsClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_product_claims",
+    "toolbar__btn_product_claims"
   );
 
   const onWriteNotes = () => {};
   const onWriteNotesClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_write_notes",
+    "toolbar__btn_write_notes"
   );
 
-  const onShareLibrary = () => {};
+  const onShareLibrary = () => {
+    dispatch(setModalComponent(modals.ModalShare));
+    dispatch(setIsUnclosable(false));
+  };
   const onShareLibraryClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_share",
+    "toolbar__btn_share"
   );
 
   const onSaveLibrary = () => {};
   const onSaveLibraryClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_save",
+    "toolbar__btn_save"
   );
 
   return (

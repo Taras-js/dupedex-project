@@ -5,14 +5,16 @@ import { Provider } from "react-redux";
 import type { AppProps } from "next/app";
 import { Header } from "../components/Header";
 
-import store from "../app/store";
+import store, { wrapper } from "../app/store";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
+    <>
       <Header />
       <Component {...pageProps} />
       <div id="modal__root" />
-    </Provider>
+    </>
   );
 }
+
+export default wrapper.withRedux(MyApp);

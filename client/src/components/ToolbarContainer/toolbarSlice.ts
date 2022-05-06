@@ -1,10 +1,11 @@
 /* eslint-disable no-param-reassign */
-import { createSlice, current } from "@reduxjs/toolkit";
+import { configureStore, createSlice, current } from "@reduxjs/toolkit";
 
 import type { AppState } from "../../app/store";
 
 import { Filter, ProductContent } from "../../shared/types";
 import { itemsIdListMock } from "../../shared/mocks/consts";
+import { HYDRATE } from "next-redux-wrapper";
 
 export interface ProductState extends ProductContent {
   history: ProductContent[];
@@ -50,8 +51,12 @@ export const toolbarSlice = createSlice({
     },
     removeItem: (state, action: { type: ""; payload: number }) => {
       state.itemsIdList = state.itemsIdList.filter(
-        (id) => id !== action.payload,
+        (id) => id !== action.payload
       );
+      saveStep(state);
+    },
+    changeIdList: (state, action: { type: ""; payload: number[] }) => {
+      state.itemsIdList = action.payload;
       saveStep(state);
     },
     setFilter: (state, action: { type: ""; payload: Filter }) => {
@@ -77,6 +82,14 @@ export const toolbarSlice = createSlice({
       ].isReviewShown;
     },
   },
+  extraReducers: {
+    [HYDRATE]: (state, action) => {
+      return {
+        ...state,
+        ...action.payload.product,
+      };
+    },
+  },
 });
 
 export const {
@@ -85,6 +98,7 @@ export const {
   setFilter,
   toggleReviews,
   getHistoryStep,
+  changeIdList,
 } = toolbarSlice.actions;
 
 export const productState = (state: AppState) => state.product;

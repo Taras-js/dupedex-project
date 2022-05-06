@@ -1,2 +1,2 @@
-export * from './ModalLogin/ModalLogin'
-export * from './ModalShare/ModalShare'
+export * from "./ModalLogin/ModalLogin";
+export * from "./ModalShare/ModalShare";

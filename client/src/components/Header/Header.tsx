@@ -1,31 +1,35 @@
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { Icon, Button } from '../UIKit';
-import { Modal } from '../UIKit/Modal';
-import { modalState, setModalComponent, toggleModal, setIsUnclosable } from '../UIKit/Modal/modalSlice';
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { Icon, Button } from "../UIKit";
+import { Modal } from "../UIKit/Modal";
+import {
+  modalState,
+  setModalComponent,
+  toggleModal,
+  setIsUnclosable,
+} from "../UIKit/Modal/modalSlice";
 
-import styles from './header.module.css';
-import { modalComponents, modals } from '../../features/modals/helper';
+import styles from "./header.module.css";
+import { modalComponents, modals } from "../../features/modals/helper";
 
 function Header() {
   const dispatch = useAppDispatch();
   const modal = useAppSelector(modalState);
-  
   const onClickMain = () => {
-    console.log('click Main');
+    console.log("click Main");
   };
 
   const onClickSignIn = () => {
-    console.log('click SignIn');
+    console.log("click SignIn");
     dispatch(setModalComponent(modals.ModalLogin));
-    dispatch(setIsUnclosable(false)); 
+    dispatch(setIsUnclosable(false));
   };
 
   const onClickSignUp = () => {
-    console.log('click SignUp');
+    console.log("click SignUp");
   };
 
   const onClickDarkMode = () => {
-    console.log('click DarkMode');
+    console.log("click DarkMode");
   };
 
   return (
@@ -38,16 +42,29 @@ function Header() {
         </Button>
 
         <div className={styles.header__btn_wrapper}>
-          <Button large onClick={onClickSignIn}>SIGN IN</Button>
-          <Button large outlined onClick={onClickSignUp}>SIGN UP</Button>
+          <Button large onClick={onClickSignIn}>
+            SIGN IN
+          </Button>
+          <Button large outlined onClick={onClickSignUp}>
+            SIGN UP
+          </Button>
 
-          <Button icon className={styles.btn_darkMode} onClick={onClickDarkMode}>
+          <Button
+            icon
+            className={styles.btn_darkMode}
+            onClick={onClickDarkMode}
+          >
             <Icon type="darkmode" width="50" height="50" color="#000" />
           </Button>
         </div>
       </div>
       {modal.isModalShown && (
-        <Modal isUnclosable={modal.isUnclosable} onClose={() => { dispatch(toggleModal())}}>
+        <Modal
+          isUnclosable={modal.isUnclosable}
+          onClose={() => {
+            dispatch(toggleModal());
+          }}
+        >
           {modalComponents[modal.modalComponent]}
         </Modal>
       )}
