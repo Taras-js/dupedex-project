@@ -1,5 +1,5 @@
 import { useAppDispatch } from "../../../app/hooks";
-import { showItem, removeItem } from "../../ToolbarContainer/toolbarSlice";
+import { showItem, removeItem, setCurrentItem } from "../../ToolbarContainer/toolbarSlice";
 import { cls, getLabels, getQuantity } from "../../../utils/helper";
 
 import { Button, Icon } from "../../UIKit";
@@ -24,6 +24,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const dispatch = useAppDispatch();
 
   const onSelectProduct = () => {
+    dispatch(setCurrentItem(id));
     dispatch(showItem([id]));
   };
 

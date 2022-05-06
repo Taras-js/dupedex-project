@@ -1,16 +1,14 @@
 /* eslint-disable @typescript-eslint/indent */
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
-import counterReducer from "../features/counter/counterSlice";
-import goodsReducer from "../features/Search/productSlice";
-import productReducer from "../components/ToolbarContainer/toolbarSlice";
+import productsReducer from "../features/Search/productSlice";
+import toolbarReducer from "../components/ToolbarContainer/toolbarSlice";
 
 export function makeStore() {
   return configureStore({
     reducer: {
-      counter: counterReducer,
-      product: productReducer,
-      goods: goodsReducer,
+      toolbar: toolbarReducer,
+      products: productsReducer,
     },
   });
 }

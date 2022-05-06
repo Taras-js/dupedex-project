@@ -12,7 +12,7 @@ const ProductSearch = () => {
   const [result, setResult] = useState<Results[]>();
   const dispatch = useAppDispatch();
 
-  const goods = useAppSelector((state) => state.goods.products);
+  const products = useAppSelector((state) => state.products);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const ProductSearch = () => {
   };
 
   useEffect(() => {
-    setResult(getProductBySearch(goods, search));
+    setResult(getProductBySearch(products, search));
   }, [search]);
 
   useEffect(() => {

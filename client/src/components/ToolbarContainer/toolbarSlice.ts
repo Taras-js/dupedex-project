@@ -3,23 +3,23 @@ import { createSlice, current } from "@reduxjs/toolkit";
 
 import type { AppState } from "../../app/store";
 
-import { Filter, ProductContent } from "../../shared/types";
+import { Filter, ToolbarContent } from "../../shared/types";
 import { itemsIdListMock } from "../../shared/mocks/consts";
 
-export interface ProductState extends ProductContent {
-  history: ProductContent[];
+export interface ToolbarState extends ToolbarContent {
+  history: ToolbarContent[];
   historyStep: number;
 }
 
-const initialState: ProductState = {
-  currentItemId: 1,
-  itemsIdList: itemsIdListMock,
+const initialState: ToolbarState = {
+  itemsListOnScreen: itemsIdListMock,
+  currentItemId: itemsIdListMock[0],
   filter: null,
   isReviewShown: true,
   history: [
     {
       currentItemId: 1,
-      itemsIdList: itemsIdListMock,
+      itemsListOnScreen: itemsIdListMock,
       filter: null,
       isReviewShown: true,
     },
@@ -27,13 +27,13 @@ const initialState: ProductState = {
   historyStep: 1,
 };
 
-const saveStep = (state: ProductState) => {
+const saveStep = (state: ToolbarState) => {
   if (state.historyStep !== state.history.length) {
     state.history = state.history.slice(0, state.historyStep);
   }
   state.history.push({
     currentItemId: state.currentItemId,
-    itemsIdList: state.itemsIdList,
+    itemsListOnScreen: state.itemsListOnScreen,
     filter: state.filter,
     isReviewShown: state.isReviewShown,
   });
@@ -45,11 +45,15 @@ export const toolbarSlice = createSlice({
   initialState,
   reducers: {
     showItem: (state, action: { type: ""; payload: number[] }) => {
-      state.itemsIdList = action.payload;
+      state.itemsListOnScreen = action.payload;
+      saveStep(state);
+    },
+    setCurrentItem: (state, action: { type: ""; payload: number }) => {
+      state.currentItemId = action.payload;
       saveStep(state);
     },
     removeItem: (state, action: { type: ""; payload: number }) => {
-      state.itemsIdList = state.itemsIdList.filter(
+      state.itemsListOnScreen = state.itemsListOnScreen.filter(
         (id) => id !== action.payload,
       );
       saveStep(state);
@@ -68,9 +72,9 @@ export const toolbarSlice = createSlice({
       state.currentItemId = current(state.history)[
         state.historyStep - 1
       ].currentItemId;
-      state.itemsIdList = current(state.history)[
+      state.itemsListOnScreen = current(state.history)[
         state.historyStep - 1
-      ].itemsIdList;
+      ].itemsListOnScreen;
       state.filter = current(state.history)[state.historyStep - 1].filter;
       state.isReviewShown = current(state.history)[
         state.historyStep - 1
@@ -81,12 +85,13 @@ export const toolbarSlice = createSlice({
 
 export const {
   showItem,
+  setCurrentItem,
   removeItem,
   setFilter,
   toggleReviews,
   getHistoryStep,
 } = toolbarSlice.actions;
 
-export const productState = (state: AppState) => state.product;
+export const toolbarState = (state: AppState) => state.toolbar;
 
 export default toolbarSlice.reducer;
