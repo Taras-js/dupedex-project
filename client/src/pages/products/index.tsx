@@ -13,7 +13,6 @@ import {
 import { LibraryContainer } from "../../components/LibraryContainer";
 import { AppState, wrapper } from "../../app/store";
 import { connect } from "react-redux";
-import { useRouter } from "next/router";
 
 const IndexPage: NextPage<AppState> = (props) => {
   const { currentItemId, itemsIdList, filter, isReviewShown } =
@@ -61,10 +60,9 @@ const IndexPage: NextPage<AppState> = (props) => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ req, res, ...etc }) => {
-      console.log(req.url); // допустим ссылка вот такая => /products?ids=1%2%4
-      // let result = await fetch("req.url") // запрос на получение товаров с данным id
-
-      store.dispatch(changeIdList([1, 4])); // сохранение товаров с id в store для примера что работает
+      let result = await fetch(`http://localhost:5000${req.url}`) // запрос на получение товаров с данным id
+      let json = await result.json();
+      store.dispatch(changeIdList(json.map((el) => +el))); // сохранение товаров в store
       return { props: {} };
     }
 );
