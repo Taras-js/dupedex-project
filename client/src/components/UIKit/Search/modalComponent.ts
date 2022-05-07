@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 
-export default function ModalComponent(initialValue) {
-  const [clickedOutside, setClickedOutside] = useState(initialValue);
+export default function ModalComponent() {
+  const [clickedOutside, setClickedOutside] = useState(false);
   const myRef = useRef(null);
+  const [clickItem, setClickItem] = useState(false);
+
+  const handleClickInside = () => {
+    if (!clickItem)setClickedOutside(true);
+  };
 
   const handleClickOutside = (e) => {
     if (!myRef.current.contains(e.target)) {
@@ -10,13 +15,12 @@ export default function ModalComponent(initialValue) {
     }
   };
 
-  const handleClickInside = () => setClickedOutside(true);
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   });
 
   return {
-    clickedOutside, myRef, handleClickInside,
+    clickedOutside, myRef, handleClickInside, setClickedOutside, setClickItem, clickItem,
   };
 }

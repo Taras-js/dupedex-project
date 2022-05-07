@@ -19,7 +19,7 @@ export interface SearchProps {
   isOpen: boolean;
   results?: Results[];
   withDebounce: (Function);
-  idProducts: number[]
+  idProducts?: number[];
   onChange?: (e: React.ChangeEvent) => void;
   onClickResult?: (number)=>void;
 }
@@ -30,10 +30,18 @@ const Search: React.FC<SearchProps> = (props) => {
   } = props;
 
   const optimized = useCallback(withDebounce(onChange), []);
-  const { clickedOutside, myRef, handleClickInside } = ModalComponent(false);
+  const {
+    clickedOutside, myRef, handleClickInside, clickItem, setClickItem, setClickedOutside,
+  } = ModalComponent();
   const inputRef = useRef(null);
 
   useEffect(() => {
+    setClickedOutside(false);
+    inputRef.current.value = '';
+  }, [clickItem]);
+
+  useEffect(() => {
+    setClickItem(false);
     inputRef.current.focus();
     handleClickInside();
   }, [isOpen]);
@@ -58,7 +66,7 @@ const Search: React.FC<SearchProps> = (props) => {
       </form>
       <div className={clickedOutside ? styles.search__dropdown : styles.search__dropdown_passive}>
         {results && results.map((result) => (
-          <ResultItem onClick={onClickResult} key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} id={result.id} idProducts={idProducts} />
+          <ResultItem onClick={onClickResult} key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} id={result.id} idProducts={idProducts} setClickItem={setClickItem} />
         ))}
       </div>
     </div>

@@ -6,20 +6,22 @@ interface ResultItemProps {
   title?: string;
   subtitle?: string;
   image?: string;
-  idProducts: number[]
+  idProducts: number[];
   onClick?: (number)=>void;
+  setClickItem?: (boolean) => void;
 }
 
 const ResultItem: React.FC<ResultItemProps> = (props) => {
   const {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    title, subtitle, image, id, onClick, idProducts,
+    title, subtitle, image, id, onClick, idProducts, setClickItem,
   } = props;
 
   const handleClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
     onClick(id);
+    setClickItem(true);
   };
   const product = idProducts.find((productId) => productId === id);
   return (

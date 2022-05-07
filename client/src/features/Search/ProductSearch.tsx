@@ -19,9 +19,13 @@ const ProductSearch = () => {
   const onClickResult = (id) => {
     if (isAddItemtolist) {
       dispatch(addIdItem(id));
-      dispatch(setAddItemToList());
-    } else { dispatch(showItem([id])); }
+    } else {
+      dispatch(showItem([id]));
+    }
+    dispatch(setAddItemToList());
+    setSearch('');
   };
+
   const handleChange = (e) => {
     e.preventDefault();
     setSearch(e.target.value);

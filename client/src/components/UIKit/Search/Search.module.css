@@ -40,10 +40,3 @@
 .search__dropdown_passive {
     display: none;
 }
-
-.search__dropdown_not_found{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: auto;
-}
