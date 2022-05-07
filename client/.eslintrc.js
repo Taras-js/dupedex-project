@@ -22,6 +22,7 @@ module.exports = {
     "max-len": "off",
     "quotes": "off",
     "@typescript-eslint/quotes": 0,
+    "@typescript-eslint/no-unused-vars": 1,
     "react/react-in-jsx-scope": 0,
     "react/require-default-props": 0,
     "react/button-has-type": 0,

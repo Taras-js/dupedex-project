@@ -4,7 +4,7 @@ import { createSlice, current } from "@reduxjs/toolkit";
 import type { AppState } from "../../app/store";
 
 import { Filter, ToolbarContent } from "../../shared/types";
-import { itemsIdListMock } from "../../shared/mocks/consts";
+import { itemsIdProductsMock } from "../../shared/mocks/consts";
 
 export interface ToolbarState extends ToolbarContent {
   history: ToolbarContent[];
@@ -12,14 +12,14 @@ export interface ToolbarState extends ToolbarContent {
 }
 
 const initialState: ToolbarState = {
-  itemsListOnScreen: itemsIdListMock,
-  currentItemId: itemsIdListMock[0],
+  idItemsOnScreen: itemsIdProductsMock,
+  idCurrentItem: itemsIdProductsMock[0],
   filter: null,
   isReviewShown: true,
   history: [
     {
-      currentItemId: 1,
-      itemsListOnScreen: itemsIdListMock,
+      idItemsOnScreen: itemsIdProductsMock,
+      idCurrentItem: itemsIdProductsMock[0],
       filter: null,
       isReviewShown: true,
     },
@@ -32,8 +32,8 @@ const saveStep = (state: ToolbarState) => {
     state.history = state.history.slice(0, state.historyStep);
   }
   state.history.push({
-    currentItemId: state.currentItemId,
-    itemsListOnScreen: state.itemsListOnScreen,
+    idCurrentItem: state.idCurrentItem,
+    idItemsOnScreen: state.idItemsOnScreen,
     filter: state.filter,
     isReviewShown: state.isReviewShown,
   });
@@ -44,18 +44,22 @@ export const toolbarSlice = createSlice({
   name: "toolbar",
   initialState,
   reducers: {
-    showItem: (state, action: { type: ""; payload: number[] }) => {
-      state.itemsListOnScreen = action.payload;
+    setCurrentItem: (state, action: { type: ""; payload: number }) => {
+      state.idCurrentItem = action.payload;
       saveStep(state);
     },
-    setCurrentItem: (state, action: { type: ""; payload: number }) => {
-      state.currentItemId = action.payload;
+    showItem: (state, action: { type: ""; payload: number[] }) => {
+      state.idItemsOnScreen = action.payload;
+      const [first, ...rest] = state.idItemsOnScreen;
+      state.idCurrentItem = first;
       saveStep(state);
     },
     removeItem: (state, action: { type: ""; payload: number }) => {
-      state.itemsListOnScreen = state.itemsListOnScreen.filter(
+      state.idItemsOnScreen = state.idItemsOnScreen.filter(
         (id) => id !== action.payload,
       );
+      const [first, ...rest] = state.idItemsOnScreen;
+      state.idCurrentItem = first;
       saveStep(state);
     },
     setFilter: (state, action: { type: ""; payload: Filter }) => {
@@ -69,12 +73,12 @@ export const toolbarSlice = createSlice({
     },
     getHistoryStep: (state, action: { type: ""; payload: 1 | -1 }) => {
       state.historyStep += action.payload;
-      state.currentItemId = current(state.history)[
+      state.idCurrentItem = current(state.history)[
         state.historyStep - 1
-      ].currentItemId;
-      state.itemsListOnScreen = current(state.history)[
+      ].idCurrentItem;
+      state.idItemsOnScreen = current(state.history)[
         state.historyStep - 1
-      ].itemsListOnScreen;
+      ].idItemsOnScreen;
       state.filter = current(state.history)[state.historyStep - 1].filter;
       state.isReviewShown = current(state.history)[
         state.historyStep - 1

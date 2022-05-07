@@ -10,14 +10,14 @@ export function getReviews(): Promise<Array<any>> {
     .then((res) => res);
 }
 
-export function searchItem(): Promise<Array<any>> {
+export function searchItem(payload: string): Promise<Array<any>> {
   return fetch("/api/search", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      payload: "ko",
+      payload,
     }),
   })
     .then((response) => response.json())

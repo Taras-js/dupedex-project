@@ -11,8 +11,8 @@ export enum CardSize {
 }
 
 export interface ToolbarContent {
-  currentItemId: number;
-  itemsListOnScreen: number[];
+  idCurrentItem: number;
+  idItemsOnScreen: number[];
   filter: Filter | null;
   isReviewShown: boolean;
 }
