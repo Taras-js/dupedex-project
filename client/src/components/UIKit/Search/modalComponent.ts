@@ -6,7 +6,7 @@ export default function ModalComponent() {
   const [clickItem, setClickItem] = useState(false);
 
   const handleClickInside = () => {
-    if (!clickItem)setClickedOutside(true);
+    if (!clickItem) setClickedOutside(true);
   };
 
   const handleClickOutside = (e) => {
@@ -21,6 +21,11 @@ export default function ModalComponent() {
   });
 
   return {
-    clickedOutside, myRef, handleClickInside, setClickedOutside, setClickItem, clickItem,
+    clickedOutside,
+    myRef,
+    handleClickInside,
+    setClickedOutside,
+    setClickItem,
+    clickItem,
   };
 }

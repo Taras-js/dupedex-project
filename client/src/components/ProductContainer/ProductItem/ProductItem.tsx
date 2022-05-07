@@ -1,5 +1,9 @@
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { showItem, removeItem, setCurrentItem } from "../../ToolbarContainer/toolbarSlice";
+import {
+  showItem,
+  removeItem,
+  setCurrentItem,
+} from "../../ToolbarContainer/toolbarSlice";
 import { reviewsState } from "../productSlice";
 import { cls, getLabels, getQuantity } from "../../../utils/helper";
 
@@ -63,7 +67,12 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
       </div>
 
       <div className={styles.products__labels}>
-        <LabelList labels={labels} filter={filter} size={size} maxQuantity={labelQuantity} />
+        <LabelList
+          labels={labels}
+          filter={filter}
+          size={size}
+          maxQuantity={labelQuantity}
+        />
       </div>
 
       {isShowClose && (

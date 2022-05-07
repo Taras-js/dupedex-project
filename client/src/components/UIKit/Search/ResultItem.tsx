@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import styles from "./resultItem.module.css";
 
@@ -8,19 +8,13 @@ interface ResultItemProps {
   subtitle?: string;
   image?: string;
   idProducts: number[];
-  onClick?: (number)=>void;
+  onClick?: (number) => void;
   setClickItem?: (boolean) => void;
 }
 
 const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
   const {
-    title,
-    subtitle,
-    image,
-    id,
-    onClick,
-    idProducts,
-    setClickItem,
+    title, subtitle, image, id, onClick, idProducts, setClickItem,
   } = props;
 
   const handleClick = (e) => {
@@ -34,16 +28,18 @@ const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
     : 0;
 
   return (
-    (
-      <button
-        disabled={!!product}
-        onClick={handleClick}
-        className={styles.search__item}
+    <button
+      disabled={!!product}
+      onClick={handleClick}
+      className={styles.search__item}
+    >
+      <p className={styles.search__title}>{`${title} `}</p>
+      <p
+        className={styles.search__subtitle}
       >
-        <p className={styles.search__title}>{`${title} `}</p>
-        <p className={styles.search__subtitle}>{` - ${subtitle} (meccabeauty.co.nz)`}</p>
-      </button>
-    )
+        {` - ${subtitle} (meccabeauty.co.nz)`}
+      </p>
+    </button>
   );
 };
 

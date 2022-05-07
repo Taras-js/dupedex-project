@@ -1,11 +1,9 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, {
-  useCallback, useEffect, useRef,
-} from 'react';
+import React, { useCallback, useEffect, useRef } from "react";
 
-import { Icon } from '../Icon';
-import ModalComponent from './modalComponent';
-import ResultItem from './ResultItem';
+import { Icon } from "../Icon";
+import ModalComponent from "./modalComponent";
+import ResultItem from "./ResultItem";
 
 import styles from "./Search.module.css";
 
@@ -18,17 +16,23 @@ export interface Results {
 
 export interface SearchProps {
   placeholder?: string;
-  isOpen: boolean;
+  isOpen?: boolean;
   results?: Results[];
-  withDebounce: (Function);
+  withDebounce: Function;
   idProducts?: number[];
   onChange?: (e: React.ChangeEvent) => void;
-  onClickResult?: (number)=>void;
+  onClickResult?: (number) => void;
 }
 
 const Search: React.FC<SearchProps> = (props: SearchProps) => {
   const {
-    results, placeholder, withDebounce, onChange, onClickResult, isOpen, idProducts,
+    results,
+    placeholder,
+    withDebounce,
+    onChange,
+    onClickResult,
+    isOpen = false,
+    idProducts,
   } = props;
 
   const optimized = useCallback(withDebounce(onChange), []);
@@ -45,7 +49,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
 
   useEffect(() => {
     setClickedOutside(false);
-    inputRef.current.value = '';
+    inputRef.current.value = "";
   }, [clickItem]);
 
   useEffect(() => {

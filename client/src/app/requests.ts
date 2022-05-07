@@ -14,7 +14,7 @@ export function searchItem(payload: string): Promise<Array<any>> {
   return fetch("/api/search", {
     method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       payload,
