@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { setProduct } from "./searchProductAction";
+import { useAppSelector } from "../../app/hooks";
 import Search, { Results } from "../../components/UIKit/Search/Search";
 import { debounce } from "../../utils/helper";
 import { getProductBySearch } from "./SearchSelector";
 
 import styles from "./productSearch.module.css";
+import { searchesState } from "./productSlice";
 
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>("");
   const [result, setResult] = useState<Results[]>();
-  const dispatch = useAppDispatch();
 
-  const products = useAppSelector((state) => state.products);
+  const searches = useAppSelector(searchesState);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -20,11 +19,7 @@ const ProductSearch = () => {
   };
 
   useEffect(() => {
-    setResult(getProductBySearch(products, search));
-  }, [search]);
-
-  useEffect(() => {
-    dispatch(setProduct());
+    setResult(getProductBySearch(searches, search));
   }, [search]);
 
   return (

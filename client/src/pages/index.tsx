@@ -10,7 +10,7 @@ import { ProductContainer } from "../components/ProductContainer";
 import { ToolbarContainer } from "../components/ToolbarContainer";
 import { LibraryContainer } from "../components/LibraryContainer";
 
-import { setMockProduct } from "../shared/mocks/productmock";
+import { setMockProduct } from "../shared/mocks/setMock";
 import { useAppDispatch } from "../app/hooks";
 
 const IndexPage: NextPage = () => {

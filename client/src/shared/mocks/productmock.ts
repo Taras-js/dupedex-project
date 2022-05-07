@@ -1,8 +1,3 @@
-import { AppDispatch } from "../../app/store";
-import { showItem } from "../../components/ToolbarContainer/toolbarSlice";
-import { setProducts, setReviews } from "../../features/Search/productSlice";
-import { randomItemsIdProductsMock } from "./consts";
-
 export const productsMock = [
   {
     _id: "624ea268497fd119e6ebf8b0",
@@ -1540,18 +1535,3 @@ export const reviewsMock = [
     ],
   },
 ];
-
-export const randomReviewsMock = () => reviewsMock.filter(() => Math.random() > 0.5);
-
-export const setMockProduct = () => async (dispatch: AppDispatch) => {
-  const randomItems = randomItemsIdProductsMock(4);
-  setTimeout(() => {
-    dispatch(showItem(randomItems));
-    // eslint-disable-next-line no-restricted-syntax
-    for (const id of randomItems) {
-      dispatch(setProducts([productsMock.find((product) => product.id === id)]));
-
-      dispatch(setReviews({ id, reviews: randomReviewsMock() }));
-    }
-  }, 500);
-};

@@ -1,6 +1,8 @@
 import styles from "./resultItem.module.css";
 import { useAppDispatch } from "../../../app/hooks";
 import { showItem } from "../../ToolbarContainer/toolbarSlice";
+import { setProducts, setReviews } from "../../../features/Search/productSlice";
+import { randomReviewsMock } from "../../../shared/mocks/setMock";
 
 interface ResultItemProps {
   id: number;
@@ -22,6 +24,8 @@ const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
   const handleClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    dispatch(setProducts([id]));
+    dispatch(setReviews({ id, reviews: randomReviewsMock() }));
     dispatch(showItem([id]));
   };
   return (
