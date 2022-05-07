@@ -1,4 +1,4 @@
-import { useAppDispatch } from "../../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { showItem, removeItem, setCurrentItem } from "../../ToolbarContainer/toolbarSlice";
 import { cls, getLabels, getQuantity } from "../../../utils/helper";
 
@@ -9,6 +9,7 @@ import { productsMock } from "../../../shared/mocks/productmock";
 import { Filter, CardSize } from "../../../shared/types";
 
 import styles from "./productItem.module.css";
+import { reviewsState } from "../../../features/Search/productSlice";
 
 interface ProductProps {
   id: number;
@@ -31,10 +32,12 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const onCloseSelected = () => {
     dispatch(removeItem(id));
   };
+  const reviews = useAppSelector(reviewsState);
 
   const item = productsMock.find((itemToFind) => itemToFind.id === id);
 
-  const labels = getLabels(item.reviews);
+  const itemReviews = reviews.find((itemToFind) => itemToFind.id === id);
+  const labels = itemReviews ? getLabels(itemReviews.reviews) : [];
 
   const labelQuantity = getQuantity(size);
 

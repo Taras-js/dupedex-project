@@ -11,13 +11,13 @@ import styles from "./productContainer.module.css";
 
 const ProductContainer: React.FC = () => {
   const {
-    currentItemId, itemsListOnScreen, filter, isReviewShown,
+    idCurrentItem, idItemsOnScreen, filter, isReviewShown,
   } = useAppSelector(toolbarState);
-  const { products } = useAppSelector(productsState);
+  const products = useAppSelector(productsState);
 
-  const productList = products.filter((item) => itemsListOnScreen.includes(item.id));
+  const productList = products.filter((item) => idItemsOnScreen.includes(item.id));
 
-  const itemSize = getCardSize(itemsListOnScreen, isReviewShown);
+  const itemSize = getCardSize(idItemsOnScreen, isReviewShown);
 
   return (
     <div className={styles.product__container}>
@@ -34,7 +34,7 @@ const ProductContainer: React.FC = () => {
 
       {productList.length === 1 && isReviewShown && (
         <Panel padding={16} className={styles.products__panel}>
-          <ReviewItem id={currentItemId} />
+          <ReviewItem id={idCurrentItem} />
         </Panel>
       )}
     </div>

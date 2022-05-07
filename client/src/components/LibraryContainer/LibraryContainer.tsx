@@ -1,7 +1,7 @@
 import styles from "./librarycontainer.module.css";
 import { LibraryItem } from "./LibraryItem";
 import { Button, Icon, ScrollPanel } from "../UIKit";
-import { itemsIdListMock } from "../../shared/mocks/consts";
+import { itemsIdLibraryMock } from "../../shared/mocks/consts";
 import Search from "../UIKit/Search/Search";
 import { libraryMock } from "../../shared/mocks/librarymock";
 
@@ -25,7 +25,7 @@ const LibraryContainer = () => (
     </div>
 
     <ScrollPanel padding={8}>
-      {itemsIdListMock.map((item) => (
+      {itemsIdLibraryMock.map((item) => (
         <LibraryItem key={item} id={item} />
       ))}
     </ScrollPanel>
