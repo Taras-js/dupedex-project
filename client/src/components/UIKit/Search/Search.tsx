@@ -2,10 +2,12 @@
 import React, {
   useCallback, useEffect, useRef,
 } from 'react';
-import styles from './Search.module.css';
+
 import { Icon } from '../Icon';
 import ModalComponent from './modalComponent';
 import ResultItem from './ResultItem';
+
+import styles from "./Search.module.css";
 
 export interface Results {
   id?: number;
@@ -24,7 +26,7 @@ export interface SearchProps {
   onClickResult?: (number)=>void;
 }
 
-const Search: React.FC<SearchProps> = (props) => {
+const Search: React.FC<SearchProps> = (props: SearchProps) => {
   const {
     results, placeholder, withDebounce, onChange, onClickResult, isOpen, idProducts,
   } = props;
@@ -64,9 +66,21 @@ const Search: React.FC<SearchProps> = (props) => {
         />
         <Icon type="search" width={25} height={25} />
       </form>
-      <div className={clickedOutside ? styles.search__dropdown : styles.search__dropdown_passive}>
+      <div className={clickedOutside
+        ? styles.search__dropdown
+        : styles.search__dropdown_passive}
+      >
         {results && results.map((result) => (
-          <ResultItem onClick={onClickResult} key={result.id} title={result.title} subtitle={result.subtitle} image={result.image} id={result.id} idProducts={idProducts} setClickItem={setClickItem} />
+          <ResultItem
+            onClick={onClickResult}
+            key={result.id}
+            title={result.title}
+            subtitle={result.subtitle}
+            image={result.image}
+            id={result.id}
+            idProducts={idProducts}
+            setClickItem={setClickItem}
+          />
         ))}
       </div>
     </div>

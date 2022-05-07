@@ -6,8 +6,10 @@
     "start": "next start",
     "type-check": "tsc",
     "test": "jest",
-    "lint": "npx eslint . --fix"
+    "lint": "npx eslint . --fix",
+    "format": "prettier --write ."
   },
+  "proxy": "localhost:5000",
   "dependencies": {
     "@next/env": "^12.1.5",
     "@reduxjs/toolkit": "^1.3.6",

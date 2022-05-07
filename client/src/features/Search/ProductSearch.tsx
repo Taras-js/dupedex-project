@@ -1,22 +1,28 @@
 import { useEffect, useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { setProduct } from './searchProductAction';
 import Search, { Results } from '../../components/UIKit/Search/Search';
 import { debounce } from '../../utils/helper';
 import { getProductBySearch } from './SearchSelector';
 import { addIdItem, showItem } from '../../components/ToolbarContainer/toolbarSlice';
-import { setAddItemToList } from './productSlice';
+import {
+  searchesState, setAddItemToList, setProducts, setReviews,
+} from './productSlice';
+
+import { randomReviewsMock } from '../../shared/mocks/setMock';
+
+import styles from "./productSearch.module.css";
 
 const ProductSearch = () => {
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string>("");
   const [result, setResult] = useState<Results[]>();
   const dispatch = useAppDispatch();
 
-  const goods = useAppSelector((state) => state.goods.products);
-  const isAddItemtolist = useAppSelector((state) => state.goods.isAddItemToList);
-  const productsIdList = useAppSelector((state) => state.product.itemsIdList);
+  const isAddItemtolist = useAppSelector((state) => state.products.isAddItemToList);
+  const productsIdList = useAppSelector((state) => state.toolbar.idItemsOnScreen);
 
   const onClickResult = (id) => {
+    dispatch(setProducts([id]));
+    dispatch(setReviews({ id, reviews: randomReviewsMock() }));
     if (isAddItemtolist) {
       dispatch(addIdItem(id));
     } else {
@@ -25,6 +31,7 @@ const ProductSearch = () => {
     dispatch(setAddItemToList());
     setSearch('');
   };
+  const searches = useAppSelector(searchesState);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -32,10 +39,7 @@ const ProductSearch = () => {
   };
 
   useEffect(() => {
-    setResult(getProductBySearch(goods, search));
-  }, [search]);
-  useEffect(() => {
-    dispatch(setProduct());
+    setResult(getProductBySearch(searches, search));
   }, [search]);
 
   return (

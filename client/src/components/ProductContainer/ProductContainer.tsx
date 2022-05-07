@@ -1,45 +1,47 @@
-import { Panel, ScrollPanel } from "../UIKit";
+import { Panel } from "../UIKit";
 import { ProductItem } from "./ProductItem";
-import { ReviewItem } from './ReviewItem';
+import { ReviewItem } from "./ReviewItem";
 
-import { ProductContent } from "../../shared/types";
-import { productsMock } from "../../shared/mocks/productmock";
+import { getCardSize } from "../../utils/helper";
+import { useAppSelector } from "../../app/hooks";
+import { toolbarState } from "../ToolbarContainer/toolbarSlice";
+import { productsState } from "../../features/Search/productSlice";
 
-import styles from './productContainer.module.css';
 import AddProductButton from "../../features/ProductButton/AddProductButton";
+import styles from "./productContainer.module.css";
 
-const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
+const ProductContainer: React.FC = () => {
   const {
-    itemsIdList, currentItemId, filter, isReviewShown = false,
-  } = props;
+    idCurrentItem, idItemsOnScreen, filter, isReviewShown,
+  } = useAppSelector(toolbarState);
+  const products = useAppSelector(productsState);
 
-  const productList = productsMock.filter((item) => itemsIdList.includes(item.id));
+  const productList = products.filter((item) => idItemsOnScreen.includes(item.id));
+
+  const itemSize = getCardSize(idItemsOnScreen, isReviewShown);
+
+  // TODO remove const
   const MAX_PRODUCT_IN_CONTAINER = productList.length < 4;
-  if (productList.length === 1) {
-    return (
 
-      <div className={styles.product__container}>
-        {productList.map((item) => (
-          <ScrollPanel key={item.id} className={styles.products__panel}>
-            <ProductItem id={item.id} filter={filter} />
-          </ScrollPanel>
-        ))}
-
-        {isReviewShown && (
-          <Panel padding={16} className={styles.products__panel}>
-            <ReviewItem id={currentItemId} />
-          </Panel>
-        )}
-        {MAX_PRODUCT_IN_CONTAINER && <AddProductButton />}
-      </div>
-    );
-  } return (
+  return (
     <div className={styles.product__container}>
       {productList.map((item) => (
-        <ScrollPanel key={item.id} className={styles.products__panel}>
-          <ProductItem isShowClose id={item.id} filter={filter} />
-        </ScrollPanel>
+        <Panel key={item.id} className={styles.products__panel}>
+          <ProductItem
+            id={item.id}
+            size={itemSize}
+            filter={filter}
+            isShowClose={productList.length !== 1}
+          />
+        </Panel>
       ))}
+
+      {productList.length === 1 && isReviewShown && (
+        <Panel padding={16} className={styles.products__panel}>
+          <ReviewItem id={idCurrentItem} />
+        </Panel>
+      )}
+
       {MAX_PRODUCT_IN_CONTAINER && <AddProductButton />}
     </div>
   );

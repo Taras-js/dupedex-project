@@ -1,10 +1,10 @@
-import { toggleReviews } from '../../ToolbarContainer/toolbarSlice';
-import { Button, Icon } from '../../UIKit';
+import { toggleReviews } from "../../ToolbarContainer/toolbarSlice";
+import { Button, Icon } from "../../UIKit";
 
-import { useAppDispatch } from '../../../app/hooks';
-import { productsMock } from '../../../shared/mocks/productmock';
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 
-import styles from './reviewItem.module.css';
+import styles from "./reviewItem.module.css";
+import { reviewsState } from "../../../features/Search/productSlice";
 
 interface ReviewProps {
   id: number;
@@ -13,19 +13,23 @@ interface ReviewProps {
 const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
   const { id } = props;
   const dispatch = useAppDispatch();
+  const reviews = useAppSelector(reviewsState);
 
-  const onShowReviewsClick = () => { dispatch(toggleReviews()); };
+  const onShowReviewsClick = () => {
+    dispatch(toggleReviews());
+  };
 
   return (
     <div className={styles.review__container}>
       <h3>Review</h3>
-      {productsMock.find((item) => item.id === id).Details}
-
-      <Button
-        icon
-        className={styles.close_btn}
-        onClick={onShowReviewsClick}
-      >
+      {reviews
+        .find((item) => item.id === id)?.reviews.filter((review, index) => index < 7)
+        .map((review) => (
+          <p key={review.name} className={styles.review__text}>
+            {review.review_text}
+          </p>
+        ))}
+      <Button icon className={styles.close_btn} onClick={onShowReviewsClick}>
         <Icon type="toggleReviews" width={28} height={28} />
       </Button>
     </div>

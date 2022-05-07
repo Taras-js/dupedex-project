@@ -1,3 +1,3 @@
-import ReviewItem from './ReviewItem';
+import ReviewItem from "./ReviewItem";
 
 export { ReviewItem };
