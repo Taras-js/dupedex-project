@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 
 import ProductSearch from "../features/Search/ProductSearch";
 import {
@@ -7,14 +8,17 @@ import {
 } from "../components/UIKit";
 import { ProductContainer } from "../components/ProductContainer";
 import { ToolbarContainer } from "../components/ToolbarContainer";
-import { useAppSelector } from "../app/hooks";
-import { productState } from "../components/ToolbarContainer/toolbarSlice";
 import { LibraryContainer } from "../components/LibraryContainer";
 
+import { setMockProduct } from "../shared/mocks/setMock";
+import { useAppDispatch } from "../app/hooks";
+
 const IndexPage: NextPage = () => {
-  const {
-    currentItemId, itemsIdList, filter, isReviewShown,
-  } = useAppSelector(productState);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(setMockProduct());
+  }, []);
 
   return (
     <>
@@ -37,12 +41,7 @@ const IndexPage: NextPage = () => {
         </LayoutRow>
         <LayoutRow rowHeight={700}>
           <LayoutItem itemWidth={1340}>
-            <ProductContainer
-              itemsIdList={itemsIdList}
-              currentItemId={currentItemId}
-              filter={filter}
-              isReviewShown={isReviewShown}
-            />
+            <ProductContainer />
           </LayoutItem>
           <LayoutItem itemWidth={370} noResize>
             <Panel>

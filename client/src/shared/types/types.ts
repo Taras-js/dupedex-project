@@ -10,9 +10,9 @@ export enum CardSize {
   small = "small",
 }
 
-export interface ProductContent {
-  currentItemId: number;
-  itemsIdList: number[];
+export interface ToolbarContent {
+  idCurrentItem: number;
+  idItemsOnScreen: number[];
   filter: Filter | null;
   isReviewShown: boolean;
 }

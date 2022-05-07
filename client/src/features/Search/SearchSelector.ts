@@ -2,18 +2,18 @@ export const getProductBySearch = (state, search: string) => (
   search.length > 1
   && state
     .filter(
-      (product) => product.prod_name
+      (product) => product.subtitle
         .toString()
         .toLowerCase()
         .includes(search.toLowerCase())
-        || product.brand_name
+        || product.title
           .toString()
           .toLowerCase()
           .includes(search.toLowerCase()),
     )
     .map((product) => ({
-      title: product.brand_name,
-      subtitle: product.prod_name,
+      title: product.title,
+      subtitle: product.subtitle,
       image: product.img_link,
       id: product.id,
     })));

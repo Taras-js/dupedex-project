@@ -99,7 +99,8 @@
 .products__item.small {
   flex-flow: column nowrap;
   align-items: center;
-  padding: 40px 30px 70px;
+  height: 100%;
+  padding: 40px 30px 60px;
 }
 
 .small .products__img {
@@ -109,7 +110,7 @@
 }
 
 .small .products__text {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .small .products__heading {
@@ -128,5 +129,7 @@
 
 .small .products__labels {
   max-width: 200px;
+  min-height: 240px;
   width: 80%;
+  margin-top: auto;
 }

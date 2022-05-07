@@ -38,7 +38,7 @@ const LibraryItem = (props: LibraryItemProps) => {
     <Panel className={styles.library__pack}>
       <div className={styles.content_wrapper}>
         {items.products.map((item) => (
-          <Panel className={styles.library__item}>
+          <Panel key={item.img_link} className={styles.library__item}>
             <img
               className={styles.item__image}
               src={item.img_link}

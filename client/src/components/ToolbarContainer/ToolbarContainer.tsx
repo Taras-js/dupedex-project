@@ -5,7 +5,7 @@ import {
   setFilter,
   toggleReviews,
   getHistoryStep,
-  productState,
+  toolbarState,
 } from "./toolbarSlice";
 import { Filter } from "../../shared/types";
 
@@ -15,7 +15,7 @@ const Divider = () => <div className={styles.divider} />;
 
 const ToolbarContainer = () => {
   const dispatch = useAppDispatch();
-  const product = useAppSelector(productState);
+  const product = useAppSelector(toolbarState);
 
   const onShowTutorial = () => {};
   const onShowTutorialClassName = cls(
