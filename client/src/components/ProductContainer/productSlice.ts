@@ -16,7 +16,6 @@ interface ProductState {
     title: string,
     subtitle: string
   }[];
-  isAddItemToList: boolean;
 }
 
 export const initialState: ProductState = {
@@ -25,7 +24,6 @@ export const initialState: ProductState = {
   idReviewsSaved: [],
   reviews: [],
   searches: [],
-  isAddItemToList: false,
 };
 
 export const productSlice = createSlice({
@@ -55,16 +53,11 @@ export const productSlice = createSlice({
     setSearches(state, action: { type: ""; payload: { id: number, title: string, subtitle: string }[] }) {
       state.searches.push(...action.payload);
     },
-
-    setAddItemToList(state) {
-      // eslint-disable-next-line no-param-reassign
-      state.isAddItemToList = !state.isAddItemToList;
-    },
   },
 });
 
 export const {
-  setProducts, setReviews, setSearches, setAddItemToList,
+  setProducts, setReviews, setSearches,
 } = productSlice.actions;
 
 export const productsState = (state: AppState) => state.products.products;

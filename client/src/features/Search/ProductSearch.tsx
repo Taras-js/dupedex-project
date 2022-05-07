@@ -3,10 +3,10 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import Search, { Results } from '../../components/UIKit/Search/Search';
 import { debounce } from '../../utils/helper';
 import { getProductBySearch } from './SearchSelector';
-import { addIdItem, showItem } from '../../components/ToolbarContainer/toolbarSlice';
+import { addIdItem, showItem, toggleAddItemToList } from '../../components/ToolbarContainer/toolbarSlice';
 import {
-  searchesState, setAddItemToList, setProducts, setReviews,
-} from './productSlice';
+  searchesState, setProducts, setReviews,
+} from '../../components/ProductContainer/productSlice';
 
 import { randomReviewsMock } from '../../shared/mocks/setMock';
 
@@ -17,7 +17,7 @@ const ProductSearch = () => {
   const [result, setResult] = useState<Results[]>();
   const dispatch = useAppDispatch();
 
-  const isAddItemtolist = useAppSelector((state) => state.products.isAddItemToList);
+  const isAddItemtolist = useAppSelector((state) => state.toolbar.isAddItemToList);
   const productsIdList = useAppSelector((state) => state.toolbar.idItemsOnScreen);
 
   const onClickResult = (id) => {
@@ -28,7 +28,7 @@ const ProductSearch = () => {
     } else {
       dispatch(showItem([id]));
     }
-    dispatch(setAddItemToList());
+    dispatch(toggleAddItemToList());
     setSearch('');
   };
   const searches = useAppSelector(searchesState);

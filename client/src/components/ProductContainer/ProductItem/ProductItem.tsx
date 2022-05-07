@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { showItem, removeItem, setCurrentItem } from "../../ToolbarContainer/toolbarSlice";
+import { reviewsState } from "../productSlice";
 import { cls, getLabels, getQuantity } from "../../../utils/helper";
 
 import { Button, Icon } from "../../UIKit";
@@ -9,7 +10,6 @@ import { productsMock } from "../../../shared/mocks/productmock";
 import { Filter, CardSize } from "../../../shared/types";
 
 import styles from "./productItem.module.css";
-import { reviewsState } from "../../../features/Search/productSlice";
 
 interface ProductProps {
   id: number;

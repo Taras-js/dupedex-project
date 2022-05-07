@@ -14,7 +14,13 @@ interface ResultItemProps {
 
 const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
   const {
-    title, subtitle, image, id, onClick, idProducts, setClickItem,
+    title,
+    subtitle,
+    image,
+    id,
+    onClick,
+    idProducts,
+    setClickItem,
   } = props;
 
   const handleClick = (e) => {

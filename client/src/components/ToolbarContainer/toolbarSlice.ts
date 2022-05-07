@@ -9,6 +9,7 @@ import { itemsIdProductsMock } from "../../shared/mocks/consts";
 export interface ToolbarState extends ToolbarContent {
   history: ToolbarContent[];
   historyStep: number;
+  isAddItemToList: boolean;
 }
 
 const initialState: ToolbarState = {
@@ -25,6 +26,7 @@ const initialState: ToolbarState = {
     },
   ],
   historyStep: 1,
+  isAddItemToList: false,
 };
 
 const saveStep = (state: ToolbarState) => {
@@ -75,6 +77,9 @@ export const toolbarSlice = createSlice({
       state.isReviewShown = !state.isReviewShown;
       saveStep(state);
     },
+    toggleAddItemToList(state) {
+      state.isAddItemToList = !state.isAddItemToList;
+    },
     getHistoryStep: (state, action: { type: ""; payload: 1 | -1 }) => {
       state.historyStep += action.payload;
       state.idCurrentItem = current(state.history)[
@@ -98,6 +103,7 @@ export const {
   removeItem,
   setFilter,
   toggleReviews,
+  toggleAddItemToList,
   getHistoryStep,
 } = toolbarSlice.actions;
 

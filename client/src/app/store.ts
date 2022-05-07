@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
-import productsReducer from "../features/Search/productSlice";
+import productsReducer from "../components/ProductContainer/productSlice";
 import toolbarReducer from "../components/ToolbarContainer/toolbarSlice";
 
 export function makeStore() {

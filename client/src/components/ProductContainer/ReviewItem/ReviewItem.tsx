@@ -1,10 +1,10 @@
-import { toggleReviews } from "../../ToolbarContainer/toolbarSlice";
 import { Button, Icon } from "../../UIKit";
-
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 
+import { toggleReviews } from "../../ToolbarContainer/toolbarSlice";
+import { reviewsState } from "../productSlice";
+
 import styles from "./reviewItem.module.css";
-import { reviewsState } from "../../../features/Search/productSlice";
 
 interface ReviewProps {
   id: number;

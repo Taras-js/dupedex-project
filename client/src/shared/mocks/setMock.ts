@@ -1,6 +1,6 @@
 import { AppDispatch } from "../../app/store";
 import { showItem } from "../../components/ToolbarContainer/toolbarSlice";
-import { setProducts, setReviews, setSearches } from "../../features/Search/productSlice";
+import { setProducts, setReviews, setSearches } from "../../components/ProductContainer/productSlice";
 import { randomItemsIdProductsMock } from "./consts";
 import { productsMock, reviewsMock } from "./productmock";
 

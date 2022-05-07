@@ -1,13 +1,13 @@
-import { Panel } from "../UIKit";
-import { ProductItem } from "./ProductItem";
-import { ReviewItem } from "./ReviewItem";
-
 import { getCardSize } from "../../utils/helper";
 import { useAppSelector } from "../../app/hooks";
 import { toolbarState } from "../ToolbarContainer/toolbarSlice";
-import { productsState } from "../../features/Search/productSlice";
+import { productsState } from "./productSlice";
 
-import AddProductButton from "../../features/ProductButton/AddProductButton";
+import { Panel } from "../UIKit";
+import { ProductItem } from "./ProductItem";
+import { ReviewItem } from "./ReviewItem";
+import { AddProductButton } from "../../features/AddProductButton";
+
 import styles from "./productContainer.module.css";
 
 const ProductContainer: React.FC = () => {
@@ -19,9 +19,6 @@ const ProductContainer: React.FC = () => {
   const productList = products.filter((item) => idItemsOnScreen.includes(item.id));
 
   const itemSize = getCardSize(idItemsOnScreen, isReviewShown);
-
-  // TODO remove const
-  const MAX_PRODUCT_IN_CONTAINER = productList.length < 4;
 
   return (
     <div className={styles.product__container}>
@@ -42,7 +39,7 @@ const ProductContainer: React.FC = () => {
         </Panel>
       )}
 
-      {MAX_PRODUCT_IN_CONTAINER && <AddProductButton />}
+      {productList.length < 4 && <AddProductButton />}
     </div>
   );
 };

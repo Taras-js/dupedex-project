@@ -1,13 +1,14 @@
 import { useAppDispatch } from "../../app/hooks";
+import { toggleAddItemToList } from "../../components/ToolbarContainer/toolbarSlice";
 import { Icon } from "../../components/UIKit";
+
 import styles from './addProductButton.module.css';
-import { setAddItemToList } from "../Search/productSlice";
 
 const AddProductButton = () => {
   const dispatch = useAppDispatch();
 
   const onClickButton = () => {
-    dispatch(setAddItemToList());
+    dispatch(toggleAddItemToList());
   };
   return (
     <button className={styles.button} onClick={onClickButton}>
@@ -16,4 +17,4 @@ const AddProductButton = () => {
   );
 };
 
-export default AddProductButton;
+export { AddProductButton };

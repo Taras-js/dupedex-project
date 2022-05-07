@@ -33,8 +33,14 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
 
   const optimized = useCallback(withDebounce(onChange), []);
   const {
-    clickedOutside, myRef, handleClickInside, clickItem, setClickItem, setClickedOutside,
+    clickedOutside,
+    myRef,
+    handleClickInside,
+    clickItem,
+    setClickItem,
+    setClickedOutside,
   } = ModalComponent();
+
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -66,22 +72,26 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
         />
         <Icon type="search" width={25} height={25} />
       </form>
-      <div className={clickedOutside
-        ? styles.search__dropdown
-        : styles.search__dropdown_passive}
+      <div
+        className={
+          clickedOutside
+            ? styles.search__dropdown
+            : styles.search__dropdown_passive
+        }
       >
-        {results && results.map((result) => (
-          <ResultItem
-            onClick={onClickResult}
-            key={result.id}
-            title={result.title}
-            subtitle={result.subtitle}
-            image={result.image}
-            id={result.id}
-            idProducts={idProducts}
-            setClickItem={setClickItem}
-          />
-        ))}
+        {results
+          && results.map((result) => (
+            <ResultItem
+              onClick={onClickResult}
+              key={result.id}
+              title={result.title}
+              subtitle={result.subtitle}
+              image={result.image}
+              id={result.id}
+              idProducts={idProducts}
+              setClickItem={setClickItem}
+            />
+          ))}
       </div>
     </div>
   );
