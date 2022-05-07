@@ -610,8 +610,7 @@ export const productsMock = [
     Usage: "Massage into face and neck.",
     Ingredients:
       "Water (aqua), squalane (olive), vitis vinifera (grape) seed oil, glycerin, cetearyl olivate, caprylic/capric triglyceride, prunus amygdalus dulcis (sweet almond) oil, sorbitan olivate, olus (vegetable) oil, coffea arabica (coffee) seed oil, vitis vinifera (grape) fruit extract, cocos nucifera (coconut) oil, butyrospermum parkii (shea butter), theobroma cacao (cocoa) seed butter, tocopherol (vitamin e), glycine, soja (soybean) oil, aloe barbadensis (aloe vera) leaf juice, glycyrrhiza glabra (licorice) root extract, fragrance (parfum), chondrus crispus (carrageenan), xanthan gum (sugar), citric acid (corn), potassium sorbate, benzyl alcohol (cinnamon derived), dehydroacetic acid, sodium citrate (corn).",
-    reviews: [
-    ],
+    reviews: [],
     key_ingredients: {
       "Cocoa and shea butters":
         " this hydrating duo will lock in your skin's moisture so it won't ever feel dry",
@@ -639,8 +638,7 @@ export const productsMock = [
       "Apply head-to-toe to seal in moisture for up to 8 hours.For the face: Rub a pea-sized amount in the palms of hands to warm through, then pat onto the face to seal in moisture. Can also be used to re-hydrate chapped lipsFor the hands: Work the cream into palms and over the fingers, then wrap each hand in a warm towel for 10 minutesFor the feet: Massage into soles, pads and heels. Wear cotton socks on top to further heal dry skinFor the brows: Run the tiniest amount through brows to tame and groom hairsPro Tip: Apply to areas what usually catch light, such as legs, shoulders, collarbone, cheeks and bow of lips for a flash of illumination ",
     Ingredients:
       "Petrolatum, Lanolin, Mineral Oil/Paraffinum Liquidum/Huile Minérale, Tocopherol, Bht, Salicylic Acid, Ricinus Communis (Castor) Seed Oil, Vegetable Oil/Olus/Huile Végétale, Zea Mays (Corn) Oil, Parfum/Fragrance, Citral, Citronellol, Geraniol, Limonene, Linalool, Propylparaben, Iron Oxides (Ci 77491, Ci 77492).",
-    reviews: [
-    ],
+    reviews: [],
     key_ingredients: {
       Lanolin:
         " a deeply hydrating and repairing emollient to restore the most dry skin",
@@ -665,8 +663,7 @@ export const productsMock = [
       "Apply to a cleansed face and neck during the AM and PM. Avoid the eye area. ",
     Ingredients:
       "Aqua/Water/Eau, Propanediol, Glycerin, Sodium Acrylates Copolymer, C13-15 Alkane, Caprylic/Capric/Myristic/Stearic Triglyceride, Coco-Caprylate, Hexyldecyl Stearate, Passiflora Incarnata Seed Oil, Aloe Barbadensis Leaf Juice Powder, Algin, Alpha-Glucan Oligosaccharide, Ascorbic Acid, Behenyl Alcohol, Bisabolol, Caprylyl Glycol, Cellulose Gum, Cetearyl Alcohol, Chlorella Vulgaris Extract, Disodium Phosphate, Glyceryl Caprylate, Glyceryl Polyacrylate, Glyceryl Stearate Citrate, Hydrogenated Ethylhexyl Olivate, Hydrogenated Olive Oil Unsaponifiables, Hydrolyzed Sodium Hyaluronate, Lactic Acid, Lactobacillus, Laminaria Digitata Extract, Lecithin, Lonicera Caprifolium (Honeysuckle) Flower Extract, Lonicera Japonica (Honeysuckle) Flower Extract, Maltodextrin, Maris Aqua/Sea Water/Eau De Mer, Menthyl Lactate, Microcrystalline Cellulose, Panthenol, Pentylene Glycol, Phenethyl Alcohol, Polyacrylate Crosspolymer-6, Polyglyceryl-3 Diisostearate, Polymnia Sonchifolia Root Juice, Potassium Phosphate, Pullulan, Saccharide Isomerate, Salvia Hispanica Seed Oil, Serine, Sodium Carboxymethyl Beta-Glucan, Sodium Hyaluronate, Tetrasodium Glutamate Diacetate, Tocopheryl Acetate, Trehalose, Tridecane, Undecane, Urea, Xanthan Gum, Yogurt, Yogurt Powder, Zingiber Officinale (Ginger) Root Extract, Benzyl Alcohol, Phenoxyethanol, Salicylic Acid, Sorbic Acid, Parfum/Fragrance. ",
-    reviews: [
-    ],
+    reviews: [],
     key_ingredients: {
       "Greek yoghurt": " delivers a dose of pre and probiotics into the skin",
       " Microbiome re-balancing technology":
@@ -678,38 +675,52 @@ export const productsMock = [
     id: 5,
     brand_name: "Estée Lauder",
     prod_name: "Micro Essence",
-    prod_link: "https://www.meccabeauty.co.nz/estee-lauder/micro-essence/I-047181.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/estee-lauder/micro-essence/I-047181.html?cgpath=skincare",
     price: "$184.00",
     category: "HomeSkin CareTreatmentOils & SerumsMicro Essence",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dwbd1aff07/product/esteel/hr/i-047181-micro-essence-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dwbd1aff07/product/esteel/hr/i-047181-micro-essence-1-940.jpg",
     Benefits: "Hydrating",
-    Details: "The MECCA view:Say goodbye to lacklustre, dehydrated skin when you dip into this essence-in-lotion. Designed to strengthen skin's foundation while delivering a concentration of Estée Lauder’s exclusive micro-nutrient bio-ferment to nourish and energise. The formula leaves skin smooth, supple and hydrated while tackling vitality. In short, it does it all.   Consumer testing:In just 4 weeks, 94% of women said their skin looked healthier, more beautiful.  Pair it with:Estée Lauder Take It Away Makeup Remover LotionEstée Lauder Advanced Night Repair Concentrated Recovery Powerfoil MaskEstée Lauder Advanced Night Repair Eye Mask",
-    Usage: "Apply with a cotton pad or with your hands. With a cotton pad: gently glide saturated cotton pad over face, from the centre out. Start at the chin and move upwards to cheeks and forehead. Do not apply pressure during application. With your hands: pour five or six drops of the Micro Essence into the hands and rub together. Gently press the Micro Essence into skin from the centre out. Start at the chin and move upwards to cheeks and forehead. Rub hands together to warm, and then gently wrap face using warm hands to complete application. ",
-    Ingredients: "Water\\aqua\\eau, bifida ferment lysate, peg-75, propanediol, butylene glycol, betaine, pentylene glycol, lactobacillus ferment, acetyl hexapeptide-8, acetyl glucosamine, trehalose, caffeine, sodium hyaluronate, anthemis nobilis (chamomile), caprylyl glycol, carbomer, ppg-5-ceteth-20, citric acid, potassium sorbate, sodium citrate, tromethamine, disodium edta, phenoxyethanol ",
-    reviews: [
-    ],
+    Details:
+      "The MECCA view:Say goodbye to lacklustre, dehydrated skin when you dip into this essence-in-lotion. Designed to strengthen skin's foundation while delivering a concentration of Estée Lauder’s exclusive micro-nutrient bio-ferment to nourish and energise. The formula leaves skin smooth, supple and hydrated while tackling vitality. In short, it does it all.   Consumer testing:In just 4 weeks, 94% of women said their skin looked healthier, more beautiful.  Pair it with:Estée Lauder Take It Away Makeup Remover LotionEstée Lauder Advanced Night Repair Concentrated Recovery Powerfoil MaskEstée Lauder Advanced Night Repair Eye Mask",
+    Usage:
+      "Apply with a cotton pad or with your hands. With a cotton pad: gently glide saturated cotton pad over face, from the centre out. Start at the chin and move upwards to cheeks and forehead. Do not apply pressure during application. With your hands: pour five or six drops of the Micro Essence into the hands and rub together. Gently press the Micro Essence into skin from the centre out. Start at the chin and move upwards to cheeks and forehead. Rub hands together to warm, and then gently wrap face using warm hands to complete application. ",
+    Ingredients:
+      "Water\\aqua\\eau, bifida ferment lysate, peg-75, propanediol, butylene glycol, betaine, pentylene glycol, lactobacillus ferment, acetyl hexapeptide-8, acetyl glucosamine, trehalose, caffeine, sodium hyaluronate, anthemis nobilis (chamomile), caprylyl glycol, carbomer, ppg-5-ceteth-20, citric acid, potassium sorbate, sodium citrate, tromethamine, disodium edta, phenoxyethanol ",
+    reviews: [],
   },
   {
     _id: "6258661f0bf68a57c0681317",
     id: 6,
     brand_name: "Abhati Suisse",
     prod_name: "Lalitya Whipped Moisturising Cream",
-    prod_link: "https://www.meccabeauty.co.nz/abhati-suisse/lalitya-whipped-moisturising-cream/I-035684.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/abhati-suisse/lalitya-whipped-moisturising-cream/I-035684.html?cgpath=skincare",
     price: "$55.00",
-    category: "HomeSkin CareMoisturiserMoisturiserLalitya Whipped Moisturising Cream",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw84a213aa/product/abhati/hr/i-035684-moisturising-cream-60ml-1-940.jpg",
+    category:
+      "HomeSkin CareMoisturiserMoisturiserLalitya Whipped Moisturising Cream",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw84a213aa/product/abhati/hr/i-035684-moisturising-cream-60ml-1-940.jpg",
     Benefits: "Cruelty-freeVeganHydratingSulphate-freeParaben-freeAlcohol-free",
-    Details: " The MECCA view:Light as a cloud this richly hydrating, this face cream is infused with a lipid-rich formulation. Jojoba oil in combination with Himalayan wild cherry visibly evens skin tone and minimises the appearance of wrinkles while simultaneously working to calm redness. Nourish and bolster the skins own protective barrier for a supple, radiant complexion.Key ingredients:Moringa Oleifera Leaf extract: an ultra-nourishing natural botanical that deeply protects and nourishes the skin. Shea butter: a rich skin hydrator, that works to deeply nourish and feed skin cells.Lactic acid: a gentle AHA, that works to smooth and refine texture and brightens discolouration.CAUTION: Sunburn Alert: This product contains an alpha hydroxy acid (AHA) that may increase your skin's sensitivity to the sun and particularly the possibility of sunburn. Use a sunscreen, wear protective clothing, and limit sun exposure while using this product and for a week afterwards.Made without:Parabens, silicones and alcohol.Pair it with:Abhati Suisse Shanta Rich Facial CleanserANGELA CAGLIA Dream Exfoliant MaskTAMMY FENDER Plant Milk",
-    Usage: "Use on clean dry skin after your serum but before a facial oil. Gently massage into skin and on neck. Not suitable for use around the eyes, safe for day and night use. Please note as this product contains an AHA, if worn during the day a sunscreen is advised.",
-    Ingredients: "Aqua (Water), Pentylene Glycol, Glycerin, Caprylic/Capric Triglyceride, Jojoba Esters, Butyrospermum Parkii (Shea) Butter, Cetyl Alcohol, Cocos Nucifera (Coconut) Oil, Moringa Oleifera Seed Oil, Myristyl Myristate, Saccharide Isomerate, Stearyl Alcohol, Olea Europaea (Olive) Leaf Extract, Prinsepia Utilis Seed Oil** (Himalayan Wild Cherry), Dioscorea Villosa (Wild Yam) Root Extract*, Chondrus Crispus (Carrageenan) Powder, Leontopodium Alpinum (Edelweiss) Extract*, Phyllanthus Emblica Fruit Extract, Curcuma Longa (Turmeric) Root Extract**, Helianthus Annuus (Sunflower) Seed Oil, Tocopheryl Acetate, Bisabolol, Tocopherol, Glycine Soja (Soybean) Oil, Xanthan Gum, Palmitic Acid, Lactic Acid (AHA), Stearic Acid, Glycine Soja (Soybean) Sterols, Citric Acid, Limonene, Linalool, Sodium Citrate, Citronellol, Geraniol, Parfum (Fragrance), Sodium Benzoate, Citral, Potassium Sorbate.",
-    reviews: [
-    ],
+    Details:
+      " The MECCA view:Light as a cloud this richly hydrating, this face cream is infused with a lipid-rich formulation. Jojoba oil in combination with Himalayan wild cherry visibly evens skin tone and minimises the appearance of wrinkles while simultaneously working to calm redness. Nourish and bolster the skins own protective barrier for a supple, radiant complexion.Key ingredients:Moringa Oleifera Leaf extract: an ultra-nourishing natural botanical that deeply protects and nourishes the skin. Shea butter: a rich skin hydrator, that works to deeply nourish and feed skin cells.Lactic acid: a gentle AHA, that works to smooth and refine texture and brightens discolouration.CAUTION: Sunburn Alert: This product contains an alpha hydroxy acid (AHA) that may increase your skin's sensitivity to the sun and particularly the possibility of sunburn. Use a sunscreen, wear protective clothing, and limit sun exposure while using this product and for a week afterwards.Made without:Parabens, silicones and alcohol.Pair it with:Abhati Suisse Shanta Rich Facial CleanserANGELA CAGLIA Dream Exfoliant MaskTAMMY FENDER Plant Milk",
+    Usage:
+      "Use on clean dry skin after your serum but before a facial oil. Gently massage into skin and on neck. Not suitable for use around the eyes, safe for day and night use. Please note as this product contains an AHA, if worn during the day a sunscreen is advised.",
+    Ingredients:
+      "Aqua (Water), Pentylene Glycol, Glycerin, Caprylic/Capric Triglyceride, Jojoba Esters, Butyrospermum Parkii (Shea) Butter, Cetyl Alcohol, Cocos Nucifera (Coconut) Oil, Moringa Oleifera Seed Oil, Myristyl Myristate, Saccharide Isomerate, Stearyl Alcohol, Olea Europaea (Olive) Leaf Extract, Prinsepia Utilis Seed Oil** (Himalayan Wild Cherry), Dioscorea Villosa (Wild Yam) Root Extract*, Chondrus Crispus (Carrageenan) Powder, Leontopodium Alpinum (Edelweiss) Extract*, Phyllanthus Emblica Fruit Extract, Curcuma Longa (Turmeric) Root Extract**, Helianthus Annuus (Sunflower) Seed Oil, Tocopheryl Acetate, Bisabolol, Tocopherol, Glycine Soja (Soybean) Oil, Xanthan Gum, Palmitic Acid, Lactic Acid (AHA), Stearic Acid, Glycine Soja (Soybean) Sterols, Citric Acid, Limonene, Linalool, Sodium Citrate, Citronellol, Geraniol, Parfum (Fragrance), Sodium Benzoate, Citral, Potassium Sorbate.",
+    reviews: [],
     key_ingredients: {
-      "Moringa Oleifera Leaf extract": " an ultra-nourishing natural botanical that deeply protects and nourishes the skin",
-      "Shea butter": " a rich skin hydrator, that works to deeply nourish and feed skin cells",
-      "Lactic acid": " a gentle AHA, that works to smooth and refine texture and brightens discolouration",
-      CAUTION: " Sunburn Alert This product contains an alpha hydroxy acid (AHA) that may increase your skin's sensitivity to the sun and particularly the possibility of sunburn",
-      " Use a sunscreen, wear protective clothing, and limit sun exposure while using this product and for a week afterwards": "",
+      "Moringa Oleifera Leaf extract":
+        " an ultra-nourishing natural botanical that deeply protects and nourishes the skin",
+      "Shea butter":
+        " a rich skin hydrator, that works to deeply nourish and feed skin cells",
+      "Lactic acid":
+        " a gentle AHA, that works to smooth and refine texture and brightens discolouration",
+      CAUTION:
+        " Sunburn Alert This product contains an alpha hydroxy acid (AHA) that may increase your skin's sensitivity to the sun and particularly the possibility of sunburn",
+      " Use a sunscreen, wear protective clothing, and limit sun exposure while using this product and for a week afterwards":
+        "",
     },
   },
   {
@@ -717,16 +728,21 @@ export const productsMock = [
     id: 7,
     brand_name: "Morphe",
     prod_name: "Morphe 2 Total Softie Gel Moisturizer",
-    prod_link: "https://www.meccabeauty.co.nz/morphe/morphe-2-total-softie-gel-moisturizer/I-047687.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/morphe/morphe-2-total-softie-gel-moisturizer/I-047687.html?cgpath=skincare",
     price: "$26.00",
-    category: "HomeSkin CareMoisturiserMoisturiserMorphe 2 Total Softie Gel Moisturizer",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw4cbbf794/product/morphe/hr/i-047687-m2-total-softie-gel-moisturizer-1-940.jpg",
+    category:
+      "HomeSkin CareMoisturiserMoisturiserMorphe 2 Total Softie Gel Moisturizer",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw4cbbf794/product/morphe/hr/i-047687-m2-total-softie-gel-moisturizer-1-940.jpg",
     Benefits: "VeganHydrating",
-    Details: "The MECCA view:Infused with hyaluronic acid, cucumber water and aloe vera extract, this vegan moisturiser is a potent dose of nourishing hydration. Suitable for all skin types, this lightweight formula will drench skin in reliable moisture that will sit neatly under makeup and leave you with a healthy, dewy glow.Key ingredients:Hyaluronic acid: plumps skin with hydration.Made without:Animal products.Pair it with:Morphe Hint Hint Skin TintMorphe 2 LI'l Pick-Me-Up 3-In-1 Face MistMorphe 2 Bubbly Fresh Gel-To-Foam Cleanser ",
-    Usage: "Take a generous amount and gently massage into cleansed skin using upward motions. Use morning and night.",
-    Ingredients: "Water (aqua, eau), caprylic/capric triglyceride, squalane, dicaprylyl carbonate, propanediol, dimethicone, 1,2-hexanediol, simmondsia chinensis (jojoba) seed oil, hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer, aloe barbadensis leaf juice, niacinamide, cucumis sativus (cucumber) fruit water, citrus aurantium amara (bitter orange) flower water, phenoxyethanol, dimethiconol, lysolecithin, sclerotium gum, polyisobutene, sodium hydroxide, ethylhexylglycerin, disodium edta, glycine soja (soybean) sterols, linoleic acid, phospholipids, pullulan, xanthan gum, peg-7 trimethylolpropane coconut ether, sodium hyaluronate, hyaluronic acid, sorbitan isostearate, polysorbate 60, ricinus communis (castor) seed oil, citric acid, potassium sorbate, sodium benzoate, silica, tocopherol, leuconostoc/radish root ferment filtrate, fragrance (parfum), hexyl cinnamal, hydroxycitronellal, linalool, limonene, benzyl benzoate +/- may contain/peut contenir: blue 1 (ci 42090), violet 2 (ci 60725).",
-    reviews: [
-    ],
+    Details:
+      "The MECCA view:Infused with hyaluronic acid, cucumber water and aloe vera extract, this vegan moisturiser is a potent dose of nourishing hydration. Suitable for all skin types, this lightweight formula will drench skin in reliable moisture that will sit neatly under makeup and leave you with a healthy, dewy glow.Key ingredients:Hyaluronic acid: plumps skin with hydration.Made without:Animal products.Pair it with:Morphe Hint Hint Skin TintMorphe 2 LI'l Pick-Me-Up 3-In-1 Face MistMorphe 2 Bubbly Fresh Gel-To-Foam Cleanser ",
+    Usage:
+      "Take a generous amount and gently massage into cleansed skin using upward motions. Use morning and night.",
+    Ingredients:
+      "Water (aqua, eau), caprylic/capric triglyceride, squalane, dicaprylyl carbonate, propanediol, dimethicone, 1,2-hexanediol, simmondsia chinensis (jojoba) seed oil, hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer, aloe barbadensis leaf juice, niacinamide, cucumis sativus (cucumber) fruit water, citrus aurantium amara (bitter orange) flower water, phenoxyethanol, dimethiconol, lysolecithin, sclerotium gum, polyisobutene, sodium hydroxide, ethylhexylglycerin, disodium edta, glycine soja (soybean) sterols, linoleic acid, phospholipids, pullulan, xanthan gum, peg-7 trimethylolpropane coconut ether, sodium hyaluronate, hyaluronic acid, sorbitan isostearate, polysorbate 60, ricinus communis (castor) seed oil, citric acid, potassium sorbate, sodium benzoate, silica, tocopherol, leuconostoc/radish root ferment filtrate, fragrance (parfum), hexyl cinnamal, hydroxycitronellal, linalool, limonene, benzyl benzoate +/- may contain/peut contenir: blue 1 (ci 42090), violet 2 (ci 60725).",
+    reviews: [],
     key_ingredients: {
       "Hyaluronic acid": " plumps skin with hydration",
     },
@@ -736,19 +752,27 @@ export const productsMock = [
     id: 8,
     brand_name: "Naked Sundays",
     prod_name: "SPF50+ Collagen Glow Crème",
-    prod_link: "https://www.meccabeauty.co.nz/naked-sundays/spf50-collagen-glow-creme/I-053111.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/naked-sundays/spf50-collagen-glow-creme/I-053111.html?cgpath=skincare",
     price: "$37.00",
-    category: "HomeSkin CareSun ProtectionSunscreen for FaceSPF50+ Collagen Glow Crème",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw6bcd456b/product/nakeds/hr/i-053111-spf50-collagen-glow-creme-1-940.jpg",
-    Benefits: "Cruelty-freeVeganSun protectionSulphate-freeParaben-freeFragrance-free",
-    Details: "The MECCA view:This Naked Sundays chemical sunscreen formula is the perfect 4-in-1 to reach for daily; acting as a primer, moisturiser, SPF and collagen-booster, skin is left protected, hydrated and ready for makeup. The primer sunscreen guards against free radical damage while promoting a smooth, glowy complexion thanks to the inclusion of vegan collagen and watermelon extract, which give a boost of antioxidant-rich hydration and moisture.\nKey ingredients:\nPlant-based collagen: increases moisture and hydration while delivering amino acids glycine, proline and lysine to promote collagen synthesis and tissue repair.\nWatermelon extract: contains skin-strengthening vitamin C, vitamin E and amino acids that help fight free radicals, brighten, add moisture and hydration while calming the skin.\n\n\nMade without:\nParabens, mineral oils, oxybenzone, animal products and testing\nPair it with:\nNaked Sundays SPF BFF Brush\nNaked Sundays SPF50+ Glow Body Mist\nNaked Sundays SPF50+ Hydrating Glow Mist",
-    Usage: "Apply 1/4 teaspoon (for face), 1/2 teaspoon (for face and neck) on cleansed, dry skin, avoiding the under-eye area. Apply\nagain 20 minutes before going out in the sun, and again after being in the\nwater. Store below 30 °C.\nWARNING: Avoid contact with eyes or damaged skin. Do not inhale. Avoid prolonged sun exposure. If product gets into your eyes, or you notice any irritation, cease use immediately and seek medical assistance.",
-    Ingredients: "Active Ingredients:4-methylbenzylidene\ncamphor 40 mg/g, butyl methoxydibenzoylmethane 50 mg/g, homosalate 150 mg/g octocrylene, 100 mg/g, octyl salicylate 50 mg/g.Other Ingredients: Dimeticone 350, ethylhexylglycerin, glyceryl monostearate, hydrolysed adansonia digitata leaf polysaccharides, hydrolysed rice protein, hydrolysed soy protein, phenoxyethanol, potassium cetyl phosphate, proline, purified water, sodium benzoate, sodium polyacrylate, watermelon extract.",
-    reviews: [
-    ],
+    category:
+      "HomeSkin CareSun ProtectionSunscreen for FaceSPF50+ Collagen Glow Crème",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw6bcd456b/product/nakeds/hr/i-053111-spf50-collagen-glow-creme-1-940.jpg",
+    Benefits:
+      "Cruelty-freeVeganSun protectionSulphate-freeParaben-freeFragrance-free",
+    Details:
+      "The MECCA view:This Naked Sundays chemical sunscreen formula is the perfect 4-in-1 to reach for daily; acting as a primer, moisturiser, SPF and collagen-booster, skin is left protected, hydrated and ready for makeup. The primer sunscreen guards against free radical damage while promoting a smooth, glowy complexion thanks to the inclusion of vegan collagen and watermelon extract, which give a boost of antioxidant-rich hydration and moisture.\nKey ingredients:\nPlant-based collagen: increases moisture and hydration while delivering amino acids glycine, proline and lysine to promote collagen synthesis and tissue repair.\nWatermelon extract: contains skin-strengthening vitamin C, vitamin E and amino acids that help fight free radicals, brighten, add moisture and hydration while calming the skin.\n\n\nMade without:\nParabens, mineral oils, oxybenzone, animal products and testing\nPair it with:\nNaked Sundays SPF BFF Brush\nNaked Sundays SPF50+ Glow Body Mist\nNaked Sundays SPF50+ Hydrating Glow Mist",
+    Usage:
+      "Apply 1/4 teaspoon (for face), 1/2 teaspoon (for face and neck) on cleansed, dry skin, avoiding the under-eye area. Apply\nagain 20 minutes before going out in the sun, and again after being in the\nwater. Store below 30 °C.\nWARNING: Avoid contact with eyes or damaged skin. Do not inhale. Avoid prolonged sun exposure. If product gets into your eyes, or you notice any irritation, cease use immediately and seek medical assistance.",
+    Ingredients:
+      "Active Ingredients:4-methylbenzylidene\ncamphor 40 mg/g, butyl methoxydibenzoylmethane 50 mg/g, homosalate 150 mg/g octocrylene, 100 mg/g, octyl salicylate 50 mg/g.Other Ingredients: Dimeticone 350, ethylhexylglycerin, glyceryl monostearate, hydrolysed adansonia digitata leaf polysaccharides, hydrolysed rice protein, hydrolysed soy protein, phenoxyethanol, potassium cetyl phosphate, proline, purified water, sodium benzoate, sodium polyacrylate, watermelon extract.",
+    reviews: [],
     key_ingredients: {
-      "Plant-based collagen": " increases moisture and hydration while delivering amino acids glycine, proline and lysine to promote collagen synthesis and tissue repair",
-      "Watermelon extract": " contains skin-strengthening vitamin C, vitamin E and amino acids that help fight free radicals, brighten, add moisture and hydration while calming the skin",
+      "Plant-based collagen":
+        " increases moisture and hydration while delivering amino acids glycine, proline and lysine to promote collagen synthesis and tissue repair",
+      "Watermelon extract":
+        " contains skin-strengthening vitamin C, vitamin E and amino acids that help fight free radicals, brighten, add moisture and hydration while calming the skin",
     },
   },
   {
@@ -756,19 +780,25 @@ export const productsMock = [
     id: 9,
     brand_name: "Perricone MD",
     prod_name: "No Makeup Lipstick",
-    prod_link: "https://www.meccabeauty.co.nz/perricone-md/no-makeup-lipstick/V-038612.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/perricone-md/no-makeup-lipstick/V-038612.html?cgpath=skincare",
     price: "$48.00",
     category: "HomeMakeupLipsLipstickNo Makeup Lipstick",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw2146f469/product/nvperr/hr/i-038612-nm-lipstick-bette-wine-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw2146f469/product/nvperr/hr/i-038612-nm-lipstick-bette-wine-1-940.jpg",
     Benefits: "Cruelty-freeNatural finishSheer coverageOil freeParaben-free",
-    Details: "The MECCA view: A new edition to the No Makeup range, this lightweight and nourishing formula imparts a subtle glossy tint of colour as it helps to moisturize, resulting in visibly smoother, plumper lips over time. The solid-to-serum formula conditions, hydrates and smooths lips. CONSUMER RESULTS88% agreed lips had a more youthful appearance* 88% agreed lips felt smoother*86% agreed lips felt healthier*86% noticed improvement in overall lip appearance* 84% agreed lips felt more nourished*84% agreed lips felt softer*82% agreed lips felt more moisturized*80% noticed improvement in lip suppleness*80% agreed vertical lip lines appeared reduced**In a consumer study with 108 women after 28 daysKey ingredients:Neuropeptides: are powerful, protein-like building blocks that offer visible antidote to wrinkles, sagging, dullness and discoloration.Hyaluronic acid: provides instant all day hydration and this lower molecular weight enables for penetration deep within the skin's surface.Made without: Gluten, alcohol, oil, parabens and sulfates. Pair it with:PERRICONE MD No Makeup Blush",
-    Usage: "Apply generously and evenly over the lip area. Reapply throughout the day as desired. ",
-    Ingredients: "(EU) Simmondsia Chinensis (Jojoba) Seed Oil, Octyldodecanol, Polyglyceryl-2 Diisostearate, Tridecyl Trimellitate, Polyethylene, Synthetic Wax, VP/Eicosene Copolymer, Mango Butter Dimer Dilinoleyl Esters/Dimer Dilinoleate Copolymer, Zinc Oxide, Beeswax/Cera Alba, Silica, C10-30 Cholesterol/Lanosterol Esters, Ethylene/Propylene/Styrene Copolymer, Ozokerite, Vanillin, Ethylhexyl Palmitate, CI 77891, Tocopheryl Acetate, Argania Spinosa Kernel Oil, Crambe Abyssinica Seed Oil, Butylene/ Ethylene/Styrene Copolymer, CI 77492, Glyceryl Isostearate, Tribehenin, Polyhydroxystearic Acid, CI 77491, CI 77499, Nylon-12, CI 15850, Sorbitan Isostearate, Bisabolol, Sodium Hyaluronate, Isopropyl Titanium Triisostearate, CI 45410, Simethicone, Dimethyl MEA, Tocotrienols, Palmitoyl Tripeptide-1, Palmitoyl Tripeptide-5.",
-    reviews: [
-    ],
+    Details:
+      "The MECCA view: A new edition to the No Makeup range, this lightweight and nourishing formula imparts a subtle glossy tint of colour as it helps to moisturize, resulting in visibly smoother, plumper lips over time. The solid-to-serum formula conditions, hydrates and smooths lips. CONSUMER RESULTS88% agreed lips had a more youthful appearance* 88% agreed lips felt smoother*86% agreed lips felt healthier*86% noticed improvement in overall lip appearance* 84% agreed lips felt more nourished*84% agreed lips felt softer*82% agreed lips felt more moisturized*80% noticed improvement in lip suppleness*80% agreed vertical lip lines appeared reduced**In a consumer study with 108 women after 28 daysKey ingredients:Neuropeptides: are powerful, protein-like building blocks that offer visible antidote to wrinkles, sagging, dullness and discoloration.Hyaluronic acid: provides instant all day hydration and this lower molecular weight enables for penetration deep within the skin's surface.Made without: Gluten, alcohol, oil, parabens and sulfates. Pair it with:PERRICONE MD No Makeup Blush",
+    Usage:
+      "Apply generously and evenly over the lip area. Reapply throughout the day as desired. ",
+    Ingredients:
+      "(EU) Simmondsia Chinensis (Jojoba) Seed Oil, Octyldodecanol, Polyglyceryl-2 Diisostearate, Tridecyl Trimellitate, Polyethylene, Synthetic Wax, VP/Eicosene Copolymer, Mango Butter Dimer Dilinoleyl Esters/Dimer Dilinoleate Copolymer, Zinc Oxide, Beeswax/Cera Alba, Silica, C10-30 Cholesterol/Lanosterol Esters, Ethylene/Propylene/Styrene Copolymer, Ozokerite, Vanillin, Ethylhexyl Palmitate, CI 77891, Tocopheryl Acetate, Argania Spinosa Kernel Oil, Crambe Abyssinica Seed Oil, Butylene/ Ethylene/Styrene Copolymer, CI 77492, Glyceryl Isostearate, Tribehenin, Polyhydroxystearic Acid, CI 77491, CI 77499, Nylon-12, CI 15850, Sorbitan Isostearate, Bisabolol, Sodium Hyaluronate, Isopropyl Titanium Triisostearate, CI 45410, Simethicone, Dimethyl MEA, Tocotrienols, Palmitoyl Tripeptide-1, Palmitoyl Tripeptide-5.",
+    reviews: [],
     key_ingredients: {
-      Neuropeptides: " are powerful, protein-like building blocks that offer visible antidote to wrinkles, sagging, dullness and discoloration",
-      "Hyaluronic acid": " provides instant all day hydration and this lower molecular weight enables for penetration deep within the skin's surface",
+      Neuropeptides:
+        " are powerful, protein-like building blocks that offer visible antidote to wrinkles, sagging, dullness and discoloration",
+      "Hyaluronic acid":
+        " provides instant all day hydration and this lower molecular weight enables for penetration deep within the skin's surface",
     },
   },
   {
@@ -776,18 +806,22 @@ export const productsMock = [
     id: 10,
     brand_name: "lilah b.",
     prod_name: "B. Kissed Lip Balm",
-    prod_link: "https://www.meccabeauty.co.nz/lilah-b/b-kissed-lip-balm/I-037593.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/lilah-b/b-kissed-lip-balm/I-037593.html?cgpath=skincare",
     price: "$55.00",
     category: "HomeSkin CareLip CareB. Kissed Lip Balm",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dwec6bc1be/product/lilahb/hr/i-037593-b-kissed-lip-balm-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dwec6bc1be/product/lilahb/hr/i-037593-b-kissed-lip-balm-1-940.jpg",
     Benefits: "Cruelty-freeDewy finishSulphate-freeParaben-free",
-    Details: "The MECCA view: For soft, comfortable and conditioned lips, B. Kissed Lip Balm is a hand-bag essential. This balm offers long wearing nourishment with minty freshness. Key ingredients:Beeswax: to moisturise and soften dry lipsMint and lavender essential oil: to refresh the senses and sooth the mindMade without: Gluten, parabens, phthalates, sulfates, synthetic fragrances, petroleum, lanolin and mineral oil.Pair it with:lilah b. Eye + Lip Liner BrushFrank Body Lip ScrubStila Stay All Day Liquid Lipstick",
+    Details:
+      "The MECCA view: For soft, comfortable and conditioned lips, B. Kissed Lip Balm is a hand-bag essential. This balm offers long wearing nourishment with minty freshness. Key ingredients:Beeswax: to moisturise and soften dry lipsMint and lavender essential oil: to refresh the senses and sooth the mindMade without: Gluten, parabens, phthalates, sulfates, synthetic fragrances, petroleum, lanolin and mineral oil.Pair it with:lilah b. Eye + Lip Liner BrushFrank Body Lip ScrubStila Stay All Day Liquid Lipstick",
     Usage: "Wear alone or under of over lip colour to nourish the lips. ",
-    Ingredients: "Bis-diglyceryl polyacyladipate-2, hydrogenated polyisobutene, microcrystalline wax, glyceryl behenate/eicosadioate, beeswax, mentha arvensis leaf oil, lavandula angustifolia (lavender) oil, linalool, limonene, silica, triethoxycaprylylsilane, polyhydroxystearic acid, C12-15 alkyl benzoate, titanium dioxide (CI 77891)",
-    reviews: [
-    ],
+    Ingredients:
+      "Bis-diglyceryl polyacyladipate-2, hydrogenated polyisobutene, microcrystalline wax, glyceryl behenate/eicosadioate, beeswax, mentha arvensis leaf oil, lavandula angustifolia (lavender) oil, linalool, limonene, silica, triethoxycaprylylsilane, polyhydroxystearic acid, C12-15 alkyl benzoate, titanium dioxide (CI 77891)",
+    reviews: [],
     key_ingredients: {
-      Beeswax: " to moisturise and soften dry lipsMint and lavender essential oil to refresh the senses and sooth the mind",
+      Beeswax:
+        " to moisturise and soften dry lipsMint and lavender essential oil to refresh the senses and sooth the mind",
     },
   },
   {
@@ -795,32 +829,39 @@ export const productsMock = [
     id: 11,
     brand_name: "FOREO",
     prod_name: "UFO 2",
-    prod_link: "https://www.meccabeauty.co.nz/foreo/ufo-2/V-043703.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/foreo/ufo-2/V-043703.html?cgpath=skincare",
     price: "$453.00",
     category: "HomeSkin CareElectronic ToolsUFO 2",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dwaaf1717f/product/foreo/hr/i-043705-ufo-2-mint-1-940.jpg",
-    Details: "The MECCA view:This 90-second power mask and light therapy device features T-Sonic™ facial massaging, LED light therapy and unique technology to heat and cool itself. Formulated with body safe silicones, PC + ABS and aluminium alloy. This device is to be used in conjunction with Foreo face masks only. Looking for more ways to elevate your skincare routine? Here are our top device picks. Pair it with:FOREO Advanced Mask Shimmer FreakFOREO Advanced Mask Glow Addict",
-    Usage: "FOR OPTIMUM SAFETY:Your UFO 2 device is intended to be used in conjunction with the accompanying masks only. At no time should the device be placed directly onto the skin/face with power on.• If you have a skin condition or any medical concerns, please consult a dermatologist before use.• Using UFO 2 should be comfortable – if you experience discomfort, discontinue use immediatelyand consult a physician.• Exercise particular care when using UFO 2 around the under-eye regions and do not bring the deviceinto contact with the eyelids or eyes themselves.• For reasons of hygiene, we do not recommend sharing your UFO 2 with anyone else.• Avoid leaving your UFO 2 in direct sunlight, and never expose it to extreme heat or boiling water.• UFO 2 has a heated surface. Those sensitive to heat must use caution and care when using this device.• Close supervision is necessary when this device is used by, on, or near children, as well as those withreduced physical and mental abilities.• Discontinue use if this product appears damaged in any way. This product contains no serviceable parts.• Use this device only for its intended use as described in this manual.If you do not find the answer to your specific question, or if you have any other questions regarding the device’s operation, please visitforeo.com/support.",
-    reviews: [
-    ],
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dwaaf1717f/product/foreo/hr/i-043705-ufo-2-mint-1-940.jpg",
+    Details:
+      "The MECCA view:This 90-second power mask and light therapy device features T-Sonic™ facial massaging, LED light therapy and unique technology to heat and cool itself. Formulated with body safe silicones, PC + ABS and aluminium alloy. This device is to be used in conjunction with Foreo face masks only. Looking for more ways to elevate your skincare routine? Here are our top device picks. Pair it with:FOREO Advanced Mask Shimmer FreakFOREO Advanced Mask Glow Addict",
+    Usage:
+      "FOR OPTIMUM SAFETY:Your UFO 2 device is intended to be used in conjunction with the accompanying masks only. At no time should the device be placed directly onto the skin/face with power on.• If you have a skin condition or any medical concerns, please consult a dermatologist before use.• Using UFO 2 should be comfortable – if you experience discomfort, discontinue use immediatelyand consult a physician.• Exercise particular care when using UFO 2 around the under-eye regions and do not bring the deviceinto contact with the eyelids or eyes themselves.• For reasons of hygiene, we do not recommend sharing your UFO 2 with anyone else.• Avoid leaving your UFO 2 in direct sunlight, and never expose it to extreme heat or boiling water.• UFO 2 has a heated surface. Those sensitive to heat must use caution and care when using this device.• Close supervision is necessary when this device is used by, on, or near children, as well as those withreduced physical and mental abilities.• Discontinue use if this product appears damaged in any way. This product contains no serviceable parts.• Use this device only for its intended use as described in this manual.If you do not find the answer to your specific question, or if you have any other questions regarding the device’s operation, please visitforeo.com/support.",
+    reviews: [],
   },
   {
     _id: "6258660a0bf68a57c06811b4",
     id: 12,
     brand_name: "Le Labo",
     prod_name: "Lip Balm",
-    prod_link: "https://www.meccabeauty.co.nz/le-labo/lip-balm/I-028946.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/le-labo/lip-balm/I-028946.html?cgpath=skincare",
     price: "$24.00",
     category: "HomeSkin CareLip CareLip Balm",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw57400f52/product/lelabo/hr/i-028946-lip-balm-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw57400f52/product/lelabo/hr/i-028946-lip-balm-1-940.jpg",
     Benefits: "Cruelty-freeVegan",
-    Details: "The MECCA view:Soften, smooth and condition the lips sans stickiness or a gloss finish with this kind-to-skin, plant-based formula. Le Labo's lip balm is a non-sticky, plant-based formula infused with shea butter to nourish, olive oil to moisturise, and jojoba seeds to soften.Key ingredients:Jojoba: nourishes, calms and reduces inflammationShea butter: softens, heals and conditionsVitamin E: antioxidant to nourish and protectMade without:Animal products, phthalates, parabens, sulphates, petroleumPair it with:Le Labo Face LotionLe Labo Body LotionLe Labo Conditioner Basil",
+    Details:
+      "The MECCA view:Soften, smooth and condition the lips sans stickiness or a gloss finish with this kind-to-skin, plant-based formula. Le Labo's lip balm is a non-sticky, plant-based formula infused with shea butter to nourish, olive oil to moisturise, and jojoba seeds to soften.Key ingredients:Jojoba: nourishes, calms and reduces inflammationShea butter: softens, heals and conditionsVitamin E: antioxidant to nourish and protectMade without:Animal products, phthalates, parabens, sulphates, petroleumPair it with:Le Labo Face LotionLe Labo Body LotionLe Labo Conditioner Basil",
     Usage: "Apply to lips as desired.",
-    Ingredients: "Polyisobutene, simmondsia chinensis (jojoba) seed oil, caprylic/capric/myristic/stearic triglyceride, butyrospermum parkii (shea butter), jojoba esters, sorbitan olivate, olea europaea (olive) fruit oil, dipentaerythrityl hexacaprylate/hexacaprate, tridecyl trimellitate, hydrogenated olive oil, tridecyl stearate, tocopheryl acetate, olea europaea (olive) oil unsaponifiables, caprylyl glycol, neopentyl glycol dicaprylate/dicaprate, citric acid, tocopherol.",
-    reviews: [
-    ],
+    Ingredients:
+      "Polyisobutene, simmondsia chinensis (jojoba) seed oil, caprylic/capric/myristic/stearic triglyceride, butyrospermum parkii (shea butter), jojoba esters, sorbitan olivate, olea europaea (olive) fruit oil, dipentaerythrityl hexacaprylate/hexacaprate, tridecyl trimellitate, hydrogenated olive oil, tridecyl stearate, tocopheryl acetate, olea europaea (olive) oil unsaponifiables, caprylyl glycol, neopentyl glycol dicaprylate/dicaprate, citric acid, tocopherol.",
+    reviews: [],
     key_ingredients: {
-      Jojoba: " nourishes, calms and reduces inflammationShea butter softens, heals and conditionsVitamin E antioxidant to nourish and protect",
+      Jojoba:
+        " nourishes, calms and reduces inflammationShea butter softens, heals and conditionsVitamin E antioxidant to nourish and protect",
     },
   },
   {
@@ -828,20 +869,26 @@ export const productsMock = [
     id: 13,
     brand_name: "Kiehl's",
     prod_name: "Ultra Facial Cleanser",
-    prod_link: "https://www.meccabeauty.co.nz/kiehls/ultra-facial-cleanser/I-041331.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/kiehls/ultra-facial-cleanser/I-041331.html?cgpath=skincare",
     price: "$38.00",
     category: "HomeSkin CareCleanser & TonerCleanserUltra Facial Cleanser",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw640c17bc/product/kiehls/hr/i-041331-ultra-facial-cleanser-5oz-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw640c17bc/product/kiehls/hr/i-041331-ultra-facial-cleanser-5oz-1-940.jpg",
     Benefits: "De-congestingFragrance-free",
-    Details: "The MECCA view:This pH-balanced cleanser helps to maintain the skin’s natural balance, while removing dirt and debris without over-drying or stripping skin. Suitable for all skin types, after each use excess oil and dirt is dissolved, and skin is left fresh, balanced and ready to take on the day. Gentle and reliable, it's no wonder this cleanser is a Kiehl's fan favourite.Key ingredients:Apricot kernal oil: to moisturise and soften skin while helping tp retain clarity and suppleness.Avocado oil: to provide intensive moisture to the skin.Squalene: to help replenish skin’s barrier, keeping it soft, supple and moisturised.Made without:Fragrance.Pair it with:KIEHL'S Ultra Facial CreamKIEHL'S Ultra Facial Oil-Free TonerKIEHL'S Ultra Facial Masque",
-    Usage: "After cleansing, apply a small amount to clean fingertips. Gently massage into damp facial areas in upward, circular motions, avoiding the immediate eye area. Rinse thoroughly or remove excess with a damp wash cloth.",
-    Ingredients: "Aqua/Water, Sodium Laureth Sulfate, Decyl Glucoside, Glycerin, Cocamidopropyl Betaine, Disodium Cocoamphodiacetate, Acrylates Copolymer, PEG-200 Hydrogenated Glyceryl Palmate, Lauryl Glucoside, Sodium Chloride, Pentylene Glycol, Triethanolamine, Phenoxyethanol, PEG-7 Glyceryl Cocoate, Distearyl Ether, Behenyl Alcohol, Methylparaben, Laureth-2, Propylparaben, Sodium Methylparaben, Squalane, Prunus Amygdalus Dulcis Oil/Sweet Almond Oil, Prunus Armeniaca Kernel Oil/Apricot Kernel Oil, Tocopherol, Ascorbyl Glucoside, Persea Gratissima Oil/Avocado Oil, Sodium Hydroxide, Citric Acid.",
-    reviews: [
-    ],
+    Details:
+      "The MECCA view:This pH-balanced cleanser helps to maintain the skin’s natural balance, while removing dirt and debris without over-drying or stripping skin. Suitable for all skin types, after each use excess oil and dirt is dissolved, and skin is left fresh, balanced and ready to take on the day. Gentle and reliable, it's no wonder this cleanser is a Kiehl's fan favourite.Key ingredients:Apricot kernal oil: to moisturise and soften skin while helping tp retain clarity and suppleness.Avocado oil: to provide intensive moisture to the skin.Squalene: to help replenish skin’s barrier, keeping it soft, supple and moisturised.Made without:Fragrance.Pair it with:KIEHL'S Ultra Facial CreamKIEHL'S Ultra Facial Oil-Free TonerKIEHL'S Ultra Facial Masque",
+    Usage:
+      "After cleansing, apply a small amount to clean fingertips. Gently massage into damp facial areas in upward, circular motions, avoiding the immediate eye area. Rinse thoroughly or remove excess with a damp wash cloth.",
+    Ingredients:
+      "Aqua/Water, Sodium Laureth Sulfate, Decyl Glucoside, Glycerin, Cocamidopropyl Betaine, Disodium Cocoamphodiacetate, Acrylates Copolymer, PEG-200 Hydrogenated Glyceryl Palmate, Lauryl Glucoside, Sodium Chloride, Pentylene Glycol, Triethanolamine, Phenoxyethanol, PEG-7 Glyceryl Cocoate, Distearyl Ether, Behenyl Alcohol, Methylparaben, Laureth-2, Propylparaben, Sodium Methylparaben, Squalane, Prunus Amygdalus Dulcis Oil/Sweet Almond Oil, Prunus Armeniaca Kernel Oil/Apricot Kernel Oil, Tocopherol, Ascorbyl Glucoside, Persea Gratissima Oil/Avocado Oil, Sodium Hydroxide, Citric Acid.",
+    reviews: [],
     key_ingredients: {
-      "Apricot kernal oil": " to moisturise and soften skin while helping tp retain clarity and suppleness",
+      "Apricot kernal oil":
+        " to moisturise and soften skin while helping tp retain clarity and suppleness",
       "Avocado oil": " to provide intensive moisture to the skin",
-      Squalene: " to help replenish skin’s barrier, keeping it soft, supple and moisturised",
+      Squalene:
+        " to help replenish skin’s barrier, keeping it soft, supple and moisturised",
     },
   },
   {
@@ -849,20 +896,29 @@ export const productsMock = [
     id: 14,
     brand_name: "Mecca Cosmetica",
     prod_name: "To Save Face SPF30 Facial Sunscreen",
-    prod_link: "https://www.meccabeauty.co.nz/mecca-cosmetica/to-save-face-spf30-facial-sunscreen/V-017490.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/mecca-cosmetica/to-save-face-spf30-facial-sunscreen/V-017490.html?cgpath=skincare",
     price: "$44.00",
-    category: "HomeSkin CareSun ProtectionSunscreen for FaceTo Save Face SPF30 Facial Sunscreen",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw437c9599/product/mecca/hr/i-017490-to-save-face-spf-30-100ml-1-940.jpg",
-    Benefits: "Cruelty-freeVeganMatte finishSun protectionSulphate-freeAlcohol-free",
-    Details: "The MECCA view:A luxe facial sunscreen with broad spectrum 30+ UVA and UVB protection. The lightweight formula has a hydrating matte finish so you can wear it alone as a daily moisturiser or layer it under makeup without the fear of a white cast. As you wear it, the non-sticky sunscreen will also prevent sun-related premature ageing.Do you really need to wear SPF in winter? Yes! Learn more here.Key ingredients:Hyaluronic acid: a molecule that plumps and hydrates the skin by retaining water up to 1000 times its own weight.Pomegranate extract: a rich antioxidant that fights and delays ageing and protects against free radicals. Vitamin E: strengthens the skin’s natural barrier whilst aiding in free radical protection. Made without:Animal products, alcohol and sulphates. Pair it with:Mecca Cosmetica – Lip De-Luscious Glide with SPF 15Mecca Max – Game Face BB Cream with SPF 30 From the shop floor: “Apply to the face, neck and ears. People always forget their ears!” – Lucy, retail skin manager Available for International Shipping. Please contact our Customer Service team.Corporate gifting note:Individual items will not be wrapped. If you would like this product gift wrapped, or for orders over $2000, please contact our Customer Service team.To ensure your beauty empties don’t end up in landfill, MECCA has partnered with TerraCycle, the global leaders in recycling the unrecyclable. Rather than throwing away your already-loved Mecca Cosmetica bottles, pots and tubes, TerraCycle’s recycling program lets us send back your beauty waste, ready to be sorted, processed, and transformed into something new (and just as beautiful). Next time you have squeezed as much as you can out of your favourite Mecca Cosmetica product, give your local MECCA store a visit and pop your clean empties into a labelled bin, or pass them on to a team member at the registers—they’ll take care of the rest. For a full list of what can and can’t be recycled read here.",
-    Usage: "Smooth a generous amount of cream evenly over dry skin at least 20 minutes prior to sun exposure. Reapply every 2 hours and more often after swimming, excessive perspiration or towelling.",
-    Ingredients: "Active ingredients: Octocrylene 5% w/w, phenylbenzimidazole sulfonic acid 2% w/w, oxybenzone 1.5% w/w, butyl methoxydibenzoylmethane 1% w/w.Other ingredients: Alkyl (c12-15) benzoate, butyl hydroxybenzoate, carbomer 934, cetostearyl alcohol, diolamine cetyl phosphate, disodium edetate, dl-alpha-tocopheryl acetate, ethyl hydroxybenzoate, fragrance (perfume), glyceryl monostearate, isobutyl hydroxybenzoate, isopropyl myristate, methyl hydroxybenzoate, phenoxyethanol, propyl hydroxybenzoate, propylene glycol, punica granatum, purified water, sodium hyaluronate, sodium hydroxide, sorbitol.",
-    reviews: [
-    ],
+    category:
+      "HomeSkin CareSun ProtectionSunscreen for FaceTo Save Face SPF30 Facial Sunscreen",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw437c9599/product/mecca/hr/i-017490-to-save-face-spf-30-100ml-1-940.jpg",
+    Benefits:
+      "Cruelty-freeVeganMatte finishSun protectionSulphate-freeAlcohol-free",
+    Details:
+      "The MECCA view:A luxe facial sunscreen with broad spectrum 30+ UVA and UVB protection. The lightweight formula has a hydrating matte finish so you can wear it alone as a daily moisturiser or layer it under makeup without the fear of a white cast. As you wear it, the non-sticky sunscreen will also prevent sun-related premature ageing.Do you really need to wear SPF in winter? Yes! Learn more here.Key ingredients:Hyaluronic acid: a molecule that plumps and hydrates the skin by retaining water up to 1000 times its own weight.Pomegranate extract: a rich antioxidant that fights and delays ageing and protects against free radicals. Vitamin E: strengthens the skin’s natural barrier whilst aiding in free radical protection. Made without:Animal products, alcohol and sulphates. Pair it with:Mecca Cosmetica – Lip De-Luscious Glide with SPF 15Mecca Max – Game Face BB Cream with SPF 30 From the shop floor: “Apply to the face, neck and ears. People always forget their ears!” – Lucy, retail skin manager Available for International Shipping. Please contact our Customer Service team.Corporate gifting note:Individual items will not be wrapped. If you would like this product gift wrapped, or for orders over $2000, please contact our Customer Service team.To ensure your beauty empties don’t end up in landfill, MECCA has partnered with TerraCycle, the global leaders in recycling the unrecyclable. Rather than throwing away your already-loved Mecca Cosmetica bottles, pots and tubes, TerraCycle’s recycling program lets us send back your beauty waste, ready to be sorted, processed, and transformed into something new (and just as beautiful). Next time you have squeezed as much as you can out of your favourite Mecca Cosmetica product, give your local MECCA store a visit and pop your clean empties into a labelled bin, or pass them on to a team member at the registers—they’ll take care of the rest. For a full list of what can and can’t be recycled read here.",
+    Usage:
+      "Smooth a generous amount of cream evenly over dry skin at least 20 minutes prior to sun exposure. Reapply every 2 hours and more often after swimming, excessive perspiration or towelling.",
+    Ingredients:
+      "Active ingredients: Octocrylene 5% w/w, phenylbenzimidazole sulfonic acid 2% w/w, oxybenzone 1.5% w/w, butyl methoxydibenzoylmethane 1% w/w.Other ingredients: Alkyl (c12-15) benzoate, butyl hydroxybenzoate, carbomer 934, cetostearyl alcohol, diolamine cetyl phosphate, disodium edetate, dl-alpha-tocopheryl acetate, ethyl hydroxybenzoate, fragrance (perfume), glyceryl monostearate, isobutyl hydroxybenzoate, isopropyl myristate, methyl hydroxybenzoate, phenoxyethanol, propyl hydroxybenzoate, propylene glycol, punica granatum, purified water, sodium hyaluronate, sodium hydroxide, sorbitol.",
+    reviews: [],
     key_ingredients: {
-      "Hyaluronic acid": " a molecule that plumps and hydrates the skin by retaining water up to 1000 times its own weight",
-      "Pomegranate extract": " a rich antioxidant that fights and delays ageing and protects against free radicals",
-      "Vitamin E": " strengthens the skin’s natural barrier whilst aiding in free radical protection",
+      "Hyaluronic acid":
+        " a molecule that plumps and hydrates the skin by retaining water up to 1000 times its own weight",
+      "Pomegranate extract":
+        " a rich antioxidant that fights and delays ageing and protects against free radicals",
+      "Vitamin E":
+        " strengthens the skin’s natural barrier whilst aiding in free radical protection",
     },
   },
   {
@@ -870,20 +926,27 @@ export const productsMock = [
     id: 15,
     brand_name: "Perricone MD",
     prod_name: "Cold Plasma+ Eye",
-    prod_link: "https://www.meccabeauty.co.nz/perricone-md/cold-plasma-eye/I-030745.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/perricone-md/cold-plasma-eye/I-030745.html?cgpath=skincare",
     price: "$177.00",
     category: "HomeSkin CareEye CareCold Plasma+ Eye",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw061d397d/product/nvperr/hr/i-030745-cold-plasma-eye-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw061d397d/product/nvperr/hr/i-030745-cold-plasma-eye-1-940.jpg",
     Benefits: "VeganFirmingDe-puffingSulphate-freeParaben-free",
-    Details: "The MECCA view:A multi-tasking advanced eye cream that targets and dramatically improves the five most visible signs of ageing around the eye including, dark circles, puffiness, crow's feet, fine lines and loss of firmness. This multi-tasking powerhouse uses a proprietary liquid crystal delivery system for faster and deeper penetration of key active ingredients. After more eye creams? Here’s our complete list of eye creams for every type of eye. Read it now.Key ingredients:Vitamin C ester: a more potent, highly stable and less irritating form of Vitamin C, that visibly smooths, brightens and minimises discoloration over time.Copper tripeptide: a powerful, naturally occurring complex with three amino acids that helps repair dry skin for a dramatically firmer, smoother, younger-looking complexion. Omegas 3, 6 and 9: pro-fatty acids that help visibly plump and increase radiance over time by strengthening the skin’s moisture barrier and improving its ability to retain water.Made without:Animal products, nuts, gluten, fish, milk, corn, fragrance, phthalates, sulphates, parabens, talc and mineral oil.Pair it with:Perricone MD Cold Plasma Plus Advanced Face SerumPerricone MD Cold Plasma Plus+ Fragile Skin TherapyDirect from the brand: For incredible natural radiance and illumination, mix a small amount of Cold Plasma+ Eye with No Makeup Highlighter to achieve eyes that look like you have had that all-important 8 hours of rest. - Chris Caires, PhD, Chief Scientific Officer ",
-    Usage: "Gently pat Cold Plasma Plus Eye onto eye area using your ring finger. Use morning and evening. Keep out of eyes.",
-    Ingredients: "Water/Aqua/Eau, Isopropyl Palmitate, Cetearyl Alcohol, Glyceryl Stearate, PEG-100 Stearate, Hydrolyzed Jojoba Esters, Ceteareth-20, Olea Europaea (Olive) Fruit Oil, Tetrahexyldecyl Ascorbate, Benzyl Alcohol, Phosphatidylcholine, Acetyl Tetrapeptide-5, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Echium Plantagineum Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Copper Tripeptide-1, Magnesium Aspartate, Zinc Gluconate, Rosmarinus Officinalis (Rosemary) Leaf Extract, Copper Gluconate, N-Hydroxysuccinimide, Tocopherol, Sodium Hyaluronate, Chrysin, Disodium EDTA, Hydrogenated Vegetable Oil, Glycerin, Dimethicone, Cyclopentasiloxane, Steareth-20, Silica, Titanium Dioxide (CI 77891), Iron Oxides (CI 77491).",
-    reviews: [
-    ],
+    Details:
+      "The MECCA view:A multi-tasking advanced eye cream that targets and dramatically improves the five most visible signs of ageing around the eye including, dark circles, puffiness, crow's feet, fine lines and loss of firmness. This multi-tasking powerhouse uses a proprietary liquid crystal delivery system for faster and deeper penetration of key active ingredients. After more eye creams? Here’s our complete list of eye creams for every type of eye. Read it now.Key ingredients:Vitamin C ester: a more potent, highly stable and less irritating form of Vitamin C, that visibly smooths, brightens and minimises discoloration over time.Copper tripeptide: a powerful, naturally occurring complex with three amino acids that helps repair dry skin for a dramatically firmer, smoother, younger-looking complexion. Omegas 3, 6 and 9: pro-fatty acids that help visibly plump and increase radiance over time by strengthening the skin’s moisture barrier and improving its ability to retain water.Made without:Animal products, nuts, gluten, fish, milk, corn, fragrance, phthalates, sulphates, parabens, talc and mineral oil.Pair it with:Perricone MD Cold Plasma Plus Advanced Face SerumPerricone MD Cold Plasma Plus+ Fragile Skin TherapyDirect from the brand: For incredible natural radiance and illumination, mix a small amount of Cold Plasma+ Eye with No Makeup Highlighter to achieve eyes that look like you have had that all-important 8 hours of rest. - Chris Caires, PhD, Chief Scientific Officer ",
+    Usage:
+      "Gently pat Cold Plasma Plus Eye onto eye area using your ring finger. Use morning and evening. Keep out of eyes.",
+    Ingredients:
+      "Water/Aqua/Eau, Isopropyl Palmitate, Cetearyl Alcohol, Glyceryl Stearate, PEG-100 Stearate, Hydrolyzed Jojoba Esters, Ceteareth-20, Olea Europaea (Olive) Fruit Oil, Tetrahexyldecyl Ascorbate, Benzyl Alcohol, Phosphatidylcholine, Acetyl Tetrapeptide-5, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Echium Plantagineum Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Copper Tripeptide-1, Magnesium Aspartate, Zinc Gluconate, Rosmarinus Officinalis (Rosemary) Leaf Extract, Copper Gluconate, N-Hydroxysuccinimide, Tocopherol, Sodium Hyaluronate, Chrysin, Disodium EDTA, Hydrogenated Vegetable Oil, Glycerin, Dimethicone, Cyclopentasiloxane, Steareth-20, Silica, Titanium Dioxide (CI 77891), Iron Oxides (CI 77491).",
+    reviews: [],
     key_ingredients: {
-      "Vitamin C ester": " a more potent, highly stable and less irritating form of Vitamin C, that visibly smooths, brightens and minimises discoloration over time",
-      "Copper tripeptide": " a powerful, naturally occurring complex with three amino acids that helps repair dry skin for a dramatically firmer, smoother, younger-looking complexion",
-      "Omegas 3, 6 and 9": " pro-fatty acids that help visibly plump and increase radiance over time by strengthening the skin’s moisture barrier and improving its ability to retain water",
+      "Vitamin C ester":
+        " a more potent, highly stable and less irritating form of Vitamin C, that visibly smooths, brightens and minimises discoloration over time",
+      "Copper tripeptide":
+        " a powerful, naturally occurring complex with three amino acids that helps repair dry skin for a dramatically firmer, smoother, younger-looking complexion",
+      "Omegas 3, 6 and 9":
+        " pro-fatty acids that help visibly plump and increase radiance over time by strengthening the skin’s moisture barrier and improving its ability to retain water",
     },
   },
   {
@@ -891,13 +954,17 @@ export const productsMock = [
     id: 16,
     brand_name: "Lonvitalite",
     prod_name: "Derma Roller Replaceable Head",
-    prod_link: "https://www.meccabeauty.co.nz/lonvitalite/derma-roller-replaceable-head/I-048366.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/lonvitalite/derma-roller-replaceable-head/I-048366.html?cgpath=skincare",
     price: "$43.00",
     category: "HomeAccessoriesToolsSkin careDerma Roller Replaceable Head",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw7572d36d/product/lonvit/hr/i-048366-derma-roller-replaceable-head-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw7572d36d/product/lonvit/hr/i-048366-derma-roller-replaceable-head-1-940.jpg",
     Benefits: "ExfoliatingFirmingFades pigmentationPore minimising",
-    Details: "The MECCA view:A replaceable Derma Roller head that can be used with your Lonvitalite Face and Body kit. Featuring 600 titanium needles with a 0.5 mm depth, this replaceable head is best suited for use on areas areas such as the forehead, cheeks, chin and neck.Pair it with:Lonvitalite Microneedle Derma Roller Face and Body KitLonvitalite Derma Roller Sanitiser Spray",
-    Usage: "Roll over a cleansed, dry skin. Spray your derma roller head with the Lonvitalite Derma Roller Sanitiser Spray. Rinse with warm water or wait until the spray evaporates. Roll with moderate pressure back and forth 5 to 10  times over sections of the skin until you complete an asterisk pattern in a vertical, horizontal  and diagonal fashion. Before changing the direction of your roll ensure you lift the device off the skin before placing in the next area. Once you have completed your derma rolling, apply your corrective skin care. Rinse the head again under warm water, spray with the Derma Roller Sanitiser Spray and enclose the roller in its protective case. Micro needling is best performed 2-3 times in the evening.",
+    Details:
+      "The MECCA view:A replaceable Derma Roller head that can be used with your Lonvitalite Face and Body kit. Featuring 600 titanium needles with a 0.5 mm depth, this replaceable head is best suited for use on areas areas such as the forehead, cheeks, chin and neck.Pair it with:Lonvitalite Microneedle Derma Roller Face and Body KitLonvitalite Derma Roller Sanitiser Spray",
+    Usage:
+      "Roll over a cleansed, dry skin. Spray your derma roller head with the Lonvitalite Derma Roller Sanitiser Spray. Rinse with warm water or wait until the spray evaporates. Roll with moderate pressure back and forth 5 to 10  times over sections of the skin until you complete an asterisk pattern in a vertical, horizontal  and diagonal fashion. Before changing the direction of your roll ensure you lift the device off the skin before placing in the next area. Once you have completed your derma rolling, apply your corrective skin care. Rinse the head again under warm water, spray with the Derma Roller Sanitiser Spray and enclose the roller in its protective case. Micro needling is best performed 2-3 times in the evening.",
     reviews: [],
   },
   {
@@ -905,17 +972,23 @@ export const productsMock = [
     id: 17,
     brand_name: "Too Faced",
     prod_name: "Lip Injection Lip Balm",
-    prod_link: "https://www.meccabeauty.co.nz/too-faced/lip-injection-lip-balm/I-051842.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/too-faced/lip-injection-lip-balm/I-051842.html?cgpath=skincare",
     price: "$39.00",
     category: "HomeSkin CareLip CareLip Injection Lip Balm",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw13a97777/product/too/hr/i-051842-lip-injection-lip-balm-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw13a97777/product/too/hr/i-051842-lip-injection-lip-balm-1-940.jpg",
     Benefits: "Cruelty-freeSheer coverageParaben-free",
-    Details: "The MECCA view:Visibly transform your lips with this buttery balm that nourishes, hydrates, conditions, and visibly plumps lips immediately and over time. A blend of nourishing shea butter, avocado oil, and olive oil, combined with our lip injection technology leaves lips looking instantly volumized, noticeably smoother, & perfectly pouty.Key ingredients:A blend of nourishing and conditioning ingredients includes shea butter, avocado oil, and olive oil  Made without:Parabens.Pair it with:Too Faced Lip Injection ExtremeToo Faced Lip Injection Maximum Lip PlumpToo Faced Lip Injection Liquid Lipstick ",
-    Usage: "Apply directly onto clean dry lips using the doe-foot applicator. Lay the doe-foot applicator flat against the lips and apply it in a back-and-forth motion to distribute lip balm evenly.Note: You may experience a slight to intense tingle.  Apply only within perimeter of lips.  If applied on skin, a temporary redness may occur.  If any discomfort is present, remove and discontinue use.  Keep away from children.",
-    Ingredients: "Petrolatum, hydrogenated polyisobutene, bis-diglyceryl polyacyladipate-2, ethylene/propylene/styrene copolymer, polyethylene, octyldodecanol, silica, tocopheryl acetate, sodium hyaluronate, glycine soja (soybean) oil, persea gratissima (avocado) oil, ricinus communis (castor) seed oil, butyrospermum parkii (shea) butter, capsicum frutescens fruit extract, zingiber officinale (ginger) root oil, olea europaea (olive) fruit oil, hydrogenated castor oil, menthol, vanillyl butyl ether, cholesterol, phytosterols, menthoxypropanediol, polydecene, c12-15 alkyl benzoate, sorbitan oleate, tin oxide, triethoxycaprylylsilane, butylene/ethylene/styrene copolymer, synthetic fluorphlogopite, vp/hexadecene copolymer, saccharin, flavor (aroma), bht, tetrahexyldecyl ascorbate,  [+/- mica, titanium dioxide (ci 77891), iron oxides (ci 77491), iron oxides (ci 77492), iron oxides (ci 77499), bismuth oxychloride (ci 77163), blue 1 lake (ci 42090), bronze powder (ci 77400), copper powder (ci 77400), red 6 (ci 15850), red 7 (ci 15850), red 21 (ci 45380), red 27 (ci 45410), red 28 (ci 45410), red 30 (ci 73360), red 33 (ci 17200), red 6 lake (ci 15850), red 7 lake (ci 15850), red 21 lake (ci 45380), red 27 lake (ci 45410), red 28 lake (ci 45410), red 30 lake (ci 73360), red 33 lake (ci 17200), yellow 5 (ci 19140), yellow 5 lake (ci 19140), yellow 6 lake (ci 15985)].",
+    Details:
+      "The MECCA view:Visibly transform your lips with this buttery balm that nourishes, hydrates, conditions, and visibly plumps lips immediately and over time. A blend of nourishing shea butter, avocado oil, and olive oil, combined with our lip injection technology leaves lips looking instantly volumized, noticeably smoother, & perfectly pouty.Key ingredients:A blend of nourishing and conditioning ingredients includes shea butter, avocado oil, and olive oil  Made without:Parabens.Pair it with:Too Faced Lip Injection ExtremeToo Faced Lip Injection Maximum Lip PlumpToo Faced Lip Injection Liquid Lipstick ",
+    Usage:
+      "Apply directly onto clean dry lips using the doe-foot applicator. Lay the doe-foot applicator flat against the lips and apply it in a back-and-forth motion to distribute lip balm evenly.Note: You may experience a slight to intense tingle.  Apply only within perimeter of lips.  If applied on skin, a temporary redness may occur.  If any discomfort is present, remove and discontinue use.  Keep away from children.",
+    Ingredients:
+      "Petrolatum, hydrogenated polyisobutene, bis-diglyceryl polyacyladipate-2, ethylene/propylene/styrene copolymer, polyethylene, octyldodecanol, silica, tocopheryl acetate, sodium hyaluronate, glycine soja (soybean) oil, persea gratissima (avocado) oil, ricinus communis (castor) seed oil, butyrospermum parkii (shea) butter, capsicum frutescens fruit extract, zingiber officinale (ginger) root oil, olea europaea (olive) fruit oil, hydrogenated castor oil, menthol, vanillyl butyl ether, cholesterol, phytosterols, menthoxypropanediol, polydecene, c12-15 alkyl benzoate, sorbitan oleate, tin oxide, triethoxycaprylylsilane, butylene/ethylene/styrene copolymer, synthetic fluorphlogopite, vp/hexadecene copolymer, saccharin, flavor (aroma), bht, tetrahexyldecyl ascorbate,  [+/- mica, titanium dioxide (ci 77891), iron oxides (ci 77491), iron oxides (ci 77492), iron oxides (ci 77499), bismuth oxychloride (ci 77163), blue 1 lake (ci 42090), bronze powder (ci 77400), copper powder (ci 77400), red 6 (ci 15850), red 7 (ci 15850), red 21 (ci 45380), red 27 (ci 45410), red 28 (ci 45410), red 30 (ci 73360), red 33 (ci 17200), red 6 lake (ci 15850), red 7 lake (ci 15850), red 21 lake (ci 45380), red 27 lake (ci 45410), red 28 lake (ci 45410), red 30 lake (ci 73360), red 33 lake (ci 17200), yellow 5 (ci 19140), yellow 5 lake (ci 19140), yellow 6 lake (ci 15985)].",
     reviews: [],
     key_ingredients: {
-      "A blend of nourishing and conditioning ingredients includes shea butter, avocado oil, and olive oil": "",
+      "A blend of nourishing and conditioning ingredients includes shea butter, avocado oil, and olive oil":
+        "",
     },
   },
   {
@@ -923,19 +996,28 @@ export const productsMock = [
     id: 18,
     brand_name: "HOURGLASS",
     prod_name: "Equilibrium Biomimetic Skin Active Serum",
-    prod_link: "https://www.meccabeauty.co.nz/hourglass/equilibrium-biomimetic-skin-active-serum/V-020478.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/hourglass/equilibrium-biomimetic-skin-active-serum/V-020478.html?cgpath=skincare",
     price: "$562.00",
-    category: "HomeSkin CareTreatmentOils & SerumsEquilibrium Biomimetic Skin Active Serum",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw92792d82/product/hour/hr/i-020478-equilibrium-biomimetic-skin-1-940.jpg",
+    category:
+      "HomeSkin CareTreatmentOils & SerumsEquilibrium Biomimetic Skin Active Serum",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw92792d82/product/hour/hr/i-020478-equilibrium-biomimetic-skin-1-940.jpg",
     Benefits: "Cruelty-freeHydrating",
-    Details: "The MECCA view:Created using an ultrasonication process that allows ingredients to be delivered at their most optimal level, this powerful night treatment works to refine texture, re-balance skin, target facial wrinkles and improve tone dramatically. The luxe formula is stored in a Miron violet glass to help protect ingredients and preserve their potency whilst a plant-derived youth lipid encourages cell generation for radiant, younger-looking skin. Key ingredients:Plant-derived phosphatidylglycerol: a bio-identical version the lipid naturally found in the human body, promotes skin cell regeneration and helps defend against the visible signs of ageing.Hyaluronic acid: a powerful humectant that draws moisture into the skin for a smooth, plump complexion.Squalane: reinforces the skin’s natural barrier, reducing moisture loss and improving overall hydration.Made without:Animal products, parabens, oil, synthetic fragrances and nanoparticles.Pair it with:La Mer Crème de la MerMecca Cosmetica To Save Face SPF50+ SuperscreenHourglass No. 28 Primer Serum",
-    Usage: "Massage or press into clean, dry skin until fully absorbed. For optimum results, exfoliate three times a week for the first two weeks of use. Designed for use in the evening only.",
-    Ingredients: "Water (aqua), dicaprylyl ether,squalane, glycerin,propanediol, polyglyceryl-3 oleate, polyglyceryl-lq mono/did eate, 3-0-ethyl ascorbic acid, angelica polymorpha sinensis root extract, squalane, tocopheryl acetate, dunaliella salina extract, hydrogenated polydecene, glycine soja (soybean) sterols, glyceryl cocoate, caprylyl glycol, behenyl behenate, cetyl alcohol, phenoxyethanol, glycerin,xanthan gum, hexylene glycol, cetyl hydroxyethylcellulose, phosphatidylglycerol, disodium edta, sodium hyaluronate.",
+    Details:
+      "The MECCA view:Created using an ultrasonication process that allows ingredients to be delivered at their most optimal level, this powerful night treatment works to refine texture, re-balance skin, target facial wrinkles and improve tone dramatically. The luxe formula is stored in a Miron violet glass to help protect ingredients and preserve their potency whilst a plant-derived youth lipid encourages cell generation for radiant, younger-looking skin. Key ingredients:Plant-derived phosphatidylglycerol: a bio-identical version the lipid naturally found in the human body, promotes skin cell regeneration and helps defend against the visible signs of ageing.Hyaluronic acid: a powerful humectant that draws moisture into the skin for a smooth, plump complexion.Squalane: reinforces the skin’s natural barrier, reducing moisture loss and improving overall hydration.Made without:Animal products, parabens, oil, synthetic fragrances and nanoparticles.Pair it with:La Mer Crème de la MerMecca Cosmetica To Save Face SPF50+ SuperscreenHourglass No. 28 Primer Serum",
+    Usage:
+      "Massage or press into clean, dry skin until fully absorbed. For optimum results, exfoliate three times a week for the first two weeks of use. Designed for use in the evening only.",
+    Ingredients:
+      "Water (aqua), dicaprylyl ether,squalane, glycerin,propanediol, polyglyceryl-3 oleate, polyglyceryl-lq mono/did eate, 3-0-ethyl ascorbic acid, angelica polymorpha sinensis root extract, squalane, tocopheryl acetate, dunaliella salina extract, hydrogenated polydecene, glycine soja (soybean) sterols, glyceryl cocoate, caprylyl glycol, behenyl behenate, cetyl alcohol, phenoxyethanol, glycerin,xanthan gum, hexylene glycol, cetyl hydroxyethylcellulose, phosphatidylglycerol, disodium edta, sodium hyaluronate.",
     reviews: [],
     key_ingredients: {
-      "Plant-derived phosphatidylglycerol": " a bio-identical version the lipid naturally found in the human body, promotes skin cell regeneration and helps defend against the visible signs of ageing",
-      "Hyaluronic acid": " a powerful humectant that draws moisture into the skin for a smooth, plump complexion",
-      Squalane: " reinforces the skin’s natural barrier, reducing moisture loss and improving overall hydration",
+      "Plant-derived phosphatidylglycerol":
+        " a bio-identical version the lipid naturally found in the human body, promotes skin cell regeneration and helps defend against the visible signs of ageing",
+      "Hyaluronic acid":
+        " a powerful humectant that draws moisture into the skin for a smooth, plump complexion",
+      Squalane:
+        " reinforces the skin’s natural barrier, reducing moisture loss and improving overall hydration",
     },
   },
   {
@@ -943,17 +1025,24 @@ export const productsMock = [
     id: 19,
     brand_name: "Bobbi Brown",
     prod_name: "Primed for Winter Vitamin Enriched Set",
-    prod_link: "https://www.meccabeauty.co.nz/bobbi-brown/primed-for-winter-vitamin-enriched-set/I-051864.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/bobbi-brown/primed-for-winter-vitamin-enriched-set/I-051864.html?cgpath=skincare",
     price: "$140.00",
-    category: "HomeSkin CareSkin Care PacksPrimed for Winter Vitamin Enriched Set",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw42ab8e8e/product/bobbi/hr/i-051864-primed-for-winter-vitamin-enriched-set-1-940.jpg",
+    category:
+      "HomeSkin CareSkin Care PacksPrimed for Winter Vitamin Enriched Set",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw42ab8e8e/product/bobbi/hr/i-051864-primed-for-winter-vitamin-enriched-set-1-940.jpg",
     Benefits: "Sulphate-freeParaben-free",
-    Details: "Set value:Set valued at $173 AUD/$205 NZDThe MECCA view:Bobbi Brown's bestselling multivitamin primer and moisturizer for face meets its partner in prime for fresh, makeup-ready skin. Vitamin Enriched Face Base instantly smooths, plumps, and preps skin for foundation with healthy hydration, while Vitamin Enriched Eye Base wakes up eyes by hydrating, brightening, de-puffing, and softening the look of fine, dry lines. Even more: Soothe and revive your eye area with the Eye Mask, designed to be cooled and applied to the lids.Includes:Vitamin Enriched Face BaseVitamin Enriched Eye BaseEye MaskKey ingredients:Nourishing vitamin blend: nourishes, smooths, and softens skin to wake up your look.Hyaluronic Acid and Shea Butter: hydrate, cushion, and plump skin with moisture for a healthy glow.Made without:Parabens, phthalates, sulfates, gluten.Pair it with:Bobbi Brown Hydrating Face CreamBobbi Brown Instant Full Cover Concealer",
-    Usage: "After cleansing skin, smooth Vitamin Enriched Face Base all over face, and then gently tap Vitamin Enriched Eye Base directly onto the undereye area. Use Eye Mask after cleansing to calm and soothe eye area.",
+    Details:
+      "Set value:Set valued at $173 AUD/$205 NZDThe MECCA view:Bobbi Brown's bestselling multivitamin primer and moisturizer for face meets its partner in prime for fresh, makeup-ready skin. Vitamin Enriched Face Base instantly smooths, plumps, and preps skin for foundation with healthy hydration, while Vitamin Enriched Eye Base wakes up eyes by hydrating, brightening, de-puffing, and softening the look of fine, dry lines. Even more: Soothe and revive your eye area with the Eye Mask, designed to be cooled and applied to the lids.Includes:Vitamin Enriched Face BaseVitamin Enriched Eye BaseEye MaskKey ingredients:Nourishing vitamin blend: nourishes, smooths, and softens skin to wake up your look.Hyaluronic Acid and Shea Butter: hydrate, cushion, and plump skin with moisture for a healthy glow.Made without:Parabens, phthalates, sulfates, gluten.Pair it with:Bobbi Brown Hydrating Face CreamBobbi Brown Instant Full Cover Concealer",
+    Usage:
+      "After cleansing skin, smooth Vitamin Enriched Face Base all over face, and then gently tap Vitamin Enriched Eye Base directly onto the undereye area. Use Eye Mask after cleansing to calm and soothe eye area.",
     reviews: [],
     key_ingredients: {
-      "Nourishing vitamin blend": " nourishes, smooths, and softens skin to wake up your look",
-      "Hyaluronic Acid and Shea Butter": " hydrate, cushion, and plump skin with moisture for a healthy glow",
+      "Nourishing vitamin blend":
+        " nourishes, smooths, and softens skin to wake up your look",
+      "Hyaluronic Acid and Shea Butter":
+        " hydrate, cushion, and plump skin with moisture for a healthy glow",
     },
   },
   {
@@ -961,18 +1050,24 @@ export const productsMock = [
     id: 20,
     brand_name: "AMOREPACIFIC",
     prod_name: "Botanical Soothing Toner.",
-    prod_link: "https://www.meccabeauty.co.nz/amorepacific/botanical-soothing-toner/I-044684.html?cgpath=skincare",
+    prod_link:
+      "https://www.meccabeauty.co.nz/amorepacific/botanical-soothing-toner/I-044684.html?cgpath=skincare",
     price: "$153.00",
     category: "HomeSkin CareCleanser & TonerTonerBotanical Soothing Toner.",
-    img_link: "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw7c903133/product/amore/hr/i-044684-botanical-soothing-toner-1-940.jpg",
+    img_link:
+      "https://www.meccabeauty.co.nz/on/demandware.static/-/Sites-mecca-online-catalog/default/dw7c903133/product/amore/hr/i-044684-botanical-soothing-toner-1-940.jpg",
     Benefits: "Hydrating",
-    Details: "The MECCA view:A lightweight toner that hydrates, calms, purifies and helps to fortify skin's moisture barrier. Designed to be used after cleansing, this gentle toner works to deeply nourish and moisturise skin, retaining water and improving it's moisture barrier. Key ingredients:King bamboo sap: deeply moisturise and helps skin retain water.Pair it with:AMOREPACIFIC Cleansing OilAMOREPACIFIC Cleansing FoamAMOREPACIFIC Time Response Skin Reserve Creme",
-    Usage: "Can be used daily, morning and night. Pour desired amount onto cotton pad or hand and sweep over face and neck.Precautions:For external use onlyWhen using this product, keep out of eyes. Rinse with water to remove. Stop use and ask doctor if rash or irritation develops or lasts. Keep out of reach of children. If swallowed, get medical help.",
-    Ingredients: "water / aqua / eau, butylene glycol, panthenol, dipropylene glycol, 1,2-hexanediol, phyllostachys bambusoides juice, ppg-13-decyltetradeceth- 24, xanthan gum, sodium citrate, alcohol, fragrance / parfum, ethylhexylglycerin, citric acid, disodium edta, hyaluronic acid, linalool, limonene, gossypium herbaceum (cotton) extract, phenoxyethanol, geraniol, butylphenyl methylpropional, hydroxycitronellal, citronellol, malachite extract, tocopherol",
+    Details:
+      "The MECCA view:A lightweight toner that hydrates, calms, purifies and helps to fortify skin's moisture barrier. Designed to be used after cleansing, this gentle toner works to deeply nourish and moisturise skin, retaining water and improving it's moisture barrier. Key ingredients:King bamboo sap: deeply moisturise and helps skin retain water.Pair it with:AMOREPACIFIC Cleansing OilAMOREPACIFIC Cleansing FoamAMOREPACIFIC Time Response Skin Reserve Creme",
+    Usage:
+      "Can be used daily, morning and night. Pour desired amount onto cotton pad or hand and sweep over face and neck.Precautions:For external use onlyWhen using this product, keep out of eyes. Rinse with water to remove. Stop use and ask doctor if rash or irritation develops or lasts. Keep out of reach of children. If swallowed, get medical help.",
+    Ingredients:
+      "water / aqua / eau, butylene glycol, panthenol, dipropylene glycol, 1,2-hexanediol, phyllostachys bambusoides juice, ppg-13-decyltetradeceth- 24, xanthan gum, sodium citrate, alcohol, fragrance / parfum, ethylhexylglycerin, citric acid, disodium edta, hyaluronic acid, linalool, limonene, gossypium herbaceum (cotton) extract, phenoxyethanol, geraniol, butylphenyl methylpropional, hydroxycitronellal, citronellol, malachite extract, tocopherol",
     reviews: [],
     key_ingredients: {
       "King bamboo sap": " deeply moisturise and helps skin retain water",
-      "Pair it with": "AMOREPACIFIC Cleansing OilAMOREPACIFIC Cleansing FoamAMOREPACIFIC Time Response Skin Reserve Creme",
+      "Pair it with":
+        "AMOREPACIFIC Cleansing OilAMOREPACIFIC Cleansing FoamAMOREPACIFIC Time Response Skin Reserve Creme",
     },
   },
 ];
@@ -1020,8 +1115,7 @@ export const reviewsMock = [
     name: " Tess9",
     age: "  Age 45 to 54",
     title: "  Beautiful hydrating cleanser",
-    review_text:
-      "  Smooth and gentle on the skin yet washes away impurities",
+    review_text: "  Smooth and gentle on the skin yet washes away impurities",
     rating: "5 out of 5 stars.",
     "review date": "  · 12 days ago  ",
     "country name": "  Sydney",
@@ -1036,11 +1130,7 @@ export const reviewsMock = [
     rating: "5 out of 5 stars.",
     "review date": "  · 13 days ago  ",
     "country name": "  Australia",
-    labels: [
-      "smoothed skin",
-      "days (positive)",
-      "shine/bright/glow/lumi/rad",
-    ],
+    labels: ["smoothed skin", "days (positive)", "shine/bright/glow/lumi/rad"],
   },
   {
     name: " GeorgiaCN",
@@ -1389,11 +1479,7 @@ export const reviewsMock = [
     rating: "5 out of 5 stars.",
     "review date": "  · a month ago  ",
     "country name": "  Australia",
-    labels: [
-      "cleared skin",
-      "weeks (positive)",
-      "shine/bright/glow/lumi/rad",
-    ],
+    labels: ["cleared skin", "weeks (positive)", "shine/bright/glow/lumi/rad"],
   },
   {
     name: " Stac222",

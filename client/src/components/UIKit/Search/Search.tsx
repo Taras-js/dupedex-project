@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import { useCallback } from "react";
-import styles from "./Search.module.css";
+import React, { useCallback, useEffect, useRef } from "react";
+
 import { Icon } from "../Icon";
 import ModalComponent from "./modalComponent";
 import ResultItem from "./ResultItem";
+
+import styles from "./Search.module.css";
 
 export interface Results {
   id?: number;
@@ -14,19 +16,47 @@ export interface Results {
 
 export interface SearchProps {
   placeholder?: string;
+  isOpen?: boolean;
   results?: Results[];
   withDebounce: Function;
+  idProducts?: number[];
   onChange?: (e: React.ChangeEvent) => void;
+  onClickResult?: (number) => void;
 }
 
 const Search: React.FC<SearchProps> = (props: SearchProps) => {
   const {
-    results, placeholder, withDebounce, onChange,
+    results,
+    placeholder,
+    withDebounce,
+    onChange,
+    onClickResult,
+    isOpen = false,
+    idProducts,
   } = props;
 
   const optimized = useCallback(withDebounce(onChange), []);
+  const {
+    clickedOutside,
+    myRef,
+    handleClickInside,
+    clickItem,
+    setClickItem,
+    setClickedOutside,
+  } = ModalComponent();
 
-  const { clickedOutside, myRef, handleClickInside } = ModalComponent(false);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    setClickedOutside(false);
+    inputRef.current.value = "";
+  }, [clickItem]);
+
+  useEffect(() => {
+    setClickItem(false);
+    inputRef.current.focus();
+    handleClickInside();
+  }, [isOpen]);
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
@@ -38,6 +68,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     >
       <form className={styles.search__form}>
         <input
+          ref={inputRef}
           className={styles.search__input}
           type="text"
           placeholder={placeholder}
@@ -55,11 +86,14 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
         {results
           && results.map((result) => (
             <ResultItem
+              onClick={onClickResult}
               key={result.id}
               title={result.title}
               subtitle={result.subtitle}
               image={result.image}
               id={result.id}
+              idProducts={idProducts}
+              setClickItem={setClickItem}
             />
           ))}
       </div>

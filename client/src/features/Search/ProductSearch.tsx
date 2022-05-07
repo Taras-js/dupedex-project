@@ -1,16 +1,46 @@
 import { useEffect, useState } from "react";
-import { useAppSelector } from "../../app/hooks";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import Search, { Results } from "../../components/UIKit/Search/Search";
 import { debounce } from "../../utils/helper";
 import { getProductBySearch } from "./SearchSelector";
+import {
+  addIdItem,
+  showItem,
+  toggleAddItemToList,
+} from "../../components/ToolbarContainer/toolbarSlice";
+import {
+  searchesState,
+  setProducts,
+  setReviews,
+} from "../../components/ProductContainer/productSlice";
+
+import { randomReviewsMock } from "../../shared/mocks/setMock";
 
 import styles from "./productSearch.module.css";
-import { searchesState } from "./productSlice";
 
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>("");
   const [result, setResult] = useState<Results[]>();
+  const dispatch = useAppDispatch();
 
+  const isAddItemtolist = useAppSelector(
+    (state) => state.toolbar.isAddItemToList,
+  );
+  const productsIdList = useAppSelector(
+    (state) => state.toolbar.idItemsOnScreen,
+  );
+
+  const onClickResult = (id) => {
+    dispatch(setProducts([id]));
+    dispatch(setReviews({ id, reviews: randomReviewsMock() }));
+    if (isAddItemtolist) {
+      dispatch(addIdItem(id));
+    } else {
+      dispatch(showItem([id]));
+    }
+    dispatch(toggleAddItemToList());
+    setSearch("");
+  };
   const searches = useAppSelector(searchesState);
 
   const handleChange = (e) => {
@@ -23,14 +53,16 @@ const ProductSearch = () => {
   }, [search]);
 
   return (
-    <div className={styles.product__search}>
-      <Search
-        onChange={handleChange}
-        placeholder="Look for a skincare product name, brand name and etc."
-        results={result}
-        withDebounce={debounce}
-      />
-    </div>
+    // eslint-disable-next-line react/react-in-jsx-scope
+    <Search
+      idProducts={productsIdList}
+      onChange={handleChange}
+      placeholder="Look for a skincare product name, brand name and etc."
+      results={result}
+      withDebounce={debounce}
+      onClickResult={onClickResult}
+      isOpen={isAddItemtolist}
+    />
   );
 };
 

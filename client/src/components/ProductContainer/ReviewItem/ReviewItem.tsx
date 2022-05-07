@@ -1,10 +1,10 @@
-import { toggleReviews } from "../../ToolbarContainer/toolbarSlice";
 import { Button, Icon } from "../../UIKit";
-
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 
+import { toggleReviews } from "../../ToolbarContainer/toolbarSlice";
+import { reviewsState } from "../productSlice";
+
 import styles from "./reviewItem.module.css";
-import { reviewsState } from "../../../features/Search/productSlice";
 
 interface ReviewProps {
   id: number;
@@ -23,7 +23,8 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
     <div className={styles.review__container}>
       <h3>Review</h3>
       {reviews
-        .find((item) => item.id === id)?.reviews.filter((review, index) => index < 7)
+        .find((item) => item.id === id)
+        ?.reviews.filter((review, index) => index < 7)
         .map((review) => (
           <p key={review.name} className={styles.review__text}>
             {review.review_text}

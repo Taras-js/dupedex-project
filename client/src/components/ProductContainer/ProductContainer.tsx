@@ -1,11 +1,12 @@
-import { Panel } from "../UIKit";
-import { ProductItem } from "./ProductItem";
-import { ReviewItem } from "./ReviewItem";
-
 import { getCardSize } from "../../utils/helper";
 import { useAppSelector } from "../../app/hooks";
 import { toolbarState } from "../ToolbarContainer/toolbarSlice";
-import { productsState } from "../../features/Search/productSlice";
+import { productsState } from "./productSlice";
+
+import { Panel } from "../UIKit";
+import { ProductItem } from "./ProductItem";
+import { ReviewItem } from "./ReviewItem";
+import { AddProductButton } from "../../features/AddProductButton";
 
 import styles from "./productContainer.module.css";
 
@@ -37,6 +38,8 @@ const ProductContainer: React.FC = () => {
           <ReviewItem id={idCurrentItem} />
         </Panel>
       )}
+
+      {productList.length < 4 && <AddProductButton />}
     </div>
   );
 };

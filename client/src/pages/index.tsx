@@ -2,16 +2,16 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect } from "react";
 
-import ProductSearch from "../features/Search/ProductSearch";
 import {
   Layout, LayoutRow, LayoutItem, Panel,
 } from "../components/UIKit";
 import { ProductContainer } from "../components/ProductContainer";
 import { ToolbarContainer } from "../components/ToolbarContainer";
+import { useAppDispatch } from "../app/hooks";
+import ProductSearch from "../features/Search/ProductSearch";
 import { LibraryContainer } from "../components/LibraryContainer";
 
 import { setMockProduct } from "../shared/mocks/setMock";
-import { useAppDispatch } from "../app/hooks";
 
 const IndexPage: NextPage = () => {
   const dispatch = useAppDispatch();
@@ -25,7 +25,6 @@ const IndexPage: NextPage = () => {
       <Head>
         <title>dupedex | Skincare reviews App</title>
       </Head>
-
       <Layout>
         <LayoutRow rowHeight={54} noResize>
           <LayoutItem itemWidth={1}>

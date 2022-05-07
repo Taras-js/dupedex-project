@@ -1,38 +1,44 @@
+import React from "react";
+
 import styles from "./resultItem.module.css";
-import { useAppDispatch } from "../../../app/hooks";
-import { showItem } from "../../ToolbarContainer/toolbarSlice";
-import { setProducts, setReviews } from "../../../features/Search/productSlice";
-import { randomReviewsMock } from "../../../shared/mocks/setMock";
 
 interface ResultItemProps {
   id: number;
   title?: string;
   subtitle?: string;
   image?: string;
+  idProducts: number[];
+  onClick?: (number) => void;
+  setClickItem?: (boolean) => void;
 }
 
 const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
   const {
-    title,
-    subtitle,
-    image,
-    id,
+    title, subtitle, image, id, onClick, idProducts, setClickItem,
   } = props;
-
-  const dispatch = useAppDispatch();
 
   const handleClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    dispatch(setProducts([id]));
-    dispatch(setReviews({ id, reviews: randomReviewsMock() }));
-    dispatch(showItem([id]));
+    setClickItem(true);
+    onClick(id);
   };
+  const product = idProducts
+    ? idProducts.find((productId) => productId === id)
+    : 0;
+
   return (
-    <button onClick={handleClick} className={styles.search__item}>
-      {image && <img src={image} alt={title} className={styles.search__image} />}
+    <button
+      disabled={!!product}
+      onClick={handleClick}
+      className={styles.search__item}
+    >
       <p className={styles.search__title}>{`${title} `}</p>
-      <p className={styles.search__subtitle}>{` - ${subtitle} (meccabeauty.co.nz)`}</p>
+      <p
+        className={styles.search__subtitle}
+      >
+        {` - ${subtitle} (meccabeauty.co.nz)`}
+      </p>
     </button>
   );
 };

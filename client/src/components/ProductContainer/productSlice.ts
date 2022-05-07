@@ -8,13 +8,13 @@ interface ProductState {
   products: any[];
   idReviewsSaved: number[];
   reviews: {
-    id: number,
-    reviews: any[]
+    id: number;
+    reviews: any[];
   }[];
   searches: {
-    id: number,
-    title: string,
-    subtitle: string
+    id: number;
+    title: string;
+    subtitle: string;
   }[];
 }
 
@@ -35,21 +35,29 @@ export const productSlice = createSlice({
         (id) => !state.idProductsSaved.includes(id),
       );
 
-      const newProducts = productsMock.filter(
-        (product) => idNew.includes(product.id),
-      );
+      const newProducts = productsMock.filter((product) => idNew.includes(product.id));
 
       state.idProductsSaved.push(...idNew);
       state.products.push(...newProducts);
     },
 
-    setReviews(state, action: { type: ""; payload: { id: number, reviews: any[] } }) {
+    setReviews(
+      state,
+      action: { type: ""; payload: { id: number; reviews: any[] } },
+    ) {
       if (state.idReviewsSaved.includes(action.payload.id)) return;
 
       state.idReviewsSaved.push(action.payload.id);
       state.reviews.push(action.payload);
     },
-    setSearches(state, action: { type: ""; payload: { id: number, title: string, subtitle: string }[] }) {
+
+    setSearches(
+      state,
+      action: {
+        type: "";
+        payload: { id: number; title: string; subtitle: string }[];
+      },
+    ) {
       state.searches.push(...action.payload);
     },
   },
