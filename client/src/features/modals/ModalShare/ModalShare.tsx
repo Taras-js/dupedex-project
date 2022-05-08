@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./modalShare.module.css";
 import { Button, Icon } from "../../../components/UIKit";
 import { useAppSelector } from "../../../app/hooks";
@@ -7,18 +7,24 @@ import { FacebookShareButton } from "react-share";
 
 const ModalShare: React.FC = () => {
   const product = useAppSelector(productState);
+  const [copyURL, setCopyURL] = useState("http://dupedex.co")
 
-  const onShareClick = (): void => {
+  useEffect(() => {
+    let domen = window.location.origin + "/products?ids=";
+    let urlCopy = product.itemsIdList.reduce(
+      (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
+      domen
+    );
+    setCopyURL(urlCopy.includes("localhost") ? "http://dupedex.co" : urlCopy)
+  }, [])
+
+  const onShareClick = () => {
     let domen = window.location.origin + "/products?ids=";
     let urlCopy = product.itemsIdList.reduce(
       (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
       domen
     );
     navigator.clipboard.writeText(urlCopy);
-  };
-
-  const onMessageClick = () => {
-    console.log("onMessageClick click");
   };
 
   return (
@@ -40,11 +46,10 @@ const ModalShare: React.FC = () => {
           icon
           isDisabled={false}
           className={"btn"}
-          onClick={onShareClick}
         >
           <FacebookShareButton
-            quote={"http://dupedex.co"}
-            url={"http://dupedex.co"}
+            quote={copyURL}
+            url={copyURL}
           >
             <div className={styles.modal__content_message}>
               <Icon
