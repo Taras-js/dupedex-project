@@ -33,11 +33,7 @@ const ProductSearch = () => {
   const onClickResult = (id) => {
     dispatch(setProducts([id]));
     dispatch(setReviews({ id, reviews: randomReviewsMock() }));
-    if (isAddItemtolist) {
-      dispatch(addIdItem(id));
-    } else {
-      dispatch(showItem([id]));
-    }
+    dispatch(addIdItem(id));
     dispatch(toggleAddItemToList());
     setSearch("");
   };
