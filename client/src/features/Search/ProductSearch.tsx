@@ -5,7 +5,6 @@ import { debounce } from "../../utils/helper";
 import { getProductBySearch } from "./SearchSelector";
 import {
   addIdItem,
-  showItem,
   toggleAddItemToList,
 } from "../../components/ToolbarContainer/toolbarSlice";
 import {
@@ -15,8 +14,6 @@ import {
 } from "../../components/ProductContainer/productSlice";
 
 import { randomReviewsMock } from "../../shared/mocks/setMock";
-
-import styles from "./productSearch.module.css";
 
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>("");
@@ -33,11 +30,7 @@ const ProductSearch = () => {
   const onClickResult = (id) => {
     dispatch(setProducts([id]));
     dispatch(setReviews({ id, reviews: randomReviewsMock() }));
-    if (isAddItemtolist) {
-      dispatch(addIdItem(id));
-    } else {
-      dispatch(showItem([id]));
-    }
+    dispatch(addIdItem(id));
     dispatch(toggleAddItemToList());
     setSearch("");
   };
