@@ -1,21 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./modalShare.module.css";
 import { Button, Icon } from "../../../components/UIKit";
 import { useAppSelector } from "../../../app/hooks";
 import { productState } from "../../../components/ToolbarContainer/toolbarSlice";
+import { FacebookShareButton } from "react-share";
 
 const ModalShare: React.FC = () => {
   const product = useAppSelector(productState);
 
-  const onShareClick = () => {
+  const onShareClick = (): void => {
     let domen = window.location.origin + "/products?ids=";
     let urlCopy = product.itemsIdList.reduce(
       (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
       domen
     );
     navigator.clipboard.writeText(urlCopy);
-
-    console.log("onShareClick click");
   };
 
   const onMessageClick = () => {
@@ -37,17 +36,26 @@ const ModalShare: React.FC = () => {
             Copy URL
           </div>
         </Button>
-
         <Button
           icon
           isDisabled={false}
           className={"btn"}
-          onClick={onMessageClick}
+          onClick={onShareClick}
         >
-          <div className={styles.modal__content_message}>
-            <Icon type="messenger" width={55} height={49} color={"#000"}></Icon>
-            Messenger
-          </div>
+          <FacebookShareButton
+            quote={"http://dupedex.co"}
+            url={"http://dupedex.co"}
+          >
+            <div className={styles.modal__content_message}>
+              <Icon
+                type="messenger"
+                width={55}
+                height={49}
+                color={"#000"}
+              ></Icon>
+              Messenger
+            </div>
+          </FacebookShareButton>
         </Button>
       </div>
     </div>
