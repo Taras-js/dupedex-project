@@ -1,5 +1,8 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useCallback, useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { cls } from "../../../utils/helper";
+import { setSearchBarBlurred } from "../../ToolbarContainer/toolbarSlice";
 
 import { Icon } from "../Icon";
 import ModalComponent from "./modalComponent";
@@ -16,7 +19,7 @@ export interface Results {
 
 export interface SearchProps {
   placeholder?: string;
-  isOpen?: boolean;
+  isFocused?: boolean;
   results?: Results[];
   withDebounce: Function;
   idProducts?: number[];
@@ -31,7 +34,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     withDebounce,
     onChange,
     onClickResult,
-    isOpen = false,
+    isFocused = false,
     idProducts,
   } = props;
 
@@ -56,14 +59,16 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     setClickItem(false);
     inputRef.current.focus();
     handleClickInside();
-  }, [isOpen]);
+  }, [isFocused]);
+
+  const searchClass = cls(styles, "search", { focused: isFocused });
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div
       onClick={handleClickInside}
       ref={myRef}
-      className={styles.search}
+      className={searchClass}
       role="button"
     >
       <form className={styles.search__form}>
@@ -76,6 +81,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
         />
         <Icon type="search" width={25} height={25} />
       </form>
+
       <div
         className={
           clickedOutside

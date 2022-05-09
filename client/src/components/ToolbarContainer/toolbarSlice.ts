@@ -9,7 +9,7 @@ import { itemsIdProductsMock } from "../../shared/mocks/consts";
 export interface ToolbarState extends ToolbarContent {
   history: ToolbarContent[];
   historyStep: number;
-  isAddItemToList: boolean;
+  isSearchBarFocused: boolean;
 }
 
 const initialState: ToolbarState = {
@@ -26,7 +26,7 @@ const initialState: ToolbarState = {
     },
   ],
   historyStep: 1,
-  isAddItemToList: false,
+  isSearchBarFocused: false,
 };
 
 const saveStep = (state: ToolbarState) => {
@@ -77,8 +77,11 @@ export const toolbarSlice = createSlice({
       state.isReviewShown = !state.isReviewShown;
       saveStep(state);
     },
-    toggleAddItemToList(state) {
-      state.isAddItemToList = !state.isAddItemToList;
+    setSearchBarFocused(state) {
+      state.isSearchBarFocused = true;
+    },
+    setSearchBarBlurred(state) {
+      state.isSearchBarFocused = false;
     },
     getHistoryStep: (state, action: { type: ""; payload: 1 | -1 }) => {
       state.historyStep += action.payload;
@@ -103,7 +106,8 @@ export const {
   removeItem,
   setFilter,
   toggleReviews,
-  toggleAddItemToList,
+  setSearchBarFocused,
+  setSearchBarBlurred,
   getHistoryStep,
 } = toolbarSlice.actions;
 
