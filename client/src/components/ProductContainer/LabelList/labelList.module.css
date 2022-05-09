@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  font-size: var(--label-font-size);
 }
 
 .labels__list.large,
@@ -35,4 +36,29 @@
 
 .noReviews {
   text-align: center;
+}
+
+@media screen and (max-width: 1600px) {
+  .labels__list.small {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .labels__list.small > li {
+    width: 48%;
+  }
+  .labels__list.small > li:nth-child(2n+1) {
+    margin-right: 2%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .labels__list.medium {
+    flex-flow: row wrap;
+  }
+  .labels__list.medium > li {
+    min-height: 30px;
+    width: 47%;
+    margin-bottom: 5px;
+    padding: 7px;
+  }
 }

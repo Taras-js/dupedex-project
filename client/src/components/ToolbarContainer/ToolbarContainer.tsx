@@ -130,7 +130,7 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Tooltip placement="bottom" title="redo">
+      <Tooltip title="redo">
         <Button
           icon
           className={onGetNextStepClassName}
@@ -153,21 +153,25 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Button
-        icon
-        className={onFilterPositiveClassName}
-        onClick={onFilterPositive}
-      >
-        <Icon type="positiveReviews" width={28} height={28} />
-      </Button>
+      <Tooltip title="Show only positive reviews">
+        <Button
+          icon
+          className={onFilterPositiveClassName}
+          onClick={onFilterPositive}
+        >
+          <Icon type="positiveReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
-      <Button
-        icon
-        className={onFilterNegativeClassName}
-        onClick={onFilterNegative}
-      >
-        <Icon type="negativeReviews" width={28} height={28} />
-      </Button>
+      <Tooltip title="Show only negative reviews">
+        <Button
+          icon
+          className={onFilterNegativeClassName}
+          onClick={onFilterNegative}
+        >
+          <Icon type="negativeReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Button
         icon

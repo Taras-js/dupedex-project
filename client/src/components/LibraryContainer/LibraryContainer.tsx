@@ -3,7 +3,6 @@ import { LibraryItem } from "./LibraryItem";
 import { Button, Icon, ScrollPanel } from "../UIKit";
 import { itemsIdLibraryMock } from "../../shared/mocks/consts";
 import Search from "../UIKit/Search/Search";
-import { libraryMock } from "../../shared/mocks/librarymock";
 
 const LibraryContainer = () => (
   <div className={styles.container}>
@@ -17,7 +16,7 @@ const LibraryContainer = () => (
     <div className={styles.container__wrapper}>
       <div className={styles.search__wrapper}>
         <Search
-          results={libraryMock}
+          results={[]}
           placeholder="Search for routines"
           withDebounce={() => {}}
         />

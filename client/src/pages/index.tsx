@@ -39,10 +39,10 @@ const IndexPage: NextPage = () => {
           </LayoutItem>
         </LayoutRow>
         <LayoutRow rowHeight={700}>
-          <LayoutItem itemWidth={1340}>
+          <LayoutItem itemWidth={1500}>
             <ProductContainer />
           </LayoutItem>
-          <LayoutItem itemWidth={370} noResize>
+          <LayoutItem itemWidth={320} noResize>
             <Panel>
               <LibraryContainer />
             </Panel>
