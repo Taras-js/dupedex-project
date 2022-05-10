@@ -28,7 +28,7 @@ const IndexPage: NextPage = () => {
       <Layout>
         <LayoutRow rowHeight={54} noResize>
           <LayoutItem itemWidth={1}>
-            <Panel>
+            <Panel padding="0px 12px">
               <ProductSearch />
             </Panel>
           </LayoutItem>
