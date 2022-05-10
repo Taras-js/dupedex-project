@@ -4,11 +4,12 @@ import { useDispatch } from "react-redux";
 import { cls } from "../../../utils/helper";
 import { setSearchBarBlurred } from "../../ToolbarContainer/toolbarSlice";
 
-import { Icon } from "../Icon";
 import ModalComponent from "./modalComponent";
-import ResultItem from "./ResultItem";
 
-import styles from "./Search.module.css";
+import { Icon } from "../Icon";
+import { ResultItem } from "./ResultItem";
+
+import styles from "./search.module.css";
 
 export interface Results {
   id?: number;

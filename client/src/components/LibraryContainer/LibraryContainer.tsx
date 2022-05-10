@@ -28,15 +28,6 @@ const LibraryContainer = () => (
         <LibraryItem key={item} id={item} />
       ))}
     </ScrollPanel>
-
-    <Button icon className={styles.close_btn} onClick={() => {}}>
-      <Icon
-        type="exit"
-        width={18}
-        height={18}
-        color="var(--color-cross-grey)"
-      />
-    </Button>
   </div>
 );
 

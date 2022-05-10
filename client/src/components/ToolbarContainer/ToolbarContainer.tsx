@@ -181,7 +181,11 @@ const ToolbarContainer = () => {
         <Icon type="productClaims" width={28} height={28} />
       </Button>
 
-      <Button icon className={onWriteNotesClassName} onClick={onWriteNotes}>
+      <Button
+        icon
+        className={onWriteNotesClassName}
+        onClick={onWriteNotes}
+      >
         <Icon type="writeNotes" width={28} height={28} />
       </Button>
 
@@ -199,7 +203,11 @@ const ToolbarContainer = () => {
       </Tooltip>
 
       <Tooltip title="Save library">
-        <Button icon className={onSaveLibraryClassName} onClick={onSaveLibrary}>
+        <Button
+          icon
+          className={onSaveLibraryClassName}
+          onClick={onSaveLibrary}
+        >
           <Icon type="save" width={28} height={28} />
           <span>Save</span>
         </Button>
