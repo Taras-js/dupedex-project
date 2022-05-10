@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import { useAppDispatch } from "../../../app/hooks";
+import { setSearchBarBlurred } from "../../ToolbarContainer/toolbarSlice";
 
 export default function ModalComponent() {
   const [clickedOutside, setClickedOutside] = useState(false);
   const myRef = useRef(null);
   const [clickItem, setClickItem] = useState(false);
+
+  const dispatch = useAppDispatch();
 
   const handleClickInside = () => {
     if (!clickItem) setClickedOutside(true);
@@ -13,6 +17,11 @@ export default function ModalComponent() {
     if (!myRef.current.contains(e.target)) {
       setClickedOutside(false);
     }
+  };
+
+  const handleFocus = (e: any) => {
+    if (myRef.current === e.target) dispatch(setSearchBarBlurred());
+    handleClickInside();
   };
 
   useEffect(() => {
@@ -27,5 +36,6 @@ export default function ModalComponent() {
     setClickedOutside,
     setClickItem,
     clickItem,
+    handleFocus,
   };
 }

@@ -33,7 +33,9 @@ const ProductSearch = () => {
     dispatch(setProducts([id]));
     dispatch(setReviews({ id, reviews: randomReviewsMock() }));
 
-    dispatch(addIdItem(id));
+    if (productsIdList.length < 4) {
+      dispatch(addIdItem(id));
+    }
     dispatch(setSearchBarBlurred());
     setSearch("");
   };

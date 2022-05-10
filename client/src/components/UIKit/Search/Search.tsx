@@ -1,14 +1,12 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useCallback, useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { cls } from "../../../utils/helper";
-import { setSearchBarBlurred } from "../../ToolbarContainer/toolbarSlice";
 
 import ModalComponent from "./modalComponent";
 
 import { Icon } from "../Icon";
 import { ResultItem } from "./ResultItem";
 
+import { cls } from "../../../utils/helper";
 import styles from "./search.module.css";
 
 export interface Results {
@@ -47,27 +45,36 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     clickItem,
     setClickItem,
     setClickedOutside,
+    handleFocus,
   } = ModalComponent();
 
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
+  const resetSearch = () => {
     setClickedOutside(false);
     inputRef.current.value = "";
-  }, [clickItem]);
+  };
 
   useEffect(() => {
-    setClickItem(false);
-    inputRef.current.focus();
-    handleClickInside();
+    if (isFocused) {
+      setClickItem(false);
+      inputRef.current.focus();
+      handleClickInside();
+      return;
+    }
+    resetSearch();
   }, [isFocused]);
 
-  const searchClass = cls(styles, "search", { focused: isFocused });
+  useEffect(() => {
+    resetSearch();
+  }, [clickItem]);
+
+  const searchClass = cls(styles, "search", { search_focused: isFocused });
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div
-      onClick={handleClickInside}
+      onClick={handleFocus}
       ref={myRef}
       className={searchClass}
       role="button"
@@ -107,4 +114,4 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     </div>
   );
 };
-export default Search;
+export { Search };
