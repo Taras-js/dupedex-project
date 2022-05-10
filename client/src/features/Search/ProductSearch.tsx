@@ -27,6 +27,8 @@ const ProductSearch = () => {
     (state) => state.toolbar.idItemsOnScreen,
   );
 
+  const placeholder: string = isAddItemtolist ? 'Write type name of product to find and add it' : "Look for a skincare product name, brand name and etc.";
+
   const onClickResult = (id) => {
     dispatch(setProducts([id]));
     dispatch(setReviews({ id, reviews: randomReviewsMock() }));
@@ -50,7 +52,7 @@ const ProductSearch = () => {
     <Search
       idProducts={productsIdList}
       onChange={handleChange}
-      placeholder="Look for a skincare product name, brand name and etc."
+      placeholder={placeholder}
       results={result}
       withDebounce={debounce}
       onClickResult={onClickResult}
