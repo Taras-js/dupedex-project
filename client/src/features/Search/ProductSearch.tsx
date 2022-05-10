@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import Search, { Results } from "../../components/UIKit/Search/Search";
+import { Search, Results } from "../../components/UIKit";
 import { debounce } from "../../utils/helper";
 import { getProductBySearch } from "./SearchSelector";
 import {
@@ -27,7 +27,7 @@ const ProductSearch = () => {
     (state) => state.toolbar.idItemsOnScreen,
   );
 
-  const placeholder: string = isAddItemtolist ? 'Write type name of product to find and add it' : "Look for a skincare product name, brand name and etc.";
+  const placeholder: string = isAddItemtolist ? 'Start typing a brand or product name to find it and add to collection' : "Look for a skincare product name, brand name and etc.";
 
   const onClickResult = (id) => {
     dispatch(setProducts([id]));

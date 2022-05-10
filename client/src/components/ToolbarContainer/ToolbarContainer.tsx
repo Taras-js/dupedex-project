@@ -130,7 +130,7 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Tooltip placement="bottom" title="redo">
+      <Tooltip title="redo">
         <Button
           icon
           className={onGetNextStepClassName}
@@ -153,21 +153,25 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Button
-        icon
-        className={onFilterPositiveClassName}
-        onClick={onFilterPositive}
-      >
-        <Icon type="positiveReviews" width={28} height={28} />
-      </Button>
+      <Tooltip title="Show only positive reviews">
+        <Button
+          icon
+          className={onFilterPositiveClassName}
+          onClick={onFilterPositive}
+        >
+          <Icon type="positiveReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
-      <Button
-        icon
-        className={onFilterNegativeClassName}
-        onClick={onFilterNegative}
-      >
-        <Icon type="negativeReviews" width={28} height={28} />
-      </Button>
+      <Tooltip title="Show only negative reviews">
+        <Button
+          icon
+          className={onFilterNegativeClassName}
+          onClick={onFilterNegative}
+        >
+          <Icon type="negativeReviews" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Button
         icon
@@ -177,7 +181,11 @@ const ToolbarContainer = () => {
         <Icon type="productClaims" width={28} height={28} />
       </Button>
 
-      <Button icon className={onWriteNotesClassName} onClick={onWriteNotes}>
+      <Button
+        icon
+        className={onWriteNotesClassName}
+        onClick={onWriteNotes}
+      >
         <Icon type="writeNotes" width={28} height={28} />
       </Button>
 
@@ -195,7 +203,11 @@ const ToolbarContainer = () => {
       </Tooltip>
 
       <Tooltip title="Save library">
-        <Button icon className={onSaveLibraryClassName} onClick={onSaveLibrary}>
+        <Button
+          icon
+          className={onSaveLibraryClassName}
+          onClick={onSaveLibrary}
+        >
           <Icon type="save" width={28} height={28} />
           <span>Save</span>
         </Button>

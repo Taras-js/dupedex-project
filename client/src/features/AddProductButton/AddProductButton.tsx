@@ -12,7 +12,7 @@ const AddProductButton = () => {
   };
   return (
     <button className={styles.button} onClick={onClickButton}>
-      <Icon type="plus" width={25} height={25} />
+      <Icon type="plus" width={30} height={30} />
     </button>
   );
 };
