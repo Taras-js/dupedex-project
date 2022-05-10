@@ -8,6 +8,10 @@
   background-color: #ffff;
 }
 
+.search__item:disabled {
+  pointer-events: none;
+}
+
 .search__item:hover {
   background-color: #eae8e8;
   box-shadow: #000000;

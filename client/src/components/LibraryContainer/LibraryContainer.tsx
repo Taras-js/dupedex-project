@@ -1,8 +1,9 @@
-import styles from "./librarycontainer.module.css";
 import { LibraryItem } from "./LibraryItem";
-import { Button, Icon, ScrollPanel } from "../UIKit";
+import { Button, ScrollPanel, Search } from "../UIKit";
+
 import { itemsIdLibraryMock } from "../../shared/mocks/consts";
-import Search from "../UIKit/Search/Search";
+
+import styles from "./librarycontainer.module.css";
 
 const LibraryContainer = () => (
   <div className={styles.container}>
@@ -16,7 +17,6 @@ const LibraryContainer = () => (
     <div className={styles.container__wrapper}>
       <div className={styles.search__wrapper}>
         <Search
-          results={[]}
           placeholder="Search for routines"
           withDebounce={() => {}}
         />
