@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useCallback, useEffect, useRef } from "react";
 
-import { Icon } from "../Icon";
 import ModalComponent from "./modalComponent";
-import ResultItem from "./ResultItem";
 
-import styles from "./Search.module.css";
+import { Icon } from "../Icon";
+import { ResultItem } from "./ResultItem";
+
+import styles from "./search.module.css";
 
 export interface Results {
   id?: number;

@@ -1,9 +1,9 @@
-import { getCardSize } from "../../utils/helper";
+import { cls, getCardSize } from "../../utils/helper";
 import { useAppSelector } from "../../app/hooks";
 import { toolbarState } from "../ToolbarContainer/toolbarSlice";
 import { productsState } from "./productSlice";
 
-import { Panel } from "../UIKit";
+import { Panel, Tooltip } from "../UIKit";
 import { ProductItem } from "./ProductItem";
 import { ReviewItem } from "./ReviewItem";
 import { AddProductButton } from "../../features/AddProductButton";
@@ -20,10 +20,15 @@ const ProductContainer: React.FC = () => {
 
   const itemSize = getCardSize(idItemsOnScreen, isReviewShown);
 
+  const containerClass = cls(styles, "product__container", itemSize);
+  const panelClass = cls(styles, "products__panel", itemSize);
+  const addBtnClass = cls(styles, "products__add_button", itemSize);
+
   return (
-    <div className={styles.product__container}>
+    <div className={containerClass}>
+
       {productList.map((item) => (
-        <Panel key={item.id} className={styles.products__panel}>
+        <Panel key={item.id} className={panelClass}>
           <ProductItem
             id={item.id}
             size={itemSize}
@@ -34,12 +39,21 @@ const ProductContainer: React.FC = () => {
       ))}
 
       {productList.length === 1 && isReviewShown && (
-        <Panel padding={16} className={styles.products__panel}>
+        <Panel className={styles.products__panel}>
           <ReviewItem id={idCurrentItem} />
         </Panel>
       )}
 
-      {productList.length < 4 && <AddProductButton />}
+      {productList.length < 4
+        && (
+          <Panel className={addBtnClass}>
+            <Tooltip
+              title="Add a new product"
+            >
+              <AddProductButton />
+            </Tooltip>
+          </Panel>
+        )}
     </div>
   );
 };

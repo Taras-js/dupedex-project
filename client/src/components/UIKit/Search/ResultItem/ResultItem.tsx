@@ -43,4 +43,4 @@ const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
   );
 };
 
-export default ResultItem;
+export { ResultItem };

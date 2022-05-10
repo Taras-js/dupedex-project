@@ -49,8 +49,10 @@
   --header-height: 80px;
   --header-padding: 16px;
 
-  --heading-font-size: 77px;
+  --heading-font-size: 42px;
   --text-font-size: 25px;
+  --link-font-size: 20px;
+  --label-font-size: 16px;
 
   --vertical-gap: 24px;
   --horizontal-gap: 12px;
@@ -115,6 +117,10 @@ img {
 }
 
 @media screen and (max-width: 1600px) {
+  :root {
+    --heading-font-size: 35px;
+    --text-font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -123,9 +129,8 @@ img {
 @media screen and (max-width: 1280px) {
   :root {
     --container-padding: 25px;
-
-    --heading-font-size: 60px;
-    --text-font-size: 20px;
+    --heading-font-size: 28px;
+    --label-font-size: 14px;
   }
 }
 

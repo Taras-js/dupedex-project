@@ -6,7 +6,7 @@
 
   width: 100%;
   max-width: 1840px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   padding: calc(var(--header-height) + 25px) var(--container-padding) 25px;
 }
