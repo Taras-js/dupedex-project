@@ -101,4 +101,4 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     </div>
   );
 };
-export default Search;
+export { Search };

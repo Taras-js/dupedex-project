@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import Search, { Results } from "../../components/UIKit/Search/Search";
+import { Search, Results } from "../../components/UIKit";
 import { debounce } from "../../utils/helper";
 import { getProductBySearch } from "./SearchSelector";
 import {
   addIdItem,
-  showItem,
   toggleAddItemToList,
 } from "../../components/ToolbarContainer/toolbarSlice";
 import {
@@ -15,8 +14,6 @@ import {
 } from "../../components/ProductContainer/productSlice";
 
 import { randomReviewsMock } from "../../shared/mocks/setMock";
-
-import styles from "./productSearch.module.css";
 
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>("");
@@ -30,14 +27,12 @@ const ProductSearch = () => {
     (state) => state.toolbar.idItemsOnScreen,
   );
 
+  const placeholder: string = isAddItemtolist ? 'Start typing a brand or product name to find it and add to collection' : "Look for a skincare product name, brand name and etc.";
+
   const onClickResult = (id) => {
     dispatch(setProducts([id]));
     dispatch(setReviews({ id, reviews: randomReviewsMock() }));
-    if (isAddItemtolist) {
-      dispatch(addIdItem(id));
-    } else {
-      dispatch(showItem([id]));
-    }
+    dispatch(addIdItem(id));
     dispatch(toggleAddItemToList());
     setSearch("");
   };
@@ -57,7 +52,7 @@ const ProductSearch = () => {
     <Search
       idProducts={productsIdList}
       onChange={handleChange}
-      placeholder="Look for a skincare product name, brand name and etc."
+      placeholder={placeholder}
       results={result}
       withDebounce={debounce}
       onClickResult={onClickResult}
