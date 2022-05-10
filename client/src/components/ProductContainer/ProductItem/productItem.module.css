@@ -47,6 +47,14 @@
   right: 8px;
 }
 
+.close_btn:hover > svg {
+  fill: var(--color-txt);
+}
+
+.close_btn:active > svg {
+  fill: var(--color-txt-dark);
+}
+
 .products__item.large {
   flex-flow: column wrap;
   align-self: flex-start;
