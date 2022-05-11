@@ -1,8 +1,9 @@
 const { Router } = require("express");
 const Product = require("../models/Products");
 const router = Router();
+const apiLimiter = require("../middleware/rateLimit");
 
-router.get("/data",  async (req, res) => {
+router.get("/data", apiLimiter, async (req, res) => {
 
     try {
         const products = await Product.find({}, {id: 1, brand_name: 1,
@@ -14,7 +15,7 @@ router.get("/data",  async (req, res) => {
         console.log('error')
     }
 });
-router.get("/data/reviews",  async (req, res) => {
+router.get("/data/reviews",  apiLimiter, async (req, res) => {
 
     try {
         const products = await Product.find({}, {id: 1, brand_name: 1
@@ -25,7 +26,7 @@ router.get("/data/reviews",  async (req, res) => {
         console.log('error')
     }
 });
-router.get("/data/:id", async (req, res) => {
+router.get("/data/:id", apiLimiter, async (req, res) => {
     try {
         const product = await Product.findById(req.params.id);
         res.json(product);
@@ -33,7 +34,7 @@ router.get("/data/:id", async (req, res) => {
         res.status(500).json({ message: "Что-то пошло не так" });
     }
 });
-router.post("/search",  async (req, res) => {
+router.post("/search", apiLimiter, async (req, res) => {
 
     try {
         let payload = req.body.payload.trim()
