@@ -1,5 +1,5 @@
 import { useAppDispatch } from "../../app/hooks";
-import { toggleAddItemToList } from "../../components/ToolbarContainer/toolbarSlice";
+import { setSearchBarFocused } from "../../components/ToolbarContainer/toolbarSlice";
 import { Icon } from "../../components/UIKit";
 
 import styles from "./addProductButton.module.css";
@@ -8,7 +8,7 @@ const AddProductButton = () => {
   const dispatch = useAppDispatch();
 
   const onClickButton = () => {
-    dispatch(toggleAddItemToList());
+    dispatch(setSearchBarFocused());
   };
   return (
     <button className={styles.button} onClick={onClickButton}>

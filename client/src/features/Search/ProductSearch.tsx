@@ -5,7 +5,7 @@ import { debounce } from "../../utils/helper";
 import { getProductBySearch } from "./SearchSelector";
 import {
   addIdItem,
-  toggleAddItemToList,
+  setSearchBarBlurred,
 } from "../../components/ToolbarContainer/toolbarSlice";
 import {
   searchesState,
@@ -20,20 +20,23 @@ const ProductSearch = () => {
   const [result, setResult] = useState<Results[]>();
   const dispatch = useAppDispatch();
 
-  const isAddItemtolist = useAppSelector(
-    (state) => state.toolbar.isAddItemToList,
+  const isSearchBarFocused = useAppSelector(
+    (state) => state.toolbar.isSearchBarFocused,
   );
   const productsIdList = useAppSelector(
     (state) => state.toolbar.idItemsOnScreen,
   );
 
-  const placeholder: string = isAddItemtolist ? 'Start typing a brand or product name to find it and add to collection' : "Look for a skincare product name, brand name and etc.";
+  const placeholder: string = isSearchBarFocused ? 'Start typing a brand or product name to find it and add to collection' : "Look for a skincare product name, brand name and etc.";
 
   const onClickResult = (id) => {
     dispatch(setProducts([id]));
     dispatch(setReviews({ id, reviews: randomReviewsMock() }));
-    dispatch(addIdItem(id));
-    dispatch(toggleAddItemToList());
+
+    if (productsIdList.length < 4) {
+      dispatch(addIdItem(id));
+    }
+    dispatch(setSearchBarBlurred());
     setSearch("");
   };
   const searches = useAppSelector(searchesState);
@@ -56,7 +59,7 @@ const ProductSearch = () => {
       results={result}
       withDebounce={debounce}
       onClickResult={onClickResult}
-      isOpen={isAddItemtolist}
+      isFocused={isSearchBarFocused}
     />
   );
 };

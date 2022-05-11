@@ -6,6 +6,7 @@ import ModalComponent from "./modalComponent";
 import { Icon } from "../Icon";
 import { ResultItem } from "./ResultItem";
 
+import { cls } from "../../../utils/helper";
 import styles from "./search.module.css";
 
 export interface Results {
@@ -17,7 +18,7 @@ export interface Results {
 
 export interface SearchProps {
   placeholder?: string;
-  isOpen?: boolean;
+  isFocused?: boolean;
   results?: Results[];
   withDebounce: Function;
   idProducts?: number[];
@@ -32,7 +33,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     withDebounce,
     onChange,
     onClickResult,
-    isOpen = false,
+    isFocused = false,
     idProducts,
   } = props;
 
@@ -44,27 +45,38 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     clickItem,
     setClickItem,
     setClickedOutside,
+    handleFocus,
   } = ModalComponent();
 
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
+  const resetSearch = () => {
     setClickedOutside(false);
     inputRef.current.value = "";
-  }, [clickItem]);
+  };
 
   useEffect(() => {
-    setClickItem(false);
-    inputRef.current.focus();
-    handleClickInside();
-  }, [isOpen]);
+    if (isFocused) {
+      setClickItem(false);
+      inputRef.current.focus();
+      handleClickInside();
+      return;
+    }
+    resetSearch();
+  }, [isFocused]);
+
+  useEffect(() => {
+    resetSearch();
+  }, [clickItem]);
+
+  const searchClass = cls(styles, "search", { search_focused: isFocused });
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div
-      onClick={handleClickInside}
+      onClick={handleFocus}
       ref={myRef}
-      className={styles.search}
+      className={searchClass}
       role="button"
     >
       <form className={styles.search__form}>
@@ -77,6 +89,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
         />
         <Icon type="search" width={25} height={25} />
       </form>
+
       <div
         className={
           clickedOutside
