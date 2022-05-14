@@ -48,4 +48,13 @@ router.post("/search",  async (req, res) => {
         console.log('error')
     }
 });
+router.get("/id", async (req, res) => {
+    try {
+        let payload = req.body.payload
+        const product = await Product.findOne({id: payload});
+        res.json(product);
+    } catch (error) {
+        res.status(500).json({ message: "Что-то пошло не так" });
+    }
+});
 module.exports = router
