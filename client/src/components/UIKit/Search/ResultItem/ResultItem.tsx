@@ -3,11 +3,11 @@ import React from "react";
 import styles from "./resultItem.module.css";
 
 interface ResultItemProps {
-  id: number;
+  id: string;
   title?: string;
   subtitle?: string;
   image?: string;
-  idProducts: number[];
+  idProducts: string[];
   onClick?: (number) => void;
   setClickItem?: (boolean) => void;
 }

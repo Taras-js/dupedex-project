@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { cls, getCardSize } from "../../utils/helper";
 import { useAppSelector } from "../../app/hooks";
 import { toolbarState } from "../ToolbarContainer/toolbarSlice";
@@ -16,7 +17,7 @@ const ProductContainer: React.FC = () => {
   } = useAppSelector(toolbarState);
   const products = useAppSelector(productsState);
 
-  const productList = products.filter((item) => idItemsOnScreen.includes(item.id));
+  const productList = products.filter((item) => idItemsOnScreen.includes(item._id));
 
   const itemSize = getCardSize(idItemsOnScreen, isReviewShown);
 
@@ -30,7 +31,7 @@ const ProductContainer: React.FC = () => {
       {productList.map((item) => (
         <Panel key={item.id} className={panelClass}>
           <ProductItem
-            id={item.id}
+            id={item._id}
             size={itemSize}
             filter={filter}
             isShowClose={productList.length !== 1}

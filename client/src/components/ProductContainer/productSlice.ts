@@ -1,18 +1,18 @@
+/* eslint-disable no-underscore-dangle */
 import { createSlice } from "@reduxjs/toolkit";
 
 import type { AppState } from "../../app/store";
-import { productsMock } from "../../shared/mocks/productmock";
 
 interface ProductState {
-  idProductsSaved: number[];
+  idProductsSaved: string[];
   products: any[];
-  idReviewsSaved: number[];
+  idReviewsSaved: string[];
   reviews: {
-    id: number;
+    id: string;
     reviews: any[];
   }[];
   searches: {
-    id: number;
+    id: string;
     title: string;
     subtitle: string;
   }[];
@@ -30,20 +30,16 @@ export const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    setProducts(state, action: { type: ""; payload: number[] }) {
-      const idNew = action.payload.filter(
-        (id) => !state.idProductsSaved.includes(id),
-      );
-
-      const newProducts = productsMock.filter((product) => idNew.includes(product.id));
-
-      state.idProductsSaved.push(...idNew);
-      state.products.push(...newProducts);
+    setProducts(state, action: { type: ""; payload: any }) {
+      if (!state.idProductsSaved.includes(action.payload._id)) {
+        state.idProductsSaved.push(action.payload._id);
+        state.products.push(action.payload);
+      }
     },
 
     setReviews(
       state,
-      action: { type: ""; payload: { id: number; reviews: any[] } },
+      action: { type: ""; payload: { id: string; reviews: any[] } },
     ) {
       if (state.idReviewsSaved.includes(action.payload.id)) return;
 
@@ -55,7 +51,7 @@ export const productSlice = createSlice({
       state,
       action: {
         type: "";
-        payload: { id: number; title: string; subtitle: string }[];
+        payload: { id: string; title: string; subtitle: string }[];
       },
     ) {
       state.searches.push(...action.payload);

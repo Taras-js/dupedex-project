@@ -4,19 +4,18 @@ import {
   removeItem,
   setCurrentItem,
 } from "../../ToolbarContainer/toolbarSlice";
-import { reviewsState } from "../productSlice";
+import { productsState, reviewsState } from "../productSlice";
 import { cls, getLabels, getQuantity } from "../../../utils/helper";
 
 import { Button, Icon } from "../../UIKit";
 import { LabelList } from "../LabelList";
 
-import { productsMock } from "../../../shared/mocks/productmock";
 import { Filter, CardSize } from "../../../shared/types";
 
 import styles from "./productItem.module.css";
 
 interface ProductProps {
-  id: number;
+  id: string;
   size: CardSize;
   isShowClose?: boolean;
   filter?: Filter;
@@ -27,6 +26,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
     id, size, isShowClose = false, filter,
   } = props;
   const dispatch = useAppDispatch();
+  const products = useAppSelector(productsState);
 
   const onSelectProduct = () => {
     dispatch(setCurrentItem(id));
@@ -38,7 +38,8 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   };
   const reviews = useAppSelector(reviewsState);
 
-  const item = productsMock.find((itemToFind) => itemToFind.id === id);
+  // eslint-disable-next-line no-underscore-dangle
+  const item = products.find((itemToFind) => itemToFind._id === id);
 
   const itemReviews = reviews.find((itemToFind) => itemToFind.id === id);
   const labels = itemReviews ? getLabels(itemReviews.reviews) : [];

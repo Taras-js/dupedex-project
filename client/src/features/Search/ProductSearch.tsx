@@ -13,7 +13,8 @@ import {
   setReviews,
 } from "../../components/ProductContainer/productSlice";
 
-import { randomReviewsMock } from "../../shared/mocks/setMock";
+import { randomReviewsMock } from "../../shared/mocks/reviewsmock";
+import { getProductByActualId, searchItem } from "../../app/requests";
 
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>("");
@@ -30,7 +31,9 @@ const ProductSearch = () => {
   const placeholder: string = isSearchBarFocused ? 'Start typing a brand or product name to find it and add to collection' : "Look for a skincare product name, brand name and etc.";
 
   const onClickResult = (id) => {
-    dispatch(setProducts([id]));
+    getProductByActualId(id).then((res) => {
+      dispatch(setProducts(res));
+    });
     dispatch(setReviews({ id, reviews: randomReviewsMock() }));
 
     if (productsIdList.length < 4) {
@@ -39,7 +42,6 @@ const ProductSearch = () => {
     dispatch(setSearchBarBlurred());
     setSearch("");
   };
-  const searches = useAppSelector(searchesState);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -47,7 +49,11 @@ const ProductSearch = () => {
   };
 
   useEffect(() => {
-    setResult(getProductBySearch(searches, search));
+    async function getResults() {
+      const searches = await searchItem(search);
+      setResult(getProductBySearch(searches, search));
+    }
+    getResults();
   }, [search]);
 
   return (

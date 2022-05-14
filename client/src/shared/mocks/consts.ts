@@ -1,14 +1,18 @@
 export const isReviewShown = true;
 
 export const itemsIdProductsMock = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  "6258661f0bf68a57c06813f5",
+  "6258661f0bf68a57c06814b4",
+  "6258661f0bf68a57c0681481",
+  "6258661f0bf68a57c0681438",
 ];
 
-export const randomItemsIdProductsMock = (arrayLength: number) => {
+export const randomNumberIdsMock = (arrayLength: number) => {
   const randArray = [];
+  const itemsAmount = 1965;
   do {
-    const rand = Math.floor(Math.random() * itemsIdProductsMock.length);
-    if (!randArray.includes(itemsIdProductsMock[rand])) { randArray.push(itemsIdProductsMock[rand]); }
+    const rand = Math.floor(Math.random() * itemsAmount);
+    if (!randArray.includes(rand)) { randArray.push(rand); }
   } while (randArray.length < arrayLength);
   return randArray;
 };

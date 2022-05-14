@@ -2,9 +2,9 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 
 import type { AppState } from "../../app/store";
+import { itemsIdProductsMock } from "../../shared/mocks/consts";
 
 import { Filter, ToolbarContent } from "../../shared/types";
-import { itemsIdProductsMock } from "../../shared/mocks/consts";
 
 export interface ToolbarState extends ToolbarContent {
   history: ToolbarContent[];
@@ -46,21 +46,21 @@ export const toolbarSlice = createSlice({
   name: "toolbar",
   initialState,
   reducers: {
-    setCurrentItem: (state, action: { type: ""; payload: number }) => {
+    setCurrentItem: (state, action: { type: ""; payload: string }) => {
       state.idCurrentItem = action.payload;
       saveStep(state);
     },
-    addIdItem: (state, action: { type: ""; payload: number }) => {
+    addIdItem: (state, action: { type: ""; payload: string }) => {
       state.idItemsOnScreen = [...state.idItemsOnScreen, action.payload];
       saveStep(state);
     },
-    showItem: (state, action: { type: ""; payload: number[] }) => {
+    showItem: (state, action: { type: ""; payload: string[] }) => {
       state.idItemsOnScreen = action.payload;
       const [first, ...rest] = state.idItemsOnScreen;
       state.idCurrentItem = first;
       saveStep(state);
     },
-    removeItem: (state, action: { type: ""; payload: number }) => {
+    removeItem: (state, action: { type: ""; payload: string }) => {
       state.idItemsOnScreen = state.idItemsOnScreen.filter(
         (id) => id !== action.payload,
       );

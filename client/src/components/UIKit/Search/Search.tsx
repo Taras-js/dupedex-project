@@ -10,7 +10,7 @@ import { cls } from "../../../utils/helper";
 import styles from "./search.module.css";
 
 export interface Results {
-  id?: number;
+  id?: string;
   title?: string;
   subtitle?: string;
   image?: string;
@@ -21,7 +21,7 @@ export interface SearchProps {
   isFocused?: boolean;
   results?: Results[];
   withDebounce: Function;
-  idProducts?: number[];
+  idProducts?: string[];
   onChange?: (e: React.ChangeEvent) => void;
   onClickResult?: (number) => void;
 }

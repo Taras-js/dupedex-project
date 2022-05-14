@@ -11,13 +11,13 @@ import { useAppDispatch } from "../app/hooks";
 import ProductSearch from "../features/Search/ProductSearch";
 import { LibraryContainer } from "../components/LibraryContainer";
 
-import { setMockProduct } from "../shared/mocks/setMock";
+import { loadProducts } from "../utils/loadProducts";
 
 const IndexPage: NextPage = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(setMockProduct());
+    dispatch(loadProducts());
   }, []);
 
   return (

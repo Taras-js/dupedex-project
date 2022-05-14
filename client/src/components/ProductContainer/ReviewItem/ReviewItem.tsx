@@ -7,7 +7,7 @@ import { reviewsState } from "../productSlice";
 import styles from "./reviewItem.module.css";
 
 interface ReviewProps {
-  id: number;
+  id: string;
 }
 
 const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
@@ -24,6 +24,7 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
       <h3 className={styles.review__heading}>Reviews</h3>
       <ScrollPanel>
         {reviews
+          // eslint-disable-next-line no-underscore-dangle
           .find((item) => item.id === id)
           ?.reviews.filter((review, index) => index < 7)
           .map((review) => (
