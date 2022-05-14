@@ -32,7 +32,7 @@ const ProductContainer: React.FC<ProductContent> = (props: ProductContent) => {
 
       {productList.length === 1 && isReviewShown && (
         <Panel padding={16} className={styles.products__panel}>
-          <ReviewItem id={currentItemId} />
+          <ReviewItem id={currentItemId}/>
         </Panel>
       )}
     </div>

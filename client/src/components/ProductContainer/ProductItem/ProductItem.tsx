@@ -59,7 +59,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
       </div>
 
       <div className={styles.products__labels}>
-        <LabelList labels={labels} filter={filter} size={size} maxQuantity={labelQuantity} />
+        <LabelList labels={labels} filter={filter} size={size} maxQuantity={labelQuantity} isShowClose={isShowClose}/>
       </div>
 
       {isShowClose && (

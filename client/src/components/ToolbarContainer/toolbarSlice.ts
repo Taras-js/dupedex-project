@@ -7,9 +7,19 @@ import { Filter, ProductContent } from "../../shared/types";
 import { itemsIdListMock } from "../../shared/mocks/consts";
 import { HYDRATE } from "next-redux-wrapper";
 
+type FilterReview = {
+  filter: boolean,
+  filterTags: string[]
+}
+
+type PayloadFilterReview = {
+  filterTag: string
+}
+
 export interface ProductState extends ProductContent {
   history: ProductContent[];
   historyStep: number;
+  filterReview: FilterReview
 }
 
 const initialState: ProductState = {
@@ -26,6 +36,7 @@ const initialState: ProductState = {
     },
   ],
   historyStep: 1,
+  filterReview: {filter: false, filterTags: []}
 };
 
 const saveStep = (state: ProductState) => {
@@ -81,6 +92,21 @@ export const toolbarSlice = createSlice({
         state.historyStep - 1
       ].isReviewShown;
     },
+    setFilterReview: (state, action: { type: ""; payload: PayloadFilterReview }) => {
+      let index = state.filterReview.filterTags.indexOf(action.payload.filterTag)
+      if (index !== -1) {
+        state.filterReview.filterTags.splice(index, 1)
+      } else {
+        state.filterReview.filterTags.push(action.payload.filterTag);
+      }
+      !state.filterReview.filterTags.length 
+      ? state.filterReview.filter = false
+      : state.filterReview.filter = true
+    },
+    resetFilterReview: (state) => {
+      state.filterReview.filter = false
+      state.filterReview.filterTags = []
+    }
   },
   extraReducers: {
     [HYDRATE]: (state, action) => {
@@ -99,6 +125,8 @@ export const {
   toggleReviews,
   getHistoryStep,
   changeIdList,
+  setFilterReview,
+  resetFilterReview
 } = toolbarSlice.actions;
 
 export const productState = (state: AppState) => state.product;

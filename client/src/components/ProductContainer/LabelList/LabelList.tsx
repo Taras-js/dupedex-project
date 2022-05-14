@@ -9,12 +9,11 @@ interface LabelProps {
   size: CardSize;
   filter?: Filter;
   maxQuantity?: number;
+  isShowClose: boolean;
 }
 
 const LabelList: React.FC<LabelProps> = (props: LabelProps) => {
-  const {
-    labels, size, filter, maxQuantity = 6,
-  } = props;
+  const { labels, size, filter, maxQuantity = 6, isShowClose } = props;
 
   const listClass = cls(styles, "labels__list", size);
 
@@ -22,11 +21,12 @@ const LabelList: React.FC<LabelProps> = (props: LabelProps) => {
     <ul className={listClass}>
       {labels
         .filter(
-          (label) => label[1].count > 1 && (filter === null || label[1].tag === filter),
+          (label) =>
+            label[1].count > 1 && (filter === null || label[1].tag === filter)
         )
         .filter((label, index) => index < maxQuantity)
         .map((label) => (
-          <LabelItem key={label[0]} label={label} />
+          <LabelItem key={label[0]} label={label} isShowClose={isShowClose} />
         ))}
     </ul>
   );

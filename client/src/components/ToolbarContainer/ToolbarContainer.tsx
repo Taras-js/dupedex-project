@@ -6,6 +6,7 @@ import {
   toggleReviews,
   getHistoryStep,
   productState,
+  resetFilterReview
 } from "./toolbarSlice";
 import { Filter } from "../../shared/types";
 
@@ -29,6 +30,7 @@ const ToolbarContainer = () => {
   const isPrevDisabled = product.historyStep === 1;
   const onGetPrevStep = () => {
     dispatch(getHistoryStep(-1));
+    dispatch(resetFilterReview())
   };
   const onGetPrevStepClassName = cls(
     styles,
@@ -39,6 +41,7 @@ const ToolbarContainer = () => {
   const isNextDisabled = product.historyStep === product.history.length;
   const onGetNextStep = () => {
     dispatch(getHistoryStep(+1));
+    dispatch(resetFilterReview())
   };
   const onGetNextStepClassName = cls(
     styles,
