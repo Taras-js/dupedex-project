@@ -1,5 +1,6 @@
-export const getProductBySearch = (state, search: string) => ((state && search && search.length > 1)
+export const getProductBySearch = (state, search: string) => ((state && search && search.length > 0)
   ? state
+
     .filter(
       (product) => product.prod_name
         .toString()
@@ -10,6 +11,7 @@ export const getProductBySearch = (state, search: string) => ((state && search &
           .includes(search.toLowerCase()),
     )
     .map((product) => ({
+
       title: product.brand_name,
       subtitle: product.prod_name,
       image: product.img_link,

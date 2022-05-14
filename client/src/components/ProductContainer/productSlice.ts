@@ -54,7 +54,8 @@ export const productSlice = createSlice({
         payload: { id: string; title: string; subtitle: string }[];
       },
     ) {
-      state.searches.push(...action.payload);
+       state.searches.length = 0
+       state.searches.push(...action.payload)
     },
   },
 });
@@ -63,6 +64,6 @@ export const { setProducts, setReviews, setSearches } = productSlice.actions;
 
 export const productsState = (state: AppState) => state.products.products;
 export const reviewsState = (state: AppState) => state.products.reviews;
-export const searchesState = (state: AppState) => state.products.searches;
+// export const searchesState = (state: AppState) => state.products.searches;
 
 export default productSlice.reducer;

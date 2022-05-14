@@ -8,7 +8,7 @@ import {
   setSearchBarBlurred,
 } from "../../components/ToolbarContainer/toolbarSlice";
 import {
-  searchesState,
+  setSearches,
   setProducts,
   setReviews,
 } from "../../components/ProductContainer/productSlice";
@@ -52,6 +52,7 @@ const ProductSearch = () => {
     async function getResults() {
       const searches = await searchItem(search);
       setResult(getProductBySearch(searches, search));
+      dispatch(setSearches(searches))
     }
     getResults();
   }, [search]);
