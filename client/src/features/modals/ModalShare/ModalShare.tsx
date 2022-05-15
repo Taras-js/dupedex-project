@@ -10,7 +10,7 @@ const ModalShare: React.FC = () => {
   const [copyURL, setCopyURL] = useState("http://dupedex.co")
 
   useEffect(() => {
-    const domen = window.location.origin + "/products?ids=";
+    const domen = window.location.origin + "/?id=";
     const urlCopy = product.reduce(
       (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
       domen
