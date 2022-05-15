@@ -1,0 +1,28 @@
+.label__tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 35px;
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.label__tag > span:first-child {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.label__tag.positive {
+  background-color: rgba(0, 200, 0, 0.3);
+}
+.label__tag.negative {
+  background-color: rgba(200, 0, 0, 0.3);
+}
+.label__tag.neutral {
+  background-color: rgba(200, 200, 0, 0.3);
+}
+.label__tag.other {
+  background-color: rgba(100, 100, 200, 0.3);
+}

@@ -1,0 +1,11 @@
+.button {
+  width: 100%;
+  height: 100%;
+}
+
+.button:hover > svg {
+  fill: var(--color-share_pink);
+}
+.button:active > svg {
+  fill: var(--color-share_pink);
+}
