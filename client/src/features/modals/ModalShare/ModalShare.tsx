@@ -15,7 +15,7 @@ const ModalShare: React.FC = () => {
       (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
       domen
     );
-    setCopyURL(urlCopy.includes("localhost") ? "http://dupedex.co" : urlCopy)
+    setCopyURL(urlCopy)
   }, [])
 
   const onShareClick = () => {
@@ -49,7 +49,7 @@ const ModalShare: React.FC = () => {
         >
           <FacebookShareButton
             quote={copyURL}
-            url={copyURL}
+            url={"http://dupedex.co"}
           >
             <div className={styles.modal__content_message}>
               <Icon
