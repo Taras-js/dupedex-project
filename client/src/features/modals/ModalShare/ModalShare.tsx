@@ -12,7 +12,7 @@ const ModalShare: React.FC = () => {
   useEffect(() => {
     let domen = window.location.origin + "/products?ids=";
     let urlCopy = product.itemsIdList.reduce(
-      (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
+      (prev, next) => (prev === domen ? prev + next : prev + "%" + next), 
       domen
     );
     setCopyURL(urlCopy)
