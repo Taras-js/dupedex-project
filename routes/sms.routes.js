@@ -57,7 +57,6 @@ router.post("/", async (req, res) => {
         return result;
       });
   } catch (e) {
-    console.log(e)
     res.status(500).json({ message: "Error from register" });
   }
 });
