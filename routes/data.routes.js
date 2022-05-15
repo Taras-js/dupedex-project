@@ -79,4 +79,17 @@ router.get("/:id", async (req, res) => {
     res.status(500).json({ message: "Что-то пошло не так" });
   }
 });
+router.get('/products', async (req, res) => {
+  try {
+    let str = req.query.ids
+    let regexp = /\d+/g;
+    let result = str.match(regexp)
+    res.json(result);
+    console.log(result)
+  } catch (error) {
+    res.status(500).json({ message: "Что-то пошло не так" });
+    console.log('error')
+  }
+})
+
 module.exports = router
