@@ -4,8 +4,8 @@
 }
 
 .button:hover > svg {
-  fill: var(--color-positive_green-dark);
+  fill: var(--color-share_pink);
 }
 .button:active > svg {
-  fill: var(--color-positive_green);
+  fill: var(--color-share_pink);
 }
