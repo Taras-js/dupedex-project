@@ -19,7 +19,7 @@ app.get('/products', async (req, res) => {
   }
 })
 
-const PORT = config.get("port") || 5000;
+const PORT = config.get("port") || 8000;
 
 async function start() {
   try {

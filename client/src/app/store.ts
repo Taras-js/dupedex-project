@@ -3,9 +3,6 @@ import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
 import productsReducer from "../components/ProductContainer/productSlice";
 import toolbarReducer from "../components/ToolbarContainer/toolbarSlice";
-import counterReducer from "../features/counter/counterSlice";
-import goodsReducer from "../features/Search/productSlice";
-import productReducer from "../components/ToolbarContainer/toolbarSlice";
 import modalReducer from "../components/UIKit/Modal/modalSlice";
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
 
@@ -14,10 +11,8 @@ export function makeStore() {
     reducer: {
       toolbar: toolbarReducer,
       products: productsReducer,
-      counter: counterReducer,
-      product: productReducer,
+      product: productsReducer,
       modal: modalReducer,
-      goods: goodsReducer,
     },
   });
 }

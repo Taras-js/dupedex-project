@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import styles from "./modalShare.module.css";
 import { Button, Icon } from "../../../components/UIKit";
 import { useAppSelector } from "../../../app/hooks";
-import { productState } from "../../../components/ToolbarContainer/toolbarSlice";
 import { FacebookShareButton } from "react-share";
+import {productsState} from "../../../components/ProductContainer/productSlice";
 
 const ModalShare: React.FC = () => {
-  const product = useAppSelector(productState);
+  const product = useAppSelector(productsState);
   const [copyURL, setCopyURL] = useState("http://dupedex.co")
 
   useEffect(() => {
-    let domen = window.location.origin + "/products?ids=";
-    let urlCopy = product.itemsIdList.reduce(
-      (prev, next) => (prev === domen ? prev + next : prev + "%" + next), 
+    const domen = window.location.origin + "/products?ids=";
+    const urlCopy = product.reduce(
+      (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
       domen
     );
     setCopyURL(urlCopy)
@@ -20,7 +20,7 @@ const ModalShare: React.FC = () => {
 
   const onShareClick = () => {
     let domen = window.location.origin + "/products?ids=";
-    let urlCopy = product.itemsIdList.reduce(
+    let urlCopy = product.reduce(
       (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
       domen
     );

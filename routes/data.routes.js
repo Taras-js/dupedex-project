@@ -5,18 +5,18 @@ const router = Router();
 router.get("/data", async (req, res) => {
   try {
     const products = await Product.find(
-      {},
-      {
-        id: 1,
-        brand_name: 1,
-        prod_name: 1,
-        prod_link: 1,
-        img_link: 1,
-        reviews: 1,
-      }
+        {},
+        {
+          id: 1,
+          brand_name: 1,
+          prod_name: 1,
+          prod_link: 1,
+          img_link: 1,
+          reviews: 1,
+        }
     )
-      .limit(5)
-      .lean();
+        .limit(5)
+        .lean();
     res.json(products);
   } catch (error) {
     res.status(500).json({ message: "Что-то пошло не так" });
@@ -26,11 +26,11 @@ router.get("/data", async (req, res) => {
 router.get("/data/reviews", async (req, res) => {
   try {
     const products = await Product.find(
-      {},
-      {
-        id: 1,
-        brand_name: 1,
-      }
+        {},
+        {
+          id: 1,
+          brand_name: 1,
+        }
     ).lean();
     res.json(products);
   } catch (error) {
@@ -50,11 +50,11 @@ router.post("/search", async (req, res) => {
   try {
     let payload = req.body.payload.trim();
     let search = await Product.find(
-      { brand_name: { $regex: payload, $options: "i" } },
-      { brand_name: 1, prod_name: 1 }
+        { brand_name: { $regex: payload, $options: "i" } },
+        { brand_name: 1, prod_name: 1 }
     )
-      .limit(10)
-      .exec();
+        .limit(10)
+        .exec();
     res.json(search);
   } catch (error) {
     res.status(500).json({ message: "Что-то пошло не так" });

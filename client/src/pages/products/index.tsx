@@ -60,8 +60,8 @@ const IndexPage: NextPage<AppState> = (props) => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ req, res, ...etc }) => {
-      let result = await fetch(`http://localhost:5000${req.url}`) // запрос на получение товаров с данным id
-      let json = await result.json();
+      const result = await fetch(`http://localhost:8000${req.url}`); // запрос на получение товаров с данным id
+      const json = await result.json();
       store.dispatch(changeIdList(json.map((el) => +el))); // сохранение товаров в store
       return { props: {} };
     }

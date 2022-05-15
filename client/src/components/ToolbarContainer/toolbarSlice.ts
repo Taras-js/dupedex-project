@@ -1,10 +1,9 @@
 /* eslint-disable no-param-reassign */
-import { configureStore, createSlice, current } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 import type { AppState } from "../../app/store";
 import { itemsIdProductsMock } from "../../shared/mocks/consts";
 
-import { itemsIdListMock } from "../../shared/mocks/consts";
 import { HYDRATE } from "next-redux-wrapper";
 import { Filter, ToolbarContent } from "../../shared/types";
 
