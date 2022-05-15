@@ -24,6 +24,19 @@
   height: 100%;
 }
 
+.products__placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.products__placeholder_text {
+  margin-right: 15px;
+  font-size: var(--text-font-size);
+}
+
 @media screen and (max-width: 1600px) {
   .product__container.small {
     flex-wrap: wrap;

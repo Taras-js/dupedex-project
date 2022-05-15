@@ -19,8 +19,6 @@ app.get('/products', async (req, res) => {
   }
 })
 
-const PORT = config.get("port") || 8000;
-
 async function start() {
   try {
     await mongoose.connect(config.get("mongoUri"), {});
