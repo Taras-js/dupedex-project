@@ -49,7 +49,7 @@ router.post("/", async (req, res) => {
           const data = result.data.messages[0];
           res
             .status(400)
-            .json({ message: "Please enter valid number : +64.....", data });
+            .json({ message: "Please enter valid number : +64....."});
         }
         return result;
       });
