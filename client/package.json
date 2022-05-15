@@ -9,7 +9,7 @@
     "lint": "npx eslint . --fix",
     "format": "prettier --write ."
   },
-  "proxy": "localhost:5000",
+  "proxy": "localhost:8000",
   "dependencies": {
     "@next/env": "^12.1.5",
     "@reduxjs/toolkit": "^1.3.6",

@@ -1,6 +1,6 @@
 {
-  "port": 5000,
+  "port": 8000,
   "mongoUri": "mongodb+srv://taras:taras@cluster0.cte51.mongodb.net/dupe_dexDB?retryWrites=true&w=majority",
   "jwtSecret": "taras",
-  "baseUrl": "http://localhost:5000"
+  "baseUrl": "http://localhost:8000"
 }
