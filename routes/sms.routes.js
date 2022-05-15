@@ -5,6 +5,9 @@ const router = Router();
 
 router.post("/", async (req, res) => {
   try {
+    const btoa = (text) => {
+      return Buffer.from(text, 'binary').toString('base64');
+    };
     const ip = req.ip;
     const payload = req.body.payload;
     const authCheckUrl = "https://rest.clicksend.com/v3/sms/send";
@@ -54,6 +57,7 @@ router.post("/", async (req, res) => {
         return result;
       });
   } catch (e) {
+    console.log(e)
     res.status(500).json({ message: "Error from register" });
   }
 });
