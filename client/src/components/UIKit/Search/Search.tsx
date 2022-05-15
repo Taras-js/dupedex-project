@@ -21,7 +21,8 @@ export interface SearchProps {
   isFocused?: boolean;
   results?: Results[];
   withDebounce: Function;
-  idProducts?: string[];
+  idProducts?: number[];
+  // TODO remove idProducts, use disabled in results
   onChange?: (e: React.ChangeEvent) => void;
   onClickResult?: (number) => void;
 }
@@ -66,8 +67,9 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
   }, [isFocused]);
 
   useEffect(() => {
+    console.log(inputRef.current.value);
     resetSearch();
-  }, [clickItem]);
+  }, [clickItem, inputRef]);
 
   const searchClass = cls(styles, "search", { search_focused: isFocused });
 
@@ -97,8 +99,8 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
             : styles.search__dropdown_passive
         }
       >
-        {results
-          && results.map((result) => (
+        {results &&
+          results.map((result) => (
             <ResultItem
               onClick={onClickResult}
               key={result.id}

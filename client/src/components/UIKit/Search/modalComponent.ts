@@ -10,7 +10,7 @@ export default function ModalComponent() {
   const dispatch = useAppDispatch();
 
   const handleClickInside = () => {
-    if (!clickItem) setClickedOutside(true);
+    setClickedOutside(true);
   };
 
   const handleClickOutside = (e) => {
@@ -21,6 +21,7 @@ export default function ModalComponent() {
 
   const handleFocus = (e: any) => {
     if (myRef.current === e.target) dispatch(setSearchBarBlurred());
+    setClickedOutside(true);
     handleClickInside();
   };
 

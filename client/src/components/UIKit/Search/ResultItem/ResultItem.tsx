@@ -7,26 +7,25 @@ interface ResultItemProps {
   title?: string;
   subtitle?: string;
   image?: string;
-  idProducts: string[];
-  onClick?: (number) => void;
-  setClickItem?: (boolean) => void;
+  idProducts: number[];
+  onClick?: (id: string) => void;
+  setClickItem?: (isClickable: boolean) => void;
 }
 
 const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
-  const {
-    title, subtitle, image, id, onClick, idProducts, setClickItem,
-  } = props;
+  const { title, subtitle, image, id, onClick, idProducts, setClickItem } =
+    props;
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     e.stopPropagation();
     setClickItem(true);
     onClick(id);
   };
   const product = idProducts
-    ? idProducts.find((productId) => productId === id)
+    ? idProducts.find((productId) => String(productId) === id)
     : 0;
-
+  // TODO remove 0 and (meccabeauty.co.nz)
   return (
     <button
       disabled={!!product}
@@ -34,9 +33,7 @@ const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
       className={styles.search__item}
     >
       <p className={styles.search__title}>{`${title} `}</p>
-      <p
-        className={styles.search__subtitle}
-      >
+      <p className={styles.search__subtitle}>
         {` - ${subtitle} (meccabeauty.co.nz)`}
       </p>
     </button>
