@@ -40,39 +40,22 @@ router.get("/reviews", apiLimiter, async (req, res) => {
     console.log("error");
   }
 });
-router.get("/:id", apiLimiter, async (req, res) => {
-  console.log(req);
-  try {
-    const product = await Product.findById(10);
-    res.json(product);
-  } catch (error) {
-    res.status(500).json({ message: "Что-то пошло не так" });
-  }
-});
+
 router.post("/search", apiLimiter, async (req, res) => {
   try {
     let payload = req.body.payload.trim();
     let search = await Product.find(
-      { brand_name: { $regex: new RegExp("^" + payload + ".*", "i") } },
+      { brand_name: { $regex: payload, '$options': 'i' } },
       {
         brand_name: 1,
-        prod_name: 1,
-        prod_link: 1,
-        price: 1,
-        category: 1,
-        img_link: 1,
-        Benefits: 1,
-        Details: 1,
-        Usage: 1,
-        Ingredients: 1,
-        reviews: 1,
-        key_ingredients: 1,
+        prod_name: 1
+
       }
     )
       .limit(10)
       .exec();
 
-    search = search.slice(0, 10);
+    // search = search.slice(0, 10);
     res.json(search);
   } catch (error) {
     res.status(500).json({ message: "Что-то пошло не так" });
@@ -94,7 +77,7 @@ router.get("/:id", async (req, res) => {
     res.json(product);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ message: "Что-то пошло не так" });
+    res.status(500).json({ message: "Плохо все" });
   }
 });
 router.get("/products", async (req, res) => {
