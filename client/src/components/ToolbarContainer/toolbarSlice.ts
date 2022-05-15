@@ -1,9 +1,11 @@
 /* eslint-disable no-param-reassign */
-import { createSlice, current } from "@reduxjs/toolkit";
+import { configureStore, createSlice, current } from "@reduxjs/toolkit";
 
 import type { AppState } from "../../app/store";
 import { itemsIdProductsMock } from "../../shared/mocks/consts";
 
+import { itemsIdListMock } from "../../shared/mocks/consts";
+import { HYDRATE } from "next-redux-wrapper";
 import { Filter, ToolbarContent } from "../../shared/types";
 
 export interface ToolbarState extends ToolbarContent {
@@ -64,6 +66,10 @@ export const toolbarSlice = createSlice({
       state.idItemsOnScreen = state.idItemsOnScreen.filter(
         (id) => id !== action.payload,
       );
+      saveStep(state);
+    },
+    changeIdList: (state, action: { type: ""; payload: number[] }) => {
+      state.itemsIdList = action.payload;
       const [first, ...rest] = state.idItemsOnScreen;
       state.idCurrentItem = first;
       saveStep(state);
@@ -97,6 +103,14 @@ export const toolbarSlice = createSlice({
       ].isReviewShown;
     },
   },
+  extraReducers: {
+    [HYDRATE]: (state, action) => {
+      return {
+        ...state,
+        ...action.payload.product,
+      };
+    },
+  },
 });
 
 export const {
@@ -109,6 +123,7 @@ export const {
   setSearchBarFocused,
   setSearchBarBlurred,
   getHistoryStep,
+  changeIdList,
 } = toolbarSlice.actions;
 
 export const toolbarState = (state: AppState) => state.toolbar;

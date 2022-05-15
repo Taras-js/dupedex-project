@@ -1,14 +1,27 @@
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { Icon, Button } from "../UIKit";
+import { Modal } from "../UIKit/Modal";
+import {
+  modalState,
+  setModalComponent,
+  toggleModal,
+  setIsUnclosable,
+} from "../UIKit/Modal/modalSlice";
 
 import styles from "./header.module.css";
+import { modalComponents, modals } from "../../features/modals/helper";
 
 function Header() {
+  const dispatch = useAppDispatch();
+  const modal = useAppSelector(modalState);
   const onClickMain = () => {
     console.log("click Main");
   };
 
   const onClickSignIn = () => {
     console.log("click SignIn");
+    dispatch(setModalComponent(modals.ModalLogin));
+    dispatch(setIsUnclosable(false));
   };
 
   const onClickSignUp = () => {
@@ -45,6 +58,16 @@ function Header() {
           </Button>
         </div>
       </div>
+      {modal.isModalShown && (
+        <Modal
+          isUnclosable={modal.isUnclosable}
+          onClose={() => {
+            dispatch(toggleModal());
+          }}
+        >
+          {modalComponents[modal.modalComponent]}
+        </Modal>
+      )}
     </header>
   );
 }

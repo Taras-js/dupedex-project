@@ -1,0 +1,53 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+  animation-name: showModal;
+  animation-duration: 0.3s;
+}
+
+.modal__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  background: #ffffff;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 21px;
+  min-width: 200px;
+  min-height: 160px;
+  max-width: 80%;
+  margin-bottom: 25px;
+}
+
+.modal__exit {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+  z-index: 10;
+}
+
+.content {
+  overflow-y: auto;
+}
+
+.close {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  margin: -24px;
+  color: #000;
+}
+
+@keyframes showModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
