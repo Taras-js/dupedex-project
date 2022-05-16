@@ -1,22 +1,45 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 
 import ProductSearch from "../../features/Search/ProductSearch";
 import { Layout, LayoutRow, LayoutItem, Panel } from "../../components/UIKit";
 import { ProductContainer } from "../../components/ProductContainer";
 import { ToolbarContainer } from "../../components/ToolbarContainer";
-import { useAppSelector } from "../../app/hooks";
-import {
-  changeIdList,
-  productState,
-} from "../../components/ToolbarContainer/toolbarSlice";
+import { useAppDispatch } from "../../app/hooks";
+import { showItem } from "../../components/ToolbarContainer/toolbarSlice";
 import { LibraryContainer } from "../../components/LibraryContainer";
 import { AppState, wrapper } from "../../app/store";
 import { connect } from "react-redux";
+import { getCopiedProductById } from "../../app/requests";
+import {
+  setProducts,
+  setReviews,
+} from "../../components/ProductContainer/productSlice";
+import { randomReviewsMock } from "../../shared/mocks/reviewsmock";
 
-const IndexPage: NextPage<AppState> = (props) => {
-  const { currentItemId, itemsIdList, filter, isReviewShown } =
-    useAppSelector(productState);
+type ProdArray = {
+  prodArray: any[];
+  idProdArray: any[];
+};
+
+const IndexPage: NextPage<AppState & ProdArray> = ({
+  prodArray,
+  idProdArray,
+}) => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    prodArray.forEach((el) => {
+      dispatch(setProducts(el));
+    });
+
+    dispatch(showItem(idProdArray));
+    prodArray.map((item) =>
+      dispatch(setReviews({ id: item._id, reviews: randomReviewsMock() }))
+    );
+
+  }, []);
 
   return (
     <>
@@ -38,15 +61,10 @@ const IndexPage: NextPage<AppState> = (props) => {
           </LayoutItem>
         </LayoutRow>
         <LayoutRow rowHeight={700}>
-          <LayoutItem itemWidth={1340}>
-            <ProductContainer
-              itemsIdList={itemsIdList}
-              currentItemId={currentItemId}
-              filter={filter}
-              isReviewShown={isReviewShown}
-            />
+          <LayoutItem itemWidth={1500}>
+            <ProductContainer />
           </LayoutItem>
-          <LayoutItem itemWidth={370} noResize>
+          <LayoutItem itemWidth={320} noResize>
             <Panel>
               <LibraryContainer />
             </Panel>
@@ -60,10 +78,18 @@ const IndexPage: NextPage<AppState> = (props) => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ req, res, ...etc }) => {
-      const result = await fetch(`http://localhost:8000${req.url}`); // запрос на получение товаров с данным id
-      const json = await result.json();
-      store.dispatch(changeIdList(json.map((el) => +el))); // сохранение товаров в store
-      return { props: {} };
+      const regexp = /\d+/g;
+      const requestQueryArray = req.url.match(regexp).map((el) => +el);
+      const prodArray = [];
+      const idProdArray = [];
+
+      for await (const item of requestQueryArray) {
+        await getCopiedProductById(item).then((res) => {
+          prodArray.push(res);
+          idProdArray.push(res._id);
+        });
+      }
+      return { props: { prodArray, idProdArray } };
     }
 );
 

@@ -44,3 +44,19 @@ export function searchItem(payload: string): Promise<Array<any>> {
     .then((res) => res);
 }
 
+<<<<<<< HEAD
+=======
+export async function getCopiedProductById(payload: number): Promise<Array<any>> {
+  return await fetch("http://localhost:3000/api/products", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      payload,
+    }),
+  })
+    .then((response) => response.json())
+    .then((res) => res);
+}
+>>>>>>> fix_modal_api

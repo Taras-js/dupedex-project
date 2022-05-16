@@ -43,7 +43,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
 
   const itemReviews = reviews.find((itemToFind) => itemToFind.id === id);
   const labels = itemReviews ? getLabels(itemReviews.reviews) : [];
-
+  // console.log(getLabels(itemReviews.reviews), "labels")
   const labelQuantity = getQuantity(size);
 
   const itemClass = cls(styles, "products__item", size);
