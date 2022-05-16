@@ -5,6 +5,9 @@ const router = Router();
 
 router.post("/", async (req, res) => {
   try {
+    const btoa = (text) => {
+      return Buffer.from(text, 'binary').toString('base64');
+    };
     const ip = req.ip;
     const payload = req.body.payload;
     const authCheckUrl = "https://rest.clicksend.com/v3/sms/send";
@@ -49,7 +52,7 @@ router.post("/", async (req, res) => {
           const data = result.data.messages[0];
           res
             .status(400)
-            .json({ message: "Please enter valid number : +64.....", data });
+            .json({ message: "Please enter valid number : +64....."});
         }
         return result;
       });

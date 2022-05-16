@@ -27,6 +27,7 @@
   line-height: 1;
   font-size: 55px;
   font-weight: bold;
+
 }
 
 .modal__text {
@@ -34,6 +35,7 @@
   text-align: center;
   color: var(--modal-text-color-1);
   letter-spacing: -1px;
+  margin-top: 50px;
 }
 
 .modal__text a {
@@ -98,4 +100,31 @@
   100% {
     transform: scale(1);
   }
+}
+.modal__container {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  background: #e2e4e5;
+  text-align: center;
+  width: 324px;
+  height: 59px;
+}
+.modal__container::placeholder {color: black;}
+.modal__wrapper {
+  text-align: center;
+  color: red;
+}
+.modal__wrapper_success {
+  color: black;
+}
+.modal__registration {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 324px;
+  height: 59px;
+}
+.modal__registration_congratulations {
+
 }

@@ -43,3 +43,4 @@ export function searchItem(payload: string): Promise<Array<any>> {
     .then((response) => response.json())
     .then((res) => res);
 }
+
