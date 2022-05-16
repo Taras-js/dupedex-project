@@ -84,7 +84,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
       const idProdArray = [];
 
       for await (const item of requestQueryArray) {
-        await getCopiedProductById(item).then((res) => {
+        await getCopiedProductById(item, req.headers.host).then((res) => {
           prodArray.push(res);
           idProdArray.push(res._id);
         });

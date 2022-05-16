@@ -1,8 +1,9 @@
 const { Router } = require("express");
 const Product = require("../models/Products");
 const router = Router();
+const apiLimiter = require("../middleware/rateLimit");
 
-router.get("/data", async (req, res) => {
+router.get("/data", apiLimiter, async (req, res) => {
   try {
     const products = await Product.find(
       {},
@@ -15,7 +16,7 @@ router.get("/data", async (req, res) => {
         reviews: 1,
       }
     )
-      .limit(5)
+      .limit(10)
       .lean();
     res.json(products);
   } catch (error) {
@@ -23,7 +24,8 @@ router.get("/data", async (req, res) => {
     console.log("error");
   }
 });
-router.get("/data/reviews", async (req, res) => {
+
+router.get("/reviews", apiLimiter, async (req, res) => {
   try {
     const products = await Product.find(
       {},
@@ -38,23 +40,22 @@ router.get("/data/reviews", async (req, res) => {
     console.log("error");
   }
 });
-router.get("/data/:id", async (req, res) => {
-  try {
-    const product = await Product.findById(req.params.id);
-    res.json(product);
-  } catch (error) {
-    res.status(500).json({ message: "Что-то пошло не так" });
-  }
-});
-router.post("/search", async (req, res) => {
+
+router.post("/search", apiLimiter, async (req, res) => {
   try {
     let payload = req.body.payload.trim();
     let search = await Product.find(
-      { brand_name: { $regex: payload, $options: "i" } },
-      { brand_name: 1, prod_name: 1 }
+      { brand_name: { $regex: payload, '$options': 'i' } },
+      {
+        brand_name: 1,
+        prod_name: 1
+
+      }
     )
-      .limit(10)
+      .limit(5)
       .exec();
+
+    // search = search.slice(0, 10);
     res.json(search);
   } catch (error) {
     res.status(500).json({ message: "Что-то пошло не так" });
@@ -76,7 +77,7 @@ router.get("/:id", async (req, res) => {
     res.json(product);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ message: "Что-то пошло не так" });
+    res.status(500).json({ message: "Плохо все" });
   }
 });
 
