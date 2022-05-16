@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 
 import ProductSearch from "../../features/Search/ProductSearch";
 import { Layout, LayoutRow, LayoutItem, Panel } from "../../components/UIKit";
@@ -10,7 +11,6 @@ import { showItem } from "../../components/ToolbarContainer/toolbarSlice";
 import { LibraryContainer } from "../../components/LibraryContainer";
 import { AppState, wrapper } from "../../app/store";
 import { connect } from "react-redux";
-import { useEffect } from "react";
 import { getCopiedProductById } from "../../app/requests";
 import {
   setProducts,
@@ -33,12 +33,12 @@ const IndexPage: NextPage<AppState & ProdArray> = ({
     prodArray.forEach((el) => {
       dispatch(setProducts(el));
     });
-    setTimeout(() => {
-      dispatch(showItem(idProdArray));
-      prodArray.map((item) =>
-        dispatch(setReviews({ id: item._id, reviews: randomReviewsMock() }))
-      );
-    }, 0);
+
+    dispatch(showItem(idProdArray));
+    prodArray.map((item) =>
+      dispatch(setReviews({ id: item._id, reviews: randomReviewsMock() }))
+    );
+
   }, []);
 
   return (
@@ -78,10 +78,10 @@ const IndexPage: NextPage<AppState & ProdArray> = ({
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ req, res, ...etc }) => {
-      let regexp = /\d+/g;
-      let requestQueryArray = req.url.match(regexp).map((el) => +el);
-      let prodArray = [];
-      let idProdArray = [];
+      const regexp = /\d+/g;
+      const requestQueryArray = req.url.match(regexp).map((el) => +el);
+      const prodArray = [];
+      const idProdArray = [];
 
       for await (const item of requestQueryArray) {
         await getCopiedProductById(item).then((res) => {
@@ -89,7 +89,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
           idProdArray.push(res._id);
         });
       }
-      return { props: { prodArray: prodArray, idProdArray: idProdArray } };
+      return { props: { prodArray, idProdArray } };
     }
 );
 
