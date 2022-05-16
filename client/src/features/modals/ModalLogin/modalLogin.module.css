@@ -99,3 +99,25 @@
     transform: scale(1);
   }
 }
+.modal__container {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  background: #e2e4e5;
+  text-align: center;
+  width: 324px;
+  height: 59px;
+}
+.modal__wrapper {
+  margin-bottom: 10px;
+  text-align: center;
+  width: 324px;
+  height: 59px;
+}
+.modal__registration {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 324px;
+  height: 59px;
+}
