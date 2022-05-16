@@ -108,12 +108,14 @@
   width: 324px;
   height: 59px;
 }
+.modal__container::placeholder {color: black;}
 .modal__wrapper {
   margin-bottom: 10px;
   text-align: center;
   width: 324px;
   height: 59px;
 }
+
 .modal__registration {
   display: block;
   margin: 0 auto;

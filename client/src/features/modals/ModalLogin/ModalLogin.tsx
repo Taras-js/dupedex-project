@@ -42,6 +42,17 @@ const ModalLogin: React.FC = () => {
       });
   }
 
+  let textSendMessageButton = (
+    <div className={styles.modal__content_mobile}>Send message</div>
+  );
+  const textRegistrationButton = (
+    <div className={styles.modal__content_mobile}>Continue with mobile </div>
+  );
+  if (success) {
+    textSendMessageButton = (
+      <div className={styles.modal__content_mobile}> Сonfirm registration</div>
+    );
+  }
   return (
     <>
       <div className={styles.modal__login}>
@@ -52,7 +63,7 @@ const ModalLogin: React.FC = () => {
         {mobilePin === pinClient ? (
           <div className={styles.modal__registration}>
             <h2>
-              Congratulations, you have successfully registered on Dupe.dex
+              Congratulations, you have successfully registered on Dupedex.app
             </h2>
           </div>
         ) : (
@@ -63,7 +74,7 @@ const ModalLogin: React.FC = () => {
                 maxLength={4}
                 autoFocus
                 value={pinClient}
-                placeholder="Please enter code sms"
+                placeholder="Please enter code from sms"
                 onChange={(e) => {
                   setPinClient(e.target.value);
                 }}
@@ -86,6 +97,7 @@ const ModalLogin: React.FC = () => {
                   onClick={onEmailLoginClick}
                 >
                   <div className={styles.modal__content_email}>
+                    {" "}
                     Continue with email (coming soon)
                   </div>
                 </Button>
@@ -95,9 +107,7 @@ const ModalLogin: React.FC = () => {
                   className={"btn"}
                   onClick={onMobileLoginClick}
                 >
-                  <div className={styles.modal__content_mobile}>
-                    Continue with mobile
-                  </div>
+                  {textRegistrationButton}
                 </Button>
               </>
             ) : (
@@ -118,9 +128,7 @@ const ModalLogin: React.FC = () => {
                   className={"btn"}
                   onClick={sendSms}
                 >
-                  <div className={styles.modal__content_mobile}>
-                    Send message
-                  </div>
+                  {textSendMessageButton}
                 </Button>
               </>
             )}
@@ -141,4 +149,4 @@ const ModalLogin: React.FC = () => {
   );
 };
 
-export {ModalLogin};
+export { ModalLogin };
