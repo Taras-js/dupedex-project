@@ -11,7 +11,6 @@ export function makeStore() {
     reducer: {
       toolbar: toolbarReducer,
       products: productsReducer,
-      product: productsReducer,
       modal: modalReducer,
     },
   });

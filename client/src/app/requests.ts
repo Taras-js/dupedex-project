@@ -43,3 +43,17 @@ export function searchItem(payload: string): Promise<Array<any>> {
     .then((response) => response.json())
     .then((res) => res);
 }
+
+export async function getCopiedProductById(payload: number): Promise<Array<any>> {
+  return await fetch("http://localhost:3000/api/products", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      payload,
+    }),
+  })
+    .then((response) => response.json())
+    .then((res) => res);
+}

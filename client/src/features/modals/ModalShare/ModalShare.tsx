@@ -1,30 +1,37 @@
 import React, { useEffect, useState } from "react";
 import styles from "./modalShare.module.css";
 import { Button, Icon } from "../../../components/UIKit";
-import { useAppSelector } from "../../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { FacebookShareButton } from "react-share";
-import {productsState} from "../../../components/ProductContainer/productSlice";
+import { productsState } from "../../../components/ProductContainer/productSlice";
+import { toolbarState } from "../../../components/ToolbarContainer/toolbarSlice";
+import { toggleModal } from "../../../components/UIKit/Modal/modalSlice";
 
 const ModalShare: React.FC = () => {
+  const dispatch = useAppDispatch();
   const product = useAppSelector(productsState);
-  const [copyURL, setCopyURL] = useState("http://dupedex.co")
+  const toolbar = useAppSelector(toolbarState);
+  const [copyURL, setCopyURL] = useState("http://dupedex.co");
 
   useEffect(() => {
-    const domen = window.location.origin + "/?id=";
+    const domen = window.location.origin + "/products?ids=";
+
     const urlCopy = product.reduce(
-      (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
+      (prev, next) =>
+        prev === domen
+          ? prev + (toolbar.idItemsOnScreen.includes(next._id) ? next.id : "")
+          : toolbar.idItemsOnScreen.includes(next._id)
+          ? prev + "%" + next.id
+          : prev,
       domen
     );
-    setCopyURL(urlCopy)
-  }, [])
+
+    setCopyURL(urlCopy);
+  }, []);
 
   const onShareClick = () => {
-    let domen = window.location.origin + "/products?ids=";
-    let urlCopy = product.reduce(
-      (prev, next) => (prev === domen ? prev + next : prev + "%" + next),
-      domen
-    );
-    navigator.clipboard.writeText(urlCopy);
+    navigator.clipboard.writeText(copyURL);
+    dispatch(toggleModal());
   };
 
   return (
@@ -42,14 +49,12 @@ const ModalShare: React.FC = () => {
             Copy URL
           </div>
         </Button>
-        <Button
-          icon
-          isDisabled={false}
-          className={"btn"}
-        >
+
+        <div className={styles.modal__facebook_button}>
           <FacebookShareButton
             quote={copyURL}
             url={"http://dupedex.co"}
+            onClick={() => dispatch(toggleModal())}
           >
             <div className={styles.modal__content_message}>
               <Icon
@@ -61,7 +66,7 @@ const ModalShare: React.FC = () => {
               Messenger
             </div>
           </FacebookShareButton>
-        </Button>
+        </div>
       </div>
     </div>
   );

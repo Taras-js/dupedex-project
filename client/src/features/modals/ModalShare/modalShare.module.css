@@ -59,6 +59,18 @@
   animation-delay: 0s;
 }
 
+.modal__facebook_button {
+  transform: scale(1);
+  transition-property: transform;
+  transition: all 0.2s ease;
+}
+
+.modal__facebook_button:hover {
+  transform: scale(1.05);
+  transition-property: transform;
+  transition: all 0.2s ease;
+}
+
 @keyframes showModal {
   from {
     opacity: 0;

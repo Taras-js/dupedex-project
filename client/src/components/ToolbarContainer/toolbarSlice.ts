@@ -63,12 +63,12 @@ export const toolbarSlice = createSlice({
     },
     removeItem: (state, action: { type: ""; payload: string }) => {
       state.idItemsOnScreen = state.idItemsOnScreen.filter(
-        (id) => id !== action.payload,
+        (id) => id !== action.payload
       );
       saveStep(state);
     },
-    changeIdList: (state, action: { type: ""; payload: number[] }) => {
-      state.itemsIdList = action.payload;
+    changeIdList: (state, action: { type: ""; payload: [] }) => {
+      state.idItemsOnScreen = action.payload;
       const [first, ...rest] = state.idItemsOnScreen;
       state.idCurrentItem = first;
       saveStep(state);
