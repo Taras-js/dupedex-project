@@ -13,7 +13,7 @@ const ModalLogin: React.FC = () => {
     setInput(false);
   };
   const onEmailLoginClick = () => {};
-  const sendSms = async (event) => {
+  const sendSms = async () => {
     setError("");
     setSuccessMessage("");
     await clickSend(phone);
@@ -62,32 +62,32 @@ const ModalLogin: React.FC = () => {
         </p>
         {mobilePin === pinClient ? (
           <div className={styles.modal__registration}>
-            <h2>
+            <h2 className={styles.modal__registration_congratulations}>
               Congratulations, you have successfully registered on Dupedex.app
             </h2>
           </div>
         ) : (
           <div className={styles.modal__content}>
             {success ? (
-              <input
-                className={styles.modal__container}
-                maxLength={4}
-                autoFocus
-                value={pinClient}
-                placeholder="Please enter code from sms"
-                onChange={(e) => {
-                  setPinClient(e.target.value);
-                }}
-              />
+                    <>
+                      <h4 className={styles.modal__wrapper_success}>{success}</h4>
+                      <input
+                          className={styles.modal__container}
+                          maxLength={4}
+                          autoFocus
+                          value={pinClient}
+                          placeholder="Please enter code from sms"
+                          onChange={(e) => {
+                            setPinClient(e.target.value);
+                          }}
+                      />
+                    </>
             ) : (
               ""
             )}
             <div className={styles.modal__wrapper}>
-              {success ? <h3>{success}</h3> : ""}
-
-              {error ? <h3>{error}</h3> : ""}
+              {error ? <h4>{error}</h4> : ""}
             </div>
-
             {input ? (
               <>
                 <Button
