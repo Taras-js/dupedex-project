@@ -1,0 +1,8 @@
+.item {
+  min-width: 50px;
+  position: relative;
+}
+
+.item:not(:last-child) {
+  margin-right: var(--horizontal-gap);
+}
