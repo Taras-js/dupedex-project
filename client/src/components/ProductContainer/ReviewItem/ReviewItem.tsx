@@ -1,4 +1,4 @@
-import { Button, Icon } from "../../UIKit";
+import { Button, Icon, ScrollPanel } from "../../UIKit";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 
 import { toggleReviews } from "../../ToolbarContainer/toolbarSlice";
@@ -7,7 +7,7 @@ import { reviewsState } from "../productSlice";
 import styles from "./reviewItem.module.css";
 
 interface ReviewProps {
-  id: number;
+  id: string;
 }
 
 const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
@@ -21,15 +21,18 @@ const ReviewItem: React.FC<ReviewProps> = (props: ReviewProps) => {
 
   return (
     <div className={styles.review__container}>
-      <h3>Review</h3>
-      {reviews
-        .find((item) => item.id === id)
-        ?.reviews.filter((review, index) => index < 7)
-        .map((review) => (
-          <p key={review.name} className={styles.review__text}>
-            {review.review_text}
-          </p>
-        ))}
+      <h3 className={styles.review__heading}>Reviews</h3>
+      <ScrollPanel>
+        {reviews
+          // eslint-disable-next-line no-underscore-dangle
+          .find((item) => item.id === id)
+          ?.reviews.filter((review, index) => index < 7)
+          .map((review) => (
+            <p key={review.name} className={styles.review__text}>
+              {review.review_text}
+            </p>
+          ))}
+      </ScrollPanel>
       <Button icon className={styles.close_btn} onClick={onShowReviewsClick}>
         <Icon type="toggleReviews" width={28} height={28} />
       </Button>

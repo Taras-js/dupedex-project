@@ -1,9 +1,9 @@
-import styles from "./librarycontainer.module.css";
 import { LibraryItem } from "./LibraryItem";
-import { Button, Icon, ScrollPanel } from "../UIKit";
+import { Button, ScrollPanel, Search } from "../UIKit";
+
 import { itemsIdLibraryMock } from "../../shared/mocks/consts";
-import Search from "../UIKit/Search/Search";
-import { libraryMock } from "../../shared/mocks/librarymock";
+
+import styles from "./librarycontainer.module.css";
 
 const LibraryContainer = () => (
   <div className={styles.container}>
@@ -17,7 +17,6 @@ const LibraryContainer = () => (
     <div className={styles.container__wrapper}>
       <div className={styles.search__wrapper}>
         <Search
-          results={libraryMock}
           placeholder="Search for routines"
           withDebounce={() => {}}
         />
@@ -29,15 +28,6 @@ const LibraryContainer = () => (
         <LibraryItem key={item} id={item} />
       ))}
     </ScrollPanel>
-
-    <Button icon className={styles.close_btn} onClick={() => {}}>
-      <Icon
-        type="exit"
-        width={18}
-        height={18}
-        color="var(--color-cross-grey)"
-      />
-    </Button>
   </div>
 );
 
