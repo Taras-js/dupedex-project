@@ -3,6 +3,7 @@ import {
   showItem,
   removeItem,
   setCurrentItem,
+  toggleReviews,
 } from "../../ToolbarContainer/toolbarSlice";
 import { productsState, reviewsState } from "../productSlice";
 import { cls, getLabels, getQuantity } from "../../../utils/helper";
@@ -22,15 +23,14 @@ interface ProductProps {
 }
 
 const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
-  const {
-    id, size, isShowClose = false, filter,
-  } = props;
+  const { id, size, isShowClose = false, filter } = props;
   const dispatch = useAppDispatch();
   const products = useAppSelector(productsState);
 
   const onSelectProduct = () => {
     dispatch(setCurrentItem(id));
     dispatch(showItem([id]));
+    dispatch(toggleReviews());
   };
 
   const onCloseSelected = () => {
@@ -43,7 +43,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
 
   const itemReviews = reviews.find((itemToFind) => itemToFind.id === id);
   const labels = itemReviews ? getLabels(itemReviews.reviews) : [];
-  // console.log(getLabels(itemReviews.reviews), "labels")
+
   const labelQuantity = getQuantity(size);
 
   const itemClass = cls(styles, "products__item", size);
@@ -73,6 +73,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
           filter={filter}
           size={size}
           maxQuantity={labelQuantity}
+          isShowClose={isShowClose}
         />
       </div>
 

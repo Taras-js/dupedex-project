@@ -16,7 +16,16 @@ interface ProductState {
     title: string;
     subtitle: string;
   }[];
+  filterReview: {
+    filter: boolean;
+    filterTags: PayloadFilterReview[];
+  };
 }
+
+export type PayloadFilterReview = {
+  filterTag: string;
+  mood: string;
+};
 
 export const initialState: ProductState = {
   idProductsSaved: [],
@@ -24,6 +33,7 @@ export const initialState: ProductState = {
   idReviewsSaved: [],
   reviews: [],
   searches: [],
+  filterReview: { filter: false, filterTags: [] },
 };
 
 export const productSlice = createSlice({
@@ -39,7 +49,7 @@ export const productSlice = createSlice({
 
     setReviews(
       state,
-      action: { type: ""; payload: { id: string; reviews: any[] } },
+      action: { type: ""; payload: { id: string; reviews: any[] } }
     ) {
       if (state.idReviewsSaved.includes(action.payload.id)) return;
 
@@ -52,18 +62,47 @@ export const productSlice = createSlice({
       action: {
         type: "";
         payload: { id: string; title: string; subtitle: string }[];
-      },
+      }
     ) {
-       state.searches.length = 0
-       state.searches.push(...action.payload)
+      state.searches.length = 0;
+      state.searches.push(...action.payload);
+    },
+    setFilterReview: (
+      state,
+      action: { type: ""; payload: PayloadFilterReview }
+    ) => {
+      // let index = state.filterReview.filterTags.indexOf(action.payload.filterTag)
+      let index = state.filterReview.filterTags.findIndex((element) => {
+        return element.filterTag === action.payload.filterTag;
+      });
+      if (index !== -1) {
+        state.filterReview.filterTags.splice(index, 1);
+      } else {
+        state.filterReview.filterTags.push(action.payload);
+      }
+      !state.filterReview.filterTags.length
+        ? (state.filterReview.filter = false)
+        : (state.filterReview.filter = true);
+    },
+    resetFilterReview: (state) => {
+      state.filterReview.filter = false;
+      state.filterReview.filterTags = [];
     },
   },
 });
 
-export const { setProducts, setReviews, setSearches } = productSlice.actions;
+export const {
+  setProducts,
+  setReviews,
+  setSearches,
+  setFilterReview,
+  resetFilterReview,
+} = productSlice.actions;
 
 export const productsState = (state: AppState) => state.products.products;
 export const reviewsState = (state: AppState) => state.products.reviews;
+export const filterReviewState = (state: AppState) =>
+  state.products.filterReview;
 // export const searchesState = (state: AppState) => state.products.searches;
 
 export default productSlice.reducer;
