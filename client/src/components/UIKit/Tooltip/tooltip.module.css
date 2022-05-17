@@ -39,7 +39,7 @@
   line-height: 1.2rem;
   transition: opacity 0.2s 0 ease;
 
-  visibility: visible;
+  visibility: hidden;
   opacity: 0;
 }
 
