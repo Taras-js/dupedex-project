@@ -23,7 +23,7 @@ const ToolbarContainer = () => {
   const onShowTutorialClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_tutorial"
+    "toolbar__btn_tutorial",
   );
 
   const isPrevDisabled = product.historyStep === 1;
@@ -33,7 +33,7 @@ const ToolbarContainer = () => {
   const onGetPrevStepClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_prev_step"
+    "toolbar__btn_prev_step",
   );
 
   const isNextDisabled = product.historyStep === product.history.length;
@@ -43,7 +43,7 @@ const ToolbarContainer = () => {
   const onGetNextStepClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_next_step"
+    "toolbar__btn_next_step",
   );
 
   const isReviewShown = product.isReviewShown === false;
@@ -54,7 +54,7 @@ const ToolbarContainer = () => {
     styles,
     "toolbar__btn",
     "toolbar__btn_toggle_reviews",
-    { toolbar__btn_toggle_reviews_active: isReviewShown }
+    { toolbar__btn_toggle_reviews_active: isReviewShown },
   );
 
   const isPositive = product.filter === Filter.positive;
@@ -65,7 +65,7 @@ const ToolbarContainer = () => {
     styles,
     "toolbar__btn",
     "toolbar__btn_positive",
-    { toolbar__btn_positive_active: isPositive }
+    { toolbar__btn_positive_active: isPositive },
   );
 
   const isNegative = product.filter === Filter.negative;
@@ -76,21 +76,21 @@ const ToolbarContainer = () => {
     styles,
     "toolbar__btn",
     "toolbar__btn_negative",
-    { toolbar__btn_negative_active: isNegative }
+    { toolbar__btn_negative_active: isNegative },
   );
 
   const onShowProductClaims = () => {};
   const onShowProductClaimsClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_product_claims"
+    "toolbar__btn_product_claims",
   );
 
   const onWriteNotes = () => {};
   const onWriteNotesClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_write_notes"
+    "toolbar__btn_write_notes",
   );
 
   const onShareLibrary = () => {
@@ -100,19 +100,19 @@ const ToolbarContainer = () => {
   const onShareLibraryClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_share"
+    "toolbar__btn_share",
   );
 
   const onSaveLibrary = () => {};
   const onSaveLibraryClassName = cls(
     styles,
     "toolbar__btn",
-    "toolbar__btn_save"
+    "toolbar__btn_save",
   );
 
   return (
     <div className={styles.container}>
-      <Tooltip placement="top" title="Tutorial">
+      <Tooltip placement="bottom" title="Tutorial">
         <Button
           icon
           className={onShowTutorialClassName}
@@ -124,7 +124,7 @@ const ToolbarContainer = () => {
 
       <Divider />
 
-      <Tooltip title="undo">
+      <Tooltip placement="bottom" title="undo">
         <Button
           icon
           className={onGetPrevStepClassName}
@@ -135,7 +135,7 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Tooltip title="redo">
+      <Tooltip placement="bottom" title="redo">
         <Button
           icon
           className={onGetNextStepClassName}
@@ -148,7 +148,7 @@ const ToolbarContainer = () => {
 
       <Divider />
 
-      <Tooltip title="Show/hide reviews">
+      <Tooltip placement="bottom" title="Show/hide reviews">
         <Button
           icon
           className={onToggleReviewsClassName}
@@ -158,7 +158,7 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Tooltip title="Show only positive reviews">
+      <Tooltip placement="bottom" title="Filter positive reviews">
         <Button
           icon
           className={onFilterPositiveClassName}
@@ -168,7 +168,7 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Tooltip title="Show only negative reviews">
+      <Tooltip placement="bottom" title="Filter negative reviews">
         <Button
           icon
           className={onFilterNegativeClassName}
@@ -178,25 +178,29 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Button
-        icon
-        className={onShowProductClaimsClassName}
-        onClick={onShowProductClaims}
-      >
-        <Icon type="productClaims" width={28} height={28} />
-      </Button>
+      <Tooltip placement="bottom" title="Product claims">
+        <Button
+          icon
+          className={onShowProductClaimsClassName}
+          onClick={onShowProductClaims}
+        >
+          <Icon type="productClaims" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
-      <Button
-        icon
-        className={onWriteNotesClassName}
-        onClick={onWriteNotes}
-      >
-        <Icon type="writeNotes" width={28} height={28} />
-      </Button>
+      <Tooltip placement="bottom" title="Write notes">
+        <Button
+          icon
+          className={onWriteNotesClassName}
+          onClick={onWriteNotes}
+        >
+          <Icon type="writeNotes" width={28} height={28} />
+        </Button>
+      </Tooltip>
 
       <Divider />
 
-      <Tooltip title="Share library">
+      <Tooltip placement="bottom" title="Share library">
         <Button
           icon
           className={onShareLibraryClassName}
@@ -207,7 +211,7 @@ const ToolbarContainer = () => {
         </Button>
       </Tooltip>
 
-      <Tooltip title="Save library">
+      <Tooltip placement="bottom" title="Save library">
         <Button
           icon
           className={onSaveLibraryClassName}
