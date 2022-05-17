@@ -1,8 +1,8 @@
 # Dupedex
-# Для запуска приложения:
-# 1. В корне проекта npm install           
-# 2. В папке client  npm install
-# 3. В корне проекта npm run dev
+# For app launch:
+# 1. In root folder: npm install           
+# 2. In client folder: npm install
+# 3. In root folder: npm run dev
 
-Основные технологии:
+Main technologies:
 react, express, mongodb, node.js, next.js

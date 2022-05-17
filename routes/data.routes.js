@@ -20,7 +20,7 @@ router.get("/data", apiLimiter, async (req, res) => {
       .lean();
     res.json(products);
   } catch (error) {
-    res.status(500).json({ message: "Что-то пошло не так" });
+    res.status(500).json({ message: "Something goes wrong" });
     console.log("error");
   }
 });
@@ -36,7 +36,7 @@ router.get("/reviews", apiLimiter, async (req, res) => {
     ).lean();
     res.json(products);
   } catch (error) {
-    res.status(500).json({ message: "Что-то пошло не так" });
+    res.status(500).json({ message: "Something goes wrong" });
     console.log("error");
   }
 });
@@ -58,7 +58,7 @@ router.post("/search", apiLimiter, async (req, res) => {
     // search = search.slice(0, 10);
     res.json(search);
   } catch (error) {
-    res.status(500).json({ message: "Что-то пошло не так" });
+    res.status(500).json({ message: "Something goes wrong" });
     console.log("error");
   }
 });
@@ -68,7 +68,7 @@ router.post("/id", async (req, res) => {
     const product = await Product.findOne({ id: payload });
     res.json(product);
   } catch (error) {
-    res.status(500).json({ message: "Что-то пошло не так" });
+    res.status(500).json({ message: "Something goes wrong" });
   }
 });
 router.get("/:id", async (req, res) => {
@@ -77,7 +77,7 @@ router.get("/:id", async (req, res) => {
     res.json(product);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ message: "Плохо все" });
+    res.status(500).json({ message: "Something goes wrong" });
   }
 });
 
@@ -87,7 +87,7 @@ router.post("/products", async (req, res) => {
     const product = await Product.findOne({ id: payload });
     res.json(product);
   } catch (error) {
-    res.status(500).json({ message: "Что-то пошло не так" });
+    res.status(500).json({ message: "Something goes wrong" });
     console.log("error");
   }
 });
