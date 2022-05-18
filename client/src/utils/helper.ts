@@ -1,5 +1,14 @@
 import classNames from "classnames/bind";
+import { ProductReviews, Reviews } from "../components/ProductContainer/productSlice";
 import { CardSize } from "../shared/types";
+
+export type SortLabels = [string , ReturnGetLabelsType]
+
+export type ReturnGetLabelsType = {
+  tag: string | null,
+  count: number,
+  name: string,
+}
 
 export function cls(styles, ...args) {
   const sx = classNames.bind(styles);
@@ -9,17 +18,15 @@ export function cls(styles, ...args) {
 
 export function sort(array: Array<any>, key: any): Array<any> {
   const sortedArray = array.sort((a, b) => (a[key] < b[key] ? 1 : -1));
-
   return sortedArray;
 }
 
-export function sortLabels(array: Array<any>): Array<any> {
+export function sortLabels(array: Array<any>): Array<SortLabels> {
   const sortedArray = array.sort((a, b) => (a[1].count < b[1].count ? 1 : -1));
-
   return sortedArray;
 }
 
-export function getLabels(reviews: Array<any>) {
+export function getLabels(reviews: Reviews):Array<SortLabels> {
   const allLabels = [];
 
   const objLabels = {};

@@ -3,9 +3,10 @@ import {
   showItem,
   removeItem,
   setCurrentItem,
+  toggleReviews,
 } from "../../ToolbarContainer/toolbarSlice";
 import { productsState, reviewsState } from "../productSlice";
-import { cls, getLabels, getQuantity } from "../../../utils/helper";
+import { cls, getLabels, getQuantity, SortLabels } from "../../../utils/helper";
 
 import { Button, Icon } from "../../UIKit";
 import { LabelList } from "../LabelList";
@@ -22,9 +23,7 @@ interface ProductProps {
 }
 
 const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
-  const {
-    id, size, isShowClose = false, filter,
-  } = props;
+  const { id, size, isShowClose = false, filter } = props;
   const dispatch = useAppDispatch();
   const products = useAppSelector(productsState);
 
@@ -42,8 +41,10 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const item = products.find((itemToFind) => itemToFind._id === id);
 
   const itemReviews = reviews.find((itemToFind) => itemToFind.id === id);
-  const labels = itemReviews ? getLabels(itemReviews.reviews) : [];
-  // console.log(getLabels(itemReviews.reviews), "labels")
+  const labels: Array<SortLabels> = itemReviews
+    ? getLabels(itemReviews.reviews)
+    : [];
+
   const labelQuantity = getQuantity(size);
 
   const itemClass = cls(styles, "products__item", size);
@@ -73,6 +74,7 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
           filter={filter}
           size={size}
           maxQuantity={labelQuantity}
+          isShowClose={isShowClose}
         />
       </div>
 

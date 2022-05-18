@@ -5,6 +5,7 @@
   position: relative;
   height: 100%;
   padding: 40px 10px 60px;
+  width: 100%;
 }
 
 .review__heading {
@@ -35,4 +36,40 @@
 
 .close_btn:hover > svg {
   fill: var(--color-neutral_yellow-dark);
+}
+
+.positive {
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(28, 191, 96, 1);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+.negative {
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(251, 120, 142, 0.6);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+.neutral {
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(248, 211, 110, 1);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+.grey {
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(119, 119, 119);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0 2px;
 }

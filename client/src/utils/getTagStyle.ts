@@ -28,12 +28,9 @@ const getAlphaFromScore = (score: number): number => {
   }
 };
 
-export const getTagStyle = ([tagLabel, tagInfo]: Array<any>): TagStyle => {
-  const re: RegExp = /\((.*?)[)|/]/g;
-  const findMood: RegExpExecArray = re.exec(tagLabel.split(" ").pop());
-
-  const color: RGBonly = !findMood ? Marks.other : Marks[findMood[1]];
-  const alpha = getAlphaFromScore(Number(tagInfo.count));
+export const getTagStyle = ({tag, count}): TagStyle => {
+  const color: RGBonly = !tag ? Marks.other : Marks[tag];
+  const alpha = getAlphaFromScore(Number(count));
 
   const tagStyle: TagStyle = {
     backgroundColor: `rgba(${color}, ${alpha})`,

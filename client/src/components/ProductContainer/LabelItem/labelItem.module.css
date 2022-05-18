@@ -26,3 +26,13 @@
 .label__tag.other {
   background-color: rgba(100, 100, 200, 0.3);
 }
+
+.label__tag_pointer {
+  cursor: pointer;
+}
+
+.border {
+  border: 2px solid #707070;
+
+  padding: 6px;
+}
