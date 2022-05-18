@@ -6,7 +6,7 @@ import {
   toggleReviews,
 } from "../../ToolbarContainer/toolbarSlice";
 import { productsState, reviewsState } from "../productSlice";
-import { cls, getLabels, getQuantity } from "../../../utils/helper";
+import { cls, getLabels, getQuantity, SortLabels } from "../../../utils/helper";
 
 import { Button, Icon } from "../../UIKit";
 import { LabelList } from "../LabelList";
@@ -30,7 +30,6 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const onSelectProduct = () => {
     dispatch(setCurrentItem(id));
     dispatch(showItem([id]));
-    dispatch(toggleReviews());
   };
 
   const onCloseSelected = () => {
@@ -42,7 +41,9 @@ const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const item = products.find((itemToFind) => itemToFind._id === id);
 
   const itemReviews = reviews.find((itemToFind) => itemToFind.id === id);
-  const labels = itemReviews ? getLabels(itemReviews.reviews) : [];
+  const labels: Array<SortLabels> = itemReviews
+    ? getLabels(itemReviews.reviews)
+    : [];
 
   const labelQuantity = getQuantity(size);
 

@@ -17,7 +17,7 @@ const initialState: ToolbarState = {
   idItemsOnScreen: itemsIdProductsMock,
   idCurrentItem: itemsIdProductsMock[0],
   filter: null,
-  isReviewShown: false,
+  isReviewShown: true,
   history: [
     {
       idItemsOnScreen: itemsIdProductsMock,

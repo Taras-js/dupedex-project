@@ -1,11 +1,11 @@
 import { Filter, CardSize } from "../../../shared/types";
-import { cls } from "../../../utils/helper";
+import { cls, SortLabels } from "../../../utils/helper";
 
 import { LabelItem } from "../LabelItem";
 import styles from "./labelList.module.css";
 
 interface LabelProps {
-  labels: any;
+  labels: SortLabels[];
   size: CardSize;
   filter?: Filter;
   maxQuantity?: number;

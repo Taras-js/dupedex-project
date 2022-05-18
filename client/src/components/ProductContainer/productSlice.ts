@@ -1,16 +1,21 @@
 /* eslint-disable no-underscore-dangle */
 import { createSlice } from "@reduxjs/toolkit";
+import { StringMap } from "ts-jest/dist/types";
 
 import type { AppState } from "../../app/store";
+import { reviewsMock } from "../../shared/mocks/reviewsmock";
+
+export type Reviews = typeof reviewsMock;
+export type ProductReviews = {
+  id: string;
+  reviews: Reviews;
+};
 
 interface ProductState {
   idProductsSaved: string[];
   products: any[];
   idReviewsSaved: string[];
-  reviews: {
-    id: string;
-    reviews: any[];
-  }[];
+  reviews: ProductReviews[];
   searches: {
     id: string;
     title: string;
@@ -71,7 +76,6 @@ export const productSlice = createSlice({
       state,
       action: { type: ""; payload: PayloadFilterReview }
     ) => {
-      // let index = state.filterReview.filterTags.indexOf(action.payload.filterTag)
       let index = state.filterReview.filterTags.findIndex((element) => {
         return element.filterTag === action.payload.filterTag;
       });

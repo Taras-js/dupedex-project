@@ -12,12 +12,13 @@ import { AddProductButton } from "../../features/AddProductButton";
 import styles from "./productContainer.module.css";
 
 const ProductContainer: React.FC = () => {
-  const {
-    idCurrentItem, idItemsOnScreen, filter, isReviewShown,
-  } = useAppSelector(toolbarState);
+  const { idCurrentItem, idItemsOnScreen, filter, isReviewShown } =
+    useAppSelector(toolbarState);
   const products = useAppSelector(productsState);
 
-  const productList = products.filter((item) => idItemsOnScreen.includes(item._id));
+  const productList = products.filter((item) =>
+    idItemsOnScreen.includes(item._id)
+  );
 
   const itemSize = getCardSize(idItemsOnScreen, isReviewShown);
 
@@ -27,7 +28,6 @@ const ProductContainer: React.FC = () => {
 
   return (
     <div className={containerClass}>
-
       {productList.map((item) => (
         <Panel key={item.id} className={panelClass}>
           <ProductItem
@@ -45,16 +45,13 @@ const ProductContainer: React.FC = () => {
         </Panel>
       )}
 
-      {productList.length < 4
-        && (
-          <Panel className={addBtnClass}>
-            <Tooltip
-              title="Add a new product"
-            >
-              <AddProductButton />
-            </Tooltip>
-          </Panel>
-        )}
+      {productList.length < 4 && (
+        <Panel className={addBtnClass}>
+          <Tooltip title="Add a new product">
+            <AddProductButton />
+          </Tooltip>
+        </Panel>
+      )}
     </div>
   );
 };
