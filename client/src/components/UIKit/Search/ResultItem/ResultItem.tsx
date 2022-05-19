@@ -7,14 +7,15 @@ interface ResultItemProps {
   title?: string;
   subtitle?: string;
   image?: string;
-  idProducts: number[];
+  idProducts: string[];
   onClick?: (id: string) => void;
   setClickItem?: (isClickable: boolean) => void;
 }
 
 const ResultItem: React.FC<ResultItemProps> = (props: ResultItemProps) => {
-  const { title, subtitle, image, id, onClick, idProducts, setClickItem } =
-    props;
+  const {
+    title, subtitle, image, id, onClick, idProducts, setClickItem,
+  } = props;
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();

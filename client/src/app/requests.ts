@@ -44,9 +44,12 @@ export function searchItem(payload: string): Promise<Array<any>> {
     .then((res) => res);
 }
 
-export async function getCopiedProductById(payload: number, req: any): Promise<Array<any>> {
-  
-  return await fetch("http://" + req + "/api/products", {
+interface Response {
+  _id: string;
+}
+
+export async function getCopiedProductById(payload: number, req: any): Promise<Response> {
+  return fetch(`http://${req}/api/products`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

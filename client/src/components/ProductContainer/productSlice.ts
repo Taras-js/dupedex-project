@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-underscore-dangle */
 import { createSlice } from "@reduxjs/toolkit";
 import { StringMap } from "ts-jest/dist/types";
@@ -54,7 +56,7 @@ export const productSlice = createSlice({
 
     setReviews(
       state,
-      action: { type: ""; payload: { id: string; reviews: any[] } }
+      action: { type: ""; payload: { id: string; reviews: any[] } },
     ) {
       if (state.idReviewsSaved.includes(action.payload.id)) return;
 
@@ -67,18 +69,16 @@ export const productSlice = createSlice({
       action: {
         type: "";
         payload: { id: string; title: string; subtitle: string }[];
-      }
+      },
     ) {
-      state.searches.length = 0;
+      state.searches = [];
       state.searches.push(...action.payload);
     },
     setFilterReview: (
       state,
-      action: { type: ""; payload: PayloadFilterReview }
+      action: { type: ""; payload: PayloadFilterReview },
     ) => {
-      let index = state.filterReview.filterTags.findIndex((element) => {
-        return element.filterTag === action.payload.filterTag;
-      });
+      const index = state.filterReview.filterTags.findIndex((element) => element.filterTag === action.payload.filterTag);
       if (index !== -1) {
         state.filterReview.filterTags.splice(index, 1);
       } else {
@@ -105,8 +105,7 @@ export const {
 
 export const productsState = (state: AppState) => state.products.products;
 export const reviewsState = (state: AppState) => state.products.reviews;
-export const filterReviewState = (state: AppState) =>
-  state.products.filterReview;
+export const filterReviewState = (state: AppState) => state.products.filterReview;
 // export const searchesState = (state: AppState) => state.products.searches;
 
 export default productSlice.reducer;

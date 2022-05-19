@@ -6,7 +6,9 @@ import {
   toggleReviews,
 } from "../../ToolbarContainer/toolbarSlice";
 import { productsState, reviewsState } from "../productSlice";
-import { cls, getLabels, getQuantity, SortLabels } from "../../../utils/helper";
+import {
+  cls, getLabels, getQuantity, SortLabels,
+} from "../../../utils/helper";
 
 import { Button, Icon } from "../../UIKit";
 import { LabelList } from "../LabelList";
@@ -23,7 +25,9 @@ interface ProductProps {
 }
 
 const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
-  const { id, size, isShowClose = false, filter } = props;
+  const {
+    id, size, isShowClose = false, filter,
+  } = props;
   const dispatch = useAppDispatch();
   const products = useAppSelector(productsState);
 

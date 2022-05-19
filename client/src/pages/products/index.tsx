@@ -1,16 +1,20 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-underscore-dangle */
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect } from "react";
 
+import { connect } from "react-redux";
 import ProductSearch from "../../features/Search/ProductSearch";
-import { Layout, LayoutRow, LayoutItem, Panel } from "../../components/UIKit";
+import {
+  Layout, LayoutRow, LayoutItem, Panel,
+} from "../../components/UIKit";
 import { ProductContainer } from "../../components/ProductContainer";
 import { ToolbarContainer } from "../../components/ToolbarContainer";
 import { useAppDispatch } from "../../app/hooks";
 import { showItem } from "../../components/ToolbarContainer/toolbarSlice";
 import { LibraryContainer } from "../../components/LibraryContainer";
 import { AppState, wrapper } from "../../app/store";
-import { connect } from "react-redux";
 import { getCopiedProductById } from "../../app/requests";
 import {
   setProducts,
@@ -26,7 +30,7 @@ type ProdArray = {
 const IndexPage: NextPage<AppState & ProdArray> = ({
   prodArray,
   idProdArray,
-}) => {
+}: ProdArray) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -35,10 +39,7 @@ const IndexPage: NextPage<AppState & ProdArray> = ({
     });
 
     dispatch(showItem(idProdArray));
-    prodArray.map((item) =>
-      dispatch(setReviews({ id: item._id, reviews: randomReviewsMock() }))
-    );
-
+    prodArray.map((item) => dispatch(setReviews({ id: item._id, reviews: randomReviewsMock() })));
   }, []);
 
   return (
@@ -76,21 +77,20 @@ const IndexPage: NextPage<AppState & ProdArray> = ({
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async ({ req, res, ...etc }) => {
-      const regexp = /\d+/g;
-      const requestQueryArray = req.url.match(regexp).map((el) => +el);
-      const prodArray = [];
-      const idProdArray = [];
+  (store) => async ({ req, res, ...etc }) => {
+    const regexp = /\d+/g;
+    const requestQueryArray = req.url.match(regexp).map((el) => +el);
+    const prodArray = [];
+    const idProdArray = [];
 
-      for await (const item of requestQueryArray) {
-        await getCopiedProductById(item, req.headers.host).then((res) => {
-          prodArray.push(res);
-          idProdArray.push(res._id);
-        });
-      }
-      return { props: { prodArray, idProdArray } };
+    for await (const item of requestQueryArray) {
+      await getCopiedProductById(item, req.headers.host).then((response) => {
+        prodArray.push(response);
+        idProdArray.push(response._id);
+      });
     }
+    return { props: { prodArray, idProdArray } };
+  },
 );
 
 export default connect((state) => state)(IndexPage);

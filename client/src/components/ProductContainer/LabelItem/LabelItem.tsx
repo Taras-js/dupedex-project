@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { Filter } from "../../../shared/types";
 import { getTagStyle } from "../../../utils/getTagStyle";
@@ -24,11 +26,9 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
     negative: label[1].tag === Filter.negative,
     neutral: label[1].tag === Filter.neutral,
     other: label[1].tag === null,
-    border: filterReview.filterTags.some((tag) => {
-      return (
-        tag.filterTag == label[1].name && product.idItemsOnScreen.length === 1
-      );
-    }),
+    border: filterReview.filterTags.some((tag) => (
+      tag.filterTag === label[1].name && product.idItemsOnScreen.length === 1
+    )),
   };
 
   const addFilterReview = (filter: string) => {
@@ -42,7 +42,7 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
       className={cls(
         styles,
         labelItemClass,
-        isShowClose ? null : "label__tag_pointer"
+        isShowClose ? null : "label__tag_pointer",
       )}
       onClick={() => {
         addFilterReview(label[1].name);
@@ -50,7 +50,8 @@ const LabelItem: React.FC<LabelProps> = (props: LabelProps) => {
     >
       <span>{label[1].name}</span>
       <span>
-        ({Number(label[1].count).toFixed(0)}
+        (
+        {Number(label[1].count).toFixed(0)}
         %)
       </span>
     </li>

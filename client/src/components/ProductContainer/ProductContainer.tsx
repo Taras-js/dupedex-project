@@ -12,13 +12,12 @@ import { AddProductButton } from "../../features/AddProductButton";
 import styles from "./productContainer.module.css";
 
 const ProductContainer: React.FC = () => {
-  const { idCurrentItem, idItemsOnScreen, filter, isReviewShown } =
-    useAppSelector(toolbarState);
+  const {
+    idCurrentItem, idItemsOnScreen, filter, isReviewShown,
+  } = useAppSelector(toolbarState);
   const products = useAppSelector(productsState);
 
-  const productList = products.filter((item) =>
-    idItemsOnScreen.includes(item._id)
-  );
+  const productList = products.filter((item) => idItemsOnScreen.includes(item._id));
 
   const itemSize = getCardSize(idItemsOnScreen, isReviewShown);
 

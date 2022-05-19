@@ -52,7 +52,7 @@ const ProductSearch = () => {
     async function getResults() {
       const searches = await searchItem(search);
       setResult(getProductBySearch(searches, search));
-      dispatch(setSearches(searches))
+      dispatch(setSearches(searches));
     }
     getResults();
   }, [search]);

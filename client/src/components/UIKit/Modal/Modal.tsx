@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react'
-import ReactDOM from 'react-dom'
-import { useAppDispatch } from '../../../app/hooks'
-import { Button } from '../Button'
-import { Icon } from '../Icon'
+import React, { useRef, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { useAppDispatch } from '../../../app/hooks';
+import { Button } from '../Button';
+import { Icon } from '../Icon';
 
-import styles from './modal.module.css'
-import { toggleModal } from './modalSlice'
+import styles from './modal.module.css';
+import { toggleModal } from './modalSlice';
 
 interface ModalProps {
   children: React.ReactNode
@@ -14,28 +14,28 @@ interface ModalProps {
 }
 
 const Modal = (props: ModalProps) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const { children, onClose, isUnclosable } = props
-  const dispatch = useAppDispatch()
+  const ref = useRef<HTMLDivElement>(null);
+  const { children, onClose, isUnclosable } = props;
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     function handleClick(event: MouseEvent) {
       if (event.target === ref.current) {
-        onClose?.()
+        onClose?.();
       }
     }
 
     if (!isUnclosable) {
-      document.addEventListener('click', handleClick)
-
-      return () => {
-        document.removeEventListener('click', handleClick)
-      }
+      document.addEventListener('click', handleClick);
     }
-  }, [])
 
-  const node = document.getElementById('modal__root')
-  if (!node) return null
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
+
+  const node = document.getElementById('modal__root');
+  if (!node) return null;
 
   return ReactDOM.createPortal(
     <div className={styles.modal} ref={ref}>
@@ -45,12 +45,12 @@ const Modal = (props: ModalProps) => {
             <Button
               icon
               isDisabled={false}
-              className={'btn'}
+              className="btn"
               onClick={() => {
-                dispatch(toggleModal())
+                dispatch(toggleModal());
               }}
             >
-              <Icon type="exit" width={24} height={22.5} color={'#000'}></Icon>
+              <Icon type="exit" width={24} height={22.5} color="#000" />
             </Button>
           </div>
         ) : null}
@@ -58,8 +58,8 @@ const Modal = (props: ModalProps) => {
         {children}
       </div>
     </div>,
-    node
-  )
-}
+    node,
+  );
+};
 
-export { Modal }
+export { Modal };

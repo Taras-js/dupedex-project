@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, current } from "@reduxjs/toolkit";
+import { HYDRATE } from "next-redux-wrapper";
 
 import type { AppState } from "../../app/store";
 import { itemsIdProductsMock } from "../../shared/mocks/consts";
 
-import { HYDRATE } from "next-redux-wrapper";
 import { Filter, ToolbarContent } from "../../shared/types";
 
 export interface ToolbarState extends ToolbarContent {
@@ -63,7 +63,7 @@ export const toolbarSlice = createSlice({
     },
     removeItem: (state, action: { type: ""; payload: string }) => {
       state.idItemsOnScreen = state.idItemsOnScreen.filter(
-        (id) => id !== action.payload
+        (id) => id !== action.payload,
       );
       saveStep(state);
     },
@@ -103,12 +103,10 @@ export const toolbarSlice = createSlice({
     },
   },
   extraReducers: {
-    [HYDRATE]: (state, action) => {
-      return {
-        ...state,
-        ...action.payload.product,
-      };
-    },
+    [HYDRATE]: (state, action) => ({
+      ...state,
+      ...action.payload.product,
+    }),
   },
 });
 

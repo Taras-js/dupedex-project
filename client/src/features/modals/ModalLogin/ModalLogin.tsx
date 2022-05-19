@@ -27,7 +27,6 @@ const ModalLogin: React.FC = () => {
         } else {
           setMobilePin(res.mobilePin);
           setSuccessMessage(res.status);
-          console.log(res.mobilePin);
         }
       });
   }

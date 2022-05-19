@@ -2,6 +2,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { Icon, Button } from "../UIKit";
 import { Modal } from "../UIKit/Modal";
 import {
+  Modals,
   modalState,
   setModalComponent,
   toggleModal,
@@ -9,27 +10,23 @@ import {
 } from "../UIKit/Modal/modalSlice";
 
 import styles from "./header.module.css";
-import { modalComponents, modals } from "../../features/modals/helper";
+import { modalComponents } from "../../features/modals/helper";
 
 function Header() {
   const dispatch = useAppDispatch();
   const modal = useAppSelector(modalState);
   const onClickMain = () => {
-    console.log("click Main");
   };
 
   const onClickSignIn = () => {
-    console.log("click SignIn");
-    dispatch(setModalComponent(modals.ModalLogin));
+    dispatch(setModalComponent(Modals.ModalLogin));
     dispatch(setIsUnclosable(false));
   };
 
   const onClickSignUp = () => {
-    console.log("click SignUp");
   };
 
   const onClickDarkMode = () => {
-    console.log("click DarkMode");
   };
 
   return (
