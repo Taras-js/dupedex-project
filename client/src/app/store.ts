@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/indent */
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
+import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import productsReducer from "../components/ProductContainer/productSlice";
 import toolbarReducer from "../components/ToolbarContainer/toolbarSlice";
 import modalReducer from "../components/UIKit/Modal/modalSlice";
-import { createWrapper, HYDRATE } from "next-redux-wrapper";
 
 export function makeStore() {
   return configureStore({

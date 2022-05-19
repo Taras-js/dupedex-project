@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-autofocus */
 import React, { useState } from "react";
 import styles from "./modalLogin.module.css";
 import { Button } from "../../../components/UIKit";
@@ -41,8 +43,6 @@ const ModalLogin: React.FC = () => {
     await clickSend(phone);
     setPhone("");
   };
-
-
 
   let textSendMessageButton = (
     <div className={styles.modal__content_mobile}>Send message</div>

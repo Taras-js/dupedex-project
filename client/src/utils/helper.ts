@@ -2,13 +2,13 @@ import classNames from "classnames/bind";
 import { ProductReviews, Reviews } from "../components/ProductContainer/productSlice";
 import { CardSize } from "../shared/types";
 
-export type SortLabels = [string , ReturnGetLabelsType]
+export type SortLabels = [string, ReturnGetLabelsType];
 
 export type ReturnGetLabelsType = {
   tag: string | null,
   count: number,
   name: string,
-}
+};
 
 export function cls(styles, ...args) {
   const sx = classNames.bind(styles);

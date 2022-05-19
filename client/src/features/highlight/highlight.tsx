@@ -1,5 +1,5 @@
-import { PayloadFilterReview } from "../../components/ProductContainer/productSlice";
 import reactStringReplace from "react-string-replace";
+import { PayloadFilterReview } from "../../components/ProductContainer/productSlice";
 
 // amount of letters in word. It helps to half of word and some next letters and search it in the review
 const LONG_WORD: number = 7;
@@ -9,20 +9,18 @@ export const highlightText = (
   review: any,
   filterTags: PayloadFilterReview[],
   styles: any,
-  i: number
+  i: number,
 ): JSX.Element => {
   let cutTag: PayloadFilterReview | string;
-  let newFilterTags: PayloadFilterReview[] = filterTags
+  const newFilterTags: PayloadFilterReview[] = filterTags
     .map((tag) => {
-      let splitTag = tag.filterTag.split(/\W/);
-      if (splitTag[0] == "non" || splitTag[0] == "no") {
+      const splitTag = tag.filterTag.split(/\W/);
+      if (splitTag[0] === "non" || splitTag[0] === "no") {
         return [{ ...tag, filterTag: tag.filterTag.split(/\W/)[1] }];
-      } else if (splitTag[1] == "skin") {
+      } if (splitTag[1] === "skin") {
         return [{ ...tag, filterTag: tag.filterTag.split(/\W/)[0] }];
       }
-      return tag.filterTag.split(/\W/).flatMap((el) => {
-        return { ...tag, filterTag: el };
-      });
+      return tag.filterTag.split(/\W/).flatMap((el) => ({ ...tag, filterTag: el }));
     })
     .flat();
 
@@ -54,9 +52,5 @@ export const highlightText = (
 // function to check if labels contain any element of filterTags. If contain then show review
 export const filterReviewWithTags = (
   labels: string[],
-  filterTags: any
-): boolean => {
-  return labels.some((el: string, i) => {
-    return filterTags.some((tag) => el.includes(tag.filterTag));
-  });
-};
+  filterTags: any,
+): boolean => labels.some((el: string, i) => filterTags.some((tag) => el.includes(tag.filterTag)));

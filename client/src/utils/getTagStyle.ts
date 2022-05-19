@@ -28,7 +28,7 @@ const getAlphaFromScore = (score: number): number => {
   }
 };
 
-export const getTagStyle = ({tag, count}): TagStyle => {
+export const getTagStyle = ({ tag, count }): TagStyle => {
   const color: RGBonly = !tag ? Marks.other : Marks[tag];
   const alpha = getAlphaFromScore(Number(count));
 
