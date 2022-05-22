@@ -45,14 +45,14 @@ router.post("/search", apiLimiter, async (req, res) => {
   try {
     let payload = req.body.payload.trim();
     let search = await Product.find(
-      { brand_name: { $regex: payload, '$options': 'i' } },
+      { $or: [{prod_name: { $regex: payload, '$options': 'i' }}, {brand_name: { $regex: payload, '$options': 'i' }}]  },
       {
         brand_name: 1,
         prod_name: 1
 
       }
     )
-      .limit(5)
+      .limit(8)
       .exec();
 
     // search = search.slice(0, 10);
