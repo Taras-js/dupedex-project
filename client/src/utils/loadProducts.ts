@@ -5,7 +5,7 @@ import {
   setReviews,
 } from "../components/ProductContainer/productSlice";
 import { itemsIdProductsMock } from "../shared/mocks/consts";
-import { randomReviewsMock } from "../shared/mocks/reviewsmock";
+import { reviewsMock } from "../shared/mocks/reviewsmock";
 import { getProductByActualId } from "../app/requests";
 
 export const loadProducts = () => async (dispatch: AppDispatch) => {
@@ -20,6 +20,6 @@ export const loadProducts = () => async (dispatch: AppDispatch) => {
   setTimeout(() => {
     dispatch(showItem(randomItems));
 
-    randomItems.map((id) => dispatch(setReviews({ id, reviews: randomReviewsMock() })));
+    randomItems.map((id) => dispatch(setReviews({ id, reviews: reviewsMock })));
   }, 0);
 };

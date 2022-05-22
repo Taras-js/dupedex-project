@@ -13,7 +13,7 @@ import {
   setReviews,
 } from "../../components/ProductContainer/productSlice";
 
-import { randomReviewsMock } from "../../shared/mocks/reviewsmock";
+import { reviewsMock } from "../../shared/mocks/reviewsmock";
 import { getProductByActualId, searchItem } from "../../app/requests";
 
 const ProductSearch = () => {
@@ -34,7 +34,7 @@ const ProductSearch = () => {
     getProductByActualId(id).then((res) => {
       dispatch(setProducts(res));
     });
-    dispatch(setReviews({ id, reviews: randomReviewsMock() }));
+    dispatch(setReviews({ id, reviews: reviewsMock }));
 
     if (productsIdList.length < 4) {
       dispatch(addIdItem(id));

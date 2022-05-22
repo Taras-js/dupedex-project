@@ -20,7 +20,7 @@ import {
   setProducts,
   setReviews,
 } from "../../components/ProductContainer/productSlice";
-import { randomReviewsMock } from "../../shared/mocks/reviewsmock";
+import { reviewsMock } from "../../shared/mocks/reviewsmock";
 
 type ProdArray = {
   prodArray: any[];
@@ -39,7 +39,7 @@ const IndexPage: NextPage<AppState & ProdArray> = ({
     });
 
     dispatch(showItem(idProdArray));
-    prodArray.map((item) => dispatch(setReviews({ id: item._id, reviews: randomReviewsMock() })));
+    prodArray.map((item) => dispatch(setReviews({ id: item._id, reviews: reviewsMock })));
   }, []);
 
   return (

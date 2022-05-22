@@ -547,5 +547,3 @@ export const reviewsMock = [
     ],
   },
 ];
-
-export const randomReviewsMock = () => reviewsMock.filter(() => Math.random() > 0.5);
