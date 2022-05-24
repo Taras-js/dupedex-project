@@ -2,7 +2,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-underscore-dangle */
 import { createSlice } from "@reduxjs/toolkit";
-import { StringMap } from "ts-jest/dist/types";
 
 import type { AppState } from "../../app/store";
 import { reviewsMock } from "../../shared/mocks/reviewsmock";
@@ -18,11 +17,6 @@ interface ProductState {
   products: any[];
   idReviewsSaved: string[];
   reviews: ProductReviews[];
-  searches: {
-    id: string;
-    title: string;
-    subtitle: string;
-  }[];
   filterReview: {
     filter: boolean;
     filterTags: PayloadFilterReview[];
@@ -39,7 +33,6 @@ export const initialState: ProductState = {
   products: [],
   idReviewsSaved: [],
   reviews: [],
-  searches: [],
   filterReview: { filter: false, filterTags: [] },
 };
 
@@ -64,16 +57,6 @@ export const productSlice = createSlice({
       state.reviews.push(action.payload);
     },
 
-    setSearches(
-      state,
-      action: {
-        type: "";
-        payload: { id: string; title: string; subtitle: string }[];
-      },
-    ) {
-      state.searches = [];
-      state.searches.push(...action.payload);
-    },
     setFilterReview: (
       state,
       action: { type: ""; payload: PayloadFilterReview },
@@ -98,7 +81,6 @@ export const productSlice = createSlice({
 export const {
   setProducts,
   setReviews,
-  setSearches,
   setFilterReview,
   resetFilterReview,
 } = productSlice.actions;
@@ -106,6 +88,5 @@ export const {
 export const productsState = (state: AppState) => state.products.products;
 export const reviewsState = (state: AppState) => state.products.reviews;
 export const filterReviewState = (state: AppState) => state.products.filterReview;
-// export const searchesState = (state: AppState) => state.products.searches;
 
 export default productSlice.reducer;

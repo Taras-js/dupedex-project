@@ -26,7 +26,7 @@ interface ProductProps {
 
 const ProductItem: React.FC<ProductProps> = (props: ProductProps) => {
   const {
-    id, size, isShowClose = false, filter,
+    id, size, isShowClose = true, filter,
   } = props;
   const dispatch = useAppDispatch();
   const products = useAppSelector(productsState);

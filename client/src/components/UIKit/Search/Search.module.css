@@ -43,6 +43,8 @@
   outline: none;
   background: none;
   width: 100%;
+  height: 100%;
+  padding: 10px 0;
   font: inherit;
   color: var(--color-search-grey);
 }
@@ -51,6 +53,7 @@
 }
 
 .search__dropdown {
+  display: none;
   position: absolute;
   left: 20%;
   top: 50px;
@@ -65,11 +68,8 @@
 }
 
 .search_focused > .search__dropdown {
+  display: block;
   z-index: 11;
-}
-
-.search__dropdown_passive {
-  display: none;
 }
 
 .search__dropdown_not_found {

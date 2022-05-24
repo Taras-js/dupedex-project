@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, { useCallback, useEffect, useRef } from "react";
-
-import ModalComponent from "./modalComponent";
+import React, {
+  useCallback, useEffect, useRef, useState,
+} from "react";
+import { useAppDispatch } from "../../../app/hooks";
+import { setSearchBarBlurred } from "../../ToolbarContainer/toolbarSlice";
 
 import { Icon } from "../Icon";
 import { ResultItem } from "./ResultItem";
@@ -18,13 +20,14 @@ export interface Results {
 
 export interface SearchProps {
   placeholder?: string;
-  isFocused?: boolean;
+  propIsFocused?: boolean;
   results?: Results[];
   withDebounce: Function;
   idProducts?: string[];
   // TODO remove idProducts, use disabled in results
   onChange?: (e: React.ChangeEvent) => void;
   onClickResult?: (number) => void;
+  resetSearch?: () => void;
 }
 
 const Search: React.FC<SearchProps> = (props: SearchProps) => {
@@ -34,41 +37,48 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     withDebounce,
     onChange,
     onClickResult,
-    isFocused = false,
+    propIsFocused = false,
     idProducts,
+    resetSearch,
   } = props;
 
-  const optimized = useCallback(withDebounce(onChange), []);
-  const {
-    clickedOutside,
-    myRef,
-    handleClickInside,
-    clickItem,
-    setClickItem,
-    setClickedOutside,
-    handleFocus,
-  } = ModalComponent();
-
+  const divRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dispatch = useAppDispatch();
 
-  const resetSearch = () => {
-    setClickedOutside(false);
+  const [isFocused, setIsFocused] = useState<boolean>(propIsFocused);
+
+  // actions when input blurred
+  const setBlur = () => {
+    setIsFocused(false);
+    dispatch(setSearchBarBlurred());
+    inputRef.current.blur();
     inputRef.current.value = "";
+    resetSearch();
   };
 
-  useEffect(() => {
-    if (isFocused) {
-      setClickItem(false);
-      inputRef.current.focus();
-      handleClickInside();
-      return;
-    }
-    resetSearch();
-  }, [isFocused]);
+  // blur input if clicked outside input
+  const handleBlur = (e?) => {
+    if (inputRef.current !== e.target) setBlur();
+    document.removeEventListener("click", handleBlur);
+  };
 
+  // focus input and add event listener for click outside
+  const handleFocus = () => {
+    setIsFocused(true);
+    inputRef.current.focus();
+    document.addEventListener("click", handleBlur);
+  };
+
+  // focus input from outside action
   useEffect(() => {
-    resetSearch();
-  }, [clickItem, inputRef]);
+    if (propIsFocused) {
+      handleFocus();
+      inputRef.current.focus();
+    }
+  }, [propIsFocused]);
+
+  const optimized = useCallback(withDebounce(onChange), []);
 
   const searchClass = cls(styles, "search", { search_focused: isFocused });
 
@@ -76,7 +86,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div
       onClick={handleFocus}
-      ref={myRef}
+      ref={divRef}
       className={searchClass}
       role="button"
     >
@@ -91,13 +101,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
         <Icon type="search" width={25} height={25} />
       </form>
 
-      <div
-        className={
-          clickedOutside
-            ? styles.search__dropdown
-            : styles.search__dropdown_passive
-        }
-      >
+      <div className={styles.search__dropdown}>
         {results
           && results.map((result) => (
             <ResultItem
@@ -108,7 +112,6 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
               image={result.image}
               id={result.id}
               idProducts={idProducts}
-              setClickItem={setClickItem}
             />
           ))}
       </div>

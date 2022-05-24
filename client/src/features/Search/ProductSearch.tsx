@@ -8,7 +8,6 @@ import {
   setSearchBarBlurred,
 } from "../../components/ToolbarContainer/toolbarSlice";
 import {
-  setSearches,
   setProducts,
   setReviews,
 } from "../../components/ProductContainer/productSlice";
@@ -18,7 +17,7 @@ import { getProductByActualId, searchItem } from "../../app/requests";
 
 const ProductSearch = () => {
   const [search, setSearch] = useState<string>("");
-  const [result, setResult] = useState<Results[]>();
+  const [results, setResults] = useState<Results[]>([]);
   const dispatch = useAppDispatch();
 
   const isSearchBarFocused = useAppSelector(
@@ -30,6 +29,8 @@ const ProductSearch = () => {
 
   const placeholder: string = isSearchBarFocused ? 'Start typing a brand or product name to find it and add to collection' : "Look for a skincare product name, brand name and etc.";
 
+  const resetSearch = () => { setSearch(""); };
+
   const onClickResult = (id) => {
     getProductByActualId(id).then((res) => {
       dispatch(setProducts(res));
@@ -40,7 +41,7 @@ const ProductSearch = () => {
       dispatch(addIdItem(id));
     }
     dispatch(setSearchBarBlurred());
-    setSearch("");
+    resetSearch();
   };
 
   const handleChange = (e) => {
@@ -51,22 +52,21 @@ const ProductSearch = () => {
   useEffect(() => {
     async function getResults() {
       const searches = await searchItem(search);
-      setResult(getProductBySearch(searches, search));
-      dispatch(setSearches(searches));
+      setResults(getProductBySearch(searches, search));
     }
     getResults();
   }, [search]);
 
   return (
-    // eslint-disable-next-line react/react-in-jsx-scope
     <Search
       idProducts={productsIdList}
       onChange={handleChange}
       placeholder={placeholder}
-      results={result}
+      results={results}
+      resetSearch={resetSearch}
       withDebounce={debounce}
       onClickResult={onClickResult}
-      isFocused={isSearchBarFocused}
+      propIsFocused={isSearchBarFocused}
     />
   );
 };
