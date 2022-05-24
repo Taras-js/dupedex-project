@@ -43,7 +43,7 @@ const ProductContainer: React.FC = () => {
         </Panel>
       )}
 
-      {productList.length && productList.length < 4 && (
+      {!!productList.length && productList.length < 4 && (
         <Panel className={addBtnClass}>
           <Tooltip title="Add a new product">
             <AddProductButton />
