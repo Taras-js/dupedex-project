@@ -43,13 +43,15 @@ const ProductContainer: React.FC = () => {
         </Panel>
       )}
 
-      {productList.length && productList.length < 4 ? (
+      {productList.length && productList.length < 4 && (
         <Panel className={addBtnClass}>
           <Tooltip title="Add a new product">
             <AddProductButton />
           </Tooltip>
         </Panel>
-      ) : (
+      )}
+
+      {!productList.length && (
         <div className={styles.products__placeholder}>
           <h4 className={styles.products__placeholder_text}>
             Start building your collection by clicking this button
