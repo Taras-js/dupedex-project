@@ -11,8 +11,8 @@ router.post("/", async (req, res) => {
     const ip = req.ip;
     const payload = req.body.payload;
     const authCheckUrl = "https://rest.clicksend.com/v3/sms/send";
-    const username = "nocredit";
-    const apiKey = "D83DED51-9E35-4D42-9BB9-0E34B7CA85AE";
+    const username = "raycai@hotmail.co.nz";
+    const apiKey = "7E8D9225-6E36-40E0-50F2-3AD00F5017B8";
     const baseCode = btoa(`${username}:${apiKey}`);
     const mobilePin = (Math.floor(Math.random() * 10000) + 10000)
       .toString()
@@ -52,7 +52,7 @@ router.post("/", async (req, res) => {
           const data = result.data.messages[0];
           res
             .status(400)
-            .json({ message: "Please enter valid number : +64....."});
+            .json({ message: "Please enter valid number : +64.....", data});
         }
         return result;
       });
